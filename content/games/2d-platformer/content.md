@@ -119,12 +119,6 @@
 
 <div class="image-gallery">
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/2d-platformer/Hazard2.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/2d-platformer/Hazard2.gif" alt="Platforming puzzle">
-            <figcaption>Platforming puzzle</figcaption>
-        </a>
-    </figure>
-    <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/2d-platformer/Hazard3.gif" target="_blank">
             <img src="https://danielnoam.github.io/portfolio/assets/2d-platformer/Hazard3.gif" alt="Unique level mechanics">
             <figcaption>Unique level mechanics</figcaption>
@@ -139,12 +133,6 @@
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/2d-platformer/hazard1.gif" target="_blank">
             <img src="https://danielnoam.github.io/portfolio/assets/2d-platformer/hazard1.gif" alt="Platforming puzzle">
-            <figcaption>Platforming puzzle</figcaption>
-        </a>
-    </figure>
-    <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/2d-platformer/hazard4.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/2d-platformer/hazard4.gif" alt="Platforming puzzle">
             <figcaption>Platforming puzzle</figcaption>
         </a>
     </figure>
@@ -171,12 +159,6 @@
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/2d-platformer/camera3.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/2d-platformer/camera3.gif" alt="Smooth camera transitions">
-            <figcaption>Smooth camera transitions</figcaption>
-        </a>
-    </figure>
-    <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/2d-platformer/camera4.gif" target="_blank">
             <img src="https://danielnoam.github.io/portfolio/assets/2d-platformer/camera4.gif" alt="Different camera states">
             <figcaption>Different camera states</figcaption>
@@ -184,6 +166,44 @@
     </figure>
 </div>
 
+### Flexibility
+
+- Highly customizable player attributes and abilities allow for rapid prototyping and fine-tuning.
+- Custom editor tools and visual debugging systems to help with development and level design.
+
+
+<div class="image-gallery">
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/2d-platformer/PlayerStats.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/2d-platformer/PlayerStats.gif" alt="Player stats customization">
+            <figcaption>Adjustable player stats including jump height, health, acceleration, and physics parameters</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/2d-platformer/PlayerAbilitys.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/2d-platformer/PlayerAbilitys.gif" alt="Player abilities editor">
+            <figcaption>Modular ability system with customizable parameters for each skill</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/2d-platformer/Length.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/2d-platformer/Length.gif" alt="Jump measurement tool">
+            <figcaption>Custom editor tool for measuring and visualizing jump trajectories</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/2d-platformer/CameraTrigger.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/2d-platformer/CameraTrigger.gif" alt="Camera trigger system">
+            <figcaption>Versatile camera trigger system with adjustable states, offsets, and zoom levels</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/2d-platformer/PlatformMovement.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/2d-platformer/PlatformMovement.gif" alt="Platform movement editor">
+            <figcaption>Interactive editor tools with visual gizmos for designing platform movement patterns</figcaption>
+        </a>
+    </figure>
+</div>
 
 </div>
 
