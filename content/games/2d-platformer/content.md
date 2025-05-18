@@ -211,11 +211,12 @@
     
 ## Development Insights
 
-- Through extensive play testing, refined gameplay mechanics and time pressure to balance challenge, accessibility, and enjoyment
-- Successfully managed project scope to deliver a complete game within academic deadlines
-- Created modular systems for student behaviors and obstacles to enable quick iteration and testing
-- Designed intuitive movement and throwing mechanics that feel satisfying while remaining simple to learn
-- Implemented an audio system with distinct sound cues and triggers to provide player feedback and enhance the game's atmosphere
+- Studied popular platformers to understand what makes jumping and movement feel great to players
+- Added "juice" through subtle animations and visual feedback to make the player, world, and UI elements feel alive and responsive
+- Figured out how to connect different game scenes smoothly while maintaining player progress
+- Built helpful tools that saved me hours of development time
+- Created a flexible player controller where I could quickly tweak values and see results immediately
+- Balanced making levels challenging enough to be fun but not frustratingly difficult
 
 
 </div>
