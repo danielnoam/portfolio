@@ -176,31 +176,31 @@
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/2d-platformer/PlayerStats.gif" target="_blank">
             <img src="https://danielnoam.github.io/portfolio/assets/2d-platformer/PlayerStats.gif" alt="Player stats customization">
-            <figcaption>Adjustable player stats including jump height, health, acceleration, and physics parameters</figcaption>
+            <figcaption>Adjustable player stats editor</figcaption>
         </a>
     </figure>
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/2d-platformer/PlayerAbilitys.gif" target="_blank">
             <img src="https://danielnoam.github.io/portfolio/assets/2d-platformer/PlayerAbilitys.gif" alt="Player abilities editor">
-            <figcaption>Modular ability system with customizable parameters for each skill</figcaption>
+            <figcaption>Player ability customization</figcaption>
         </a>
     </figure>
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/2d-platformer/Length.gif" target="_blank">
             <img src="https://danielnoam.github.io/portfolio/assets/2d-platformer/Length.gif" alt="Jump measurement tool">
-            <figcaption>Custom editor tool for measuring and visualizing jump trajectories</figcaption>
+            <figcaption>Jump measurement tool</figcaption>
         </a>
     </figure>
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/2d-platformer/CameraTrigger.gif" target="_blank">
             <img src="https://danielnoam.github.io/portfolio/assets/2d-platformer/CameraTrigger.gif" alt="Camera trigger system">
-            <figcaption>Versatile camera trigger system with adjustable states, offsets, and zoom levels</figcaption>
+            <figcaption>Camera trigger editor</figcaption>
         </a>
     </figure>
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/2d-platformer/PlatformMovement.gif" target="_blank">
             <img src="https://danielnoam.github.io/portfolio/assets/2d-platformer/PlatformMovement.gif" alt="Platform movement editor">
-            <figcaption>Interactive editor tools with visual gizmos for designing platform movement patterns</figcaption>
+            <figcaption>Platform path visualizer</figcaption>
         </a>
     </figure>
 </div>
