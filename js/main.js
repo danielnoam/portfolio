@@ -1,40 +1,15 @@
 /*==============================================
-                CONFIGURATION
+            INITIALIZATION
 ================================================*/
-const baseUrl = '/portfolio';
-const defaultPath = `${baseUrl}/content/about/content.md`;
-const siteTitle = 'Daniel Noam - Portfolio';
-const defaultShowUrls = false;
-const defaultShowTopBar = true;
-const defaultShowThemeToggle = true;
+// These variables now reference the CONFIG object from config.js
+const baseUrl = CONFIG.baseUrl;
+const defaultPath = CONFIG.defaultPath;
+const siteTitle = CONFIG.siteTitle;
+const defaultShowUrls = CONFIG.uiSettings.showUrls;
+const defaultShowTopBar = CONFIG.uiSettings.showTopBar;
+const defaultShowThemeToggle = CONFIG.uiSettings.showThemeToggle;
 
-
-const structure = {
-    "GAMES": {
-        path: "content/games",
-        pages: [
-            { title: "UMD", folder: "umd", visible: false },
-            { title: "2D Platformer", folder: "2d-platformer", visible: true },
-            { title: "School These Sh*ts", folder: "school-these-shits", visible: true },
-            { title: "Pixel Knight", folder: "pixel-knight", visible: true },
-        ]
-    },
-    "Prototypes": {
-        path: "content/prototypes",
-        pages: [
-            { title: "Bubblerena - GGJ 2025", folder: "bubblerena", visible: false },
-            { title: "PopACorn", folder: "popacorn", visible: false },
-        ]
-    },
-    "Art": {
-        path: "content/art",
-        pages: [
-            { title: "Shaders", folder: "shaders", visible: false },
-            { title: "Blender", folder: "blender", visible: false },
-            { title: "Procedural Animations", folder: "proceduralanimations", visible: false },
-        ]
-    },
-};
+const structure = CONFIG.structure;
 
 /*==============================================
             NAVIGATION MANAGEMENT
