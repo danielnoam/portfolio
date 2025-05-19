@@ -365,7 +365,9 @@ async function init() {
     initHistoryHandling();
 
     // Apply visibility settings
-    if (!defaultShowUrls) {
+    if (defaultShowUrls) {
+        document.documentElement.classList.remove('hide-urls');
+    } else {
         document.documentElement.classList.add('hide-urls');
     }
 
