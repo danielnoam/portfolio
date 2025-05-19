@@ -158,7 +158,7 @@ async function loadContent(path) {
                 newUrl = `/portfolio/${pageName}`;
             }
 
-            // Update browser history with new state and URL
+            // Update browser history with a new state and URL
             history.pushState({path: path}, '', newUrl);
         }
 
