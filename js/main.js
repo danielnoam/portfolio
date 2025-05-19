@@ -57,6 +57,22 @@ function handleNavigationClick(path, link) {
     loadContent(path);
     setActiveLink(link);
     closeMobileSidebar();
+
+    // Extract section and page name for URL
+    const pathSegments = path.split('/');
+    const section = pathSegments[pathSegments.length - 3]; // e.g., "games"
+    const pageName = pathSegments[pathSegments.length - 2]; // e.g., "school-these-shits"
+
+    // Create a clean URL that shows which page we're on
+    let newUrl;
+    if (section === "about") {
+        newUrl = `/portfolio/about`;
+    } else {
+        newUrl = `/portfolio/${section}/${pageName}`;
+    }
+
+    // Update URL without triggering a page reload
+    history.pushState({path: path}, '', newUrl);
 }
 
 function updateSidebarForContent(contentPath) {
@@ -127,7 +143,21 @@ async function loadContent(path) {
 
         // Push a new state only if it's different from the current
         if (!history.state || history.state.path !== path) {
-            history.pushState({path: path}, '', '/portfolio/');
+            // Extract the page name from the path for use in the URL
+            const pathSegments = path.split('/');
+            const section = pathSegments[pathSegments.length - 3]; // e.g., "games"
+            const pageName = pathSegments[pathSegments.length - 2]; // e.g., "school-these-shits"
+
+            // Create a clean URL that shows which page we're on
+            let newUrl;
+            if (section === "about") {
+                newUrl = `/portfolio/about`;
+            } else {
+                newUrl = `/portfolio/${section}/${pageName}`;
+            }
+
+            // Update browser history with new state and URL
+            history.pushState({path: path}, '', newUrl);
         }
 
         updateDocumentTitle(path);
@@ -145,7 +175,9 @@ async function loadContent(path) {
 
 function updateDocumentTitle(path) {
     let title = siteTitle;
-    const pageName = path.split('/').pop().replace('content.md', '').replace(/-/g, ' ');
+    const pathSegments = path.split('/');
+    const pageName = pathSegments[pathSegments.length - 2].replace(/-/g, ' ');
+
     if (pageName) {
         title = `${pageName.charAt(0).toUpperCase() + pageName.slice(1)} | ${title}`;
     }
@@ -383,6 +415,8 @@ async function init() {
 
     // Handle content loading based on URL
     const currentPath = window.location.pathname;
+    const matches = currentPath.match(/\/portfolio\/([^\/]+)\/([^\/]+)/);
+    const aboutMatch = currentPath === '/portfolio/about';
 
     try {
         // Check if we have a state (from back/forward navigation)
@@ -391,10 +425,36 @@ async function init() {
             const link = findNavigationLink(history.state.path);
             if (link) setActiveLink(link);
         }
-        // If we're at the root or direct file access, load About
+        // If we have a specific page in the URL (like /portfolio/games/school-these-shits)
+        else if (matches) {
+            const section = matches[1]; // e.g., "games"
+            const pageName = matches[2]; // e.g., "school-these-shits"
+
+            // Find the corresponding content path
+            const contentPath = `${baseUrl}/content/${section}/${pageName}/content.md`;
+
+            await loadContent(contentPath);
+            history.replaceState({path: contentPath}, '', currentPath);
+
+            const link = findNavigationLink(contentPath);
+            if (link) setActiveLink(link);
+        }
+        // If we're at the About page
+        else if (aboutMatch) {
+            await loadContent(defaultPath);
+            history.replaceState({path: defaultPath}, '', currentPath);
+
+            const aboutLink = document.querySelector('nav a');
+            if (aboutLink) setActiveLink(aboutLink);
+        }
+        // If we're at the root
         else if (currentPath === '/portfolio/' || currentPath === '/portfolio/index.html') {
             await loadContent(defaultPath);
-            history.replaceState({path: defaultPath}, '', '/portfolio/');
+
+            // For About page, use a simpler URL
+            const newUrl = '/portfolio/about';
+            history.replaceState({path: defaultPath}, '', newUrl);
+
             const aboutLink = document.querySelector('nav a');
             if (aboutLink) setActiveLink(aboutLink);
         } else {

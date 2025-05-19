@@ -105,14 +105,6 @@
     cursor: pointer;
 }
 
-/* Ensure URLs are visible when showUrls is true */
-:root:not(.hide-urls) a[href^="http"],
-:root:not(.hide-urls) a[href^="https"],
-:root:not(.hide-urls) a[href^="/"] {
-    color: var(--link-color);
-    text-decoration: underline;
-}
-
 /* Theme Toggle Visibility */
 :root:not(.show-theme-toggle) .theme-toggle {
     display: none !important;
