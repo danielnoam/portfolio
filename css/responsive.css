@@ -37,6 +37,11 @@
         margin-left: 0;
     }
 
+    #content {
+        transition: 0.1s;
+    }
+
+
     .theme-toggle {
         position: fixed;
         bottom: 1rem;
@@ -63,6 +68,11 @@
     :root.show-top-bar main {
         padding-top: 60px;
     }
+
+    .fade-in {
+        transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+    }
+    
 }
 
 /*==============================================
