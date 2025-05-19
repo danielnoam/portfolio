@@ -30,8 +30,8 @@
 
 <div class="image-gallery">
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/2d-platformer/doublejump.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/2d-platformer/doublejump.gif" alt="Double jump">
+        <a href="https://danielnoam.github.io/portfolio/assets/project-umn/doublejump.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/doublejump.gif" alt="Double jump">
             <figcaption>Double jump</figcaption>
         </a>
     </figure>
@@ -48,8 +48,8 @@
 
 <div class="image-gallery">
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/2d-platformer/doublejump.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/2d-platformer/doublejump.gif" alt="Double jump">
+        <a href="https://danielnoam.github.io/portfolio/assets/project-umn/doublejump.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/doublejump.gif" alt="Double jump">
             <figcaption>Double jump</figcaption>
         </a>
     </figure>
@@ -65,9 +65,9 @@
 
 <div class="image-gallery">
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/2d-platformer/movingplatform.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/2d-platformer/movingplatform.gif" alt="Moving platform">
-            <figcaption>Moving platform</figcaption>
+        <a href="https://danielnoam.github.io/portfolio/assets/project-umn/doublejump.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/doublejump.gif" alt="Double jump">
+            <figcaption>Double jump</figcaption>
         </a>
     </figure>
 </div>
