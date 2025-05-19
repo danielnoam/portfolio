@@ -68,7 +68,8 @@ function handleNavigationClick(path, link) {
     if (section === "about") {
         newUrl = `/portfolio/about`;
     } else {
-        newUrl = `/portfolio/${section}/${pageName}`;
+        // Use just the page name without the section
+        newUrl = `/portfolio/${pageName}`;
     }
 
     // Update URL without triggering a page reload
@@ -153,7 +154,8 @@ async function loadContent(path) {
             if (section === "about") {
                 newUrl = `/portfolio/about`;
             } else {
-                newUrl = `/portfolio/${section}/${pageName}`;
+                // Use just the page name without the section
+                newUrl = `/portfolio/${pageName}`;
             }
 
             // Update browser history with new state and URL
@@ -419,28 +421,8 @@ async function init() {
         // Clear the stored path to prevent it from affecting future navigation
         localStorage.removeItem('redirectPath');
 
-        // Parse the redirect path to determine what content to load
-        const redirectMatches = redirectPath.match(/\/portfolio\/([^\/]+)\/([^\/]+)/);
-        const isAboutPage = redirectPath === '/portfolio/about';
-
-        if (redirectMatches) {
-            const section = redirectMatches[1]; // e.g., "games"
-            const pageName = redirectMatches[2]; // e.g., "school-these-shits"
-
-            // Find the corresponding content path
-            const contentPath = `${baseUrl}/content/${section}/${pageName}/content.md`;
-
-            // Load the content for the requested page
-            await loadContent(contentPath);
-            history.replaceState({path: contentPath}, '', redirectPath);
-
-            const link = findNavigationLink(contentPath);
-            if (link) setActiveLink(link);
-
-            // Skip the rest of the initialization
-            return;
-        }
-        else if (isAboutPage) {
+        // Check if this is the about page
+        if (redirectPath === '/portfolio/about') {
             await loadContent(defaultPath);
             history.replaceState({path: defaultPath}, '', redirectPath);
 
@@ -450,16 +432,117 @@ async function init() {
             // Skip the rest of the initialization
             return;
         }
+
+        // Handle other pages - extract just the page name
+        const pageMatch = redirectPath.match(/\/portfolio\/([^\/]+)$/);
+        if (pageMatch) {
+            const pageName = pageMatch[1];
+
+            // Find this page in the structure
+            let foundContentPath = null;
+            let foundLink = null;
+
+            // Search through all sections to find the page
+            for (const [section, content] of Object.entries(structure)) {
+                const matchingPage = content.pages.find(page => page.folder === pageName);
+                if (matchingPage) {
+                    foundContentPath = `${baseUrl}/${content.path}/${pageName}/content.md`;
+
+                    // Find the corresponding navigation link
+                    const links = document.querySelectorAll('nav a');
+                    for (const link of links) {
+                        if (link.textContent === matchingPage.title) {
+                            foundLink = link;
+                            break;
+                        }
+                    }
+                    break;
+                }
+            }
+
+            if (foundContentPath) {
+                // Load the content for the requested page
+                await loadContent(foundContentPath);
+                history.replaceState({path: foundContentPath}, '', redirectPath);
+
+                if (foundLink) setActiveLink(foundLink);
+
+                // Skip the rest of the initialization
+                return;
+            }
+        }
     }
 
     // Handle content loading based on URL (only if not redirected)
     const currentPath = window.location.pathname;
-    const matches = currentPath.match(/\/portfolio\/([^\/]+)\/([^\/]+)/);
     const aboutMatch = currentPath === '/portfolio/about';
+    const pageMatch = currentPath.match(/\/portfolio\/([^\/]+)$/);
 
     try {
-        // Rest of your initialization code...
-        // ... (unchanged)
+        // Check if we have a state (from back/forward navigation)
+        if (history.state && history.state.path) {
+            await loadContent(history.state.path);
+            const link = findNavigationLink(history.state.path);
+            if (link) setActiveLink(link);
+        }
+        // If we're at the About page
+        else if (aboutMatch) {
+            await loadContent(defaultPath);
+            history.replaceState({path: defaultPath}, '', currentPath);
+
+            const aboutLink = document.querySelector('nav a');
+            if (aboutLink) setActiveLink(aboutLink);
+        }
+        // If we have a specific page in the URL (like /portfolio/project-umn)
+        else if (pageMatch) {
+            const pageName = pageMatch[1];
+
+            // Find this page in the structure
+            let foundContentPath = null;
+            let foundLink = null;
+
+            // Search through all sections to find the page
+            for (const [section, content] of Object.entries(structure)) {
+                const matchingPage = content.pages.find(page => page.folder === pageName);
+                if (matchingPage) {
+                    foundContentPath = `${baseUrl}/${content.path}/${pageName}/content.md`;
+
+                    // Find the corresponding navigation link
+                    const links = document.querySelectorAll('nav a');
+                    for (const link of links) {
+                        if (link.textContent === matchingPage.title) {
+                            foundLink = link;
+                            break;
+                        }
+                    }
+                    break;
+                }
+            }
+
+            if (foundContentPath) {
+                await loadContent(foundContentPath);
+                history.replaceState({path: foundContentPath}, '', currentPath);
+
+                if (foundLink) setActiveLink(foundLink);
+            } else {
+                // If page not found, redirect to home
+                window.location.href = '/portfolio/';
+            }
+        }
+        // If we're at the root
+        else if (currentPath === '/portfolio/' || currentPath === '/portfolio/index.html') {
+            await loadContent(defaultPath);
+
+            // For About page, use a simpler URL
+            const newUrl = '/portfolio/about';
+            history.replaceState({path: defaultPath}, '', newUrl);
+
+            const aboutLink = document.querySelector('nav a');
+            if (aboutLink) setActiveLink(aboutLink);
+        } else {
+            // Handle direct file access by redirecting to the portfolio root
+            window.location.href = '/portfolio/';
+        }
     } catch (error) {
         console.error('Error during initialization:', error);
         document.getElementById('content').innerHTML = `
