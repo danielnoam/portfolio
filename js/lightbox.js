@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
         contentObserver.observe(contentElement, { childList: true, subtree: true });
     }
 
-    // Run once on initial page load
+    // Run once on an initial page load
     initLightbox();
 });
 
@@ -38,7 +38,7 @@ function setupGalleryImages() {
 
     // Add click event to all gallery images
     galleryLinks.forEach((link, index) => {
-        // Check if this gallery should have lightbox disabled
+        // Check if this gallery should have the lightbox disabled
         const gallery = link.closest('.image-gallery');
         const lightboxDisabled = gallery && gallery.classList.contains('no-lightbox');
 
@@ -66,7 +66,7 @@ function setupGalleryImages() {
             // Remove existing target="_blank" attribute
             link.removeAttribute('target');
 
-            // Create new click handler for lightbox
+            // Create a new click handler for lightbox
             link.onclick = function(e) {
                 e.preventDefault();
                 openLightbox(index, galleryImages);

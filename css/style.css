@@ -73,7 +73,7 @@
 }
 
 body {
-    font-family: var(--font-family);
+    font-family: var(--font-family), serif;
     background-color: var(--bg-color);
     color: var(--text-color);
     display: flex;
@@ -92,7 +92,7 @@ body {
     position: fixed;
     height: 100vh;
     overflow-y: auto;
-    font-family: var(--font-family);
+    font-family: var(--font-family), serif;
     transition: background-color 0.3s, transform 0.3s ease;
 }
 
@@ -105,13 +105,12 @@ body {
 
 /* Main Content Layout */
 main {
-    margin-left: var(--sidebar-width);
     flex-grow: 1;
     max-width: 1200px;
     margin-right: auto;
     margin-left: auto;
     padding: 2rem 2rem 2rem 250px;
-    font-family: var(--font-family);
+    font-family: var(--font-family), serif;
 }
 
 #content {
@@ -299,5 +298,4 @@ nav a:not([target="_blank"]).active::before {
     color: #ff4a4a;
     margin-bottom: 1rem;
 }
-
 
