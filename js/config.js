@@ -23,7 +23,7 @@ const CONFIG = {
         "GAMES": {
             path: "content/games",
             pages: [
-                { title: "UMD", folder: "umd", visible: false },
+                { title: "Project UMN", folder: "project-umn", visible: true },
                 { title: "2D Platformer", folder: "2d-platformer", visible: true },
                 { title: "School These Sh*ts", folder: "school-these-shits", visible: true },
                 { title: "Pixel Knight", folder: "pixel-knight", visible: true },
@@ -41,7 +41,7 @@ const CONFIG = {
             pages: [
                 { title: "Shaders", folder: "shaders", visible: false },
                 { title: "Blender", folder: "blender", visible: false },
-                { title: "Procedural Animations", folder: "proceduralanimations", visible: false },
+                { title: "Procedural Animations", folder: "procedural-animations", visible: false },
             ]
         },
     }

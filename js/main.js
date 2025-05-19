@@ -87,7 +87,7 @@ function buildNavigation() {
     nav.appendChild(resumeLink);
 
     for (const [section, content] of Object.entries(structure)) {
-        // Only create section if it has visible pages
+        // Only create a section if it has visible pages
         const visiblePages = content.pages.filter(page => page.visible !== false);
 
         if (visiblePages.length > 0) {
@@ -125,7 +125,7 @@ async function loadContent(path) {
 
         window.scrollTo(0, 0);
 
-        // Push new state only if it's different from current
+        // Push a new state only if it's different from the current
         if (!history.state || history.state.path !== path) {
             history.pushState({path: path}, '', '/portfolio/');
         }
@@ -192,7 +192,7 @@ function initThemeToggle() {
     const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     const defaultTheme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
 
-    // Set initial theme
+    // Set the initial theme
     document.documentElement.classList.toggle('light-mode', defaultTheme === 'light');
     updateThemeToggles(defaultTheme === 'light');
 
@@ -252,10 +252,10 @@ function initScrollAnimations() {
         '.page-content img'
     ];
 
-    // Create single reusable IntersectionObserver
+    // Create a single reusable IntersectionObserver
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-            // Add the 'visible' class when element enters viewport
+            // Add the 'visible' class when an element enters the viewport
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
                 // Once the animation has played, we can stop observing the element
@@ -274,7 +274,7 @@ function initScrollAnimations() {
         animatedElements.forEach(selector => {
             const elements = document.querySelectorAll(selector);
 
-            // Add fade-in class and observe each element
+            // Add a fade-in class and observe each element
             elements.forEach((el, index) => {
                 // Skip elements that already have animations
                 if (!el.classList.contains('fade-in')) {
@@ -302,7 +302,7 @@ function initScrollAnimations() {
 
         contentObserver.observe(contentElement, { childList: true, subtree: true });
 
-        // Also run once on initial page load
+        // Also run once on an initial page load
         setupAnimations();
     }
 }
@@ -343,7 +343,7 @@ function initHistoryHandling() {
             const link = findNavigationLink(event.state.path);
             if (link) setActiveLink(link);
         } else {
-            // If no state, go to About page
+            // If no state, go to the About page
             loadContent(defaultPath);
             const aboutLink = document.querySelector('nav a');
             if (aboutLink) setActiveLink(aboutLink);
@@ -355,7 +355,7 @@ function initHistoryHandling() {
             INITIALIZATION
 ================================================*/
 async function init() {
-    // Set up navigation structure
+    // Set up the navigation structure
     buildNavigation();
 
     // Initialize UI components
@@ -396,7 +396,7 @@ async function init() {
             const aboutLink = document.querySelector('nav a');
             if (aboutLink) setActiveLink(aboutLink);
         } else {
-            // Handle direct file access by redirecting to portfolio root
+            // Handle direct file access by redirecting to the portfolio root
             window.location.href = '/portfolio/';
         }
     } catch (error) {
