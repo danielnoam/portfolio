@@ -38,3 +38,18 @@
 <button id="back-to-top" title="Back to top">↑</button>
 </body>
 </html>
+
+<script>
+    // Check if we came here via a redirect
+    if (localStorage.getItem('redirectPath')) {
+        // Don't show anything during redirect handling
+        document.body.style.opacity = "0";
+        document.body.style.transition = "opacity 0.5s";
+        window.addEventListener('DOMContentLoaded', function() {
+            // Show body after the page is fully loaded and handled
+            setTimeout(function() {
+                document.body.style.opacity = "1";
+            }, 100);
+        });
+    }
+</script>

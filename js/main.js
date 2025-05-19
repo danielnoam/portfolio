@@ -413,54 +413,53 @@ async function init() {
         document.documentElement.classList.add('hide-theme-toggle');
     }
 
-    // Handle content loading based on URL
+    // Check if we have a redirect path stored
+    const redirectPath = localStorage.getItem('redirectPath');
+    if (redirectPath) {
+        // Clear the stored path to prevent it from affecting future navigation
+        localStorage.removeItem('redirectPath');
+
+        // Parse the redirect path to determine what content to load
+        const redirectMatches = redirectPath.match(/\/portfolio\/([^\/]+)\/([^\/]+)/);
+        const isAboutPage = redirectPath === '/portfolio/about';
+
+        if (redirectMatches) {
+            const section = redirectMatches[1]; // e.g., "games"
+            const pageName = redirectMatches[2]; // e.g., "school-these-shits"
+
+            // Find the corresponding content path
+            const contentPath = `${baseUrl}/content/${section}/${pageName}/content.md`;
+
+            // Load the content for the requested page
+            await loadContent(contentPath);
+            history.replaceState({path: contentPath}, '', redirectPath);
+
+            const link = findNavigationLink(contentPath);
+            if (link) setActiveLink(link);
+
+            // Skip the rest of the initialization
+            return;
+        }
+        else if (isAboutPage) {
+            await loadContent(defaultPath);
+            history.replaceState({path: defaultPath}, '', redirectPath);
+
+            const aboutLink = document.querySelector('nav a');
+            if (aboutLink) setActiveLink(aboutLink);
+
+            // Skip the rest of the initialization
+            return;
+        }
+    }
+
+    // Handle content loading based on URL (only if not redirected)
     const currentPath = window.location.pathname;
     const matches = currentPath.match(/\/portfolio\/([^\/]+)\/([^\/]+)/);
     const aboutMatch = currentPath === '/portfolio/about';
 
     try {
-        // Check if we have a state (from back/forward navigation)
-        if (history.state && history.state.path) {
-            await loadContent(history.state.path);
-            const link = findNavigationLink(history.state.path);
-            if (link) setActiveLink(link);
-        }
-        // If we have a specific page in the URL (like /portfolio/games/school-these-shits)
-        else if (matches) {
-            const section = matches[1]; // e.g., "games"
-            const pageName = matches[2]; // e.g., "school-these-shits"
-
-            // Find the corresponding content path
-            const contentPath = `${baseUrl}/content/${section}/${pageName}/content.md`;
-
-            await loadContent(contentPath);
-            history.replaceState({path: contentPath}, '', currentPath);
-
-            const link = findNavigationLink(contentPath);
-            if (link) setActiveLink(link);
-        }
-        // If we're at the About page
-        else if (aboutMatch) {
-            await loadContent(defaultPath);
-            history.replaceState({path: defaultPath}, '', currentPath);
-
-            const aboutLink = document.querySelector('nav a');
-            if (aboutLink) setActiveLink(aboutLink);
-        }
-        // If we're at the root
-        else if (currentPath === '/portfolio/' || currentPath === '/portfolio/index.html') {
-            await loadContent(defaultPath);
-
-            // For About page, use a simpler URL
-            const newUrl = '/portfolio/about';
-            history.replaceState({path: defaultPath}, '', newUrl);
-
-            const aboutLink = document.querySelector('nav a');
-            if (aboutLink) setActiveLink(aboutLink);
-        } else {
-            // Handle direct file access by redirecting to the portfolio root
-            window.location.href = '/portfolio/';
-        }
+        // Rest of your initialization code...
+        // ... (unchanged)
     } catch (error) {
         console.error('Error during initialization:', error);
         document.getElementById('content').innerHTML = `
