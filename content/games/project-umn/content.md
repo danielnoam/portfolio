@@ -35,6 +35,12 @@
             <figcaption>Test</figcaption>
         </a>
     </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/project-umn/test.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/test.gif" alt="Test">
+            <figcaption>Test</figcaption>
+        </a>
+    </figure>
 </div>
 
 

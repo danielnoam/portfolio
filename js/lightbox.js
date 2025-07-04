@@ -24,9 +24,6 @@ function initLightbox() {
 
     // Get all gallery images and add click events
     setupGalleryImages();
-
-    // Preload video metadata for better performance
-    preloadVideoMetadata();
 }
 
 function setupGalleryImages() {
@@ -45,12 +42,12 @@ function setupGalleryImages() {
         const gallery = link.closest('.image-gallery');
         const lightboxDisabled = gallery && gallery.classList.contains('no-lightbox');
 
-        // Check if this link is a video
+        // Check if this link is a video and add indicator
         const href = link.getAttribute('href');
         const isVideo = href && isVideoFile(href);
 
         if (isVideo) {
-            addInPlaceVideoPreview(link);
+            addVideoIndicator(link);
         }
 
         if (lightboxDisabled) {
@@ -79,101 +76,56 @@ function setupGalleryImages() {
     });
 }
 
-// Helper function to check if a file is a video
+
 function isVideoFile(url) {
     const extension = url.split('.').pop().toLowerCase();
     return ['mp4', 'webm', 'ogg', 'mov', 'avi', 'mkv'].includes(extension);
 }
 
-// Function to add in-place video preview
-function addInPlaceVideoPreview(link) {
+
+function addVideoIndicator(link) {
     const figure = link.closest('figure');
-    const href = link.getAttribute('href');
-
-    // Add video indicator
-    const indicator = document.createElement('div');
-    indicator.className = 'video-indicator';
-    indicator.textContent = 'Video';
-    figure.appendChild(indicator);
-
-    // Create video element that will overlay the image
-    const video = document.createElement('video');
-    video.className = 'video-preview';
-    video.src = href;
-    video.muted = true;
-    video.loop = true;
-    video.playsInline = true;
-    video.preload = 'metadata';
-
-    // Insert video after the image but before figcaption
     const img = figure.querySelector('img');
-    if (img) {
-        img.parentNode.insertBefore(video, img.nextSibling);
+
+    // Check if indicator already exists to avoid duplicates
+    if (figure.querySelector('.video-indicator')) {
+        return;
     }
 
-    // Add hover events to the figure
-    let hoverTimeout;
-    let isPlaying = false;
+    if (!img) {
+        return;
+    }
 
-    figure.addEventListener('mouseenter', function() {
-        // Small delay to prevent accidental triggers
-        hoverTimeout = setTimeout(() => {
-            if (!isPlaying) {
-                video.currentTime = 0; // Start from beginning
-                video.play().then(() => {
-                    isPlaying = true;
-                }).catch(e => {
-                    console.log('Video autoplay prevented:', e);
-                });
-            }
-        }, 200);
-    });
+    // Create the indicator
+    const indicator = document.createElement('div');
+    indicator.className = 'video-indicator';
+    indicator.textContent = '';
+    figure.appendChild(indicator);
 
-    figure.addEventListener('mouseleave', function() {
-        clearTimeout(hoverTimeout);
-        if (isPlaying) {
-            video.pause();
-            video.currentTime = 0;
-            isPlaying = false;
-        }
-    });
+    // Function to position indicator relative to image
+    function positionIndicator() {
+        const imgRect = img.getBoundingClientRect();
+        const figureRect = figure.getBoundingClientRect();
 
-    // Ensure video is properly sized to match the thumbnail
-    video.addEventListener('loadedmetadata', function() {
-        const img = figure.querySelector('img');
-        if (img) {
-            // Match the video dimensions to the image
-            video.style.width = getComputedStyle(img).width;
-            video.style.height = getComputedStyle(img).height;
-        }
-    });
+        // Calculate position relative to figure
+        const top = imgRect.top - figureRect.top + 8;
+        const right = figureRect.right - imgRect.right + 8;
+
+        indicator.style.top = top + 'px';
+        indicator.style.right = right + 'px';
+    }
+
+    // Position immediately if image is loaded
+    if (img.complete && img.naturalWidth > 0) {
+        positionIndicator();
+    } else {
+        img.addEventListener('load', positionIndicator);
+    }
+
+    // Reposition on window resize
+    window.addEventListener('resize', positionIndicator);
 }
 
-function preloadVideoMetadata() {
-    const videoLinks = document.querySelectorAll('.image-gallery figure a');
-
-    videoLinks.forEach(link => {
-        const href = link.getAttribute('href');
-        if (isVideoFile(href)) {
-            // Create a hidden video element just for preloading
-            const video = document.createElement('video');
-            video.src = href;
-            video.preload = 'metadata';
-            video.muted = true;
-            video.style.display = 'none';
-            document.body.appendChild(video);
-
-            // Remove after metadata is loaded
-            video.addEventListener('loadedmetadata', function() {
-                setTimeout(() => {
-                    if (video.parentNode) {
-                        video.parentNode.removeChild(video);
-                    }
-                }, 1000);
-            });
-        }
-    });
-}
 
 function openLightbox(index, images) {
     const lightboxContainer = document.getElementById('lightbox-container');

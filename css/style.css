@@ -16,7 +16,6 @@
     /* Shared Colors */
     --primary-blue: #4a9eff;
     --secondary-blue: #77b6ff;
-    --gallery-image-text-bg: rgba(255, 255, 255, 0.1);
 
     /* Dark Theme Colors */
     --dark-bg: rgba(26, 29, 33, 1);
@@ -28,6 +27,7 @@
     --dark-subheading: var(--secondary-blue);
     --dark-link: rgba(160, 160, 160, 1);
     --dark-link-hover: rgba(255, 255, 255, 1);
+    --dark--gallery-image-text-bg: rgba(26, 29, 33, 0.1);
 
     /* Light Theme Colors */
     --light-bg: rgba(196, 214, 232, 0.8);
@@ -39,6 +39,7 @@
     --light-subheading: rgba(74, 158, 255, 1);
     --light-link: rgba(102, 102, 102, 1);
     --light-link-hover: rgba(51, 51, 51, 1);
+    --light--gallery-image-text-bg: rgba(196, 214, 232, 0.5);
 
     /* Default Theme (Dark) */
     --bg-color: var(--dark-bg);
@@ -50,6 +51,7 @@
     --subheading-color: var(--dark-subheading);
     --link-color: var(--dark-link);
     --link-hover-color: var(--dark-link-hover);
+    --gallery-image-text-bg: var(--dark--gallery-image-text-bg);
 }
 
 /* Light Mode Theme */
@@ -63,6 +65,7 @@
     --subheading-color: var(--light-subheading);
     --link-color: var(--light-link);
     --link-hover-color: var(--light-link-hover);
+    --gallery-image-text-bg: var(--light--gallery-image-text-bg);
 }
 
 /* Base Styles */
