@@ -111,6 +111,56 @@
     border: 1px solid var(--text-secondary);
 }
 
+.image-gallery figure {
+    position: relative;
+    margin: 0;
+    overflow: hidden; /* Keep as hidden for clean borders */
+}
+
+.video-preview {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 5;
+    pointer-events: none;
+}
+
+.image-gallery figure:hover .video-preview {
+    opacity: 1;
+}
+
+/* Video indicator for gallery images */
+.video-indicator {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    z-index: 6;
+    pointer-events: none;
+    backdrop-filter: blur(4px);
+}
+
+.video-indicator::before {
+    content: '▶ ';
+    font-size: 0.7rem;
+}
+
+
+.image-gallery img {
+    position: relative;
+    z-index: 1;
+}
+
 /* Page Content */
 .page-content h1 {
     font-size: 3rem;

@@ -72,6 +72,17 @@
     .fade-in {
         transition: opacity 0.3s ease-out, transform 0.3s ease-out;
     }
+
+    .video-preview {
+        display: none !important;
+    }
+
+    .video-indicator {
+        font-size: 0.7rem;
+        padding: 2px 6px;
+        top: 4px;
+        right: 4px;
+    }
     
 }
 

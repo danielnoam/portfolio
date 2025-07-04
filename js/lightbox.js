@@ -24,6 +24,9 @@ function initLightbox() {
 
     // Get all gallery images and add click events
     setupGalleryImages();
+
+    // Preload video metadata for better performance
+    preloadVideoMetadata();
 }
 
 function setupGalleryImages() {
@@ -42,28 +45,28 @@ function setupGalleryImages() {
         const gallery = link.closest('.image-gallery');
         const lightboxDisabled = gallery && gallery.classList.contains('no-lightbox');
 
+        // Check if this link is a video
+        const href = link.getAttribute('href');
+        const isVideo = href && isVideoFile(href);
+
+        if (isVideo) {
+            addInPlaceVideoPreview(link);
+        }
+
         if (lightboxDisabled) {
             // For galleries with lightbox disabled, preserve the link's default behavior
-            // This allows the link to navigate as configured in the href or onclick
-
-            // Make sure we keep any existing onclick handlers
             if (!link.hasAttribute('data-has-custom-click')) {
                 const originalOnClick = link.onclick;
                 link.setAttribute('data-has-custom-click', 'true');
 
-                // Only preserve the original onclick if it exists
                 if (originalOnClick) {
-                    // No further modification needed for links in no-lightbox galleries
-                    // The original onclick handler will work as intended
+                    // Keep original onclick handler
                 } else {
-                    // If no onclick exists, make sure the link works normally
                     link.onclick = null;
                 }
             }
         } else {
             // For regular galleries with lightbox enabled
-
-            // Remove existing target="_blank" attribute
             link.removeAttribute('target');
 
             // Create a new click handler for lightbox
@@ -72,6 +75,102 @@ function setupGalleryImages() {
                 openLightbox(index, galleryImages);
                 return false;
             };
+        }
+    });
+}
+
+// Helper function to check if a file is a video
+function isVideoFile(url) {
+    const extension = url.split('.').pop().toLowerCase();
+    return ['mp4', 'webm', 'ogg', 'mov', 'avi', 'mkv'].includes(extension);
+}
+
+// Function to add in-place video preview
+function addInPlaceVideoPreview(link) {
+    const figure = link.closest('figure');
+    const href = link.getAttribute('href');
+
+    // Add video indicator
+    const indicator = document.createElement('div');
+    indicator.className = 'video-indicator';
+    indicator.textContent = 'Video';
+    figure.appendChild(indicator);
+
+    // Create video element that will overlay the image
+    const video = document.createElement('video');
+    video.className = 'video-preview';
+    video.src = href;
+    video.muted = true;
+    video.loop = true;
+    video.playsInline = true;
+    video.preload = 'metadata';
+
+    // Insert video after the image but before figcaption
+    const img = figure.querySelector('img');
+    if (img) {
+        img.parentNode.insertBefore(video, img.nextSibling);
+    }
+
+    // Add hover events to the figure
+    let hoverTimeout;
+    let isPlaying = false;
+
+    figure.addEventListener('mouseenter', function() {
+        // Small delay to prevent accidental triggers
+        hoverTimeout = setTimeout(() => {
+            if (!isPlaying) {
+                video.currentTime = 0; // Start from beginning
+                video.play().then(() => {
+                    isPlaying = true;
+                }).catch(e => {
+                    console.log('Video autoplay prevented:', e);
+                });
+            }
+        }, 200);
+    });
+
+    figure.addEventListener('mouseleave', function() {
+        clearTimeout(hoverTimeout);
+        if (isPlaying) {
+            video.pause();
+            video.currentTime = 0;
+            isPlaying = false;
+        }
+    });
+
+    // Ensure video is properly sized to match the thumbnail
+    video.addEventListener('loadedmetadata', function() {
+        const img = figure.querySelector('img');
+        if (img) {
+            // Match the video dimensions to the image
+            video.style.width = getComputedStyle(img).width;
+            video.style.height = getComputedStyle(img).height;
+        }
+    });
+}
+
+function preloadVideoMetadata() {
+    const videoLinks = document.querySelectorAll('.image-gallery figure a');
+
+    videoLinks.forEach(link => {
+        const href = link.getAttribute('href');
+        if (isVideoFile(href)) {
+            // Create a hidden video element just for preloading
+            const video = document.createElement('video');
+            video.src = href;
+            video.preload = 'metadata';
+            video.muted = true;
+            video.style.display = 'none';
+            document.body.appendChild(video);
+
+            // Remove after metadata is loaded
+            video.addEventListener('loadedmetadata', function() {
+                setTimeout(() => {
+                    if (video.parentNode) {
+                        video.parentNode.removeChild(video);
+                    }
+                }, 1000);
+            });
         }
     });
 }
