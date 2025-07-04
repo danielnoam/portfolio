@@ -20,9 +20,9 @@
 
 ## Core Design Elements
 
-### Player
+### The Player
 
-- Custom state machine controller with fine-tuned movement parameters for smooth acceleration, precise control, and responsive movement.
+- State machine controller with fine-tuned movement parameters for smooth acceleration, precise control, and responsive movement.
 - Head tracking through IK that follows the camera during gameplay and tracks the mouse cursor in menus for more natural character animation.
 - Fluid animation transitions using blend trees that create seamless movement between walking, running, and interacting with objects.
 - Versatile camera system that switches between exploration mode with a free-orbiting view and a focused over-the-shoulder perspective for precise interactions.
@@ -38,7 +38,7 @@
 </div>
 
 
-### Robot Companion
+### The Robot
 
 - Physics-based hover movement system that dynamically adjusts to terrain, maintaining optimal height while following the player or reaching designated positions.
 - Reactive ear animations that respond to movement and rotation, creating visual feedback as the robot changes direction or speed.
@@ -55,10 +55,10 @@
     </figure>
 </div>
 
-### Simulation
+### The World
 
 - Clean, minimalist look that highlights important elements while maintaining a distinctive sci-fi aesthetic.
-- Button prompts and hints that appear as part of the environment instead of floating UI elements, showing up only when needed.
+- Button prompts and hints that appear as part of the environment instead of UI elements, showing up only when needed.
 - Game menus are built as part of the world itself with smooth animations and controls that match the game's overall feel.
 - Test chambers that build themselves through animated sequences, creating dramatic scene changes and reinforcing the artificial testing environment.
 
@@ -82,7 +82,7 @@ This project helped me develop skills with C# interfaces, abstract classes, Unit
 
 - Created a detailed GDD to plan the game's scope, mechanics, and story progression.
 - Used Scriptable Objects to build modular, reusable components for puzzles and character behaviors.
-- Implemented Cinemachine for dynamic camera movements and story-enhancing cutscenes.
+- Implemented Cinemachine for dynamic camera movements and cutscenes.
 - Built custom shaders with Shader Graph to create the game's distinctive minimalist look.
 
 </div>
