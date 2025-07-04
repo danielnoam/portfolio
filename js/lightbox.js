@@ -78,21 +78,62 @@ function setupGalleryImages() {
 
 function openLightbox(index, images) {
     const lightboxContainer = document.getElementById('lightbox-container');
-    const lightboxImage = document.getElementById('lightbox-image');
     const lightboxCaption = document.getElementById('lightbox-caption');
     const lightboxCounter = document.getElementById('lightbox-counter');
     const lightboxPrev = document.getElementById('lightbox-prev');
     const lightboxNext = document.getElementById('lightbox-next');
-    const lightboxImageContainer = document.getElementById('lightbox-image-container');
 
     // Set current image index
     let currentIndex = index;
 
-    // Update the image and caption
+    // Update the content based on media type
     function updateLightboxContent() {
-        // Set image and caption
-        lightboxImage.src = images[currentIndex].src;
-        lightboxCaption.textContent = images[currentIndex].caption;
+        const currentMedia = images[currentIndex];
+        const mediaContainer = document.getElementById('lightbox-image-container');
+
+        // Clear existing content
+        mediaContainer.innerHTML = '';
+
+        // Determine media type based on file extension
+        const src = currentMedia.src;
+        const extension = src.split('.').pop().toLowerCase();
+
+        if (['mp4', 'webm', 'ogg', 'mov'].includes(extension)) {
+            // Video
+            mediaContainer.className = 'lightbox-media-container';
+            const video = document.createElement('video');
+            video.className = 'lightbox-video';
+            video.src = src;
+            video.controls = true;
+            video.autoplay = false;
+            video.loop = true;
+            mediaContainer.appendChild(video);
+        } else if (['wav', 'mp3', 'ogg', 'm4a'].includes(extension)) {
+            // Audio
+            mediaContainer.className = 'lightbox-audio-container';
+            const audioTitle = document.createElement('div');
+            audioTitle.className = 'lightbox-audio-title';
+            audioTitle.textContent = currentMedia.caption || 'Audio File';
+
+            const audio = document.createElement('audio');
+            audio.className = 'lightbox-audio';
+            audio.src = src;
+            audio.controls = true;
+
+            mediaContainer.appendChild(audioTitle);
+            mediaContainer.appendChild(audio);
+        } else {
+            // Image (default)
+            mediaContainer.className = 'lightbox-image-container';
+            const image = document.createElement('img');
+            image.className = 'lightbox-image';
+            image.src = src;
+            image.alt = 'Enlarged view';
+            mediaContainer.appendChild(image);
+        }
+
+        // Set caption and counter
+        lightboxCaption.textContent = currentMedia.caption;
         lightboxCounter.textContent = `${currentIndex + 1} / ${images.length}`;
 
         // Update navigation buttons
@@ -132,7 +173,7 @@ function openLightbox(index, images) {
         lightboxContainer.classList.remove('active');
         setTimeout(() => {
             lightboxContainer.style.display = 'none';
-        }, 300); // Match transition time
+        }, 300);
 
         // Re-enable page scrolling
         document.body.classList.remove('lightbox-open');
@@ -158,14 +199,14 @@ function openLightbox(index, images) {
                 break;
             case 'a':
                 prevImage();
-                break
+                break;
             case 'd':
                 nextImage();
-                break
+                break;
         }
     }
 
-    // Handle clicks outside the image
+    // Handle clicks outside the media
     function handleOutsideClick(e) {
         if (e.target === lightboxContainer) {
             closeLightbox();

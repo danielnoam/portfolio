@@ -160,6 +160,60 @@ body.lightbox-open {
     animation: fadeIn 0.3s ease;
 }
 
+
+/* Media container for videos and audio */
+.lightbox-media-container {
+    width: 80vw;
+    height: 80vh;
+    max-width: 1200px;
+    min-width: 500px;
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Video styles */
+.lightbox-video {
+    max-width: 100%;
+    max-height: 100%;
+    min-width: 500px;
+    min-height: 400px;
+    object-fit: contain;
+    border-radius: 4px;
+}
+
+/* Audio styles */
+.lightbox-audio {
+    width: 100%;
+    max-width: 600px;
+    height: 60px;
+    border-radius: 8px;
+}
+
+.lightbox-audio-container {
+    width: 80vw;
+    height: 200px;
+    max-width: 800px;
+    min-width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 2rem;
+}
+
+.lightbox-audio-title {
+    color: white;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
 /* Responsive adjustments */
 @media (max-width: 1200px) {
     .lightbox-image-container {
@@ -203,6 +257,24 @@ body.lightbox-open {
         height: 70vh;
         min-width: 400px;
         min-height: 350px;
+    }
+
+    .lightbox-video {
+        min-width: 400px;
+        min-height: 350px;
+    }
+
+    .lightbox-media-container {
+        height: 70vh;
+        min-width: 400px;
+        min-height: 350px;
+    }
+
+    .lightbox-audio-container {
+        width: 90vw;
+        min-width: 350px;
+        height: 180px;
+        padding: 1rem;
     }
     
 }
