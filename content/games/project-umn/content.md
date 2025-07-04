@@ -31,7 +31,7 @@
 <div class="image-gallery">
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/project-umn/test.mp4" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/test.mp4" alt="Test">
+            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/test.gif" alt="Test">
             <figcaption>Test</figcaption>
         </a>
     </figure>
