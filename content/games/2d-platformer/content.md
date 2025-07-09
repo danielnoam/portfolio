@@ -216,6 +216,7 @@
 - Built helpful tools that saved development time.
 - Created a flexible player controller that allows to quickly tweak values and see results immediately.
 - Balanced making levels challenging enough to be fun but not frustratingly difficult.
+- Saving the player's progress (last checkpoint, collectables, and best time and deaths for each level) using Unity's Player Perfs.
 
 
 </div>

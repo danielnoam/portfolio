@@ -12,9 +12,9 @@
 
 ## Overview
 
-"Project UMN" is a third-person puzzle game developed for my third-semester school project.
-Players control a robotic entity alongside an AI companion through minimalist simulation tests, making moral choices that explore the balance between efficiency and companionship.
-The story unfolds entirely through environmental design, with no text or dialogue.
+"Project UMN" is a third-person puzzle game developed for my third-semester school project. 
+Players control a robotic entity alongside an AI companion through a series of minimalist simulation tests, each featuring unique mechanics that require both strategic thinking and coordination with the robot companion. 
+The story unfolds through environmental design with minimal text, culminating in a single moral choice that explores the balance between efficiency and companionship.
 
 </div>
 
@@ -63,7 +63,7 @@ The story unfolds entirely through environmental design, with no text or dialogu
     </figure>
 </div>
 
-### The World
+### The Simulation
 
 - A clean, minimalist look that highlights important elements while maintaining a distinctive sci-fi aesthetic.
 - Button prompts and hints that appear as part of the environment instead of UI elements, showing up only when needed.
@@ -86,7 +86,8 @@ The story unfolds entirely through environmental design, with no text or dialogu
 
 ## Development Insights
 
-This project helped me develop skills with C# interfaces, abstract classes, Unity's Shader Graph, Scriptable Objects, and the use of animation tweening libraries.
+This project helped me develop skills with C# interfaces, abstract classes, 
+and Unity's Shader Graph, Scriptable Objects, Animator, and the use of animation tweening libraries.
 
 - Created a detailed GDD to plan the game's scope, mechanics, and story progression.
 - Used Scriptable Objects to build modular, reusable components for puzzles and character behaviors.
@@ -95,3 +96,4 @@ This project helped me develop skills with C# interfaces, abstract classes, Unit
 
 </div>
 </div>
+
