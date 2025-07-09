@@ -12,7 +12,7 @@
 
 ## Overview
 
-"2D Platformer" started as a small project to learn and expand skills but ballooned into its own game. It features fluid movement mechanics including wall-jumping and dashing, complemented by forgiving systems like coyote time and jump buffering. Players navigate through meticulously crafted levels filled with interactive elements such as soft platforms, crumbling surfaces, and portals, all supported by fine-tuned physics and camera systems.
+"2D Platformer" started as a small project to learn and expand skills but ballooned into its own game. It features fluid movement mechanics including wall-jumping and dashing, complemented by systems like coyote time and jump buffering. Players navigate through meticulously crafted levels filled with interactive elements such as soft platforms, crumbling surfaces, and portals, all supported by fine-tuned player movement and an adaptive camera.
 
 
 </div>
@@ -26,8 +26,7 @@
 - Double jump, wall sliding, wall jump, and dashing mechanics provide a versatile and engaging platforming experience.
 - Coyote jump and jump buffering techniques create a more forgiving and responsive control scheme.
 - Variable jump height allows players to control their jump trajectory and navigate the environment with precision.
-- Unique gravity and friction that provide a satisfying and responsive platforming experience.
-- Fine-tuned physics parameters that allow for precise player control and predictable movement.
+- Fine-tuned gravity, friction, acceleration, and deceleration that allow for precise player control and predictable movement.
 
 
 <div class="image-gallery">
@@ -78,8 +77,8 @@
 ### Environmental Elements
 
 - Hazardous obstacles like lava and spikes that make traversal dangerous.
-- Soft objects that players can jump through from below but land on from above.
-- Crumbling objects that add a sense of urgency and require quick decision-making.
+- Soft platforms that players can jump through from below but land on from above.
+- Crumbling platforms that add a sense of urgency and require quick decision-making.
 - Moving platforms that require timing and coordination to navigate.
 - Portals that transport players to different parts of the level or to entirely new areas.
 - Checkpoints that allow players to save their progress and provide a sense of accomplishment.
@@ -211,12 +210,12 @@
     
 ## Development Insights
 
-- Studied popular platformers to understand what makes jumping and movement feel great to players
-- Added "juice" through subtle animations and visual feedback to make the player, world, and UI elements feel alive and responsive
-- Figured out how to connect different game scenes smoothly while maintaining player progress
-- Built helpful tools that saved me hours of development time
-- Created a flexible player controller where I could quickly tweak values and see results immediately
-- Balanced making levels challenging enough to be fun but not frustratingly difficult
+- Studied popular platformers to understand what makes movement feel great to players.
+- Added "juice" through subtle animations and visual feedback to make the player, world, and UI elements feel alive and responsive.
+- Learned how to connect different game scenes smoothly while maintaining player progress.
+- Built helpful tools that saved development time.
+- Created a flexible player controller that allows to quickly tweak values and see results immediately.
+- Balanced making levels challenging enough to be fun but not frustratingly difficult.
 
 
 </div>

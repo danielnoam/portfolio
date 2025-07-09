@@ -13,16 +13,17 @@
 <div class="project-card">
     
 ## Overview
-"School These Sh*ts" is a fast-paced "shooter" where players take on the role of an unconventional teacher. Armed with textbooks as projectiles and momentum-based movement, the player must race against time to help students overcome various obstacles and achieve a 70% class success rate before the bell rings. The game combines precision throwing mechanics with strategic time management across a diverse school environment.
+"School These Sh*ts" is a fast-paced "shooter" where players take on the role of an unconventional teacher.
+Armed with textbooks as projectiles and momentum-based movement, the player must race against time to help students overcome various obstacles and ensure at least 70% of the student body succeeds before the bell rings.
 </div>
 
 <div class="project-card">
     
 ## Core Design Elements
 ### Gameplay Mechanics
-- Momentum-based movement system rewarding skillful navigation and mastery
-- Precision-focused book throwing mechanic requiring careful aim and timing
-- Various student obstacles requiring creative problem-solving, from retrieving lost items to freeing students from lockers
+- Momentum-based movement system rewarding skillful navigation and mastery.
+- Precision-focused book throwing mechanic requiring careful aim and timing.
+- Various student obstacles requiring creative problem-solving, from retrieving lost items to freeing students from lockers.
 
 <div class="image-gallery">
     <figure>
@@ -40,7 +41,7 @@
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/school-these-shits/trickshot.gif" target="_blank">
             <img src="https://danielnoam.github.io/portfolio/assets/school-these-shits/trickshot.gif" alt="Trickshots!">
-            <figcaption>Trickshots!</figcaption>
+            <figcaption>Trick shots!</figcaption>
         </a>
     </figure>
     <figure>
@@ -58,8 +59,8 @@
 </div>
 
 ### Environment Design
-- Diverse school environment featuring classrooms, offices, playground, and unique areas to explore
-- Environmental storytelling through scattered notes, bulletin boards, and student items to expand about the game world
+- Diverse school environment featuring classrooms, offices, a playground, and unique areas to explore.
+- Environmental storytelling through scattered notes, bulletin boards, and student items that expand on the game.
 
 <div class="image-gallery">
     <figure>
@@ -95,8 +96,8 @@
 </div>
 
 ### Difficulty and Time Management
-- Time-pressured gameplay encouraging mastery of movement, accuracy, and route optimization
-- Multiple difficulty levels allowing players to learn mechanics while providing increasing challenge
+- Time-pressured gameplay encouraging mastery of movement, accuracy, and route optimization.
+- Multiple difficulty levels allowing players to learn mechanics while providing increased challenge.
 
 <div class="image-gallery">
     <figure>
@@ -108,7 +109,7 @@
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/school-these-shits/gameplay4.gif" target="_blank">
             <img src="https://danielnoam.github.io/portfolio/assets/school-these-shits/gameplay4.gif" alt="School bells rings">
-            <figcaption>School bells rings</figcaption>
+            <figcaption>School bell rings</figcaption>
         </a>
     </figure>
 </div>
@@ -117,11 +118,11 @@
 <div class="project-card">
     
 ## Development Insights
-- Through extensive play testing, refined gameplay mechanics and time pressure to balance challenge, accessibility, and enjoyment
-- Successfully managed project scope to deliver a complete game within academic deadlines
-- Created modular systems for student behaviors and obstacles to enable quick iteration and testing
-- Designed intuitive movement and throwing mechanics that feel satisfying while remaining simple to learn
-- Implemented an audio system with distinct sound cues and triggers to provide player feedback and enhance the game's atmosphere
+- Extensive playtesting, to help refine gameplay mechanics and balance difficulty.
+- Successfully managed project scope to deliver a complete game within the project's deadline.
+- Created modular systems for student behaviors and obstacles to enable quick iteration and testing.
+- Designed intuitive movement and throwing mechanics that feel satisfying while remaining simple to learn.
+- Implemented an audio system with distinct sound cues and triggers to provide player feedback and enhance the game's atmosphere.
 </div>
 
 </div>
