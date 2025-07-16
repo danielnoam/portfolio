@@ -20,29 +20,32 @@ const CONFIG = {
 
     // Site structure configuration
     structure: {
-        "GAMES": {
+        "Games": {
             path: "content/games",
             pages: [
-                { title: "Project UMN", folder: "project-umn", visible: true },
+                { title: "Chicken Invaders Remake", folder: "chicken-invaders", visible: false },
+                { title: "PopACorn", folder: "popacorn", visible: false },
+                { title: "Project UMN", folder: "project-umn", visible: false },
                 { title: "2D Platformer", folder: "2d-platformer", visible: true },
                 { title: "School These Sh*ts", folder: "school-these-shits", visible: true },
                 { title: "Pixel Knight", folder: "pixel-knight", visible: true },
             ]
         },
-        "Prototypes": {
+        "Prototypes/GameJams": {
             path: "content/prototypes",
             pages: [
                 { title: "Bubblerena - GGJ 2025", folder: "bubblerena", visible: false },
-                { title: "PopACorn", folder: "popacorn", visible: false },
             ]
         },
-        "Art": {
-            path: "content/art",
+        "Other": {
+            path: "content/other",
             pages: [
+                { title: "Assets", folder: "assets", visible: false },
                 { title: "Shaders", folder: "shaders", visible: false },
-                { title: "Blender", folder: "blender", visible: false },
+                { title: "Models", folder: "models", visible: false },
                 { title: "Procedural Animations", folder: "procedural-animations", visible: false },
             ]
         },
+        
     }
 };
