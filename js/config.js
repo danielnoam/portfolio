@@ -31,10 +31,11 @@ const CONFIG = {
                 { title: "Pixel Knight", folder: "pixel-knight", visible: true },
             ]
         },
-        "Prototypes/GameJams": {
-            path: "content/prototypes",
+        "GameJams": {
+            path: "content/jams",
             pages: [
                 { title: "Bubblerena - GGJ 2025", folder: "bubblerena", visible: false },
+                { title: "Power Factory - KenneyJam 2025", folder: "power-factory", visible: false },
             ]
         },
         "Other": {
