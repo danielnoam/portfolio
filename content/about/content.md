@@ -23,6 +23,12 @@ I'm a Game Designer and Programmer who began my journey in game development duri
             <figcaption>Pixel Knight</figcaption>
         </a>
     </figure>
+    <figure>
+        <a href="#" onclick="handleNavigationClick(`${baseUrl}/content/jams/power-factory/content.md`, document.querySelector('a[onclick*=\'power-factory\']')); return false;">
+            <img src="https://danielnoam.github.io/portfolio/assets/power-factory/logo.png" alt="Power Factory">
+            <figcaption>Power Factory</figcaption>
+        </a>
+    </figure>
 </div>
 
 </div>
