@@ -47,20 +47,20 @@ The game features wave-based gameplay where bubbles spawn around the map and pla
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/bubblerena/poppingbubles.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/bubblerena/poppingbubles.gif" alt="Popping Bubbles">
+        <a href="https://danielnoam.github.io/portfolio/assets/bubblerena/poppingbubbles.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/bubblerena/poppingbubbles.gif" alt="Popping Bubbles">
             <figcaption>Popping bubbles</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/bubblerena/poppingbubles2.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/bubblerena/poppingbubles2.gif" alt="Popping Bubbles">
+        <a href="https://danielnoam.github.io/portfolio/assets/bubblerena/poppingbubbles2.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/bubblerena/poppingbubbles2.gif" alt="Popping Bubbles">
             <figcaption>Popping bubbles</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/bubblerena/poppingbubles3.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/bubblerena/poppingbubles3.gif" alt="Popping Bubbles">
+        <a href="https://danielnoam.github.io/portfolio/assets/bubblerena/poppingbubbles3.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/bubblerena/poppingbubbles3.gif" alt="Popping Bubbles">
             <figcaption>Popping bubbles</figcaption>
         </a>
     </figure>
