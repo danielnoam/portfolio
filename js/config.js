@@ -35,7 +35,7 @@ const CONFIG = {
             path: "content/jams",
             pages: [
                 { title: "Bubblerena - GGJ 2025", folder: "bubblerena", visible: false },
-                { title: "Power Factory - KenneyJam 2025", folder: "power-factory", visible: false },
+                { title: "Power Factory - KenneyJam 2025", folder: "power-factory", visible: true },
             ]
         },
         "Other": {

@@ -75,8 +75,14 @@ Players pick up numbered packages and throw them into power machines (x², x⁴)
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/power-factory/gilguli.mp4" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/power-factory/gilguli.mp4" alt="Gameplay">
+        <a href="https://danielnoam.github.io/portfolio/assets/power-factory/upgrade.mp4" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/power-factory/upgrade.mp4" alt="Gameplay">
+            <figcaption>Gameplay</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/power-factory/packagespawner.mp4" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/power-factory/packagespawner.mp4" alt="Gameplay">
             <figcaption>Gameplay</figcaption>
         </a>
     </figure>
