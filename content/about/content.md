@@ -29,6 +29,12 @@ I'm a Game Designer and Programmer who began my journey in game development duri
             <figcaption>Power Factory</figcaption>
         </a>
     </figure>
+    <figure>
+        <a href="#" onclick="handleNavigationClick(`${baseUrl}/content/jams/bubblerena/content.md`, document.querySelector('a[onclick*=\'bubblerena\']')); return false;">
+            <img src="https://danielnoam.github.io/portfolio/assets/bubblerena/logo.png" alt="Bubblerena">
+            <figcaption>Bubblerena</figcaption>
+        </a>
+    </figure>
 </div>
 
 </div>

@@ -5,7 +5,7 @@
 
 <img src="https://danielnoam.github.io/portfolio/assets/bubblerena/logo.png" alt="Logo">
 
-[itch.io](https://danielnoam.itch.io/bubblerena) | [Global Game Jam 2025](https://globalgamejam.org/)
+[Global Game Jam 2025](https://globalgamejam.org/)
 
 
 <div class="project-card">
