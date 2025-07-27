@@ -45,14 +45,8 @@ Players pick up numbered packages and throw them into power machines (x², x⁴)
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/power-factory/packagespawning.png" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/power-factory/packagespawning.png" alt="Package Spawner">
-            <figcaption>Package spawner</figcaption>
-        </a>
-    </figure>
-    <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/power-factory/packagespawning2.png" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/power-factory/packagespawning2.png" alt="Package Spawner">
+        <a href="https://danielnoam.github.io/portfolio/assets/power-factory/packagespawner.png" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/power-factory/packagespawner.png" alt="Package Spawner">
             <figcaption>Package spawner</figcaption>
         </a>
     </figure>
