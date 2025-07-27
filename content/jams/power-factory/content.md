@@ -3,7 +3,7 @@
 # Power Factory
 
 
-<img src="https://img.itch.zone/aW1nLzIyMjM1OTMxLnBuZw==/original/ldtW%2BH.png" alt="Power Factory Game Screenshot">
+<img src="https://danielnoam.github.io/portfolio/assets/power-factory/logo.png" alt="Intro">
 
 [itch.io](https://danielnoam.itch.io/power-factory) | [Kenney Jam 2025](https://itch.io/jam/kenney-jam-2025)
 
@@ -13,8 +13,7 @@
 ## Overview
 
 "Power Factory" is a first-person mathematical puzzle game developed in under 48 hours for Kenney Jam 2025 using only Kenney and KayKit assets.
-Players navigate a factory environment, picking up numbered packages and strategically throwing them into power machines (x², x⁴) to create specific target numbers displayed in order windows.
-With limited packages and tight deadlines, the game challenges players to quickly calculate which mathematical combinations will achieve the required results - like using 4² = 16 or 2³ = 8.
+Players pick up numbered packages and throw them into power machines (x², x⁴) to fulfill required numbers on the order screen.
 
 </div>
 
@@ -34,21 +33,51 @@ With limited packages and tight deadlines, the game challenges players to quickl
 ## Gallery
 <div class="image-gallery">
     <figure>
-        <a href="https://img.itch.zone/aW1nLzIyMjM1OTMxLnBuZw==/original/ldtW%2BH.png" target="_blank">
-            <img src="https://img.itch.zone/aW1nLzIyMjM1OTMxLnBuZw==/original/ldtW%2BH.png" alt="Factory Floor">
+        <a href="https://danielnoam.github.io/portfolio/assets/power-factory/factory1.png" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/power-factory/factory1.png" alt="Factory Floor">
             <figcaption>Factory Floor</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://img.itch.zone/aW1nLzIyMjM1OTMxLnBuZw==/original/ldtW%2BH.png" target="_blank">
-            <img src="https://img.itch.zone/aW1nLzIyMjM1OTMxLnBuZw==/original/ldtW%2BH.png" alt="Power Machines">
-            <figcaption>Power Machines</figcaption>
+        <a href="https://danielnoam.github.io/portfolio/assets/power-factory/factory2.png" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/power-factory/factory2.png" alt="Factory Floor">
+            <figcaption>Factory Floor</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://img.itch.zone/aW1nLzIyMjM1OTMxLnBuZw==/original/ldtW%2BH.png" target="_blank">
-            <img src="https://img.itch.zone/aW1nLzIyMjM1OTMxLnBuZw==/original/ldtW%2BH.png" alt="Order System">
-            <figcaption>Order System</figcaption>
+        <a href="https://danielnoam.github.io/portfolio/assets/power-factory/packagespawning.png" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/power-factory/packagespawning.png" alt="Package Spawner">
+            <figcaption>Package Spawner</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/power-factory/packagespawning2.png" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/power-factory/packagespawning2.png" alt="Package Spawner">
+            <figcaption>Package Spawner</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/power-factory/upgrade.png" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/power-factory/upgrade.png" alt="Machine Upgrade">
+            <figcaption>Machine Upgrade</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/power-factory/orderwindow.png" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/power-factory/orderwindow.png" alt="Order Window">
+            <figcaption>Order Window</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/power-factory/orderwindow2.png" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/power-factory/orderwindow2.png" alt="Order Window">
+            <figcaption>Order Window</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/power-factory/gilguli.mp4" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/power-factory/gilguli.mp4" alt="Gameplay">
+            <figcaption>Gameplay</figcaption>
         </a>
     </figure>
 </div>
