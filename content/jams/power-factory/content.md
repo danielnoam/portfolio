@@ -57,12 +57,6 @@ Players pick up numbered packages and throw them into power machines (x², x⁴)
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/power-factory/upgrade.png" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/power-factory/upgrade.png" alt="Machine Upgrade">
-            <figcaption>Machine Upgrade</figcaption>
-        </a>
-    </figure>
-    <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/power-factory/orderwindow.png" target="_blank">
             <img src="https://danielnoam.github.io/portfolio/assets/power-factory/orderwindow.png" alt="Order Window">
             <figcaption>Order Window</figcaption>
@@ -75,15 +69,27 @@ Players pick up numbered packages and throw them into power machines (x², x⁴)
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/power-factory/upgrade.mp4" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/power-factory/upgrade.mp4" alt="Gameplay">
-            <figcaption>Gameplay</figcaption>
+        <a href="https://danielnoam.github.io/portfolio/assets/power-factory/upgrade.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/power-factory/upgrade.gif" alt="Machine Upgrade">
+            <figcaption>Machine Upgrade</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/power-factory/packagespawner.mp4" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/power-factory/packagespawner.mp4" alt="Gameplay">
-            <figcaption>Gameplay</figcaption>
+        <a href="https://danielnoam.github.io/portfolio/assets/power-factory/packagespawner.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/power-factory/packagespawner.gif" alt="Packages Spawning">
+            <figcaption>Packages Spawning</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/power-factory/recyclemachine.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/power-factory/recyclemachine.gif" alt="Recycle Machine">
+            <figcaption>Recycle Machine</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/power-factory/ordercomplete.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/power-factory/ordercomplete.gif" alt="Order Complete">
+            <figcaption>Completing An Order</figcaption>
         </a>
     </figure>
 </div>
