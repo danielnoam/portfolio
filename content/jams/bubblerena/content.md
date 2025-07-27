@@ -3,7 +3,7 @@
 # Bubblerena
 
 
-<img src="https://danielnoam.github.io/portfolio/assets/bubblerena/logo.png" alt="Logo">
+<img src="https://danielnoam.github.io/portfolio/assets/bubblerena/logo.gif" alt="Logo">
 
 [Global Game Jam 2025](https://globalgamejam.org/)
 
@@ -23,7 +23,7 @@ The game features wave-based gameplay where bubbles spawn around the map and pla
 ## Game Mechanics
 
 - First-person movement with running, jumping, and dashing for traversal.
-- Color-matching bubble shooting system requiring strategic placement to create bubble matches.
+- Color-matching bubble shooting requiring bubble matches.
 - Wave-based progression with increasing difficulty and more bubbles spawning each round.
 - Jump pads scattered throughout the arena providing vertical mobility.
 - Combo system that tracks popped bubbles and creates destructive bubble shields around the player.
