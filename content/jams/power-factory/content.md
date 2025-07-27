@@ -35,13 +35,13 @@ Players pick up numbered packages and throw them into power machines (x², x⁴)
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/power-factory/factory1.png" target="_blank">
             <img src="https://danielnoam.github.io/portfolio/assets/power-factory/factory1.png" alt="Factory Floor">
-            <figcaption>Factory Floor</figcaption>
+            <figcaption>Factory floor</figcaption>
         </a>
     </figure>
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/power-factory/factory2.png" target="_blank">
             <img src="https://danielnoam.github.io/portfolio/assets/power-factory/factory2.png" alt="Factory Floor">
-            <figcaption>Factory Floor</figcaption>
+            <figcaption>Factory floor</figcaption>
         </a>
     </figure>
     <figure>
