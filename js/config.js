@@ -18,7 +18,38 @@ const CONFIG = {
         showThemeToggle: true,
     },
 
-    // Site structure configuration
+    navigation: {
+        // Static links that appear at the top of navigation
+        staticLinks: [
+            {
+                title: "About",
+                type: "content",
+                path: "content/about/content.md"
+            },
+        ],
+        // Links that appear at the bottom of the sidebar, above the theme toggle
+        bottomLinks: [
+            {
+                title: "Resume",
+                type: "external",
+                url: "content/about/resume.pdf",
+                target: "_blank"
+            },
+            {
+                title: "Itch.io",
+                type: "external",
+                url: "https://danielnoam.itch.io/",
+                target: "_blank"
+            },
+            {
+                title: "LinkedIn",
+                type: "external",
+                url: "https://linkedin.com/in/your-profile", // Replace with your actual LinkedIn URL
+                target: "_blank"
+            }
+        ]
+    },
+    
     structure: {
         "Games": {
             path: "content/games",

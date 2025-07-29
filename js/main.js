@@ -53,56 +53,37 @@ function closeMobileSidebar() {
     }
 }
 
-function handleNavigationClick(path, link) {
-    loadContent(path);
-    setActiveLink(link);
-    closeMobileSidebar();
-
-    // Extract section and page name for URL
-    const pathSegments = path.split('/');
-    const section = pathSegments[pathSegments.length - 3]; // e.g., "games"
-    const pageName = pathSegments[pathSegments.length - 2]; // e.g., "school-these-shits"
-
-    // Create a clean URL that shows which page we're on
-    let newUrl;
-    if (section === "about") {
-        newUrl = `/portfolio/about`;
-    } else {
-        // Use just the page name without the section
-        newUrl = `/portfolio/${pageName}`;
-    }
-
-    // Update URL without triggering a page reload
-    history.pushState({path: path}, '', newUrl);
-}
-
-function updateSidebarForContent(contentPath) {
-    const link = findNavigationLink(contentPath);
-    if (link) {
-        setActiveLink(link);
-    }
-    closeMobileSidebar();
-}
-
 function buildNavigation() {
     const nav = document.getElementById('main-nav');
     nav.innerHTML = '';
 
-    const aboutLink = document.createElement('a');
-    aboutLink.textContent = "About";
-    aboutLink.onclick = () => handleNavigationClick(`${baseUrl}/content/about/content.md`, aboutLink);
-    nav.appendChild(aboutLink);
+    // Build static navigation links from config
+    CONFIG.navigation.staticLinks.forEach(linkConfig => {
+        const link = document.createElement('a');
+        link.textContent = linkConfig.title;
 
-    const resumeLink = document.createElement('a');
-    resumeLink.textContent = "Resume";
-    resumeLink.href = `${baseUrl}/content/about/resume.pdf`;
-    resumeLink.target = '_blank';
-    resumeLink.onclick = () => {
-        console.log('Resume viewed');
-        closeMobileSidebar();
-    };
-    nav.appendChild(resumeLink);
+        if (linkConfig.type === 'content') {
+            // Content links (like About)
+            link.onclick = () => handleNavigationClick(`${baseUrl}/${linkConfig.path}`, link);
+        } else if (linkConfig.type === 'external') {
+            // External links (like Resume, Itch.io, LinkedIn)
+            if (linkConfig.url.startsWith('http')) {
+                link.href = linkConfig.url;
+            } else {
+                link.href = `${baseUrl}/${linkConfig.url}`;
+            }
+            if (linkConfig.target) {
+                link.target = linkConfig.target;
+            }
+            link.onclick = () => {
+                console.log(`${linkConfig.title} viewed`);
+                closeMobileSidebar();
+            };
+        }
+        nav.appendChild(link);
+    });
 
+    // Build dynamic content sections from structure
     for (const [section, content] of Object.entries(structure)) {
         // Only create a section if it has visible pages
         const visiblePages = content.pages.filter(page => page.visible !== false);
@@ -126,6 +107,47 @@ function buildNavigation() {
     }
 }
 
+function buildBottomNavigation() {
+    // Remove existing bottom nav if it exists
+    const existingBottomNav = document.querySelector('.bottom-nav');
+    if (existingBottomNav) {
+        existingBottomNav.remove();
+    }
+
+    // Only create bottom nav if there are bottom links configured
+    if (CONFIG.navigation.bottomLinks && CONFIG.navigation.bottomLinks.length > 0) {
+        const sidebar = document.querySelector('.sidebar');
+        const bottomNav = document.createElement('nav');
+        bottomNav.className = 'bottom-nav';
+
+        CONFIG.navigation.bottomLinks.forEach(linkConfig => {
+            const link = document.createElement('a');
+            link.textContent = linkConfig.title;
+
+            if (linkConfig.type === 'content') {
+                // Content links
+                link.onclick = () => handleNavigationClick(`${baseUrl}/${linkConfig.path}`, link);
+            } else if (linkConfig.type === 'external') {
+                // External links
+                if (linkConfig.url.startsWith('http') || linkConfig.url.startsWith('mailto:')) {
+                    link.href = linkConfig.url;
+                } else {
+                    link.href = `${baseUrl}/${linkConfig.url}`;
+                }
+                if (linkConfig.target) {
+                    link.target = linkConfig.target;
+                }
+                link.onclick = () => {
+                    console.log(`${linkConfig.title} viewed`);
+                    closeMobileSidebar();
+                };
+            }
+            bottomNav.appendChild(link);
+        });
+
+        sidebar.appendChild(bottomNav);
+    }
+}
 /*==============================================
             CONTENT MANAGEMENT
 ================================================*/
@@ -391,6 +413,7 @@ function initHistoryHandling() {
 async function init() {
     // Set up the navigation structure
     buildNavigation();
+    buildBottomNavigation();
 
     // Initialize UI components
     initMobileMenu();

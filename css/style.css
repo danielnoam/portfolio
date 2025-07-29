@@ -177,6 +177,43 @@ nav a:not([target="_blank"]).active::before {
     border-radius: 50%;
 }
 
+.bottom-nav {
+    position: absolute;
+    bottom: 80px; /* Above the theme toggle button */
+    left: 2rem;
+    right: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--card-bg);
+}
+
+.bottom-nav a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    padding: 0.3rem 0;
+    transition: color 0.2s;
+    cursor: pointer;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.bottom-nav a:hover {
+    color: var(--text-color);
+}
+
+.bottom-nav a[target="_blank"]:after {
+    content: '↗';
+    font-size: 0.7em;
+    opacity: 0.7;
+}
+
+
 /* External Links */
 .sidebar nav a[target="_blank"] {
     color: var(--text-secondary) !important;
@@ -211,6 +248,8 @@ nav a:not([target="_blank"]).active::before {
     justify-content: space-between;
     align-items: center;
 }
+
+
 
 /*==============================================
             UI ELEMENTS

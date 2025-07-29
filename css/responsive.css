@@ -73,6 +73,17 @@
         transition: opacity 0.3s ease-out, transform 0.3s ease-out;
     }
 
+    .bottom-nav {
+        position: static;
+        bottom: auto;
+        left: auto;
+        right: auto;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        border-top: 1px solid var(--card-bg);
+        padding-top: 1rem;
+    }
+
     .video-indicator {
         /* Reset desktop text-only styles */
         text-shadow: none !important;
