@@ -37,6 +37,12 @@ The story unfolds through environmental design with minimal text, culminating in
             <figcaption>Player Animation Tree</figcaption>
         </a>
     </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/project-umn/player2.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/player2.gif" alt="Player Interaction">
+            <figcaption>Player interaction</figcaption>
+        </a>
+    </figure>
 </div>
 
 
@@ -58,7 +64,13 @@ The story unfolds through environmental design with minimal text, culminating in
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/project-umn/robot2.gif" target="_blank">
             <img src="https://danielnoam.github.io/portfolio/assets/project-umn/robot2.gif" alt="Robot Light">
-            <figcaption>Robot light</figcaption>
+            <figcaption>the robot follows the player aim direction</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/project-umn/robot3.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/robot3.gif" alt="Robot command">
+            <figcaption>Commanding the robot</figcaption>
         </a>
     </figure>
 </div>
