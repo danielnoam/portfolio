@@ -44,7 +44,7 @@ const CONFIG = {
             {
                 title: "LinkedIn",
                 type: "external",
-                url: "https://linkedin.com/in/your-profile", // Replace with your actual LinkedIn URL
+                url: "https://linkedin.com/in/daniel-noam",
                 target: "_blank"
             }
         ]
