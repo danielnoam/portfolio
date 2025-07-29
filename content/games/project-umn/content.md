@@ -62,9 +62,9 @@ The story unfolds through environmental design with minimal text, culminating in
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/project-umn/robot2.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/robot2.gif" alt="Robot Light">
-            <figcaption>the robot follows the player aim direction</figcaption>
+        <a href="https://danielnoam.github.io/portfolio/assets/project-umn/world3.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/world3.gif" alt="Robot Light">
+            <figcaption>The robot follows the player's aim</figcaption>
         </a>
     </figure>
     <figure>
@@ -88,12 +88,6 @@ The story unfolds through environmental design with minimal text, culminating in
         <a href="https://danielnoam.github.io/portfolio/assets/project-umn/world1.gif" target="_blank">
             <img src="https://danielnoam.github.io/portfolio/assets/project-umn/world1.gif" alt="Dynamic Stairs">
             <figcaption>Dynamic stairs</figcaption>
-        </a>
-    </figure>
-    <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/project-umn/world3.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/world3.gif" alt="Custom Dither Shader">
-            <figcaption>Custom dither shader</figcaption>
         </a>
     </figure>
     <figure>
