@@ -3,7 +3,7 @@
 # Project UMN
 
 
-<img src="https://danielnoam.github.io/portfolio/assets/project-umn/main.gif" alt="Intro">
+<img src="https://danielnoam.github.io/portfolio/assets/project-umn/intro2.gif" alt="Intro">
 
 [GDD](https://docs.google.com/document/d/1cU73PA5Ix3AxZ0AB7ok3quzK6Il2FuIT4DuwFEk2508/edit?usp=sharing)
 
@@ -32,15 +32,9 @@ The story unfolds through environmental design with minimal text, culminating in
 
 <div class="image-gallery">
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/project-umn/test.mp4" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/test.gif" alt="Test">
-            <figcaption>Test</figcaption>
-        </a>
-    </figure>
-    <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/project-umn/test.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/test.gif" alt="Test">
-            <figcaption>Test</figcaption>
+        <a href="https://danielnoam.github.io/portfolio/assets/project-umn/player.mp4" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/player.gif" alt="Test">
+            <figcaption>Player Animation Tree</figcaption>
         </a>
     </figure>
 </div>
@@ -56,8 +50,14 @@ The story unfolds through environmental design with minimal text, culminating in
 
 <div class="image-gallery">
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/project-umn/test.mp4" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/test.gif" alt="Test">
+        <a href="https://danielnoam.github.io/portfolio/assets/project-umn/robot1.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/robot1.gif" alt="Test">
+            <figcaption>Test</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/project-umn/robot2.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/robot2.gif" alt="Test">
             <figcaption>Test</figcaption>
         </a>
     </figure>
@@ -73,8 +73,44 @@ The story unfolds through environmental design with minimal text, culminating in
 
 <div class="image-gallery">
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/project-umn/test.mp4" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/test.gif" alt="Test">
+        <a href="https://danielnoam.github.io/portfolio/assets/project-umn/world1.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/world1.gif" alt="Test">
+            <figcaption>Test</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/project-umn/world3.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/world3.gif" alt="Test">
+            <figcaption>Test</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/project-umn/world2.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/world2.gif" alt="Test">
+            <figcaption>Test</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/project-umn/world4.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/world4.gif" alt="Test">
+            <figcaption>Test</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/project-umn/loadanimation.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/loadanimation.gif" alt="Test">
+            <figcaption>Test</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/project-umn/loadanimation2.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/loadanimation2.gif" alt="Test">
+            <figcaption>Test</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/project-umn/menu.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/menu.gif" alt="Test">
             <figcaption>Test</figcaption>
         </a>
     </figure>
