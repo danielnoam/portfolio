@@ -13,7 +13,7 @@
 ## Overview
 
 "Project UMN" is a third-person puzzle game developed for my third-semester school project. 
-Players control a robotic entity alongside an AI companion through a series of minimalist simulation tests, each featuring unique mechanics that require both strategic thinking and coordination with the robot companion. 
+Players control a robotic entity alongside an AI companion through a series of minimalist simulation tests, each featuring unique mechanics.
 The story unfolds through environmental design with minimal text, culminating in a single moral choice that explores the balance between efficiency and companionship.
 
 </div>
@@ -32,8 +32,8 @@ The story unfolds through environmental design with minimal text, culminating in
 
 <div class="image-gallery">
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/project-umn/player.mp4" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/player.gif" alt="Test">
+        <a href="https://danielnoam.github.io/portfolio/assets/project-umn/player.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/player.gif" alt="Player Animation Tree">
             <figcaption>Player Animation Tree</figcaption>
         </a>
     </figure>
@@ -51,14 +51,14 @@ The story unfolds through environmental design with minimal text, culminating in
 <div class="image-gallery">
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/project-umn/robot1.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/robot1.gif" alt="Test">
-            <figcaption>Test</figcaption>
+            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/robot1.gif" alt="Robot Movement">
+            <figcaption>Robot movement</figcaption>
         </a>
     </figure>
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/project-umn/robot2.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/robot2.gif" alt="Test">
-            <figcaption>Test</figcaption>
+            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/robot2.gif" alt="Robot Light">
+            <figcaption>Robot light</figcaption>
         </a>
     </figure>
 </div>
@@ -74,44 +74,38 @@ The story unfolds through environmental design with minimal text, culminating in
 <div class="image-gallery">
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/project-umn/world1.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/world1.gif" alt="Test">
-            <figcaption>Test</figcaption>
+            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/world1.gif" alt="Dynamic Stairs">
+            <figcaption>Dynamic stairs</figcaption>
         </a>
     </figure>
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/project-umn/world3.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/world3.gif" alt="Test">
-            <figcaption>Test</figcaption>
+            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/world3.gif" alt="Custom Dither Shader">
+            <figcaption>Custom dither shader</figcaption>
         </a>
     </figure>
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/project-umn/world2.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/world2.gif" alt="Test">
-            <figcaption>Test</figcaption>
+            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/world2.gif" alt="Dynamic Bridge">
+            <figcaption>Dynamic bridge</figcaption>
         </a>
     </figure>
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/project-umn/world4.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/world4.gif" alt="Test">
-            <figcaption>Test</figcaption>
+            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/world4.gif" alt="Easter egg">
+            <figcaption>?</figcaption>
         </a>
     </figure>
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/project-umn/loadanimation.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/loadanimation.gif" alt="Test">
-            <figcaption>Test</figcaption>
-        </a>
-    </figure>
-    <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/project-umn/loadanimation2.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/loadanimation2.gif" alt="Test">
-            <figcaption>Test</figcaption>
+            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/loadanimation.gif" alt="Loading Animation">
+            <figcaption>Test loading animation</figcaption>
         </a>
     </figure>
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/project-umn/menu.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/menu.gif" alt="Test">
-            <figcaption>Test</figcaption>
+            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/menu.gif" alt="Menu">
+            <figcaption>In world menu</figcaption>
         </a>
     </figure>
 </div>
@@ -130,7 +124,7 @@ and Unity's Shader Graph, Scriptable Objects, Animator, and the use of animation
 - Implemented Cinemachine for dynamic camera movements and cutscenes.
 - Built custom shaders with Shader Graph to create the game's distinctive minimalist look.
 - Designed a robust player controller using a state machine architecture to manage different movement states and behaviors with clean code organization.
-- Utilized Unity's Animator to create a comprehensive state machine for character animations, ensuring smooth and natural transitions between walking, running, idle, and interaction states.
+- Learned to use Unity's Animator to create a comprehensive state machine for character animations, ensuring smooth and natural transitions between walking, running, idle, and interaction states.
 - Implemented Inverse Kinematics (IK) to create a responsive player character with natural head tracking that adapts to player actions.
 - Integrated Unity's new Input System to provide full controller support alongside keyboard and mouse controls.
 
