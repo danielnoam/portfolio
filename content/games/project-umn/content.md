@@ -131,7 +131,7 @@ The story unfolds through environmental design with minimal text, culminating in
 This project helped me develop skills with C# interfaces, abstract classes,
 and Unity's Shader Graph, Scriptable Objects, Animator, and the use of animation tweening libraries.
 
-- Created a detailed GDD to plan the game's scope, mechanics, and story progression.
+- Using a GDD to plan the game's scope, mechanics, and story progression.
 - Used Scriptable Objects to build modular, reusable components for puzzles.
 - Implemented Cinemachine for dynamic camera movements and cutscenes.
 - Built custom shaders with Shader Graph to create the game's distinctive minimalist look.
