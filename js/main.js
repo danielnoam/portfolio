@@ -53,6 +53,37 @@ function closeMobileSidebar() {
     }
 }
 
+function handleNavigationClick(path, link) {
+    loadContent(path);
+    setActiveLink(link);
+    closeMobileSidebar();
+
+    // Extract section and page name for URL
+    const pathSegments = path.split('/');
+    const section = pathSegments[pathSegments.length - 3]; // e.g., "games"
+    const pageName = pathSegments[pathSegments.length - 2]; // e.g., "school-these-shits"
+
+    // Create a clean URL that shows which page we're on
+    let newUrl;
+    if (section === "about") {
+        newUrl = `/portfolio/about`;
+    } else {
+        // Use just the page name without the section
+        newUrl = `/portfolio/${pageName}`;
+    }
+
+    // Update URL without triggering a page reload
+    history.pushState({path: path}, '', newUrl);
+}
+
+function updateSidebarForContent(contentPath) {
+    const link = findNavigationLink(contentPath);
+    if (link) {
+        setActiveLink(link);
+    }
+    closeMobileSidebar();
+}
+
 function buildNavigation() {
     const nav = document.getElementById('main-nav');
     nav.innerHTML = '';

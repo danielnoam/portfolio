@@ -179,7 +179,7 @@ nav a:not([target="_blank"]).active::before {
 
 .bottom-nav {
     position: absolute;
-    bottom: 80px; /* Above the theme toggle button */
+    bottom: 100px; /* Above the theme toggle button */
     left: 2rem;
     right: 2rem;
     display: flex;
