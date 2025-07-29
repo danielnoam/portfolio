@@ -27,7 +27,7 @@ const CONFIG = {
                 path: "content/about/content.md"
             },
         ],
-        // Links that appear at the bottom of the sidebar, above the theme toggle
+        // Links that appear at the bottom of the navigation
         bottomLinks: [
             {
                 title: "Resume",
