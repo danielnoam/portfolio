@@ -38,8 +38,8 @@ The story unfolds through environmental design with minimal text, culminating in
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/project-umn/player2.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/player2.gif" alt="Player Interaction">
+        <a href="https://danielnoam.github.io/portfolio/assets/project-umn/player3.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/player3.gif" alt="Player Interaction">
             <figcaption>Player interaction</figcaption>
         </a>
     </figure>
