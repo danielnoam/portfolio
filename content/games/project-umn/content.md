@@ -114,6 +114,12 @@ The story unfolds through environmental design with minimal text, culminating in
             <figcaption>In world menu</figcaption>
         </a>
     </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/project-umn/mainmenu.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/mainmenu.gif" alt="Main Menu">
+            <figcaption>Main menu</figcaption>
+        </a>
+    </figure>
 </div>
 
 </div>
