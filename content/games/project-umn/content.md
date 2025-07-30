@@ -3,7 +3,7 @@
 # Project UMN
 
 
-<img src="https://danielnoam.github.io/portfolio/assets/project-umn/intro2.gif" alt="Intro">
+<img src="https://danielnoam.github.io/portfolio/assets/project-umn/introon.gif" alt="Intro">
 
 [itch.io](https://danielnoam.itch.io/project-umd) | [GDD](https://docs.google.com/document/d/1cU73PA5Ix3AxZ0AB7ok3quzK6Il2FuIT4DuwFEk2508/edit?usp=sharing)
 

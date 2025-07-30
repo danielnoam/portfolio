@@ -7,7 +7,7 @@ I'm a Game Designer and Programmer who began my journey in game development duri
 <div class="image-gallery no-lightbox">
     <figure>
         <a href="#" onclick="handleNavigationClick(`${baseUrl}/content/games/project-umn/content.md`, document.querySelector('a[onclick*=\'project-umn\']')); return false;">
-            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/intro2.gif" alt="Project UMN">
+            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/introon.gif" alt="Project UMN">
             <figcaption>Project UMN</figcaption>
         </a>
     </figure>
