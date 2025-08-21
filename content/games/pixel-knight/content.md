@@ -11,7 +11,8 @@
 <div class="project-card">
     
 ## Overview
-"Pixel Knight" is a short Action-RPG developed during my high school years while learning Game Maker. The game features dynamic combat, resource management, and a diverse roster of enemies and bosses.
+"Pixel Knight" is a short Action-RPG developed during my high school years while learning Game Maker.
+The game features dynamic combat, resource management, and a diverse roster of enemies and bosses.
 </div>
 
 <div class="project-card">

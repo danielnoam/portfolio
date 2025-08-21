@@ -23,7 +23,7 @@ The game features wave-based gameplay where bubbles spawn around the map and pla
 ## Game Mechanics
 
 - First-person movement with running, jumping, and dashing for traversal.
-- Color-matching bubble shooting requiring bubble matches.
+- Bubble shooting requiring strategic color matches.
 - Wave-based progression with increasing difficulty and more bubbles spawning each round.
 - Jump pads scattered throughout the arena providing vertical mobility.
 - Combo system that tracks popped bubbles and creates destructive bubble shields around the player.

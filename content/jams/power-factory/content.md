@@ -5,7 +5,7 @@
 
 <img src="https://danielnoam.github.io/portfolio/assets/power-factory/logo.png" alt="Intro">
 
-[itch.io](https://danielnoam.itch.io/power-factory) | [Kenney Jam 2025](https://itch.io/jam/kenney-jam-2025)
+[Itch.io](https://danielnoam.itch.io/power-factory) | [Kenney Jam 2025](https://itch.io/jam/kenney-jam-2025)
 
 
 <div class="project-card">

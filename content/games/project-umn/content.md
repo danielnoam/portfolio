@@ -5,14 +5,14 @@
 
 <img src="https://danielnoam.github.io/portfolio/assets/project-umn/introon.gif" alt="Intro">
 
-[itch.io](https://danielnoam.itch.io/project-umd) | [GDD](https://docs.google.com/document/d/1cU73PA5Ix3AxZ0AB7ok3quzK6Il2FuIT4DuwFEk2508/edit?usp=sharing)
+[Itch.io](https://danielnoam.itch.io/project-umd) | [GDD](https://docs.google.com/document/d/1cU73PA5Ix3AxZ0AB7ok3quzK6Il2FuIT4DuwFEk2508/edit?usp=sharing)
 
 
 <div class="project-card">
 
 ## Overview
 
-"Project UMN" is a third-person puzzle game developed for my third-semester school project. 
+"Project UMN" is a third-person puzzle game developed as my third-semester school project. 
 Players control a robotic entity alongside a robot companion through a series of minimalist simulation tests, each featuring unique mechanics.
 The story unfolds through environmental design with minimal text, culminating in a single moral choice that explores the balance between efficiency and companionship.
 
@@ -128,8 +128,7 @@ The story unfolds through environmental design with minimal text, culminating in
 
 ## Development Insights
 
-This project helped me develop skills with C# interfaces, abstract classes,
-and Unity's Shader Graph, Scriptable Objects, Animator, and the use of animation tweening libraries.
+This project helped me develop skills with C# interfaces, abstract classes, and Unity's Shader Graph, Scriptable Objects, Animator, and animation tweening libraries.
 
 - Using a GDD to plan the game's scope, mechanics, and story progression.
 - Used Scriptable Objects to build modular, reusable components for puzzles.

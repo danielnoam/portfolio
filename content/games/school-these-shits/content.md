@@ -13,7 +13,7 @@
 <div class="project-card">
     
 ## Overview
-"School These Sh*ts" is a fast-paced "shooter" where players take on the role of an unconventional teacher.
+"School These Sh*ts" is a fast-paced "shooter" developed as my first-semester school project where players take on the role of an unconventional teacher.
 Armed with textbooks as projectiles and momentum-based movement, the player must race against time to help students overcome various obstacles and ensure at least 70% of the student body succeeds before the bell rings.
 </div>
 
@@ -46,14 +46,14 @@ Armed with textbooks as projectiles and momentum-based movement, the player must
     </figure>
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/school-these-shits/mission1.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/school-these-shits/mission1.gif" alt="Student's mission">
-            <figcaption>Student's mission</figcaption>
+            <img src="https://danielnoam.github.io/portfolio/assets/school-these-shits/mission1.gif" alt="A student's mission">
+            <figcaption>A student's mission</figcaption>
         </a>
     </figure>
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/school-these-shits/mission2.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/school-these-shits/mission2.gif" alt="Student's mission">
-            <figcaption>Student's mission</figcaption>
+            <img src="https://danielnoam.github.io/portfolio/assets/school-these-shits/mission2.gif" alt="A student's mission">
+            <figcaption>A student's mission</figcaption>
         </a>
     </figure>
 </div>
@@ -118,7 +118,7 @@ Armed with textbooks as projectiles and momentum-based movement, the player must
 <div class="project-card">
     
 ## Development Insights
-- Extensive playtesting, to help refine gameplay mechanics and balance difficulty.
+- Extensive playtesting, which helped refine gameplay mechanics and balance difficulty.
 - Successfully managed project scope to deliver a complete game within the project's deadline.
 - Created modular systems for student behaviors and obstacles to enable quick iteration and testing.
 - Designed intuitive movement and throwing mechanics that feel satisfying while remaining simple to learn.
