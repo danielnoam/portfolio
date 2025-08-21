@@ -6,7 +6,9 @@
 
 ## Overview
 
-A collection of Unity tools and systems designed to accelerate development and streamline prototyping workflows. These assets provide modular, reusable solutions for common game development challenges, built with performance optimization in mind and featuring designer-friendly interfaces. Each system operates independently while providing clean integration points, comprehensive error handling, and extensible architecture that allows for easy customization. All systems include comprehensive XML documentation and follow Unity coding conventions, designed to work seamlessly together while maintaining independence for selective implementation in projects.
+A collection of Unity tools and systems designed to accelerate development and streamline prototyping workflows.
+
+Each system operates independently while providing clean integration points, and includes comprehensive XML documentation.
 
 </div>
 
