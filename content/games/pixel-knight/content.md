@@ -58,6 +58,18 @@ Developing this project provided me with hands-on experience with the core aspec
             <figcaption>Boss battle</figcaption>
         </a>
     </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/pixel-knight/gameplay5.png" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/pixel-knight/gameplay5.png" alt="Boss battle">
+            <figcaption>Boss battle</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/pixel-knight/gameplay6.png" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/pixel-knight/gameplay6.png" alt="Combat">
+            <figcaption>Combat</figcaption>
+        </a>
+    </figure>
 </div>
 </div>
 </div>
