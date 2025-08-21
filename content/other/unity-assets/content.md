@@ -13,12 +13,9 @@ A collection of Unity tools and systems designed to accelerate development and s
 
 <div class="project-card">
 
-## Core Systems
-
-### Controller Rumble System
+## Controller Rumble System
 A comprehensive haptic feedback system that provides precise controller vibration control with support for multiple simultaneous effects and custom intensity curves.
 
-**Key Features:**
 - Source-listener architecture allowing multiple objects to trigger rumble effects
 - AnimationCurve-based intensity modulation for complex vibration patterns
 - Built-in effect presets (fade in/out, pulse patterns)
@@ -27,10 +24,9 @@ A comprehensive haptic feedback system that provides precise controller vibratio
 - Integration with Unity's Input System for seamless controller detection
 
 
-### VFX & Transition Manager
+## VFX & Transition Manager
 A comprehensive visual effects system that manages post-processing effects, UI transitions, and scene loading with seamless visual continuity.
 
-**Key Features:**
 - Automatic post-processing volume setup and management
 - Scriptable Object-based effect sequences for designer-friendly workflow
 - Scene transition system with customizable visual effects
@@ -39,10 +35,9 @@ A comprehensive visual effects system that manages post-processing effects, UI t
 - Integration with PrimeTween for smooth animations
 
 
-### Object Pooling System
+## Object Pooling System
 A high-performance object pooling system that eliminates runtime instantiation costs and reduces garbage collection overhead.
 
-**Key Features:**
 - Generic pooling system supporting any GameObject
 - Automatic pool management with configurable size limits
 - Pre-warming capabilities for optimal performance
