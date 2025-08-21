@@ -1,6 +1,10 @@
+<div class="page-content">
+
 # Unity Assets
 
 A collection of Unity tools and systems designed to accelerate development and streamline prototyping workflows. These assets provide modular, reusable solutions for common game development challenges, built with performance optimization in mind and featuring designer-friendly interfaces. Each system operates independently while providing clean integration points, comprehensive error handling, and extensible architecture that allows for easy customization. All systems include comprehensive XML documentation and follow Unity coding conventions, designed to work seamlessly together while maintaining independence for selective implementation in projects.
+
+<div class="project-card">
 
 ## Core Systems
 
@@ -28,7 +32,7 @@ A comprehensive visual effects system that manages post-processing effects, UI t
 - Integration with PrimeTween for smooth animations
 
 
-### Object Pooler
+### Object Pooling System
 A high-performance object pooling system that eliminates runtime instantiation costs and reduces garbage collection overhead.
 
 **Key Features:**
@@ -40,6 +44,9 @@ A high-performance object pooling system that eliminates runtime instantiation c
 - Fallback mechanisms for missing pools
 - Editor debugging tools and runtime statistics
 
+</div>
+
+<div class="project-card">
 
 ## Utility Tools
 
@@ -53,7 +60,11 @@ A weighted random selection tool with built-in normalization and designer-friend
 A Scene reference tool that maintains valid scene connections and provides build setting validation. Features type-safe scene references in Inspector, automatic validation of scenes in build settings, runtime build index resolution, and support for scene loading/unloading operations with implicit conversion support. Essential for scene management, level selection, menu navigation, and progression flow.
 
 ### Audio Event Tool
-A Scriptable Object-based audio solution that simplifies audio playback with randomization, 3D positioning, and object pooling integration. Features random clip selection from arrays, configurable audio source parameters, spatial audio settings, and automatic lifetime management through pooling. Includes custom Inspector with preview functionality for sound design workflows.
+A Scriptable Object-based audio solution that simplifies audio playbook with randomization, 3D positioning, and object pooling integration. Features random clip selection from arrays, configurable audio source parameters, spatial audio settings, and automatic lifetime management through pooling. Includes custom Inspector with preview functionality for sound design workflows.
 
 ### ReadOnly Attribute
 A simple property drawer attribute that makes Inspector fields non-editable while preserving their visibility. Supports all field types including arrays and complex objects, maintaining full Inspector functionality without allowing modifications. Perfect for debugging, runtime value display, and preventing accidental field changes.
+
+</div>
+
+</div>
