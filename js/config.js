@@ -32,7 +32,7 @@ const CONFIG = {
             {
                 title: "Resume",
                 type: "external",
-                url: "content/about/resume.pdf",
+                url: "assets/Resume-General.pdf",
                 target: "_blank"
             },
             {
