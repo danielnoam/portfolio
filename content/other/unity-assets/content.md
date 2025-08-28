@@ -4,11 +4,14 @@
 
 <div class="project-card">
 
+
+
 ## Overview
 
-A collection of Unity tools and systems designed to accelerate development and streamline prototyping workflows.
+A collection of Unity tools developed organically while working on various projects. 
+Each tool was created to solve specific problems, then refined and expanded as new needs emerged across different games and prototypes.
 
-Each system operates independently while providing clean integration points, and includes comprehensive XML documentation.
+[GitHub](https://github.com/danielnoam/DNExtensions/)
 
 </div>
 
@@ -16,37 +19,35 @@ Each system operates independently while providing clean integration points, and
 <div class="project-card">
 
 ## Controller Rumble System
-A comprehensive haptic feedback system that provides precise controller vibration control with support for multiple simultaneous effects and custom intensity curves.
+A comprehensive haptic feedback system with 3D spatial positioning and advanced effect management for precise controller vibration control.
 
-- Source-listener architecture allowing multiple objects to trigger rumble effects
-- AnimationCurve-based intensity modulation for complex vibration patterns
-- Built-in effect presets (fade in/out, pulse patterns)
-- Automatic effect queuing and blending using maximum intensity algorithm
+- Source-listener architecture for multiple simultaneous effects
+- AnimationCurve-based intensity modulation for complex patterns
+- 3D spatial positioning with distance attenuation
+- Built-in presets: fade in/out, pulse patterns, custom curves
 - Configurable frequency range clamping for accessibility
-- Integration with Unity's Input System for seamless controller detection
 
 
-## VFX & Transition Manager
-A comprehensive visual effects system that manages post-processing effects, UI transitions, and scene loading with seamless visual continuity.
+## VFX & Transition System
+Visual effects system managing post-processing, UI transitions, and scene loading with seamless continuity.
 
 - Automatic post-processing volume setup and management
-- Scriptable Object-based effect sequences for designer-friendly workflow
+- Scriptable Object-based effect sequences for designers
 - Scene transition system with customizable visual effects
-- Support for lens distortion, chromatic aberration, motion blur, and vignette effects
+- Support for post-processing and UI effects
 - Automatic cleanup and reset functionality
-- Integration with PrimeTween for smooth animations
+- PrimeTween integration for smooth animations
 
 
 ## Object Pooling System
-A high-performance object pooling system that eliminates runtime instantiation costs and reduces garbage collection overhead.
+High-performance pooling system eliminating instantiation costs and reducing garbage collection overhead.
 
 - Generic pooling system supporting any GameObject
 - Automatic pool management with configurable size limits
 - Pre-warming capabilities for optimal performance
-- Support for IPooledObject interface for custom initialization/cleanup
+- Support for IPooledObject interface for custom initialization
 - Scene persistence options with DontDestroyOnLoad support
 - Fallback mechanisms for missing pools
-- Editor debugging tools and runtime statistics
 
 </div>
 
@@ -56,20 +57,32 @@ A high-performance object pooling system that eliminates runtime instantiation c
 
 ## Utility Tools
 
-### Button Attribute
-Custom inspector buttons that allow developers to execute methods directly from the Unity Inspector without entering Play mode. Features method execution with parameter support, customizable button appearance, play mode restrictions, and foldout interface for complex parameters with automatic validation and default value handling. Ideal for testing, debugging, content creation workflows, and designer tools.
+### ChanceList
+Weighted random selection tool with built-in normalization and designer-friendly Inspector integration. Features generic type support, automatic chance normalization, locking mechanism for fixed probabilities, and support for single/multiple item selection.
 
-### ChanceList\<T\>
-A weighted random selection tool with built-in normalization and designer-friendly Inspector integration. Provides generic type support, automatic chance normalization ensuring total equals 100%, locking mechanism for fixed probability items, and support for both single and multiple item selection with custom property drawer controls. Perfect for loot tables, random events, procedural content generation, and AI decision-making.
+### Audio Event
+Scriptable Object-based audio solution simplifying audio playback with randomization and 3D positioning. Features random clip selection, configurable audio parameters, spatial audio settings, and automatic lifetime management through pooling integration.
 
 ### SceneField
-A Scene reference tool that maintains valid scene connections and provides build setting validation. Features type-safe scene references in Inspector, automatic validation of scenes in build settings, runtime build index resolution, and support for scene loading/unloading operations with implicit conversion support. Essential for scene management, level selection, menu navigation, and progression flow.
+Scene reference tool maintaining valid scene connections with build setting validation. Features type-safe scene references, automatic build settings validation, runtime build index resolution, and scene loading/unloading operations. Essential for scene management and level progression.
 
-### Audio Event Tool
-A Scriptable Object-based audio solution that simplifies audio playbook with randomization, 3D positioning, and object pooling integration. Features random clip selection from arrays, configurable audio source parameters, spatial audio settings, and automatic lifetime management through pooling. Includes custom Inspector with preview functionality for sound design workflows.
+### Sorting Layer Field
+Serializable sorting layer references with Inspector dropdown and validation. Features automatic layer ID synchronization, missing layer detection, and direct integration with Unity's rendering system. Simplifies sorting layer management across components.
+
+### Ranged Values
+Serializable range types (RangedFloat/RangedInt) with custom Inspector min-max sliders and utility methods. Features visual range display, constraint validation, random value generation, and mathematical operations. Perfect for damage ranges, spawn intervals, and configurable parameters.
+
+### Interface References
+Type-safe interface references in Unity Inspector with automatic validation and component detection. Features generic interface constraints, GameObject component scanning, and seamless conversion operators. Essential for decoupled architecture and dependency injection.
+
+### Button Attribute
+Custom inspector buttons executing methods directly from Unity Inspector. Features method execution with parameters, customizable appearance, play mode restrictions, and foldout interface for complex parameters. Ideal for testing, debugging, and designer tools.
 
 ### ReadOnly Attribute
-A simple property drawer attribute that makes Inspector fields non-editable while preserving their visibility. Supports all field types including arrays and complex objects, maintaining full Inspector functionality without allowing modifications. Perfect for debugging, runtime value display, and preventing accidental field changes.
+Property drawer attribute making Inspector fields non-editable while preserving visibility. Supports all field types including arrays and complex objects, maintaining full Inspector functionality without modifications. Perfect for debugging and runtime value display.
+
+### Conditional Attributes
+Inspector field visibility and interaction controls based on other field values. Features ShowIf/HideIf for dynamic layouts, EnableIf/DisableIf for conditional interaction, and support for boolean, enum, and custom value comparisons.
 
 </div>
 
