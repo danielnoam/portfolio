@@ -149,15 +149,18 @@ nav a {
     color: var(--link-color);
     text-decoration: none;
     padding: 0.3rem 0;
-    transition: color 0.2s;
+    transition: color 0.2s, transform 0.3s ease, font-size 0.3s ease;
     cursor: pointer;
     font-size: 0.9rem;
     letter-spacing: 1px;
     position: relative;
+    display: block;
+    transform-origin: left center;
 }
 
 nav a:hover {
     color: var(--link-hover-color);
+    transform: translateX(8px) scale(1.05);
 }
 
 nav a:not([target="_blank"]).active {
@@ -193,7 +196,7 @@ nav a:not([target="_blank"]).active::before {
     color: var(--text-secondary);
     text-decoration: none;
     padding: 0.3rem 0;
-    transition: color 0.2s;
+    transition: color 0.2s, transform 0.3s ease, font-size 0.3s ease;
     cursor: pointer;
     font-size: 0.85rem;
     letter-spacing: 1px;
@@ -201,10 +204,12 @@ nav a:not([target="_blank"]).active::before {
     display: inline-flex;
     align-items: center;
     gap: 4px;
+    transform-origin: left center;
 }
 
 .bottom-nav a:hover {
     color: var(--text-color);
+    transform: translateX(6px) scale(1.03);
 }
 
 .bottom-nav a[target="_blank"]:after {
@@ -231,6 +236,7 @@ nav a:not([target="_blank"]).active::before {
 
 .sidebar nav a[target="_blank"]:hover {
     color: var(--text-color) !important;
+    transform: translateX(8px) scale(1.05);
 }
 
 /* Mobile Top Bar */

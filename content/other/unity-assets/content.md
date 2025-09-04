@@ -2,16 +2,20 @@
 
 # Unity Assets
 
+
+<img src="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" alt="Intro">
+
+[GitHub](https://github.com/danielnoam/DNExtensions/)
+
+
 <div class="project-card">
-
-
 
 ## Overview
 
 A collection of Unity tools developed organically while working on various projects. 
 Each tool was created to solve specific problems, then refined and expanded as new needs emerged across different games and prototypes.
 
-[GitHub](https://github.com/danielnoam/DNExtensions/)
+
 
 </div>
 
