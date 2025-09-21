@@ -184,14 +184,26 @@ function buildBottomNavigation() {
 ================================================*/
 async function loadContent(path) {
     try {
+        const contentElement = document.getElementById('content');
+
+        // Start transition out
+        contentElement.classList.add('page-transitioning');
+
+        // Wait for transition to complete
+        await new Promise(resolve => setTimeout(resolve, 200));
+
         const response = await fetch(path);
         if (!response.ok) throw new Error('Content not found');
         const content = await response.text();
 
-        const contentElement = document.getElementById('content');
         contentElement.classList.add('loading');
         contentElement.innerHTML = marked.parse(content);
         contentElement.classList.remove('loading');
+
+        // Transition back in
+        setTimeout(() => {
+            contentElement.classList.remove('page-transitioning');
+        }, 50);
 
         window.scrollTo(0, 0);
 
@@ -219,15 +231,16 @@ async function loadContent(path) {
         updateSidebarForContent(path);
     } catch (error) {
         console.error('Error loading content:', error);
-        document.getElementById('content').innerHTML = `
+        const contentElement = document.getElementById('content');
+        contentElement.innerHTML = `
             <div class="error-message">
                 <h1>Content Not Found</h1>
                 <p>Sorry, the requested content could not be loaded.</p>
             </div>
         `;
+        contentElement.classList.remove('page-transitioning');
     }
 }
-
 function updateDocumentTitle(path) {
     let title = siteTitle;
     const pathSegments = path.split('/');
@@ -398,13 +411,21 @@ function initScrollAnimations() {
             SCROLL TO TOP FUNCTIONALITY
 ================================================*/
 function initScrollToTop() {
+    let isVisible = false;
+
     window.onscroll = function() {
         const button = document.getElementById("back-to-top");
         if (button) {
-            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-                button.style.display = "block";
-            } else {
-                button.style.display = "none";
+            const shouldShow = document.body.scrollTop > 200 || document.documentElement.scrollTop > 200;
+
+            if (shouldShow && !isVisible) {
+                // Show button with animation
+                button.classList.add('show');
+                isVisible = true;
+            } else if (!shouldShow && isVisible) {
+                // Hide button with animation
+                button.classList.remove('show');
+                isVisible = false;
             }
         }
     };

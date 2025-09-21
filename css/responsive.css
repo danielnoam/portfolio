@@ -9,6 +9,8 @@
         background-color: var(--sidebar-bg);
         backdrop-filter: blur(10px);
         padding-top: 4rem;
+        display: flex;
+        flex-direction: column;
     }
 
     .sidebar.active {
@@ -19,6 +21,25 @@
         display: none !important;
     }
 
+    .sidebar #main-nav {
+        flex: 1;
+        overflow-y: auto;
+        margin-bottom: 2rem;
+    }
+
+    .bottom-nav {
+        position: static;
+        bottom: auto;
+        left: auto;
+        right: auto;
+        margin-top: auto;
+        margin-bottom: 1rem;
+        border-top: 1px solid var(--card-bg);
+        padding-top: 1rem;
+        flex-shrink: 0;
+    }
+
+    /* Rest of existing mobile styles... */
     .menu-toggle {
         display: block;
         background: var(--card-bg);
@@ -40,7 +61,6 @@
     #content {
         transition: 0.1s;
     }
-
 
     .theme-toggle {
         position: fixed;
@@ -73,24 +93,10 @@
         transition: opacity 0.3s ease-out, transform 0.3s ease-out;
     }
 
-    .bottom-nav {
-        position: static;
-        bottom: auto;
-        left: auto;
-        right: auto;
-        margin-top: 2rem;
-        margin-bottom: 1rem;
-        border-top: 1px solid var(--card-bg);
-        padding-top: 1rem;
-    }
-
     .video-indicator {
-        /* Reset desktop text-only styles */
         text-shadow: none !important;
         font-size: 0.7rem !important;
         font-weight: 500 !important;
-
-        /* Use theme-aware card background */
         background: var(--card-bg); !important;
         background-color: var(--gallery-image-text-bg); !important;
         color: var(--text-color) !important;
@@ -101,15 +107,12 @@
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15) !important;
         transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease !important;
     }
-    
 
     .video-indicator::before {
         font-size: 0.6rem !important;
         margin-right: 1px !important;
     }
-    
 }
-
 /*==============================================
             UTILITY CLASSES
 ================================================*/

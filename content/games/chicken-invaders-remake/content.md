@@ -17,11 +17,37 @@ Our goal was to recreate the original game's idea with modern visuals and reimag
 
 <div class="project-card">
 
-## My Contribution to the Project
+## Main Contributions I Made
 
-- Gameplay systems such as Player, Upgrade Store, Main Menu, Options, Saving Loading, Controller support, Camera, UI
-- Implementation - working with the artists to implement models, textures, shaders and effects into the game
-- some notable stuff - player weapon system, 
+- **Player Controller** - Spaceship movement and physics systems
+- **Upgrade System** - Weapon and ship enhancement mechanics
+- **Store** - Shop interface and transaction systems
+- **UI** - In-game user interface and HUD elements
+- **Main Menu** - Navigation and menu systems
+- **Options Menu** - Settings and configuration interface
+- **Save System** - Progress persistence and data management
+- **Camera Controller** - Dynamic camera behavior and effects
+- **Overarching Level Manager** - Stage progression with event-driven architecture for different stage types
+- **Controller Support** - Comprehensive gamepad integration with advanced rumble system
+
+</div>
+
+<div class="project-card">
+
+## Other Contributions
+
+- **Intro Cinematic** - Opening sequence and cutscene implementation
+- **Narrative Design** - Dialogue writing and story presentation
+
+### Team Collaboration & Asset Integration
+- Collaborated closely with 3D modelers to implement character models, spaceships, and environment assets
+- Worked with the technical artist to integrate shaders, particle effects, and visual polish
+- Established clear communication protocols for asset delivery and implementation feedback
+
+### Development Workflow
+- Used Git for version control across the entire team, managing code and asset conflicts
+- Implemented modular code architecture allowing multiple programmers to work simultaneously
+- Created custom editor tools to help artists and designers test and tweak gameplay elements
 
 </div>
 
