@@ -54,7 +54,7 @@ const CONFIG = {
         "Games": {
             path: "content/games",
             pages: [
-                { title: "Chicken Invaders Remake", folder: "chicken-invaders-remake", visible: true },
+                { title: "Chicken Invaders Remake", folder: "chicken-invaders-remake", visible: false },
                 { title: "Project UMN", folder: "project-umn", visible: true },
                 { title: "2D Platformer", folder: "2d-platformer", visible: true },
                 { title: "School These Sh*ts", folder: "school-these-shits", visible: true },
