@@ -24,9 +24,9 @@ I'm a Game Designer and Programmer who began my journey in game development duri
         </a>
     </figure>
     <figure>
-        <a href="#" onclick="handleNavigationClick(`${baseUrl}/content/games/pixel-knight/content.md`, document.querySelector('a[onclick*=\'pixel-knight\']')); return false;">
-            <img src="https://danielnoam.github.io/portfolio/assets/pixel-knight/main.gif" alt="Pixel Knight">
-            <figcaption>Pixel Knight</figcaption>
+        <a href="#" onclick="handleNavigationClick(`${baseUrl}/content/other/dnextenstions/content.md`, document.querySelector('a[onclick*=\'dnextenstions\']')); return false;">
+            <img src="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" alt="DNExtenstions">
+            <figcaption>DNExtenstions</figcaption>
         </a>
     </figure>
     <figure>
@@ -39,6 +39,12 @@ I'm a Game Designer and Programmer who began my journey in game development duri
         <a href="#" onclick="handleNavigationClick(`${baseUrl}/content/jams/bubblerena/content.md`, document.querySelector('a[onclick*=\'bubblerena\']')); return false;">
             <img src="https://danielnoam.github.io/portfolio/assets/bubblerena/logo.gif" alt="Bubblerena">
             <figcaption>Bubblerena</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="#" onclick="handleNavigationClick(`${baseUrl}/content/games/pixel-knight/content.md`, document.querySelector('a[onclick*=\'pixel-knight\']')); return false;">
+            <img src="https://danielnoam.github.io/portfolio/assets/pixel-knight/main.gif" alt="Pixel Knight">
+            <figcaption>Pixel Knight</figcaption>
         </a>
     </figure>
 </div>
