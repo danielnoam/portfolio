@@ -367,7 +367,6 @@ nav a:not([target="_blank"]).active::before {
             UI ELEMENTS
 ================================================*/
 /* Theme Toggle */
-/* Theme Toggle */
 .theme-toggle {
     position: absolute;
     bottom: 2rem;
@@ -386,7 +385,7 @@ nav a:not([target="_blank"]).active::before {
     justify-content: center;
     gap: 0.5rem;
     z-index: 1003;
-    overflow: hidden; /* Hide any scrollbars */
+    overflow: hidden;
 }
 
 /* Hide all scrollbars on theme toggle */
