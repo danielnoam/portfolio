@@ -95,10 +95,52 @@ body {
     position: fixed;
     height: 100vh;
     overflow-y: auto;
+    overflow-x: hidden; /* Prevent horizontal scroll */
     font-family: var(--font-family), serif;
     transition: background-color 0.3s, transform 0.3s ease;
     display: flex;
     flex-direction: column;
+}
+
+/* Force hide horizontal scrollbar on sidebar */
+.sidebar::-webkit-scrollbar:horizontal {
+    display: none;
+}
+
+.sidebar {
+    scrollbar-width: thin; /* Only for vertical */
+    scrollbar-color: var(--text-secondary) transparent;
+}
+
+/* Ensure sidebar scrolls properly on small windows */
+@media (max-height: 700px) {
+    .sidebar {
+        overflow-y: auto;
+    }
+
+    .sidebar #main-nav {
+        flex: 1;
+        min-height: 0;
+        overflow-y: auto;
+        overflow-x: hidden;
+        margin-bottom: 1rem;
+    }
+    .sidebar nav {
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    .bottom-nav {
+        position: static;
+        margin-top: auto;
+        flex-shrink: 0;
+    }
+
+    .theme-toggle {
+        position: static;
+        margin-top: 1rem;
+        flex-shrink: 0;
+    }
 }
 
 .name {
@@ -137,11 +179,31 @@ main {
             NAVIGATION COMPONENTS
 ================================================*/
 /* Main navigation container */
+/* Main navigation container */
 .sidebar #main-nav {
     flex: 1;
     min-height: 0; /* Allows flexbox to shrink properly */
     overflow-y: auto;
     margin-bottom: 1rem;
+}
+
+/* Ensure navigation can scroll when needed */
+.sidebar #main-nav {
+    scrollbar-width: thin;
+    scrollbar-color: var(--text-secondary) transparent;
+}
+
+.sidebar #main-nav::-webkit-scrollbar {
+    width: 4px;
+}
+
+.sidebar #main-nav::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.sidebar #main-nav::-webkit-scrollbar-thumb {
+    background-color: var(--text-secondary);
+    border-radius: 2px;
 }
 
 /* Navigation Base */
@@ -172,22 +234,25 @@ nav a {
     position: relative;
     display: block;
     transform-origin: left center;
+    overflow: hidden; /* Contain hover effects */
+    white-space: nowrap; /* Prevent text wrapping */
 }
 
 nav a:hover {
     color: var(--link-hover-color);
-    transform: translateX(8px) scale(1.05);
+    transform: translateX(6px) scale(1.03); /* Reduced scale and translation */
 }
 
 nav a:not([target="_blank"]).active {
     color: var(--text-color);
     position: relative;
+    padding-left: 1rem; /* Add space for the dot */
 }
 
 nav a:not([target="_blank"]).active::before {
     content: '';
     position: absolute;
-    left: -1rem;
+    left: 0; /* Position dot at the left edge of the text area */
     top: 50%;
     transform: translateY(-50%);
     width: 4px;
@@ -219,6 +284,18 @@ nav a:not([target="_blank"]).active::before {
     padding-top: 1rem;
     border-top: 1px solid var(--card-bg);
     margin-top: auto;
+}
+
+/* Make bottom nav flexible on small heights */
+@media (max-height: 700px) {
+    .bottom-nav {
+        position: static;
+        bottom: auto;
+        left: auto;
+        right: auto;
+        margin-top: auto;
+        flex-shrink: 0;
+    }
 }
 
 .bottom-nav a {
@@ -265,7 +342,7 @@ nav a:not([target="_blank"]).active::before {
 
 .sidebar nav a[target="_blank"]:hover {
     color: var(--text-color) !important;
-    transform: translateX(8px) scale(1.05);
+    transform: translateX(4px) scale(1.02); /* Reduced scale and translation */
 }
 
 /* Mobile Top Bar */
@@ -290,6 +367,7 @@ nav a:not([target="_blank"]).active::before {
             UI ELEMENTS
 ================================================*/
 /* Theme Toggle */
+/* Theme Toggle */
 .theme-toggle {
     position: absolute;
     bottom: 2rem;
@@ -308,6 +386,28 @@ nav a:not([target="_blank"]).active::before {
     justify-content: center;
     gap: 0.5rem;
     z-index: 1003;
+    overflow: hidden; /* Hide any scrollbars */
+}
+
+/* Hide all scrollbars on theme toggle */
+.theme-toggle::-webkit-scrollbar {
+    display: none;
+}
+
+.theme-toggle {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+@media (max-height: 700px) {
+    .theme-toggle {
+        position: static;
+        bottom: auto;
+        left: auto;
+        right: auto;
+        margin-top: 1rem;
+        flex-shrink: 0;
+    }
 }
 
 .theme-toggle:hover {

@@ -71,7 +71,7 @@ const CONFIG = {
         "Other": {
             path: "content/other",
             pages: [
-                { title: "Unity Assets", folder: "unity-assets", visible: true },
+                { title: "DNExtenstions", folder: "dnextenstions", visible: true },
                 { title: "Shaders", folder: "shaders", visible: false },
                 { title: "Models", folder: "models", visible: false },
                 { title: "Procedural Animations", folder: "procedural-animations", visible: false },

@@ -11,6 +11,34 @@
         padding-top: 4rem;
         display: flex;
         flex-direction: column;
+        overflow-x: hidden; /* Prevent horizontal scroll on mobile */
+    }
+
+    /* Hide horizontal scrollbars on mobile sidebar */
+    .sidebar::-webkit-scrollbar:horizontal {
+        width: 0;
+        height: 0;
+        display: none;
+    }
+
+    /* Keep only vertical scrollbar styling for mobile */
+    .sidebar::-webkit-scrollbar:vertical {
+        width: 4px;
+    }
+
+    .sidebar::-webkit-scrollbar-track:vertical {
+        background: transparent;
+    }
+
+    .sidebar::-webkit-scrollbar-thumb:vertical {
+        background-color: var(--text-secondary);
+        border-radius: 2px;
+    }
+
+    /* Firefox scrollbar settings for mobile */
+    .sidebar {
+        scrollbar-width: thin;
+        scrollbar-color: var(--text-secondary) transparent;
     }
 
     .sidebar.active {
