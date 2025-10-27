@@ -22,35 +22,22 @@ while practicing teamwork, version control, and coordinated game development.
 
 ## Main Contributions
 
-- Player Controller - Spaceship movement and physics systems
-- Progression & Economy Systems - Weapon and ship upgrade mechanics with integrated shop interface and transaction systems for player progression
-- User Interface Systems - Complete UI/UX design including in-game HUD elements, main menu navigation, options/settings interface, and pause menu functionality
-- Save System - Progress persistence and data management
-- Camera Controller - Dynamic camera behavior and effects
-- Overarching Level Manager - Stage progression with event-driven architecture for different stage types
-- Controller Support - Comprehensive gamepad integration with custom rumble system
+- Player - Spaceship movement and physics systems
+- Camera - Dynamic camera behavior and effects
 - Custom Editor Tools - To help artists and designers test and tweak gameplay elements
+- Asset Integration - Implemented 3D models, textures, and VFX artist's shaders from the art team
+- Progression & Economy - Weapon and ship upgrade mechanics with integrated shop interface and transaction systems for player progression
+- User Interface - Complete UI/UX design including in-game HUD elements, main menu navigation, options/settings interface, and pause menu functionality
+- Save/Load - Progress persistence and data management
+- Level Design & Management - Designed and implemented multiple game stages with event-driven architecture for stage progression
+- Audio Systems - Music manager, sound effects implementation, and audio integration
+- Controller Support - Comprehensive gamepad integration with custom rumble system
 - Game Design & Player Experience - Balanced difficulty progression, designed tutorial systems to teach core mechanics, and fine-tuned gameplay elements
+- Narrative & Cinematics - Crafted game story, dialogue, and developed intro sequence, credits, and cutscenes
+- Custom Shaders - Created custom shaders for visual effects
 
 </div>
 
-<div class="project-card">
-
-## Other Contributions
-
-### Team Collaboration & Asset Integration
-- Collaborated closely with 3D modelers to implement models, and environment assets
-- Worked with the technical artist to integrate shaders, particle effects, and visual polish
-- Established clear communication protocols for asset delivery and implementation feedback
-- Used Git for version control across the entire team, managing code and asset conflicts
-
-### Narrative Design & Cinematics
-- Story & Dialogue Writing - Crafted game narrative and character dialogue
-- Cinematic Creation - Developed intro sequence, credits, and cutscenes
-
-
-
-</div>
 
 <div class="project-card">
 
