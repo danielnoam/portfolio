@@ -42,7 +42,7 @@ while practicing teamwork, version control, and coordinated game development.
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/PlayerAndCameraGif.gif" target="_blank">
             <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/PlayerAndCameraGif.gif" alt="Player and Camera">
-            <figcaption>Responsive ship controls and camera movement</figcaption>
+            <figcaption>Ship controls and camera movement</figcaption>
         </a>
     </figure>
     <figure>
@@ -53,8 +53,8 @@ while practicing teamwork, version control, and coordinated game development.
     </figure>
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/WeaponsGif.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/WeaponsGif.gif" alt="Store Interface">
-            <figcaption>Shop and upgrade system</figcaption>
+            <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/WeaponsGif.gif" alt="Weapon Upgrades">
+            <figcaption>Weapon system</figcaption>
         </a>
     </figure>
     <figure>
