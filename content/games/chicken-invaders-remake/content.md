@@ -2,9 +2,9 @@
 
 # Chicken Invaders Remake
 
-<img src="[ADD_MAIN_GIF_URL_HERE]" alt="Intro">
+<img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/Cover.gif" alt="Intro">
 
-[Itch.io](ADD_ITCH_LINK_HERE) | [GDD](ADD_ADDITIONAL_LINK_HERE)
+[Itch.io](https://tay-dev.itch.io/chicken-invaders-remake) | [GDD](https://docs.google.com/document/d/15oJfTMVTdB9uJKfskemjhVx1XfsIAPWvOurxZK-_GJw/edit?usp=sharing)
 
 <div class="project-card">
 
@@ -22,7 +22,7 @@ while practicing teamwork, version control, and coordinated game development.
 
 ## Main Contributions
 
-- Player - Spaceship movement and physics systems
+- Player - Spaceship movement and physics
 - Camera - Dynamic camera behavior and effects
 - Custom Editor Tools - To help artists and designers test and tweak gameplay elements
 - Asset Integration - Implemented 3D models, textures, and VFX artist's shaders from the art team
@@ -33,9 +33,25 @@ while practicing teamwork, version control, and coordinated game development.
 - Audio Systems - Music manager, sound effects implementation, and audio integration
 - Controller Support - Comprehensive gamepad integration with custom rumble system
 - Game Design & Player Experience - Balanced difficulty progression, designed tutorial systems to teach core mechanics, and fine-tuned gameplay elements
-- Narrative & Cinematics - Crafted game story, dialogue, and developed intro sequence, credits, and cutscenes
+- Narrative & Cinematics - Crafted game story, dialogue, and developed intro sequence, credits, and dialogue  scenes
 - Custom Shaders - Created custom shaders for visual effects
 
+</div>
+
+<div class="image-gallery">
+    <figure>
+        <a href="URL_TO_MOVEMENT_GIF">
+            <img src="URL_TO_MOVEMENT_GIF" alt="Ship Movement">
+            <figcaption>Responsive ship controls</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="URL_TO_CAMERA_GIF">
+            <img src="URL_TO_CAMERA_GIF" alt="Dynamic Camera">
+            <figcaption>Dynamic camera tracking</figcaption>
+        </a>
+    </figure>
+    <!-- Add 3-5 more similar captures -->
 </div>
 
 
@@ -54,4 +70,26 @@ This project served as an invaluable learning experience in collaborative game d
 
 
 </div>
+
+<div class="image-gallery">
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/Gamepay1Gif.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/Gamepay1Gif.gif" alt="Gameplay">
+            <figcaption>Gameplay</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/Gamepay2Gif.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/Gamepay2Gif.gif" alt="Gameplay">
+            <figcaption>Gameplay</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/MainMenu.jpg" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/MainMenu.jpg" alt="Main menu">
+            <figcaption>Main menu</figcaption>
+        </a>
+    </figure>
+</div>
+
 </div>
