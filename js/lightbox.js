@@ -314,4 +314,33 @@ function createLightboxElements() {
     `;
 
     document.body.insertAdjacentHTML('beforeend', lightboxHTML);
+
+    // Adjust caption font size based on length
+    function adjustCaptionSizes() {
+        const captions = document.querySelectorAll('.image-gallery figcaption');
+        captions.forEach(caption => {
+            const textLength = caption.textContent.length;
+
+            if (textLength > 30) {
+                caption.style.fontSize = '0.8rem';
+            } else if (textLength > 20) {
+                caption.style.fontSize = '0.85rem';
+            }
+            // Default is 0.9rem from CSS
+        });
+    }
+
+// Call it when content loads
+    document.addEventListener('DOMContentLoaded', function() {
+        adjustCaptionSizes();
+
+        // Also call it when content changes
+        const contentElement = document.getElementById('content');
+        if (contentElement) {
+            const observer = new MutationObserver(() => {
+                setTimeout(adjustCaptionSizes, 100);
+            });
+            observer.observe(contentElement, { childList: true, subtree: true });
+        }
+    });
 }

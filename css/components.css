@@ -91,6 +91,7 @@
     transform: translateX(-50%) scale(1.05);
 }
 
+
 .image-gallery figcaption {
     position: absolute;
     bottom: 40px;
@@ -101,18 +102,26 @@
     color: var(--text-color);
     padding: 5px 10px;
     border-radius: 4px;
-    font-size: 0.9rem;
+    font-size: clamp(0.75rem, 0.9rem, 0.9rem);
     font-weight: bold;
     opacity: 0;
     transition: opacity 0.3s ease, transform 0.3s ease;
-    white-space: nowrap;
+    white-space: normal;
+    word-wrap: break-word;
+    max-width: 90%;
     pointer-events: none;
     text-align: center;
     z-index: 1;
     backdrop-filter: blur(8px);
     border: 1px solid var(--text-secondary);
+    line-height: 1.3;
 }
 
+/* Smaller font for longer captions */
+.image-gallery figcaption:has(br),
+.image-gallery figure:has(figcaption:is(:where(:not(:empty)):where([data-long]))) figcaption {
+    font-size: 0.8rem;
+}
 
 
 /* Video indicator for gallery images */
