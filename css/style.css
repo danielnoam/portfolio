@@ -1,3 +1,6 @@
+/* Load variables first */
+@import url('variables.css');
+
 /* Load components and responsive styles */
 @import url('components.css');
 @import url('responsive.css');
@@ -5,68 +8,6 @@
 /*==============================================
                 CORE SETUP
 ================================================*/
-/* Root Variables */
-:root {
-    /* System Fonts */
-    --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-
-    /* Layout Constants */
-    --sidebar-width: 255px;
-
-    /* Shared Colors */
-    --primary-blue: #4a9eff;
-    --secondary-blue: #77b6ff;
-
-    /* Dark Theme Colors */
-    --dark-bg: rgba(26, 29, 33, 1);
-    --dark-text: rgba(255, 255, 255, 1);
-    --dark-text-secondary: rgba(160, 160, 160, 1);
-    --dark-sidebar-bg: rgba(0, 0, 0, 0.5);
-    --dark-card-bg: rgba(255, 255, 255, 0.05);
-    --dark-heading: var(--primary-blue);
-    --dark-subheading: var(--secondary-blue);
-    --dark-link: rgba(160, 160, 160, 1);
-    --dark-link-hover: rgba(255, 255, 255, 1);
-    --dark--gallery-image-text-bg: rgba(26, 29, 33, 0.1);
-
-    /* Light Theme Colors */
-    --light-bg: rgba(196, 214, 232, 0.8);
-    --light-text: rgba(26, 29, 33, 1);
-    --light-text-secondary: rgba(102, 102, 102, 1);
-    --light-sidebar-bg: rgba(161, 178, 212, 0.5);
-    --light-card-bg: rgba(0, 0, 0, 0.05);
-    --light-heading: rgba(42, 122, 223, 1);
-    --light-subheading: rgba(74, 158, 255, 1);
-    --light-link: rgba(102, 102, 102, 1);
-    --light-link-hover: rgba(51, 51, 51, 1);
-    --light--gallery-image-text-bg: rgba(196, 214, 232, 0.5);
-
-    /* Default Theme (Dark) */
-    --bg-color: var(--dark-bg);
-    --text-color: var(--dark-text);
-    --text-secondary: var(--dark-text-secondary);
-    --sidebar-bg: var(--dark-sidebar-bg);
-    --card-bg: var(--dark-card-bg);
-    --heading-color: var(--dark-heading);
-    --subheading-color: var(--dark-subheading);
-    --link-color: var(--dark-link);
-    --link-hover-color: var(--dark-link-hover);
-    --gallery-image-text-bg: var(--dark--gallery-image-text-bg);
-}
-
-/* Light Mode Theme */
-:root.light-mode {
-    --bg-color: var(--light-bg);
-    --text-color: var(--light-text);
-    --text-secondary: var(--light-text-secondary);
-    --sidebar-bg: var(--light-sidebar-bg);
-    --card-bg: var(--light-card-bg);
-    --heading-color: var(--light-heading);
-    --subheading-color: var(--light-subheading);
-    --link-color: var(--light-link);
-    --link-hover-color: var(--light-link-hover);
-    --gallery-image-text-bg: var(--light--gallery-image-text-bg);
-}
 
 /* Base Styles */
 * {
@@ -76,31 +17,32 @@
 }
 
 body {
-    font-family: var(--font-family), serif;
+    font-family: var(--font-family, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif);
     background-color: var(--bg-color);
     color: var(--text-color);
     display: flex;
     min-height: 100vh;
-    transition: background-color 0.3s, color 0.3s;
+    transition: background-color var(--transition-normal), color var(--transition-normal);
 }
 
 /*==============================================
             LAYOUT & STRUCTURE
 ================================================*/
+
 /* Sidebar Layout */
 .sidebar {
     width: var(--sidebar-width);
     background-color: var(--sidebar-bg);
-    padding: 1.5rem;
+    padding: var(--sidebar-padding);
     position: fixed;
     height: 100vh;
     overflow: hidden;
-    font-family: var(--font-family), serif;
-    transition: background-color 0.3s, transform 0.3s ease;
+    font-family: var(--font-family, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif);
+    transition: background-color var(--transition-normal), transform var(--transition-normal);
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
-    gap: 0; /* Remove any default gaps */
+    gap: 0;
 }
 
 /* Force hide horizontal scrollbar on sidebar */
@@ -109,7 +51,7 @@ body {
 }
 
 .sidebar {
-    scrollbar-width: thin; /* Only for vertical */
+    scrollbar-width: thin;
     scrollbar-color: var(--text-secondary) transparent;
 }
 
@@ -117,7 +59,7 @@ body {
 @media (max-height: 700px) {
     .sidebar {
         overflow-y: auto;
-        padding: 1.5rem; /* Reduced padding */
+        padding: var(--sidebar-padding);
     }
 
     .sidebar #main-nav {
@@ -125,8 +67,8 @@ body {
         min-height: 0;
         overflow-y: auto;
         overflow-x: hidden;
-        margin-bottom: 1rem;
-        padding-right: 0.5rem; /* Add some padding for scrollbar */
+        margin-bottom: var(--space-4);
+        padding-right: var(--space-2);
         max-height: calc(100vh - 200px);
     }
 
@@ -136,83 +78,84 @@ body {
     }
 
     .bottom-nav {
-        position: static; /* Changed from absolute */
+        position: static;
         display: flex;
         flex-direction: column;
-        gap: 0.5rem;
-        padding-top: 1rem;
+        gap: var(--space-2);
+        padding-top: var(--space-4);
         border-top: 1px solid var(--card-bg);
         margin-top: auto;
-        flex-shrink: 0; /* Prevent shrinking */
+        flex-shrink: 0;
     }
 
     .theme-toggle {
-        position: static; /* Changed from absolute */
-        padding: 0.75rem;
+        position: static;
+        padding: var(--space-3);
         background: none;
         border: 1px solid var(--link-color);
-        border-radius: 8px;
+        border-radius: var(--radius-md);
         color: var(--text-color);
         cursor: pointer;
-        font-size: 0.9rem;
-        transition: all 0.3s ease;
+        font-size: var(--text-base);
+        transition: all var(--transition-normal);
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 0.5rem;
-        z-index: 1003;
+        gap: var(--space-2);
+        z-index: var(--z-modal);
         overflow: hidden;
-        margin-top: 1rem; /* Add spacing above */
-        flex-shrink: 0; /* Prevent shrinking */
+        margin-top: var(--space-4);
+        flex-shrink: 0;
     }
 }
 
 .name {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-    font-weight: bold;
+    font-size: var(--text-xl);
+    margin-bottom: var(--space-6);
+    font-weight: var(--weight-bold);
     color: var(--text-color);
 }
 
 /* Main Content Layout */
 main {
     flex-grow: 1;
-    max-width: 1200px;
+    max-width: var(--content-max-width);
     margin-right: auto;
     margin-left: auto;
-    padding: 2rem 2rem 2rem 250px;
-    font-family: var(--font-family), serif;
+    padding: var(--space-6) var(--space-6) var(--space-6) 250px;
+    font-family: var(--font-family, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif);
 }
 
 #content {
     width: 100%;
-    max-width: 800px;
+    max-width: var(--content-inner-max-width);
     margin: 0 auto;
-    padding: 2rem;
-    opacity: 1;
+    padding: var(--space-6);
+    opacity: var(--opacity-100);
     transform: translateY(0);
     transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
 #content.page-transitioning {
-    opacity: 0;
+    opacity: var(--opacity-0);
     transform: translateY(50px);
 }
 
 /*==============================================
             NAVIGATION COMPONENTS
 ================================================*/
+
 /* Main navigation container */
 .sidebar #main-nav {
     flex: 1;
-    min-height: 0; /* Allows flexbox to shrink properly */
+    min-height: 0;
     overflow-y: auto;
-    overflow-x: hidden; /* Prevent horizontal overflow */
-    margin-bottom: 1rem;
-    max-height: calc(100vh - 280px); /* Changed from 200px to 280px */
+    overflow-x: hidden;
+    margin-bottom: var(--space-4);
+    max-height: calc(100vh - 280px);
 }
 
-/* Ensure navigation can scroll when needed */
+/* Scrollbar styling */
 .sidebar #main-nav {
     scrollbar-width: thin;
     scrollbar-color: var(--text-secondary) transparent;
@@ -228,104 +171,101 @@ main {
 
 .sidebar #main-nav::-webkit-scrollbar-thumb {
     background-color: var(--text-secondary);
-    border-radius: 2px;
+    border-radius: var(--radius-sm);
 }
 
 /* Navigation Base */
 nav {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: var(--nav-gap);
 }
 
 nav h2 {
-    font-size: 0.9rem;
-    margin-top: 1.5rem;
-    margin-bottom: 0.5rem;
+    font-size: var(--text-base);
+    margin: var(--nav-header-spacing);
     color: var(--heading-color);
-    font-weight: bold;
-    letter-spacing: 2px;
+    font-weight: var(--weight-bold);
+    letter-spacing: var(--tracking-widest);
 }
 
 /* Navigation Links */
 nav a {
     color: var(--link-color);
     text-decoration: none;
-    padding: 0.4rem 0;
-    transition: color 0.2s, transform 0.3s ease;
+    padding: var(--nav-link-padding);
+    transition: color var(--transition-base), transform var(--transition-normal);
     cursor: pointer;
-    font-size: 0.85rem;
-    letter-spacing: 0.5px;
+    font-size: var(--text-sm);
+    letter-spacing: var(--tracking-wide);
     position: relative;
     display: block;
     transform-origin: left center;
     overflow: hidden;
     white-space: normal;
-    line-height: 1.3;
-    margin-bottom: 0.1rem; /* Add small margin between links */
-    min-height: 1.5rem; /* Ensure minimum height */
+    line-height: var(--leading-snug);
+    margin-bottom: var(--space-1);
+    min-height: 1.5rem;
 }
 
 nav a:hover {
     color: var(--link-hover-color);
-    transform: translateX(6px) scale(1.03); /* Reduced scale and translation */
+    transform: translateX(6px) scale(1.03);
 }
 
 nav a:not([target="_blank"]).active {
     color: var(--text-color);
     position: relative;
-    padding-left: 1rem; /* Add space for the dot */
+    padding-left: var(--space-4);
 }
 
 nav a:not([target="_blank"]).active::before {
     content: '';
     position: absolute;
-    left: 0; /* Position dot at the left edge of the text area */
+    left: 0;
     top: 50%;
     transform: translateY(-50%);
     width: 4px;
     height: 4px;
-    background-color: var(--primary-blue);
-    border-radius: 50%;
-    animation: dotAppear 0.3s ease;
+    background-color: var(--color-primary);
+    border-radius: var(--radius-full);
+    animation: dotAppear var(--transition-normal);
 }
 
 @keyframes dotAppear {
     from {
         transform: translateY(-50%) scale(0);
-        opacity: 0;
+        opacity: var(--opacity-0);
     }
     to {
         transform: translateY(-50%) scale(1);
-        opacity: 1;
+        opacity: var(--opacity-100);
     }
 }
 
 .bottom-nav {
-    position: static; /* Changed from absolute */
+    position: static;
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
-    padding-top: 1rem;
+    gap: var(--space-2);
+    padding-top: var(--space-4);
     border-top: 1px solid var(--card-bg);
     margin-top: auto;
-    flex-shrink: 0; /* Prevent shrinking */
+    flex-shrink: 0;
 }
-
-
 
 .bottom-nav a {
     color: var(--text-secondary);
     text-decoration: none;
-    padding: 0.3rem 0;
-    transition: color 0.2s, transform 0.3s ease, font-size 0.3s ease;
+    padding: var(--space-1) 0;
+    transition: color var(--transition-base), transform var(--transition-normal), font-size var(--transition-normal);
     cursor: pointer;
-    font-size: 0.85rem;
-    letter-spacing: 1px;
+    font-size: var(--text-sm);
+    letter-spacing: var(--tracking-normal);
     position: relative;
     display: inline-flex;
     align-items: center;
-    gap: 4px;
+    gap: var(--space-1);
     transform-origin: left center;
 }
 
@@ -337,9 +277,8 @@ nav a:not([target="_blank"]).active::before {
 .bottom-nav a[target="_blank"]:after {
     content: '↗';
     font-size: 0.7em;
-    opacity: 0.7;
+    opacity: var(--opacity-70);
 }
-
 
 /* External Links */
 .sidebar nav a[target="_blank"] {
@@ -347,18 +286,18 @@ nav a:not([target="_blank"]).active::before {
     position: relative;
     display: inline-flex;
     align-items: center;
-    gap: 4px;
+    gap: var(--space-1);
 }
 
 .sidebar nav a[target="_blank"]:after {
     content: '↗';
     font-size: 0.8em;
-    opacity: 0.7;
+    opacity: var(--opacity-70);
 }
 
 .sidebar nav a[target="_blank"]:hover {
     color: var(--text-color) !important;
-    transform: translateX(4px) scale(1.02); /* Reduced scale and translation */
+    transform: translateX(4px) scale(1.02);
 }
 
 /* Mobile Top Bar */
@@ -368,50 +307,48 @@ nav a:not([target="_blank"]).active::before {
     top: 0;
     left: 0;
     right: 0;
-    height: 60px;
+    height: var(--mobile-topbar-height);
     background-color: var(--bg-color);
     border-bottom: 1px solid var(--card-bg);
-    padding: 0.5rem 1rem;
-    z-index: 1003;
+    padding: var(--space-2) var(--space-4);
+    z-index: var(--z-modal);
     justify-content: space-between;
     align-items: center;
 }
 
-
-
 /*==============================================
             UI ELEMENTS
 ================================================*/
+
 /* Theme Toggle */
 .theme-toggle {
-    position: static; /* Changed from absolute */
-    padding: 0.75rem;
+    position: static;
+    padding: var(--space-3);
     background: none;
     border: 1px solid var(--link-color);
-    border-radius: 8px;
+    border-radius: var(--radius-md);
     color: var(--text-color);
     cursor: pointer;
-    font-size: 0.9rem;
-    transition: all 0.3s ease;
+    font-size: var(--text-base);
+    transition: all var(--transition-normal);
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.5rem;
-    z-index: 1003;
+    gap: var(--space-2);
+    z-index: var(--z-modal);
     overflow: hidden;
-    margin-top: 1rem; /* Add spacing above */
-    flex-shrink: 0; /* Prevent shrinking */
+    margin-top: var(--space-4);
+    flex-shrink: 0;
 }
-/* Hide all scrollbars on theme toggle */
+
 .theme-toggle::-webkit-scrollbar {
     display: none;
 }
 
 .theme-toggle {
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
-
 
 .theme-toggle:hover {
     background-color: var(--card-bg);
@@ -421,7 +358,7 @@ nav a:not([target="_blank"]).active::before {
 .mobile-top-bar .theme-toggle {
     position: static;
     margin: 0;
-    padding: 0.5rem;
+    padding: var(--space-2);
     border: 1px solid var(--text-color);
     background: none;
     color: var(--text-color);
@@ -430,7 +367,7 @@ nav a:not([target="_blank"]).active::before {
     justify-content: center;
     width: 42px;
     height: 42px;
-    font-size: 1.5rem;
+    font-size: var(--text-xl);
 }
 
 /* Back to Top Button */
@@ -442,20 +379,23 @@ nav a:not([target="_blank"]).active::before {
     color: var(--bg-color);
     width: 50px;
     height: 50px;
-    border-radius: 50%;
+    border-radius: var(--radius-full);
     border: none;
     cursor: pointer;
     font-size: 24px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    transition: background-color 0.3s, transform 0.3s, opacity 0.3s ease, visibility 0.3s ease;
-    z-index: 1001;
-    opacity: 0;
+    box-shadow: var(--shadow-md);
+    transition: background-color var(--transition-normal),
+    transform var(--transition-normal),
+    opacity var(--transition-normal),
+    visibility var(--transition-normal);
+    z-index: var(--z-sticky);
+    opacity: var(--opacity-0);
     visibility: hidden;
     transform: translateY(20px) scale(0.8);
 }
 
 #back-to-top.show {
-    opacity: 1;
+    opacity: var(--opacity-100);
     visibility: visible;
     transform: translateY(0) scale(1);
     animation: buttonAppear 0.4s ease;
@@ -468,14 +408,14 @@ nav a:not([target="_blank"]).active::before {
 
 @keyframes buttonAppear {
     0% {
-        opacity: 0;
+        opacity: var(--opacity-0);
         transform: translateY(20px) scale(0.5);
     }
     60% {
         transform: translateY(-5px) scale(1.1);
     }
     100% {
-        opacity: 1;
+        opacity: var(--opacity-100);
         transform: translateY(0) scale(1);
     }
 }
@@ -486,19 +426,18 @@ nav a:not([target="_blank"]).active::before {
     background: none;
     border: 1px solid var(--text-color);
     color: var(--text-color);
-    font-size: 1.5rem;
+    font-size: var(--text-xl);
     cursor: pointer;
-    padding: 0.5rem;
+    padding: var(--space-2);
 }
 
 /* Error Message */
 .error-message {
     text-align: center;
-    padding: 3rem;
+    padding: var(--space-8);
 }
 
 .error-message h1 {
     color: #ff4a4a;
-    margin-bottom: 1rem;
+    margin-bottom: var(--space-4);
 }
-

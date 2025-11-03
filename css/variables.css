@@ -1,0 +1,192 @@
+/*==============================================
+            CSS CUSTOM PROPERTIES
+================================================*/
+
+:root {
+    /*------------------------------------------
+                DESIGN TOKENS
+    ------------------------------------------*/
+    
+    /* Spacing Scale (8px base) */
+    --space-0: 0;
+    --space-1: 0.25rem;   /* 4px */
+    --space-2: 0.5rem;    /* 8px */
+    --space-3: 0.75rem;   /* 12px */
+    --space-4: 1rem;      /* 16px */
+    --space-5: 1.5rem;    /* 24px */
+    --space-6: 2rem;      /* 32px */
+    --space-7: 2.5rem;    /* 40px */
+    --space-8: 3rem;      /* 48px */
+    --space-10: 4rem;     /* 64px */
+    --space-12: 6rem;     /* 96px */
+    
+    /* Font Sizes */
+    --text-xs: 0.75rem;   /* 12px */
+    --text-sm: 0.85rem;   /* 13.6px */
+    --text-base: 0.9rem;  /* 14.4px */
+    --text-md: 1rem;      /* 16px */
+    --text-lg: 1.1rem;    /* 17.6px */
+    --text-xl: 1.5rem;    /* 24px */
+    --text-2xl: 2rem;     /* 32px */
+    --text-3xl: 3rem;     /* 48px */
+    
+    /* Font Weights */
+    --weight-normal: 400;
+    --weight-medium: 500;
+    --weight-semibold: 600;
+    --weight-bold: 700;
+    
+    /* Line Heights */
+    --leading-none: 1;
+    --leading-tight: 1.25;
+    --leading-snug: 1.375;
+    --leading-normal: 1.5;
+    --leading-relaxed: 1.625;
+    --leading-loose: 2;
+    
+    /* Letter Spacing */
+    --tracking-tight: -0.025em;
+    --tracking-normal: 0;
+    --tracking-wide: 0.025em;
+    --tracking-wider: 0.05em;
+    --tracking-widest: 0.1em;
+    
+    /* Border Radius */
+    --radius-none: 0;
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 10px;
+    --radius-xl: 12px;
+    --radius-2xl: 16px;
+    --radius-full: 9999px;
+    
+    /* Shadows */
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 6px 12px rgba(0, 0, 0, 0.2);
+    --shadow-xl: 0 10px 25px rgba(0, 0, 0, 0.3);
+    
+    /* Transitions */
+    --transition-fast: 0.15s ease;
+    --transition-base: 0.2s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.5s ease;
+    
+    /* Z-Index Scale */
+    --z-base: 1;
+    --z-dropdown: 1000;
+    --z-sticky: 1001;
+    --z-fixed: 1002;
+    --z-modal: 1003;
+    --z-popover: 1004;
+    --z-tooltip: 1005;
+    --z-lightbox: 2000;
+    
+    /* Opacity */
+    --opacity-0: 0;
+    --opacity-10: 0.1;
+    --opacity-20: 0.2;
+    --opacity-30: 0.3;
+    --opacity-40: 0.4;
+    --opacity-50: 0.5;
+    --opacity-60: 0.6;
+    --opacity-70: 0.7;
+    --opacity-80: 0.8;
+    --opacity-90: 0.9;
+    --opacity-100: 1;
+    
+    /*------------------------------------------
+                SEMANTIC COLORS
+    ------------------------------------------*/
+    
+    /* Brand Colors */
+    --color-primary: #4a9eff;
+    --color-primary-light: #77b6ff;
+    --color-primary-dark: #2a7edf;
+    
+    /* Neutral Colors - Dark Theme */
+    --color-dark-bg: rgba(26, 29, 33, 1);
+    --color-dark-text: rgba(255, 255, 255, 1);
+    --color-dark-text-secondary: rgba(160, 160, 160, 1);
+    --color-dark-sidebar: rgba(0, 0, 0, 0.5);
+    --color-dark-card: rgba(255, 255, 255, 0.05);
+    --color-dark-gallery-text: rgba(26, 29, 33, 0.1);
+    
+    /* Neutral Colors - Light Theme */
+    --color-light-bg: rgba(196, 214, 232, 0.8);
+    --color-light-text: rgba(26, 29, 33, 1);
+    --color-light-text-secondary: rgba(102, 102, 102, 1);
+    --color-light-sidebar: rgba(161, 178, 212, 0.5);
+    --color-light-card: rgba(0, 0, 0, 0.05);
+    --color-light-gallery-text: rgba(196, 214, 232, 0.5);
+    
+    /* Accent Colors */
+    --color-heading: var(--color-primary);
+    --color-subheading: var(--color-primary-light);
+    
+    /*------------------------------------------
+            COMPONENT-SPECIFIC SIZES
+    ------------------------------------------*/
+    
+    /* Sidebar */
+    --sidebar-width: 255px;
+    --sidebar-padding: var(--space-5);
+    
+    /* Navigation */
+    --nav-link-padding: var(--space-2) 0;
+    --nav-gap: var(--space-2);
+    --nav-header-spacing: var(--space-5) 0 var(--space-2) 0;
+    
+    /* Content */
+    --content-max-width: 1200px;
+    --content-padding: var(--space-6);
+    --content-inner-max-width: 800px;
+    
+    /* Cards */
+    --card-padding: var(--space-6);
+    --card-gap: var(--space-6);
+    --card-radius: var(--radius-lg);
+    
+    /* Gallery */
+    --gallery-columns: 3;
+    --gallery-gap: var(--space-4);
+    --gallery-image-height: 200px;
+    --gallery-image-max-width: 400px;
+    
+    /* Mobile */
+    --mobile-topbar-height: 60px;
+    --mobile-padding: var(--space-4);
+    
+    /* Buttons */
+    --button-padding: var(--space-3) var(--space-5);
+    --button-radius: var(--radius-md);
+    
+    /*------------------------------------------
+            THEME APPLICATION (Default: Dark)
+    ------------------------------------------*/
+    
+    --bg-color: var(--color-dark-bg);
+    --text-color: var(--color-dark-text);
+    --text-secondary: var(--color-dark-text-secondary);
+    --sidebar-bg: var(--color-dark-sidebar);
+    --card-bg: var(--color-dark-card);
+    --heading-color: var(--color-heading);
+    --subheading-color: var(--color-subheading);
+    --link-color: var(--color-dark-text-secondary);
+    --link-hover-color: var(--color-dark-text);
+    --gallery-image-text-bg: var(--color-dark-gallery-text);
+}
+
+/*------------------------------------------
+            LIGHT MODE THEME
+------------------------------------------*/
+:root.light-mode {
+    --bg-color: var(--color-light-bg);
+    --text-color: var(--color-light-text);
+    --text-secondary: var(--color-light-text-secondary);
+    --sidebar-bg: var(--color-light-sidebar);
+    --card-bg: var(--color-light-card);
+    --link-color: var(--color-light-text-secondary);
+    --link-hover-color: var(--color-light-text);
+    --gallery-image-text-bg: var(--color-light-gallery-text);
+}

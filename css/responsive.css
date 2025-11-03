@@ -4,24 +4,22 @@
 @media (max-width: 768px) {
     .sidebar {
         transform: translateX(-100%);
-        z-index: 1002;
+        z-index: var(--z-fixed);
         width: 100%;
         background-color: var(--sidebar-bg);
         backdrop-filter: blur(10px);
-        padding-top: 4rem;
+        padding-top: var(--space-10);
         display: flex;
         flex-direction: column;
-        overflow-x: hidden; /* Prevent horizontal scroll on mobile */
+        overflow-x: hidden;
     }
 
-    /* Hide horizontal scrollbars on mobile sidebar */
     .sidebar::-webkit-scrollbar:horizontal {
         width: 0;
         height: 0;
         display: none;
     }
 
-    /* Keep only vertical scrollbar styling for mobile */
     .sidebar::-webkit-scrollbar:vertical {
         width: 4px;
     }
@@ -32,10 +30,9 @@
 
     .sidebar::-webkit-scrollbar-thumb:vertical {
         background-color: var(--text-secondary);
-        border-radius: 2px;
+        border-radius: var(--radius-sm);
     }
 
-    /* Firefox scrollbar settings for mobile */
     .sidebar {
         scrollbar-width: thin;
         scrollbar-color: var(--text-secondary) transparent;
@@ -52,7 +49,7 @@
     .sidebar #main-nav {
         flex: 1;
         overflow-y: auto;
-        margin-bottom: 2rem;
+        margin-bottom: var(--space-6);
     }
 
     .bottom-nav {
@@ -61,18 +58,17 @@
         left: auto;
         right: auto;
         margin-top: auto;
-        margin-bottom: 1rem;
+        margin-bottom: var(--space-4);
         border-top: 1px solid var(--card-bg);
-        padding-top: 1rem;
+        padding-top: var(--space-4);
         flex-shrink: 0;
     }
 
-    /* Rest of existing mobile styles... */
     .menu-toggle {
         display: block;
         background: var(--card-bg);
-        padding: 0.5rem 0.75rem;
-        border-radius: 4px;
+        padding: var(--space-2) var(--space-3);
+        border-radius: var(--radius-sm);
     }
 
     body.menu-open {
@@ -80,9 +76,9 @@
     }
 
     main {
-        padding-left: 1rem;
-        padding-right: 1rem;
-        padding-bottom: 4rem;
+        padding-left: var(--space-4);
+        padding-right: var(--space-4);
+        padding-bottom: var(--space-10);
         margin-left: 0;
     }
 
@@ -92,9 +88,9 @@
 
     .theme-toggle {
         position: fixed;
-        bottom: 1rem;
-        left: 1rem;
-        right: 1rem;
+        bottom: var(--space-4);
+        left: var(--space-4);
+        right: var(--space-4);
     }
 
     .image-gallery {
@@ -114,26 +110,29 @@
     }
 
     :root.show-top-bar main {
-        padding-top: 60px;
+        padding-top: var(--mobile-topbar-height);
     }
 
     .fade-in {
-        transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+        transition: opacity var(--transition-normal), transform var(--transition-normal);
     }
 
     .video-indicator {
         text-shadow: none !important;
-        font-size: 0.7rem !important;
-        font-weight: 500 !important;
-        background: var(--card-bg); !important;
-        background-color: var(--gallery-image-text-bg); !important;
+        font-size: var(--text-xs) !important;
+        font-weight: var(--weight-medium) !important;
+        background: var(--card-bg) !important;
+        background-color: var(--gallery-image-text-bg) !important;
         color: var(--text-color) !important;
-        padding: 3px 6px !important;
-        border-radius: 4px !important;
+        padding: var(--space-1) var(--space-2) !important;
+        border-radius: var(--radius-sm) !important;
         backdrop-filter: blur(4px) !important;
         border: 1px solid var(--text-secondary) !important;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15) !important;
-        transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease !important;
+        box-shadow: var(--shadow-sm) !important;
+        transition: transform var(--transition-normal),
+        background-color var(--transition-normal),
+        border-color var(--transition-normal),
+        color var(--transition-normal) !important;
     }
 
     .video-indicator::before {
@@ -141,10 +140,11 @@
         margin-right: 1px !important;
     }
 }
+
 /*==============================================
             UTILITY CLASSES
 ================================================*/
-/* Accessibility */
+
 .sr-only {
     position: absolute;
     width: 1px;
@@ -157,12 +157,10 @@
     border: 0;
 }
 
-/* Loading States */
 #content.loading {
-    opacity: 0.6;
+    opacity: var(--opacity-60);
 }
 
-/* URL Display Settings */
 :root.hide-urls a[href^="http"],
 :root.hide-urls a[href^="https"],
 :root.hide-urls a[href^="/"] {
@@ -171,7 +169,6 @@
     cursor: pointer;
 }
 
-/* Theme Toggle Visibility */
 :root:not(.show-theme-toggle) .theme-toggle {
     display: none !important;
 }
@@ -184,20 +181,18 @@
     display: none !important;
 }
 
-/* Top Bar Visibility */
 :root:not(.show-top-bar) .mobile-top-bar {
     display: none !important;
 }
 
 :root:not(.show-top-bar) .menu-toggle {
     position: fixed;
-    top: 1rem;
-    left: 1rem;
-    z-index: 1003;
+    top: var(--space-4);
+    left: var(--space-4);
+    z-index: var(--z-modal);
     background-color: var(--bg-color);
 }
 
-/* Menu Toggle Visibility */
 :root:not(.show-theme-toggle) .mobile-top-bar {
     justify-content: flex-start;
 }

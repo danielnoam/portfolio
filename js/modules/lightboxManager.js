@@ -1,0 +1,295 @@
+/*==============================================
+            LIGHTBOX MANAGER MODULE
+================================================*/
+export class LightboxManager {
+    constructor() {
+        this.container = null;
+        this.currentIndex = 0;
+        this.images = [];
+        this.touchStartX = 0;
+        this.touchEndX = 0;
+        this.isInitialized = false;
+    }
+
+    init() {
+        if (!this.isInitialized) {
+            this.createLightboxElements();
+            this.isInitialized = true;
+        }
+        this.setupGalleryImages();
+    }
+
+    createLightboxElements() {
+        const lightboxHTML = `
+            <div id="lightbox-container" class="lightbox-container">
+                <div class="lightbox-content">
+                    <div class="lightbox-header">
+                        <div id="lightbox-counter" class="lightbox-counter"></div>
+                        <div id="lightbox-caption" class="lightbox-caption"></div>
+                        <button id="lightbox-close" class="lightbox-close" aria-label="Close lightbox">×</button>
+                    </div>
+                    <div id="lightbox-image-container" class="lightbox-image-container">
+                        <img id="lightbox-image" class="lightbox-image" src="" alt="Enlarged view">
+                    </div>
+                    <div class="lightbox-controls">
+                        <button id="lightbox-prev" class="lightbox-nav" aria-label="Previous image">❮</button>
+                        <button id="lightbox-next" class="lightbox-nav" aria-label="Next image">❯</button>
+                    </div>
+                </div>
+            </div>
+        `;
+
+        document.body.insertAdjacentHTML('beforeend', lightboxHTML);
+        this.container = document.getElementById('lightbox-container');
+        this.adjustCaptionSizes();
+    }
+
+    setupGalleryImages() {
+        const galleryLinks = document.querySelectorAll('.image-gallery figure a');
+        const galleryImages = Array.from(galleryLinks).map(link => ({
+            src: link.getAttribute('href'),
+            caption: link.querySelector('figcaption')?.textContent || ''
+        }));
+
+        galleryLinks.forEach((link, index) => {
+            const gallery = link.closest('.image-gallery');
+            const lightboxDisabled = gallery && gallery.classList.contains('no-lightbox');
+
+            const href = link.getAttribute('href');
+            const isVideo = href && this.isVideoFile(href);
+
+            if (isVideo) {
+                this.addVideoIndicator(link);
+            }
+
+            if (!lightboxDisabled) {
+                link.removeAttribute('target');
+                link.onclick = (e) => {
+                    e.preventDefault();
+                    this.open(index, galleryImages);
+                    return false;
+                };
+            }
+        });
+    }
+
+    isVideoFile(url) {
+        const extension = url.split('.').pop().toLowerCase();
+        return ['mp4', 'webm', 'ogg', 'mov', 'avi', 'mkv'].includes(extension);
+    }
+
+    addVideoIndicator(link) {
+        const figure = link.closest('figure');
+        const img = figure.querySelector('img');
+
+        if (figure.querySelector('.video-indicator') || !img) {
+            return;
+        }
+
+        const indicator = document.createElement('div');
+        indicator.className = 'video-indicator';
+        indicator.textContent = '';
+        figure.appendChild(indicator);
+
+        const positionIndicator = () => {
+            const imgRect = img.getBoundingClientRect();
+            const figureRect = figure.getBoundingClientRect();
+            const top = imgRect.top - figureRect.top + 8;
+            const right = figureRect.right - imgRect.right + 8;
+            indicator.style.top = top + 'px';
+            indicator.style.right = right + 'px';
+        };
+
+        if (img.complete && img.naturalWidth > 0) {
+            positionIndicator();
+        } else {
+            img.addEventListener('load', positionIndicator);
+        }
+
+        window.addEventListener('resize', positionIndicator);
+    }
+
+    open(index, images) {
+        this.currentIndex = index;
+        this.images = images;
+
+        this.updateContent();
+        this.container.style.display = 'flex';
+        setTimeout(() => this.container.classList.add('active'), 10);
+
+        document.body.classList.add('lightbox-open');
+        this.attachEventListeners();
+    }
+
+    close() {
+        this.container.classList.remove('active');
+        setTimeout(() => {
+            this.container.style.display = 'none';
+        }, 300);
+
+        document.body.classList.remove('lightbox-open');
+        this.detachEventListeners();
+    }
+
+    updateContent() {
+        const currentMedia = this.images[this.currentIndex];
+        const mediaContainer = document.getElementById('lightbox-image-container');
+        const caption = document.getElementById('lightbox-caption');
+        const counter = document.getElementById('lightbox-counter');
+        const prevBtn = document.getElementById('lightbox-prev');
+        const nextBtn = document.getElementById('lightbox-next');
+
+        mediaContainer.innerHTML = '';
+
+        const src = currentMedia.src;
+        const extension = src.split('.').pop().toLowerCase();
+
+        if (['mp4', 'webm', 'ogg', 'mov'].includes(extension)) {
+            this.createVideoElement(mediaContainer, src);
+        } else if (['wav', 'mp3', 'ogg', 'm4a'].includes(extension)) {
+            this.createAudioElement(mediaContainer, src, currentMedia.caption);
+        } else {
+            this.createImageElement(mediaContainer, src);
+        }
+
+        caption.textContent = currentMedia.caption;
+        counter.textContent = `${this.currentIndex + 1} / ${this.images.length}`;
+
+        prevBtn.classList.toggle('disabled', this.currentIndex === 0);
+        nextBtn.classList.toggle('disabled', this.currentIndex === this.images.length - 1);
+    }
+
+    createImageElement(container, src) {
+        container.className = 'lightbox-image-container';
+        const image = document.createElement('img');
+        image.className = 'lightbox-image';
+        image.src = src;
+        image.alt = 'Enlarged view';
+        container.appendChild(image);
+    }
+
+    createVideoElement(container, src) {
+        container.className = 'lightbox-media-container';
+        const video = document.createElement('video');
+        video.className = 'lightbox-video';
+        video.src = src;
+        video.controls = true;
+        video.autoplay = false;
+        video.loop = true;
+        container.appendChild(video);
+    }
+
+    createAudioElement(container, src, caption) {
+        container.className = 'lightbox-audio-container';
+
+        const audioTitle = document.createElement('div');
+        audioTitle.className = 'lightbox-audio-title';
+        audioTitle.textContent = caption || 'Audio File';
+
+        const audio = document.createElement('audio');
+        audio.className = 'lightbox-audio';
+        audio.src = src;
+        audio.controls = true;
+
+        container.appendChild(audioTitle);
+        container.appendChild(audio);
+    }
+
+    prev() {
+        if (this.currentIndex > 0) {
+            this.currentIndex--;
+            this.updateContent();
+        }
+    }
+
+    next() {
+        if (this.currentIndex < this.images.length - 1) {
+            this.currentIndex++;
+            this.updateContent();
+        }
+    }
+
+    handleKeyboard = (e) => {
+        switch(e.key) {
+            case 'ArrowLeft':
+            case 'a':
+                this.prev();
+                break;
+            case 'ArrowRight':
+            case 'd':
+                this.next();
+                break;
+            case 'Escape':
+                this.close();
+                break;
+        }
+    }
+
+    handleOutsideClick = (e) => {
+        if (e.target === this.container) {
+            this.close();
+        }
+    }
+
+    handleTouchStart = (e) => {
+        this.touchStartX = e.changedTouches[0].screenX;
+    }
+
+    handleTouchEnd = (e) => {
+        this.touchEndX = e.changedTouches[0].screenX;
+        const swipeThreshold = 50;
+
+        if (this.touchEndX < this.touchStartX - swipeThreshold) {
+            this.next();
+        } else if (this.touchEndX > this.touchStartX + swipeThreshold) {
+            this.prev();
+        }
+    }
+
+    attachEventListeners() {
+        const prevBtn = document.getElementById('lightbox-prev');
+        const nextBtn = document.getElementById('lightbox-next');
+        const closeBtn = document.getElementById('lightbox-close');
+
+        document.addEventListener('keydown', this.handleKeyboard);
+        this.container.addEventListener('click', this.handleOutsideClick);
+        this.container.addEventListener('touchstart', this.handleTouchStart);
+        this.container.addEventListener('touchend', this.handleTouchEnd);
+
+        prevBtn.addEventListener('click', () => this.prev());
+        nextBtn.addEventListener('click', () => this.next());
+        closeBtn.addEventListener('click', () => this.close());
+    }
+
+    detachEventListeners() {
+        document.removeEventListener('keydown', this.handleKeyboard);
+        this.container.removeEventListener('click', this.handleOutsideClick);
+        this.container.removeEventListener('touchstart', this.handleTouchStart);
+        this.container.removeEventListener('touchend', this.handleTouchEnd);
+    }
+
+    adjustCaptionSizes() {
+        const observer = new MutationObserver(() => {
+            setTimeout(() => {
+                const captions = document.querySelectorAll('.image-gallery figcaption');
+                captions.forEach(caption => {
+                    const textLength = caption.textContent.length;
+                    if (textLength > 30) {
+                        caption.style.fontSize = '0.8rem';
+                    } else if (textLength > 20) {
+                        caption.style.fontSize = '0.85rem';
+                    }
+                });
+            }, 100);
+        });
+
+        const contentElement = document.getElementById('content');
+        if (contentElement) {
+            observer.observe(contentElement, { childList: true, subtree: true });
+        }
+    }
+
+    reinitialize() {
+        this.setupGalleryImages();
+    }
+}
