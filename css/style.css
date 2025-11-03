@@ -94,12 +94,13 @@ body {
     padding: 1.5rem;
     position: fixed;
     height: 100vh;
-    overflow: hidden; /* Prevent any overflow on the sidebar itself */
+    overflow: hidden;
     font-family: var(--font-family), serif;
     transition: background-color 0.3s, transform 0.3s ease;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
+    gap: 0; /* Remove any default gaps */
 }
 
 /* Force hide horizontal scrollbar on sidebar */
@@ -126,7 +127,7 @@ body {
         overflow-x: hidden;
         margin-bottom: 1rem;
         padding-right: 0.5rem; /* Add some padding for scrollbar */
-        max-height: calc(100vh - 120px); /* Account for name, bottom nav, and theme toggle */
+        max-height: calc(100vh - 200px);
     }
 
     .sidebar nav {
@@ -135,18 +136,34 @@ body {
     }
 
     .bottom-nav {
-        position: static;
+        position: static; /* Changed from absolute */
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        padding-top: 1rem;
+        border-top: 1px solid var(--card-bg);
         margin-top: auto;
-        flex-shrink: 0;
-        padding-top: 0.5rem; /* Reduced padding */
+        flex-shrink: 0; /* Prevent shrinking */
     }
 
     .theme-toggle {
-        position: static;
-        margin-top: 0.5rem; /* Reduced margin */
-        flex-shrink: 0;
-        padding: 0.5rem; /* Smaller padding */
-        font-size: 0.8rem; /* Smaller font */
+        position: static; /* Changed from absolute */
+        padding: 0.75rem;
+        background: none;
+        border: 1px solid var(--link-color);
+        border-radius: 8px;
+        color: var(--text-color);
+        cursor: pointer;
+        font-size: 0.9rem;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        z-index: 1003;
+        overflow: hidden;
+        margin-top: 1rem; /* Add spacing above */
+        flex-shrink: 0; /* Prevent shrinking */
     }
 }
 
@@ -192,7 +209,7 @@ main {
     overflow-y: auto;
     overflow-x: hidden; /* Prevent horizontal overflow */
     margin-bottom: 1rem;
-    max-height: calc(100vh - 200px); /* Ensure it doesn't exceed viewport */
+    max-height: calc(100vh - 280px); /* Changed from 200px to 280px */
 }
 
 /* Ensure navigation can scroll when needed */
@@ -285,29 +302,17 @@ nav a:not([target="_blank"]).active::before {
 }
 
 .bottom-nav {
-    position: absolute;
-    bottom: 110px; /* Increased space above theme toggle */
-    left: 2rem;
-    right: 2rem;
+    position: static; /* Changed from absolute */
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
     padding-top: 1rem;
     border-top: 1px solid var(--card-bg);
     margin-top: auto;
+    flex-shrink: 0; /* Prevent shrinking */
 }
 
-/* Make bottom nav flexible on small heights */
-@media (max-height: 700px) {
-    .bottom-nav {
-        position: static;
-        bottom: auto;
-        left: auto;
-        right: auto;
-        margin-top: auto;
-        flex-shrink: 0;
-    }
-}
+
 
 .bottom-nav a {
     color: var(--text-secondary);
@@ -379,10 +384,7 @@ nav a:not([target="_blank"]).active::before {
 ================================================*/
 /* Theme Toggle */
 .theme-toggle {
-    position: absolute;
-    bottom: 2rem;
-    left: 2rem;
-    right: 2rem;
+    position: static; /* Changed from absolute */
     padding: 0.75rem;
     background: none;
     border: 1px solid var(--link-color);
@@ -397,8 +399,9 @@ nav a:not([target="_blank"]).active::before {
     gap: 0.5rem;
     z-index: 1003;
     overflow: hidden;
+    margin-top: 1rem; /* Add spacing above */
+    flex-shrink: 0; /* Prevent shrinking */
 }
-
 /* Hide all scrollbars on theme toggle */
 .theme-toggle::-webkit-scrollbar {
     display: none;
@@ -409,16 +412,6 @@ nav a:not([target="_blank"]).active::before {
     scrollbar-width: none; /* Firefox */
 }
 
-@media (max-height: 700px) {
-    .theme-toggle {
-        position: static;
-        bottom: auto;
-        left: auto;
-        right: auto;
-        margin-top: 1rem;
-        flex-shrink: 0;
-    }
-}
 
 .theme-toggle:hover {
     background-color: var(--card-bg);
