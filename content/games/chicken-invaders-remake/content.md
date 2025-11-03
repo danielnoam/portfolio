@@ -52,6 +52,12 @@ while practicing teamwork, version control, and coordinated game development.
         </a>
     </figure>
     <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/WeaponsGif.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/WeaponsGif.gif" alt="Store Interface">
+            <figcaption>Shop and upgrade system</figcaption>
+        </a>
+    </figure>
+    <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/CustomEditorGif.gif" target="_blank">
             <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/CustomEditorGif.gif" alt="Custom Editor Tools">
             <figcaption>Custom editor tools</figcaption>
