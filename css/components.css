@@ -66,13 +66,13 @@
 
 .image-gallery img {
     width: 100%;
-    height: auto;
+    max-height: 200px;
     min-height: 200px;
+    max-width: 400px;
     object-fit: contain;
     border-radius: 8px;
     transition: transform 0.3s;
     background-color: var(--card-bg);
-    max-width: 400px;
 }
 
 .image-gallery img:hover {
