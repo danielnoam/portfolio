@@ -2,7 +2,7 @@
 
 # Chicken Invaders Remake
 
-<img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/Cover.gif" alt="Intro">
+<img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/Cover.jpg" alt="Intro">
 
 [Itch.io](https://tay-dev.itch.io/chicken-invaders-remake) | [GDD](https://docs.google.com/document/d/15oJfTMVTdB9uJKfskemjhVx1XfsIAPWvOurxZK-_GJw/edit?usp=sharing)
 

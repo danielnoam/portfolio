@@ -7,6 +7,12 @@ My main expertise is in Unity, with additional experience in Unreal, Blender, Ph
 
 <div class="image-gallery no-lightbox">
     <figure>
+        <a href="#" onclick="handleNavigationClick(`${baseUrl}/content/games/chicken-invaders-remake/content.md`, document.querySelector('a[onclick*=\'chicken-invaders-remake\']')); return false;">
+            <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/Cover.jpg" alt="Chicken Invaders Remake">
+            <figcaption>Chicken Invaders Remake</figcaption>
+        </a>
+    </figure>
+    <figure>
         <a href="#" onclick="handleNavigationClick(`${baseUrl}/content/games/project-umn/content.md`, document.querySelector('a[onclick*=\'project-umn\']')); return false;">
             <img src="https://danielnoam.github.io/portfolio/assets/project-umn/introon.gif" alt="Project UMN">
             <figcaption>Project UMN</figcaption>
