@@ -2,7 +2,7 @@
 
 # Chicken Invaders Remake
 
-<img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/Cover.jpg" alt="Intro">
+<img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/Cover.png" alt="Intro">
 
 [Itch.io](https://tay-dev.itch.io/chicken-invaders-remake) | [GDD](https://docs.google.com/document/d/15oJfTMVTdB9uJKfskemjhVx1XfsIAPWvOurxZK-_GJw/edit?usp=sharing)
 
@@ -40,15 +40,15 @@ while practicing teamwork, version control, and coordinated game development.
 
 <div class="image-gallery">
     <figure>
-        <a href="URL_TO_MOVEMENT_GIF">
-            <img src="URL_TO_MOVEMENT_GIF" alt="Ship Movement">
-            <figcaption>Responsive ship controls</figcaption>
+        <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/Gamepay1Gif.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/Gamepay1Gif.gif" alt="Ship Movement and Camera">
+            <figcaption>Responsive ship controls and camera movement</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="URL_TO_CAMERA_GIF">
-            <img src="URL_TO_CAMERA_GIF" alt="Dynamic Camera">
-            <figcaption>Dynamic camera tracking</figcaption>
+        <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/Gamepay1Gif.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/Gamepay1Gif.gif" alt="Ship Movement">
+            <figcaption>Responsive ship controls</figcaption>
         </a>
     </figure>
     <!-- Add 3-5 more similar captures -->
