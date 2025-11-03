@@ -27,6 +27,7 @@ while practicing teamwork, version control, and coordinated game development.
 - Player - Spaceship movement and physics
 - Camera - Dynamic camera behavior and effects
 - Custom Editor Tools - To help artists and designers test and tweak gameplay elements
+- Object Pooling System - Implemented for projectiles, sound effects, and various game resources to optimize performance and reduce garbage collection overhead
 - Asset Integration - Implemented 3D models, textures, and VFX artist's shaders from the art team
 - Progression & Economy - Weapon and ship upgrade mechanics with integrated shop interface and transaction systems for player progression
 - User Interface - Complete UI/UX design including in-game HUD elements, main menu navigation, options/settings interface, and pause menu functionality
@@ -66,23 +67,35 @@ while practicing teamwork, version control, and coordinated game development.
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/SOStage.png" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/SOStage.png" alt="Scriptable Object Stage">
-            <figcaption>Scriptable Object stage system</figcaption>
-        </a>
-    </figure>
-    <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/MainMenuGif.gif" target="_blank">
             <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/MainMenuGif.gif" alt="Main Menu">
             <figcaption>Main menu interface</figcaption>
         </a>
     </figure>
-<figure>
-    <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/PauseMenuGif.gif" target="_blank">
-        <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/PauseMenuGif.gif" alt="Pause Menu">
-        <figcaption>Pause menu interface</figcaption>
-    </a>
-</figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/PauseMenuGif.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/PauseMenuGif.gif" alt="Pause Menu">
+            <figcaption>Pause menu interface</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/ObstaclesStageGif.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/ObstaclesStageGif.gif" alt="Obstacles stage">
+            <figcaption>Obstacles the player has to dodge</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/ObjectPoolingGif.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/ObjectPoolingGif.gif" alt="Object pooling">
+            <figcaption>Object pooling system</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/SOStage.png" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/SOStage.png" alt="Scriptable object Stage">
+            <figcaption>Scriptable Object stage system</figcaption>
+        </a>
+    </figure>
 </div>
 
 
@@ -92,12 +105,12 @@ while practicing teamwork, version control, and coordinated game development.
 
 This project served as an invaluable learning experience in collaborative game development, teaching essential skills in:
 
-- Team Coordination: Working effectively with programmers, artists, and technical artists to ensure smooth project workflow and consistent communication.
-- Version Control: Using Git and collaborative development tools to manage code changes across multiple team members without conflicts.
-- Role Specialization: Understanding how different disciplines contribute to game development and learning to integrate programming work with 3D models and technical art.
-- Project Management: Coordinating tasks, deadlines, and deliverables across team members with different specializations and schedules.
-- Asset Integration: Learning to work with externally created 3D models, textures, and technical art implementations within the game engine.
-- Code Architecture for Teams: Writing clean, documented, and modular code that other team members can understand, modify, and build upon.
+- Working effectively with programmers, artists, and technical artists to ensure smooth project workflow and consistent communication.
+- Using Git and collaborative development tools to manage code changes across multiple team members without conflicts.
+- Understanding how different disciplines contribute to game development and learning to integrate programming work with 3D models and technical art.
+- Coordinating tasks, deadlines, and deliverables across team members with different specializations and schedules.
+- Learning to work with externally created 3D models, textures, and technical art implementations within the game engine.
+- Writing clean, documented, and modular code that other team members can understand, modify, and build upon.
 
 
 </div>
