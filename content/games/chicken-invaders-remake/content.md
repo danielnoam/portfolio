@@ -4,7 +4,9 @@
 
 <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/Cover.png" alt="Intro">
 
-[Itch.io](https://tay-dev.itch.io/chicken-invaders-remake) | [GDD](https://docs.google.com/document/d/15oJfTMVTdB9uJKfskemjhVx1XfsIAPWvOurxZK-_GJw/edit?usp=sharing)
+[Itch.io](https://tay-dev.itch.io/chicken-invaders-remake) | [GDD](https://docs.google.com/document/d/15oJfTMVTdB9uJKfskemjhVx1XfsIAPWvOurxZK-_GJw/edit?usp=sharing) | [INTRO](https://youtu.be/kjTa3ECVQwo)
+
+
 
 <div class="project-card">
 
