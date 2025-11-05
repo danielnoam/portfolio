@@ -24,57 +24,76 @@ while practicing teamwork, version control, and coordinated game development.
 
 ## Main Contributions
 
-### Player Controller & Weapon System
+### Player Controller & Weapons
 
-Built a modular component-based architecture where systems communicate through C# events. Implemented rail-constrained movement with dodge accumulation mechanics and multi-control scheme support.
-Designed a flexible weapon system using ScriptableObjects and the behavior pattern. Weapons dynamically upgrade at runtime - creating new data instances and swapping visual elements based on upgrade level without duplicate prefabs.
-Implemented projectile and hitscan types with composable behaviors allowing complex functionality through combination. Created aim-lock targeting with multi-target support and real-time reticle feedback (heat visualization, spread indication, size changes).
-Health system features shield/health pools with regeneration, iframe damage prevention, and feedback through screen shake and fullscreen effects. Applied object pooling for projectiles to eliminate instantiation overhead.
+- modular player controller where components (movement, health, aiming, weapons) communicate through C# events
+- Designed flexible weapon system using ScriptableObjects and composable behaviors - allows configuring weapon types, behaviors, effects, and targeting limits through data without code changes
+- Real-time reticle feedback showing heat, spread, and lock state
+- Implemented rail-constrained movement system with dodge mechanic
+- Health system uses shield/health pools with regeneration and iframe damage prevention
 
-### Camera System
+### Camera
 
-Integrated Cinemachine for dynamic camera behavior including screen shake on damage, smooth tracking, and combat feedback synchronization. Implemented multiple camera configurations for different gameplay sections with seamless transitions.
+- Integrated Cinemachine for dynamic camera behavior including screen shake, smooth tracking, and combat feedback
+- Implemented multiple camera setups for different gameplay sections with seamless transitions
 
-### Level Design & Progression System
+### Object Pooling
 
-Built event-driven stage progression using ScriptableObjects for data-driven level creation. Orchestrated stage transitions, enemy spawning, obstacle management, and resource drops with automatic state tracking.
-Created procedural obstacle system with dynamic pathfinding - obstacles support breakable and pass-through mechanics with visual feedback integration.
-Designed stage task system supporting multiple objective types (eliminate enemies, break/pass-through obstacles) with real-time progress tracking. Implemented radio message system queuing character dialogue with priority handling and warning system for critical events.
+- Implemented centralized pooling system for projectiles, audio effects, enemies, and visual effects
+- Eliminates instantiation overhead and reduces garbage collection
 
-### User Interface System
+### Level Design & Progression
 
-Designed complete UI/UX including in-game HUD, main menu navigation, pause system, options/settings interface, and outro screens. Created adaptive stage progression visualization that calculates icon sizes based on stage count and animates transitions. All UI systems integrate with pause state and respond to game events.
+- Built event-driven stage progression using ScriptableObjects
+- Managed stage transitions, enemy spawning, obstacle spawning, and resource drops
+- Created obstacle system with breakable and pass-through mechanics
+- Designed stage task system supporting multiple objectives (eliminate enemies, break/pass obstacles)
+- Implemented radio message system with priority handling and warning system for critical events
+
+### User Interface
+
+- Designed complete UI/UX including HUD, menus, pause system, and settings
+- Created adaptive stage progression bar that adjusts icon sizes and animates transitions
+- All UI systems respond to game events and pause state
+
 ### Shop & Upgrade Economy
 
-Developed upgrade store with currency system, purchase validation, and ScriptableObject-based upgrade definitions. System tracks owned upgrades and applies stat modifications dynamically.
+- Built upgrade store with currency system and purchase validation using ScriptableObjects
+- Tracks owned upgrades and applies stat changes dynamically
 
 ### Save System & Data Persistence
 
-Implemented multi-layer save architecture - cross-run persistence for level completion and high scores, session state for health/currency/upgrades/weapons, and user preferences. System handles complex serialization including ScriptableObject references and Dictionary collections.
+- Implemented multi-layer save system - persistent data for level completion and scores, session data for health/currency/upgrades/weapons, and user settings
+- Handles serialization of ScriptableObject references and Dictionary collections
 
 ### Asset Integration
 
-Integrated 3D models, textures, and shader effects from art team into gameplay systems.
+- Integrated 3D models, textures, 2D art, and sound effects from art team, creating necessary prefabs
+- Implemented scripts for various shader effects and materials 
 
-### Audio Systems
+### Audio
 
-Built centralized audio management system using ScriptableObjects for designer-friendly sound implementation. Created music manager with cross-fade transitions between tracks, dynamic volume adjustment on pause, and stage-based theme switching.
+- Built audio system using ScriptableObjects for designer-friendly implementation
+- Created music manager with cross-fade transitions, dynamic volume on pause, and stage-based theme switching
 
 ### Controller Support
 
-Implemented full gamepad support throughout the entire game with seamless device switching and dynamic UI that updates button prompts based on active input device. Created custom vibration system featuring spatial 3D positioning and distance attenuation for directional haptic feedback.
+- Implemented full gamepad support with seamless device switching and dynamic UI updating button prompts
+- Created custom vibration system with spatial 3D positioning and distance attenuation
 
 ### Custom Editor Tools
 
-Created custom editor tools and inspector buttons for rapid testing and designer workflow improvements. Built debug visualization systems using Gizmos for spatial debugging.
+- Created editor tools and inspector buttons for rapid testing
+- Built debug visualizations using Gizmos
 
 ### Game Design & Narrative
 
-Balanced difficulty progression and designed tutorial systems to teach core mechanics. Fine-tuned gameplay elements for player experience. Crafted game story, dialogue, and developed intro/outro sequences and credits scenes.
+- Balanced difficulty progression and designed tutorial
+- Created story, dialogue, and intro/credits sequences
 
 ### Custom Shaders
 
-Created custom shaders for visual effects using Shader Graph.
+- Created dither shader for level boundaries that fade in as player approaches using distance-based transparency
 
 </div>
 
