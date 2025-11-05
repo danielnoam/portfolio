@@ -4,7 +4,7 @@
 
 <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/Cover.png" alt="Intro">
 
-[Itch.io](https://tay-dev.itch.io/chicken-invaders-remake) | [GDD](https://docs.google.com/document/d/15oJfTMVTdB9uJKfskemjhVx1XfsIAPWvOurxZK-_GJw/edit?usp=sharing) | [Intro](https://youtu.be/kjTa3ECVQwo)
+[Itch.io](https://tay-dev.itch.io/chicken-invaders-remake) | [GDD](https://docs.google.com/document/d/15oJfTMVTdB9uJKfskemjhXx1XfsIAPWvOurxZK-_GJw/edit?usp=sharing) | [Intro](https://youtu.be/kjTa3ECVQwo)
 
 
 
@@ -15,7 +15,7 @@
 "Chicken Invaders Remake" is a collaborative project developed during my fourth semester as a team-based learning experience.
 Our team consisted of 2 programmers (including myself), 2 3D modelers, and 1 technical artist.
 
-Our goal was to recreate the original game's idea with modern visuals and reimagined gameplay, 
+Our goal was to recreate the original game's idea with modern visuals and reimagined gameplay,
 while practicing teamwork, version control, and coordinated game development.
 
 </div>
@@ -24,20 +24,57 @@ while practicing teamwork, version control, and coordinated game development.
 
 ## Main Contributions
 
-- Player - Spaceship movement and physics
-- Camera - Dynamic camera behavior and effects
-- Custom Editor Tools - To help artists and designers test and tweak gameplay elements
-- Object Pooling System - Implemented for projectiles, sound effects, and various game resources to optimize performance and reduce garbage collection overhead
-- Asset Integration - Implemented 3D models, textures, and VFX artist's shaders from the art team
-- Progression & Economy - Weapon and ship upgrade mechanics with integrated shop interface and transaction systems for player progression
-- User Interface - Complete UI/UX design including in-game HUD elements, main menu navigation, options/settings interface, and pause menu functionality
-- Save/Load - Progress persistence and data management
-- Level Design & Management - Designed and implemented multiple game stages with event-driven architecture for stage progression
-- Audio Systems - Music manager, sound effects implementation, and audio integration
-- Controller Support - Comprehensive gamepad integration with custom rumble system
-- Game Design & Player Experience - Balanced difficulty progression, designed tutorial systems to teach core mechanics, and fine-tuned gameplay elements
-- Narrative & Cinematics - Crafted game story, dialogue, and developed intro sequence, credits, and dialogue  scenes
-- Custom Shaders - Created custom shaders for visual effects
+### Player Controller & Weapon System
+
+Built a modular component-based architecture where systems communicate through C# events. Implemented rail-constrained movement with dodge accumulation mechanics and multi-control scheme support.
+Designed a flexible weapon system using ScriptableObjects and the behavior pattern. Weapons dynamically upgrade at runtime - creating new data instances and swapping visual elements based on upgrade level without duplicate prefabs.
+Implemented projectile and hitscan types with composable behaviors allowing complex functionality through combination. Created aim-lock targeting with multi-target support and real-time reticle feedback (heat visualization, spread indication, size changes).
+Health system features shield/health pools with regeneration, iframe damage prevention, and feedback through screen shake and fullscreen effects. Applied object pooling for projectiles to eliminate instantiation overhead.
+
+### Camera System
+
+Integrated Cinemachine for dynamic camera behavior including screen shake on damage, smooth tracking, and combat feedback synchronization. Implemented multiple camera configurations for different gameplay sections with seamless transitions.
+
+### Level Design & Progression System
+
+Built event-driven stage progression using ScriptableObjects for data-driven level creation. Orchestrated stage transitions, enemy spawning, obstacle management, and resource drops with automatic state tracking.
+Created procedural obstacle system with dynamic pathfinding - obstacles support breakable and pass-through mechanics with visual feedback integration.
+Designed stage task system supporting multiple objective types (eliminate enemies, break/pass-through obstacles) with real-time progress tracking. Implemented radio message system queuing character dialogue with priority handling and warning system for critical events.
+
+### User Interface System
+
+Designed complete UI/UX including in-game HUD, main menu navigation, pause system, options/settings interface, and outro screens. Created adaptive stage progression visualization that calculates icon sizes based on stage count and animates transitions. All UI systems integrate with pause state and respond to game events.
+### Shop & Upgrade Economy
+
+Developed upgrade store with currency system, purchase validation, and ScriptableObject-based upgrade definitions. System tracks owned upgrades and applies stat modifications dynamically.
+
+### Save System & Data Persistence
+
+Implemented multi-layer save architecture - cross-run persistence for level completion and high scores, session state for health/currency/upgrades/weapons, and user preferences. System handles complex serialization including ScriptableObject references and Dictionary collections.
+
+### Asset Integration
+
+Integrated 3D models, textures, and shader effects from art team into gameplay systems.
+
+### Audio Systems
+
+Built centralized audio management system using ScriptableObjects for designer-friendly sound implementation. Created music manager with cross-fade transitions between tracks, dynamic volume adjustment on pause, and stage-based theme switching.
+
+### Controller Support
+
+Implemented full gamepad support throughout the entire game with seamless device switching and dynamic UI that updates button prompts based on active input device. Created custom vibration system featuring spatial 3D positioning and distance attenuation for directional haptic feedback.
+
+### Custom Editor Tools
+
+Created custom editor tools and inspector buttons for rapid testing and designer workflow improvements. Built debug visualization systems using Gizmos for spatial debugging.
+
+### Game Design & Narrative
+
+Balanced difficulty progression and designed tutorial systems to teach core mechanics. Fine-tuned gameplay elements for player experience. Crafted game story, dialogue, and developed intro/outro sequences and credits scenes.
+
+### Custom Shaders
+
+Created custom shaders for visual effects using Shader Graph.
 
 </div>
 
