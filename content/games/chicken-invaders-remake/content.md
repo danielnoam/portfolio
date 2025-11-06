@@ -22,7 +22,7 @@ while practicing teamwork, version control, and coordinated game development.
 
 <div class="project-card">
 
-## Main Contributions
+## Contributions
 
 ### Player Controller & Weapons
 
@@ -34,8 +34,8 @@ while practicing teamwork, version control, and coordinated game development.
 
 ### Camera
 
-- Integrated Cinemachine for dynamic camera behavior including screen shake, smooth tracking, and combat feedback
-- Implemented multiple camera setups for different gameplay sections with seamless transitions
+- Integrated Cinemachine for dynamic camera behavior including screen shake, and combat feedback
+- Implemented multiple camera setups for different sections with seamless transitions
 
 ### Object Pooling
 
@@ -53,8 +53,9 @@ while practicing teamwork, version control, and coordinated game development.
 ### User Interface
 
 - Designed complete UI/UX including HUD, menus, pause system, and settings
-- Created adaptive stage progression bar that adjusts icon sizes and animates transitions
-- All UI systems respond to game events and pause state
+- Built dynamic HUD system that responds to player movement with position offset and shake effects, and changes color based on damage type (health/shield)
+- Created diegetic main menu integrated into the game world
+- Implemented adaptive stage progression bar that adjusts icon sizes and animates transitions
 
 ### Shop & Upgrade Economy
 
@@ -162,10 +163,8 @@ while practicing teamwork, version control, and coordinated game development.
 This project served as an invaluable learning experience in collaborative game development, teaching essential skills in:
 
 - Working effectively with programmers, artists, and technical artists to ensure smooth project workflow and consistent communication.
-- Using Git and collaborative development tools to manage code changes across multiple team members without conflicts.
-- Understanding how different disciplines contribute to game development and learning to integrate programming work with 3D models and technical art.
+- Using Git to manage code changes across multiple team members without conflicts.
 - Coordinating tasks, deadlines, and deliverables across team members with different specializations and schedules.
-- Learning to work with externally created 3D models, textures, and technical art implementations within the game engine.
 - Writing clean, documented, and modular code that other team members can understand, modify, and build upon.
 
 
