@@ -15,7 +15,7 @@
 "2D Platformer" is a project developed for my second-semester school project to learn and expand skills.
 It features fluid movement mechanics including wall-jumping and dashing, complemented by systems like coyote time and jump buffering.
 
-Players navigate through meticulously crafted levels filled with interactive elements such as soft platforms, crumbling surfaces, and portals, all supported by fine-tuned player movement and an adaptive camera.
+Players navigate through meticulously crafted levels filled with interactive elements such as soft platforms, and crumbling platforms, all supported by fine-tuned player movement and an adaptive camera.
 
 </div>
 
@@ -27,7 +27,7 @@ Players navigate through meticulously crafted levels filled with interactive ele
 
 - Double jump, wall sliding, wall jump, and dashing mechanics provide a versatile and engaging platforming experience.
 - Coyote jump and jump buffering techniques create a more forgiving and responsive control scheme.
-- Variable jump height allows players to control their jump trajectory and navigate the environment with precision.
+- Variable jump height allows players to control their jump trajectory and navigate with precision.
 - Fine-tuned gravity, friction, acceleration, and deceleration that allow for precise player control and predictable movement.
 
 
@@ -218,7 +218,7 @@ Players navigate through meticulously crafted levels filled with interactive ele
 - Built helpful tools that saved development time.
 - Created a flexible player controller that allows me to quickly tweak values and see results immediately.
 - Balanced making levels challenging enough to be fun but not frustratingly difficult.
-- Saving the player's progress (last checkpoint, collectibles, and best time and deaths for each level) using Unity's PlayerPrefs.
+- Saving the player's progress (checkpoint, collectibles, and best time and deaths for each level) using Unity's PlayerPrefs.
 
 
 </div>

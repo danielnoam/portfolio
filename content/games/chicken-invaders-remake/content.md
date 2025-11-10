@@ -15,8 +15,7 @@
 "Chicken Invaders Remake" is a collaborative project developed during my fourth semester as a team-based learning experience.
 Our team consisted of 2 programmers (including myself), 2 3D modelers, and 1 technical artist.
 
-Our goal was to recreate the original game's idea with modern visuals and reimagined gameplay,
-while practicing teamwork, version control, and coordinated game development.
+Our goal was to recreate the original game's idea with modern visuals and reimagined gameplay.
 
 </div>
 
@@ -28,19 +27,19 @@ while practicing teamwork, version control, and coordinated game development.
 
 - modular player controller where components (movement, health, aiming, weapons) communicate through C# events
 - Designed flexible weapon system using ScriptableObjects and composable behaviors - allows configuring weapon types, behaviors, effects, and targeting limits through data without code changes
-- Real-time reticle feedback showing heat, spread, and lock state
+- Reticle feedback showing heat, spread, and lock state
 - Implemented rail-constrained movement system with dodge mechanic
 - Health system uses shield/health pools with regeneration and iframe damage prevention
 
 ### Camera
 
-- Integrated Cinemachine for dynamic camera behavior including screen shake, and combat feedback
-- Implemented multiple camera setups for different sections with seamless transitions
+- Integrated Cinemachine for dynamic camera behavior including screen shake, and combat feedback (Dynamic rotation and position depending on player position and aim direction)
+- Implemented multiple camera setups for different sections with seamless transitions (intro, gameplay, shop, outro, passing through obstacles)
 
 ### Object Pooling
 
 - Implemented centralized pooling system for projectiles, audio effects, enemies, and visual effects
-- Eliminates instantiation overhead and reduces garbage collection
+- Allows pre warming each pool before gameplay to minimize runtime instantiation overhead
 
 ### Level Design & Progression
 
@@ -69,7 +68,8 @@ while practicing teamwork, version control, and coordinated game development.
 
 ### Asset Integration
 
-- Integrated 3D models, textures, 2D art, and sound effects from art team, creating necessary prefabs
+- Integrated 3D models, textures, 2D art, and sound effects from art team
+- Created prefabs and materials for easy reuse
 - Implemented scripts for various shader effects and materials 
 
 ### Audio
