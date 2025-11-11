@@ -15,7 +15,7 @@ const CONFIG = {
     uiSettings: {
         showUrls: true,
         showTopBar: true,
-        showThemeToggle: true,
+        showThemeToggle: false,
     },
 
     navigation: {

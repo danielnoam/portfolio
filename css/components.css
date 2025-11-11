@@ -36,6 +36,9 @@
     transition: transform var(--transition-base),
     box-shadow var(--transition-base),
     background-color var(--transition-normal);
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .project-card:hover {
@@ -68,14 +71,16 @@
 }
 
 .image-gallery img {
-    width: 100%;
+    width: auto;
+    height: auto;
     max-height: var(--gallery-image-height);
-    min-height: var(--gallery-image-height);
     max-width: var(--gallery-image-max-width);
     object-fit: contain;
     border-radius: var(--radius-md);
     transition: transform var(--transition-normal);
     background-color: var(--card-bg);
+    padding: var(--space-0);
+    box-sizing: border-box;
 }
 
 .image-gallery img:hover {
@@ -228,4 +233,66 @@
 
 .fade-in-delay-3 {
     transition-delay: 0.3s;
+}
+
+/* Two-column layout for content */
+.content-two-column {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: var(--space-8);
+    align-items: start;
+    margin: var(--space-6) 0;
+    margin-left: calc(-1 * var(--space-6));
+    width: calc(100% + var(--space-6) * 2);
+}
+
+.content-two-column .content-left {
+    position: sticky;
+    top: var(--space-6);
+    padding-left: var(--space-6);
+}
+
+.content-two-column .content-right {
+    max-width: 100%;
+    padding-right: var(--space-6);
+    overflow: hidden;
+}
+
+.content-two-column .image-gallery {
+    max-width: 100%;
+}
+
+/* Scale up on larger viewports - keep left small, right gets bigger */
+@media (min-width: 1400px) {
+    .content-two-column {
+        grid-template-columns: 450px 1fr;
+        gap: var(--space-10);
+    }
+}
+
+@media (min-width: 1800px) {
+    .content-two-column {
+        grid-template-columns: 500px 1fr;
+        gap: var(--space-12);
+    }
+}
+
+/* Responsive: stack on mobile */
+@media (max-width: 968px) {
+    .content-two-column {
+        grid-template-columns: 1fr;
+        gap: var(--space-6);
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .content-two-column .content-left {
+        position: static;
+        padding-left: 0;
+    }
+
+    .content-two-column .content-right {
+        padding-right: 0;
+        overflow: visible;
+    }
 }

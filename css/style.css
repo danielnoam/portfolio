@@ -119,7 +119,7 @@ body {
 /* Main Content Layout */
 main {
     flex-grow: 1;
-    max-width: var(--content-max-width);
+    max-width: 100%;
     margin-right: auto;
     margin-left: auto;
     padding: var(--space-6) var(--space-6) var(--space-6) 250px;
@@ -136,10 +136,39 @@ main {
     transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
+/* Grow content area on larger screens */
+@media (min-width: 1200px) {
+    #content {
+        max-width: 1100px;
+    }
+}
+
+@media (min-width: 1400px) {
+    #content {
+        max-width: 1300px;
+    }
+}
+
+@media (min-width: 1800px) {
+    #content {
+        max-width: 1600px;
+    }
+}
+
+@media (min-width: 2200px) {
+    #content {
+        max-width: 1800px;
+    }
+}
+
+
 #content.page-transitioning {
     opacity: var(--opacity-0);
     transform: translateY(50px);
 }
+
+
+
 
 /*==============================================
             NAVIGATION COMPONENTS
