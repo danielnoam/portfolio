@@ -8,6 +8,7 @@ import { UIManager } from './modules/uiManager.js';
 import { AnimationManager } from './modules/animationManager.js';
 import { Router } from './modules/router.js';
 import { LightboxManager } from './modules/lightboxManager.js';
+import { BackgroundManager } from './modules/backgroundManager.js';
 
 /*==============================================
             APPLICATION CLASS
@@ -20,6 +21,7 @@ class PortfolioApp {
 
     async init() {
         // Initialize modules
+        this.modules.background = new BackgroundManager();
         this.modules.content = new ContentManager(this.config);
         this.modules.navigation = new NavigationManager(this.config);
         this.modules.theme = new ThemeManager();
@@ -49,6 +51,7 @@ class PortfolioApp {
         this.modules.ui.initScrollToTop();
         this.modules.ui.applyVisibilitySettings();
         this.modules.router.init();
+        this.modules.background.init();
 
         // Load initial route
         await this.modules.router.handleInitialRoute();
@@ -87,6 +90,7 @@ class PortfolioApp {
 ================================================*/
 window.onload = async function() {
     const app = new PortfolioApp(CONFIG);
+    window.portfolioApp = app;
     app.setupGlobalHandlers();
     await app.init();
 };

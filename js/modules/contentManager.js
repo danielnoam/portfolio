@@ -28,6 +28,12 @@ export class ContentManager {
 
             window.scrollTo(0, 0);
             this.updateDocumentTitle(path);
+            
+            setTimeout(() => {
+                if (window.portfolioApp && window.portfolioApp.modules.background) {
+                    window.portfolioApp.modules.background.setBackground(path);
+                }
+            }, 50);
 
             return path;
         } catch (error) {

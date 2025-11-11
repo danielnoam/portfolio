@@ -109,7 +109,7 @@
     --color-dark-text: rgba(255, 255, 255, 1);
     --color-dark-text-secondary: rgba(160, 160, 160, 1);
     --color-dark-sidebar: rgba(0, 0, 0, 0.5);
-    --color-dark-card: rgba(255, 255, 255, 0.05);
+    --color-dark-card: rgba(50, 50, 50, 0.8);
     --color-dark-gallery-text: rgba(26, 29, 33, 0.1);
     
     /* Neutral Colors - Light Theme */
