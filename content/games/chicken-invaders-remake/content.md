@@ -4,9 +4,11 @@
 
 <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/Cover.png" alt="Intro">
 
-[Itch.io](https://tay-dev.itch.io/chicken-invaders-remake) | [GDD](https://docs.google.com/document/d/15oJfTMVTdB9uJKfskemjhXx1XfsIAPWvOurxZK-_GJw/edit?usp=sharing) | [Intro](https://youtu.be/kjTa3ECVQwo)
-
-
+<p class="text-center">
+    <a href="https://tay-dev.itch.io/chicken-invaders-remake">Itch.io</a> | 
+    <a href="https://docs.google.com/document/d/15oJfTMVTdB9uJKfskemjhXx1XfsIAPWvOurxZK-_GJw/edit?usp=sharing">GDD</a> | 
+    <a href="https://youtu.be/kjTa3ECVQwo">Intro</a>
+</p>
 
 <div class="project-card">
 
@@ -96,7 +98,6 @@ Our goal was to recreate the original game's idea with modern visuals and reimag
 
 - Created dither shader for level boundaries that fade in as player approaches using distance-based transparency
 
-</div>
 
 <div class="image-gallery">
     <figure>
@@ -108,13 +109,13 @@ Our goal was to recreate the original game's idea with modern visuals and reimag
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/StoreGif.gif" target="_blank">
             <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/StoreGif.gif" alt="Store Interface">
-            <figcaption>Shop and upgrade system</figcaption>
+            <figcaption>Shop and upgrades</figcaption>
         </a>
     </figure>
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/WeaponsGif.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/WeaponsGif.gif" alt="Weapon Upgrades">
-            <figcaption>Weapon system</figcaption>
+            <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/WeaponsGif.gif" alt="Weapons">
+            <figcaption>Different weapons behaviors</figcaption>
         </a>
     </figure>
     <figure>
@@ -126,13 +127,13 @@ Our goal was to recreate the original game's idea with modern visuals and reimag
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/MainMenuGif.gif" target="_blank">
             <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/MainMenuGif.gif" alt="Main Menu">
-            <figcaption>Main menu interface</figcaption>
+            <figcaption>Main menu</figcaption>
         </a>
     </figure>
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/PauseMenuGif.gif" target="_blank">
             <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/PauseMenuGif.gif" alt="Pause Menu">
-            <figcaption>Pause menu interface</figcaption>
+            <figcaption>Pause menu</figcaption>
         </a>
     </figure>
     <figure>
@@ -144,7 +145,7 @@ Our goal was to recreate the original game's idea with modern visuals and reimag
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/ObjectPoolingGif.gif" target="_blank">
             <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/ObjectPoolingGif.gif" alt="Object pooling">
-            <figcaption>Object pooling system</figcaption>
+            <figcaption>Object pooling</figcaption>
         </a>
     </figure>
     <figure>
@@ -154,6 +155,11 @@ Our goal was to recreate the original game's idea with modern visuals and reimag
         </a>
     </figure>
 </div>
+
+</div>
+
+
+
 
 
 <div class="project-card">
@@ -170,6 +176,10 @@ This project served as an invaluable learning experience in collaborative game d
 
 </div>
 
+
+<div class="project-card">
+
+## Gallery
 <div class="image-gallery">
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/Gamepay1Gif.gif" target="_blank">
@@ -184,5 +194,9 @@ This project served as an invaluable learning experience in collaborative game d
         </a>
     </figure>
 </div>
+
+</div>
+
+
 
 </div>

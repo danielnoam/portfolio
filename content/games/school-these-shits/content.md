@@ -7,8 +7,9 @@
 <img src="https://danielnoam.github.io/portfolio/assets/school-these-shits/main.png" alt="Game Screenshot">
 
 
-
-[Itch.io](https://danielnoam.itch.io/school-these-shts)
+<p class="text-center">
+    <a href="https://danielnoam.itch.io/school-these-shts">Itch.io</a>
+</p>
 
 <div class="project-card">
     

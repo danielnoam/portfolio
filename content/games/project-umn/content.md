@@ -5,8 +5,10 @@
 
 <img src="https://danielnoam.github.io/portfolio/assets/project-umn/introon.gif" alt="Intro">
 
-[Itch.io](https://danielnoam.itch.io/project-umd) | [GDD](https://docs.google.com/document/d/1cU73PA5Ix3AxZ0AB7ok3quzK6Il2FuIT4DuwFEk2508/edit?usp=sharing)
-
+<p class="text-center">
+    <a href="https://danielnoam.itch.io/project-umd">Itch.io</a> | 
+    <a href="https://docs.google.com/document/d/1cU73PA5Ix3AxZ0AB7ok3quzK6Il2FuIT4DuwFEk2508/edit?usp=sharing">GDD</a>
+</p>
 
 <div class="project-card">
 

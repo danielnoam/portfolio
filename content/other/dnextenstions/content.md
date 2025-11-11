@@ -5,8 +5,9 @@
 
 <img src="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" alt="Intro">
 
-[GitHub](https://github.com/danielnoam/DNExtensions/)
-
+<p class="text-center">
+    <a href="https://github.com/danielnoam/DNExtensions/">GitHub</a>
+</p>
 
 <div class="project-card">
 

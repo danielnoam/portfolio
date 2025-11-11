@@ -48,12 +48,6 @@ Developing this project provided me with hands-on experience with the core aspec
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/pixel-knight/gameplay2.png" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/pixel-knight/gameplay2.png" alt="Main Menu">
-            <figcaption>Main Menu</figcaption>
-        </a>
-    </figure>
-    <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/pixel-knight/gameplay4.png" target="_blank">
             <img src="https://danielnoam.github.io/portfolio/assets/pixel-knight/gameplay4.png" alt="Boss battle">
             <figcaption>Boss battle</figcaption>

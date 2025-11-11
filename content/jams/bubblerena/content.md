@@ -5,7 +5,9 @@
 
 <img src="https://danielnoam.github.io/portfolio/assets/bubblerena/logo.gif" alt="Logo">
 
-[Global Game Jam 2025](https://globalgamejam.org/)
+<p class="text-center">
+    <a href="https://globalgamejam.org/">Global Game Jam 2025</a>
+</p>
 
 
 <div class="project-card">
@@ -13,8 +15,9 @@
 ## Overview
 
 "Bubblerena" is a first-person arena shooter combined with match-3 mechanics, developed in 48 hours for Global Game Jam 2025 with the theme "Bubble".
+
 Players need to run, jump, dash, and shoot colored bubbles from their gun to create matches of 3 or more bubbles of the same color.
-The game features wave-based gameplay where bubbles spawn around the map and players must move and aim to pop all bubbles before advancing to increasingly challenging waves.
+The game features wave-based gameplay where bubbles spawn around the map and players must move and aim to pop all bubbles before advancing.
 
 </div>
 
