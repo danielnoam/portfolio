@@ -4,7 +4,7 @@
 
 
 
-<img src="https://danielnoam.github.io/portfolio/assets/pixel-knight/main.gif" alt="Game Screenshot">
+<img src="https://danielnoam.github.io/portfolio/assets/pixel-knight/main.gif" alt="Game Screenshot" class="page-logo">
 
 
 

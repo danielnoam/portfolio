@@ -3,7 +3,7 @@
 # Square
 
 
-<img src="https://danielnoam.github.io/portfolio/assets/square/main.gif" alt="Intro">
+<img src="https://danielnoam.github.io/portfolio/assets/square/main.gif" alt="Intro" class="page-logo">
 
 <p class="text-center">
     <a href="https://danielnoam.itch.io/square">Itch.io</a>

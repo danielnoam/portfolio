@@ -3,7 +3,7 @@
 # DNExtensions
 
 
-<img src="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" alt="Intro">
+<img src="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" alt="Intro" class="page-logo">
 
 <p class="text-center">
     <a href="https://github.com/danielnoam/DNExtensions/">GitHub</a>
@@ -13,7 +13,7 @@
 
 ## Overview
 
-A collection of Unity tools developed organically while working on various projects. 
+A collection of small Unity tools developed while working on various projects. 
 Each tool was created to solve specific problems, then refined and expanded as new needs emerged across different games and prototypes.
 
 
@@ -22,16 +22,6 @@ Each tool was created to solve specific problems, then refined and expanded as n
 
 
 <div class="project-card">
-
-## Controller Rumble System
-A comprehensive haptic feedback system with 3D spatial positioning and advanced effect management for precise controller vibration control.
-
-- Source-listener architecture for multiple simultaneous effects
-- AnimationCurve-based intensity modulation for complex patterns
-- 3D spatial positioning with distance attenuation
-- Built-in presets: fade in/out, pulse patterns, custom curves
-- Configurable frequency range clamping for accessibility
-
 
 ## VFX & Transition System
 Visual effects system managing post-processing, UI transitions, and scene loading with seamless continuity.

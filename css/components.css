@@ -52,10 +52,15 @@
     padding-bottom: var(--space-2);
 }
 
+.project-card h3 {
+    text-align: match-parent;
+    padding-top: var(--space-2);
+}
+
 /* Image Gallery */
 .image-gallery {
     display: grid;
-    grid-template-columns: repeat(var(--gallery-columns), 1fr);
+    grid-template-columns: repeat(var(--gallery-columns), auto);
     row-gap: 0;
     column-gap: var(--gallery-gap);
     margin: var(--space-4) auto;
@@ -76,7 +81,7 @@
 .image-gallery img {
     width: auto;
     height: auto;
-    max-height: var(--gallery-image-height);
+    max-height: var(--gallery-image-max-height);
     max-width: var(--gallery-image-max-width);
     object-fit: contain;
     border-radius: var(--radius-md);
@@ -204,6 +209,18 @@
     box-shadow: var(--shadow-lg);
 }
 
+.page-content .page-logo {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    display: block;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-lg);
+    margin-bottom: var(--card-gap);
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .page-content ul,
 .page-content ol {
     max-width: 600px;
@@ -270,7 +287,7 @@
 .content-two-column .content-right {
     max-width: 100%;
     padding-right: var(--space-6);
-    overflow: hidden;
+    overflow: visible;
 }
 
 .content-two-column .image-gallery {

@@ -65,7 +65,7 @@ const CONFIG = {
         "Unity Extensions": {
             path: "content/other",
             pages: [
-                { title: "Controller Rumble", folder: "dnextenstions", visible: false },
+                { title: "Controller Rumble", folder: "controller-rumble", visible: true },
                 { title: "DNExtensions", folder: "dnextenstions", visible: true },
             ]
         },

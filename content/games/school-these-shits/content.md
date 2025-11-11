@@ -3,8 +3,7 @@
 # School These Sh*ts
 
 
-
-<img src="https://danielnoam.github.io/portfolio/assets/school-these-shits/main.png" alt="Game Screenshot">
+<img src="https://danielnoam.github.io/portfolio/assets/school-these-shits/main.png" alt="Game Screenshot" class="page-logo">
 
 
 <p class="text-center">

@@ -2,7 +2,7 @@
 
 # PopACorn
 
-<img src="https://danielnoam.github.io/portfolio/assets/popacorn/main.gif" alt="Game Screenshot">
+<img src="https://danielnoam.github.io/portfolio/assets/popacorn/main.gif" alt="Game Screenshot" class="page-logo">
 
 <div class="project-card">
 

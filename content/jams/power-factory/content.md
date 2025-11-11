@@ -3,7 +3,7 @@
 # Power Factory
 
 
-<img src="https://danielnoam.github.io/portfolio/assets/power-factory/logo.png" alt="Intro">
+<img src="https://danielnoam.github.io/portfolio/assets/power-factory/logo.png" alt="Intro" class="page-logo">
 
 
 <p class="text-center">
