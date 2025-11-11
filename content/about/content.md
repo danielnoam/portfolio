@@ -32,9 +32,9 @@ My main expertise is in Unity, with additional experience in Unreal, Blender, Ph
         </a>
     </figure>
     <figure>
-        <a href="#" onclick="handleNavigationClick(`${baseUrl}/content/games/2d-platformer/content.md`, document.querySelector('a[onclick*=\'2d-platformer\']')); return false;">
-            <img src="https://danielnoam.github.io/portfolio/assets/2d-platformer/main.gif" alt="2D Platformer">
-            <figcaption>2D Platformer</figcaption>
+        <a href="#" onclick="handleNavigationClick(`${baseUrl}/content/games/square/content.md`, document.querySelector('a[onclick*=\'square\']')); return false;">
+            <img src="https://danielnoam.github.io/portfolio/assets/square/main.gif" alt="Square">
+            <figcaption>Square</figcaption>
         </a>
     </figure>
     <figure>
@@ -45,8 +45,8 @@ My main expertise is in Unity, with additional experience in Unreal, Blender, Ph
     </figure>
     <figure>
         <a href="#" onclick="handleNavigationClick(`${baseUrl}/content/other/dnextenstions/content.md`, document.querySelector('a[onclick*=\'dnextenstions\']')); return false;">
-            <img src="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" alt="DNExtenstions">
-            <figcaption>DNExtenstions</figcaption>
+            <img src="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" alt="DNExtensions">
+            <figcaption>DNExtensions</figcaption>
         </a>
     </figure>
     <figure>

@@ -54,11 +54,19 @@ const CONFIG = {
         "Games": {
             path: "content/games",
             pages: [
+                { title: "PopACorn", folder: "popacorn", visible: false },
                 { title: "Chicken Invaders Remake", folder: "chicken-invaders-remake", visible: true },
                 { title: "Project UMN", folder: "project-umn", visible: true },
-                { title: "2D Platformer", folder: "2d-platformer", visible: true },
+                { title: "Square", folder: "square", visible: true },
                 { title: "School These Sh*ts", folder: "school-these-shits", visible: true },
                 { title: "Pixel Knight", folder: "pixel-knight", visible: true },
+            ]
+        },
+        "Unity Extensions": {
+            path: "content/other",
+            pages: [
+                { title: "Controller Rumble", folder: "dnextenstions", visible: false },
+                { title: "DNExtensions", folder: "dnextenstions", visible: true },
             ]
         },
         "GameJams": {
@@ -71,7 +79,6 @@ const CONFIG = {
         "Other": {
             path: "content/other",
             pages: [
-                { title: "DNExtenstions", folder: "dnextenstions", visible: true },
                 { title: "Shaders", folder: "shaders", visible: false },
                 { title: "Models", folder: "models", visible: false },
                 { title: "Procedural Animations", folder: "procedural-animations", visible: false },

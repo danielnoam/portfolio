@@ -1,6 +1,6 @@
 <div class="page-content">
 
-# DNExtenstions
+# DNExtensions
 
 
 <img src="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" alt="Intro">
