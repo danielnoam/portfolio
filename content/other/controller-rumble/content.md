@@ -3,7 +3,7 @@
 # Controller Rumble
 
 
-<img src="https://danielnoam.github.io/portfolio/assets/controllerlogo.jpg" alt="Intro" class="page-logo">
+<img src="https://danielnoam.github.io/portfolio/assets/controllerlogo.jpg" alt="logo" class="page-logo">
 
 <p class="text-center">
     <a href="https://github.com/danielnoam/DNExtensions/">GitHub</a>

@@ -69,7 +69,7 @@ My main expertise is in Unity, with additional experience in Unreal, Blender, Ph
     </figure>
     <figure>
         <a href="#" onclick="handleNavigationClick(`${baseUrl}/content/other/controller-rumble/content.md`, document.querySelector('a[onclick*=\'controller-rumble\']')); return false;">
-            <img src="https://danielnoam.github.io/portfolio/assets/controllerlogo.jpg" alt="DNExtensions">
+            <img src="https://danielnoam.github.io/portfolio/assets/controllerlogo.jpg" alt="Controller Rumble">
             <figcaption>Controller Rumble</figcaption>
         </a>
     </figure>
