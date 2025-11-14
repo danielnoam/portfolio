@@ -128,19 +128,19 @@ Our goal was to recreate the original game's idea with modern visuals and reimag
 <div class="image-gallery">
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/MainMenuGif.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/MainMenuGif.gif" alt="Main Menu">
+            <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/MainMenuGif.gif" alt="Main menu">
             <figcaption>Main menu</figcaption>
         </a>
     </figure>
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/PauseMenuGif.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/PauseMenuGif.gif" alt="Pause Menu">
+            <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/PauseMenuGif.gif" alt="Pause menu">
             <figcaption>Pause menu</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/radiowarning.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/PauseMenuGif.gif" alt="Radio&Warning">
+        <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/radioandwarning.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/radioandwarning.gif" alt="Radio & warning">
             <figcaption>Radio & warning</figcaption>
         </a>
     </figure>
@@ -156,6 +156,12 @@ Our goal was to recreate the original game's idea with modern visuals and reimag
             <figcaption>Weapons & dodge bar reacts to actions</figcaption>
         </a>
     </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/levelProgressionBar.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/levelProgressionBar.gif" alt="level progression bar">
+            <figcaption>Dynamic level progression bar & objectives</figcaption>
+        </a>
+    </figure>
 </div>
 
 ### Shop & Upgrade
@@ -166,8 +172,14 @@ Our goal was to recreate the original game's idea with modern visuals and reimag
 <div class="image-gallery">
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/StoreGif.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/StoreGif.gif" alt="Store Interface">
-            <figcaption>Shop & Buying upgrades</figcaption>
+            <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/StoreGif.gif" alt="Store interface">
+            <figcaption>Buying upgrades</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/boughtUpgrades.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/boughtUpgrades.gif" alt="Bought upgrades">
+            <figcaption>Bought upgrades window</figcaption>
         </a>
     </figure>
 </div>
@@ -175,7 +187,7 @@ Our goal was to recreate the original game's idea with modern visuals and reimag
 
 ### Save System & Data Persistence
 
-- Implemented multi-layer save system - persistent data for level completion and scores, session data for health/currency/upgrades/weapons, and user settings
+- Implemented saving of data for level completion and scores, user settings, and session data for health/currency/upgrades/weapons
 - Handles serialization of ScriptableObject references and Dictionary collections
 
 ### Asset Integration
@@ -213,10 +225,11 @@ Our goal was to recreate the original game's idea with modern visuals and reimag
     </figure>
 </div>
 
-### Custom Editor Tools
+### Custom Tools & Designer Friendly Systems
 
 - Created editor tools and inspector buttons for rapid testing
-- Built debug visualizations using Gizmos
+- Developed tools that allow non-programmers to configure complex behaviors through ScriptableObjects and components
+- Built debug visualizations using Gizmos for easer debugging
 
 <div class="image-gallery">
     <figure>
@@ -225,11 +238,18 @@ Our goal was to recreate the original game's idea with modern visuals and reimag
             <figcaption>Custom editor tools</figcaption>
         </a>
     </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/stagesub.png" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/stagesub.png" alt="Stage Subscriber">
+            <figcaption>Stage subscriber component</figcaption>
+        </a>
+    </figure>
 </div>
 
 ### Narrative Design
 
-- Created story, dialogue, and intro/credits sequences
+- Created story, dialogue
+- Made intro/credits sequences using timeline and cinemachine
 
 <div class="image-gallery">
     <figure>
@@ -250,6 +270,16 @@ Our goal was to recreate the original game's idea with modern visuals and reimag
 ### Custom Shaders
 
 - Created dither shader for level boundaries that fade in as player approaches using distance-based transparency
+
+<div class="image-gallery">
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/boundaryshader.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/boundaryshader.gif" alt="Boundary Shader">
+            <figcaption>Player boundary shader</figcaption>
+        </a>
+    </figure>
+</div>
+
 
 </div>
 
