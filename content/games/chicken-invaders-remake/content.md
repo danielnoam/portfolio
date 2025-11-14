@@ -53,6 +53,21 @@ Our goal was to recreate the original game's idea with modern visuals and reimag
 - Integrated Cinemachine for dynamic camera behavior including screen shake, and combat feedback (Dynamic rotation and position depending on player position and aim direction)
 - Implemented multiple camera setups for different sections with seamless transitions (intro, gameplay, shop, outro, passing through obstacles)
 
+<div class="image-gallery">
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/introcamera.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/introcamera.gif" alt="Intro cmera">
+            <figcaption>Intro camera has different positions</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/passcamera.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/passcamera.gif" alt="Passthrough Ccamera">
+            <figcaption>Passing through building has different camera effects</figcaption>
+        </a>
+    </figure>
+</div>
+
 ### Object Pooling
 
 - Implemented centralized pooling system for projectiles, audio effects, enemies, and visual effects
@@ -63,6 +78,12 @@ Our goal was to recreate the original game's idea with modern visuals and reimag
         <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/ObjectPoolingGif.gif" target="_blank">
             <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/ObjectPoolingGif.gif" alt="Object pooling">
             <figcaption>Object pooling</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/objectpooler.png" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/objectpooler.png" alt="Object pooler">
+            <figcaption>Object pooler</figcaption>
         </a>
     </figure>
 </div>
@@ -83,9 +104,15 @@ Our goal was to recreate the original game's idea with modern visuals and reimag
         </a>
     </figure>
     <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/solevel.png" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/solevel.png" alt="Scriptable object level">
+            <figcaption>Level settings</figcaption>
+        </a>
+    </figure>
+    <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/SOStage.png" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/SOStage.png" alt="Scriptable object Stage">
-            <figcaption>Scriptable Object stage</figcaption>
+            <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/SOStage.png" alt="Scriptable object stage">
+            <figcaption>Stage settings</figcaption>
         </a>
     </figure>
 </div>
@@ -116,6 +143,24 @@ Our goal was to recreate the original game's idea with modern visuals and reimag
             <figcaption>Pause menu</figcaption>
         </a>
     </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/radiowarning.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/PauseMenuGif.gif" alt="Radio&Warning">
+            <figcaption>Radio & warning</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/statusbar.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/statusbar.gif" alt="Status bar">
+            <figcaption>Status bar react to movement and events</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/weaponsbar.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/weaponsbar.gif" alt="Weapons bar">
+            <figcaption>Weapons & dodge bar reacts to actions</figcaption>
+        </a>
+    </figure>
 </div>
 
 ### Shop & Upgrade Economy
@@ -139,10 +184,29 @@ Our goal was to recreate the original game's idea with modern visuals and reimag
 - Built audio system using ScriptableObjects for designer-friendly implementation
 - Created music manager with cross-fade transitions, dynamic volume on pause, and stage-based theme switching
 
+<div class="image-gallery">
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/audioso.png" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/audioso.png" alt="Audio scriptable object">
+            <figcaption>Scriptable object system for playing sfx</figcaption>
+        </a>
+    </figure>
+</div>
+
+
 ### Controller Support
 
 - Implemented full gamepad support with seamless device switching and dynamic UI updating button prompts
 - Created custom vibration system with spatial 3D positioning and distance attenuation
+
+<div class="image-gallery">
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/controllerrumble.png" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/controllerrumble.png" alt="Controller rumble settings">
+            <figcaption>Customizable controller rumble effect</figcaption>
+        </a>
+    </figure>
+</div>
 
 ### Custom Editor Tools
 
@@ -162,6 +226,22 @@ Our goal was to recreate the original game's idea with modern visuals and reimag
 
 - Balanced difficulty progression and designed tutorial
 - Created story, dialogue, and intro/credits sequences
+
+<div class="image-gallery">
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/intro.mp4" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/intro.mp4" alt="Intro sequence">
+            <figcaption>Intro sequence</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/credits.mp4" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/credits.mp4" alt="Credits sequence">
+            <figcaption>Intro sequence</figcaption>
+        </a>
+    </figure>
+</div>
+
 
 ### Custom Shaders
 
