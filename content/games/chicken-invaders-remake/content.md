@@ -95,6 +95,7 @@ Our goal was to recreate the original game's idea with modern visuals and reimag
 - Created obstacle system with breakable and pass-through mechanics
 - Designed stage task system supporting multiple objectives (eliminate enemies, break/pass obstacles)
 - Implemented radio message system with priority handling and warning system for critical events
+- Balanced difficulty progression and designed tutorial
 
 <div class="image-gallery">
     <figure>
@@ -226,9 +227,8 @@ Our goal was to recreate the original game's idea with modern visuals and reimag
     </figure>
 </div>
 
-### Game Design & Narrative
+### Narrative Design
 
-- Balanced difficulty progression and designed tutorial
 - Created story, dialogue, and intro/credits sequences
 
 <div class="image-gallery">

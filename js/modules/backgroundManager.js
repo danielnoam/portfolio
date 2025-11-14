@@ -8,35 +8,40 @@ export class BackgroundManager {
         this.currentBackground = null;
         this.backgroundConfigs = {
             'about': {
-                type: 'network',
-                count: 15,
+                effects: [
+                    {type: 'network', count: 15,},
+                ]
             },
             'chicken-invaders-remake': {
-                type: 'particles',
-                color: '#4a9eff',
-                count: 50
+                effects: [
+                    {type: 'particles', color: '#4a9eff', count: 50},
+                    {type: 'stars', color: '#4a9eff', count: 7, speed: 0.5},
+                ]
             },
             'project-umn': {
-                type: 'binary',
-                count: 20
+                effects: [
+                    {type: 'binary', count: 20, speed: 1.25},
+                ]
             },
             'square': {
-                type: 'shapes',
-                count: 25,
+                effects: [
+                    {type: 'shapes', count: 25,},
+                ]
             },
             'school-these-shits': {
-                type: 'waves',
-                count: 1,
+                effects: [
+                    {type: 'waves', count: 1,},
+                ]
             },
             'pixel-knight': {
-                type: 'rain',
-                count: 15,
-                speed: 0.5,
+                effects: [
+                    {type: 'rain', count: 15, speed: 0.5,},
+                ]
             },
             'bubblerena': {
-                type: 'bubbles',
-                count: 20,
-                color: '#ff6b6b',
+                effects: [
+                    {type: 'bubbles', count: 20, color: '#ff6b6b',},
+                ]
             },
         };
     }
@@ -61,7 +66,7 @@ export class BackgroundManager {
             return;
         }
 
-        if (!config) {
+        if (!config || !config.effects || config.effects.length === 0) {
             this.clearBackground();
             this.currentBackground = null;
             return;
@@ -72,47 +77,50 @@ export class BackgroundManager {
         setTimeout(() => {
             this.container.innerHTML = '';
 
-            switch(config.type) {
-                case 'rain':
-                    this.createRainEffect(config);
-                    break;
-                case 'particles':
-                    this.createParticlesEffect(config);
-                    break;
-                case 'shapes':
-                    this.createShapesEffect(config);
-                    break;
-                case 'binary':
-                    this.createBinaryEffect(config);
-                    break;
-                case 'waves':
-                    this.createWavesEffect(config);
-                    break;
-                case 'image':
-                    this.createImageBackground(config);
-                    break;
-                case 'bubbles':
-                    this.createBubblesEffect(config);
-                    break;
-                case 'stars':
-                    this.createStarsEffect(config);
-                    break;
-                case 'snow':
-                    this.createSnowEffect(config);
-                    break;
-                case 'confetti':
-                    this.createConfettiEffect(config);
-                    break;
-                case 'dna':
-                    this.createDNAEffect(config);
-                    break;
-                case 'network':
-                    this.createNetworkEffect(config);
-                    break;
-                case 'fireflies':
-                    this.createFirefliesEffect(config);
-                    break;
-            }
+            // Loop through all effects in the array
+            config.effects.forEach((effectConfig, index) => {
+                switch(effectConfig.type) {
+                    case 'rain':
+                        this.createRainEffect(effectConfig);
+                        break;
+                    case 'particles':
+                        this.createParticlesEffect(effectConfig);
+                        break;
+                    case 'shapes':
+                        this.createShapesEffect(effectConfig);
+                        break;
+                    case 'binary':
+                        this.createBinaryEffect(effectConfig);
+                        break;
+                    case 'waves':
+                        this.createWavesEffect(effectConfig);
+                        break;
+                    case 'image':
+                        this.createImageBackground(effectConfig);
+                        break;
+                    case 'bubbles':
+                        this.createBubblesEffect(effectConfig);
+                        break;
+                    case 'stars':
+                        this.createStarsEffect(effectConfig);
+                        break;
+                    case 'snow':
+                        this.createSnowEffect(effectConfig);
+                        break;
+                    case 'confetti':
+                        this.createConfettiEffect(effectConfig);
+                        break;
+                    case 'dna':
+                        this.createDNAEffect(effectConfig);
+                        break;
+                    case 'network':
+                        this.createNetworkEffect(effectConfig);
+                        break;
+                    case 'fireflies':
+                        this.createFirefliesEffect(effectConfig);
+                        break;
+                }
+            });
 
             this.currentBackground = pageId;
 
@@ -126,12 +134,14 @@ export class BackgroundManager {
         const rainContainer = document.createElement('div');
         rainContainer.className = 'rain-container';
 
+        const baseSpeed = config.speed || 1.0;
+
         for (let i = 0; i < (config.count || 100); i++) {
             const drop = document.createElement('div');
             drop.className = config.image ? 'image-rain-drop rain-drop' : 'rain-drop';
             drop.style.left = `${Math.random() * 100}%`;
             drop.style.height = `${Math.random() * 50 + 30}px`;
-            drop.style.animationDuration = `${Math.random() * 1 + (config.speed || 2)}s`;
+            drop.style.animationDuration = `${(Math.random() * 1 + 2) / baseSpeed}s`;
             drop.style.animationDelay = `${Math.random() * 2}s`;
             drop.style.transform = 'translateY(-100vh)';
 
@@ -150,6 +160,8 @@ export class BackgroundManager {
         const particlesContainer = document.createElement('div');
         particlesContainer.className = 'particles-container';
 
+        const baseSpeed = config.speed || 1.0;
+
         for (let i = 0; i < (config.count || 50); i++) {
             const particle = document.createElement('div');
             particle.className = config.image ? 'image-particle particle' : 'particle';
@@ -159,7 +171,7 @@ export class BackgroundManager {
             particle.style.left = `${startX}%`;
             particle.style.top = `${startY}%`;
 
-            const duration = Math.random() * 10 + 15;
+            const duration = (Math.random() * 10 + 15) / baseSpeed;
             const delay = Math.random() * 5;
 
             if (config.image) {
@@ -174,23 +186,23 @@ export class BackgroundManager {
             const dy = (Math.random() - 0.5) * 200;
 
             const keyframes = `
-            @keyframes ${animationName} {
-                0% {
-                    transform: translate(0, 0);
-                    opacity: 0;
-                }
-                10% {
-                    opacity: 0.2;
-                }
-                90% {
-                    opacity: 0.2;
-                }
-                100% {
-                    transform: translate(${dx}px, ${dy}px);
-                    opacity: 0;
-                }
+        @keyframes ${animationName} {
+            0% {
+                transform: translate(0, 0);
+                opacity: 0;
             }
-        `;
+            10% {
+                opacity: 0.2;
+            }
+            90% {
+                opacity: 0.2;
+            }
+            100% {
+                transform: translate(${dx}px, ${dy}px);
+                opacity: 0;
+            }
+        }
+    `;
 
             // Inject keyframes
             const styleSheet = document.createElement('style');
@@ -209,6 +221,8 @@ export class BackgroundManager {
         const shapesContainer = document.createElement('div');
         shapesContainer.className = 'shapes-container';
 
+        const baseSpeed = config.speed || 1.0;
+
         for (let i = 0; i < (config.count || 20); i++) {
             const shape = document.createElement('div');
             shape.className = `shape ${Math.random() > 0.5 ? 'square' : 'circle'}`;
@@ -222,7 +236,7 @@ export class BackgroundManager {
             shape.style.left = `${startX}%`;
             shape.style.top = `${startY}%`;
 
-            const duration = Math.random() * 20 + 20;
+            const duration = (Math.random() * 20 + 20) / baseSpeed;
             const delay = Math.random() * 5;
 
             // Create unique animation
@@ -231,23 +245,23 @@ export class BackgroundManager {
             const dy = (Math.random() - 0.5) * 300;
 
             const keyframes = `
-            @keyframes ${animationName} {
-                from {
-                    transform: translate(0, 0) rotate(0deg);
-                    opacity: 0;
-                }
-                10% {
-                    opacity: 0.1;
-                }
-                90% {
-                    opacity: 0.1;
-                }
-                to {
-                    transform: translate(${dx}px, ${dy}px) rotate(360deg);
-                    opacity: 0;
-                }
+        @keyframes ${animationName} {
+            from {
+                transform: translate(0, 0) rotate(0deg);
+                opacity: 0;
             }
-        `;
+            10% {
+                opacity: 0.1;
+            }
+            90% {
+                opacity: 0.1;
+            }
+            to {
+                transform: translate(${dx}px, ${dy}px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+    `;
 
             // Inject keyframes
             const styleSheet = document.createElement('style');
@@ -266,6 +280,8 @@ export class BackgroundManager {
         const binaryContainer = document.createElement('div');
         binaryContainer.className = 'binary-container';
 
+        const baseSpeed = config.speed || 1.0;
+
         for (let i = 0; i < (config.count || 15); i++) {
             const column = document.createElement('div');
             column.className = 'binary-column';
@@ -278,7 +294,7 @@ export class BackgroundManager {
             }
             column.innerHTML = text;
 
-            column.style.animationDuration = `${Math.random() * 5 + 10}s`;
+            column.style.animationDuration = `${(Math.random() * 5 + 10) / baseSpeed}s`;
             column.style.animationDelay = `${Math.random() * 3}s`;
             column.style.transform = 'translateY(-100%)';
 
@@ -292,12 +308,14 @@ export class BackgroundManager {
         const wavesContainer = document.createElement('div');
         wavesContainer.className = 'waves-container';
 
+        const baseSpeed = config.speed || 1.0;
+
         for (let i = 0; i < (config.count || 3); i++) {
             const wave = document.createElement('div');
             wave.className = 'wave';
             wave.style.left = `${50}%`;
             wave.style.top = `${50}%`;
-            wave.style.animationDuration = `${10 + i * 3}s`;
+            wave.style.animationDuration = `${(10 + i * 3) / baseSpeed}s`;
             wave.style.animationDelay = `${i * 2}s`;
             wavesContainer.appendChild(wave);
         }
@@ -316,6 +334,8 @@ export class BackgroundManager {
         const bubblesContainer = document.createElement('div');
         bubblesContainer.className = 'bubbles-container';
 
+        const baseSpeed = config.speed || 1.0;
+
         for (let i = 0; i < (config.count || 20); i++) {
             const bubble = document.createElement('div');
             bubble.className = 'bubble';
@@ -326,7 +346,7 @@ export class BackgroundManager {
             bubble.style.left = `${Math.random() * 100}%`;
             bubble.style.bottom = '-100px';
 
-            bubble.style.animationDuration = `${Math.random() * 5 + 8}s`;
+            bubble.style.animationDuration = `${(Math.random() * 5 + 8) / baseSpeed}s`;
             bubble.style.animationDelay = `${Math.random() * 5}s`;
 
             if (config.color) {
@@ -343,6 +363,8 @@ export class BackgroundManager {
         const starsContainer = document.createElement('div');
         starsContainer.className = 'stars-container';
 
+        const baseSpeed = config.speed || 1.0;
+
         for (let i = 0; i < (config.count || 50); i++) {
             const star = document.createElement('div');
             star.className = 'star';
@@ -353,7 +375,7 @@ export class BackgroundManager {
             star.style.left = `${Math.random() * 100}%`;
             star.style.top = `${Math.random() * 100}%`;
 
-            star.style.animationDuration = `${Math.random() * 3 + 2}s`;
+            star.style.animationDuration = `${(Math.random() * 3 + 2) / baseSpeed}s`;
             star.style.animationDelay = `${Math.random() * 3}s`;
 
             if (config.color) {
@@ -371,6 +393,7 @@ export class BackgroundManager {
         snowContainer.className = 'snow-container';
 
         const snowflakes = ['❄', '❅', '❆'];
+        const baseSpeed = config.speed || 1.0;
 
         for (let i = 0; i < (config.count || 50); i++) {
             const snowflake = document.createElement('div');
@@ -379,7 +402,7 @@ export class BackgroundManager {
 
             snowflake.style.left = `${Math.random() * 100}%`;
             snowflake.style.fontSize = `${Math.random() * 10 + 10}px`;
-            snowflake.style.animationDuration = `${Math.random() * 5 + 10}s`;
+            snowflake.style.animationDuration = `${(Math.random() * 5 + 10) / baseSpeed}s`;
             snowflake.style.animationDelay = `${Math.random() * 5}s`;
             snowflake.style.transform = 'translateY(-100vh)';
 
@@ -394,6 +417,7 @@ export class BackgroundManager {
         confettiContainer.className = 'confetti-container';
 
         const colors = config.colors || ['#ff6b6b', '#4ecdc4', '#45b7d1', '#f9ca24', '#6c5ce7'];
+        const baseSpeed = config.speed || 1.0;
 
         for (let i = 0; i < (config.count || 50); i++) {
             const confetti = document.createElement('div');
@@ -401,7 +425,7 @@ export class BackgroundManager {
 
             confetti.style.left = `${Math.random() * 100}%`;
             confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-            confetti.style.animationDuration = `${Math.random() * 3 + 3}s`;
+            confetti.style.animationDuration = `${(Math.random() * 3 + 3) / baseSpeed}s`;
             confetti.style.animationDelay = `${Math.random() * 2}s`;
             confetti.style.transform = 'translateY(-100vh)';
 
@@ -410,7 +434,7 @@ export class BackgroundManager {
 
         this.container.appendChild(confettiContainer);
     }
-
+    
     createDNAEffect(config) {
         const dnaContainer = document.createElement('div');
         dnaContainer.className = 'dna-container';
@@ -418,12 +442,14 @@ export class BackgroundManager {
         const strand = document.createElement('div');
         strand.className = 'dna-strand';
 
+        const baseSpeed = config.speed || 1.0;
+
         for (let i = 0; i < (config.count || 30); i++) {
             const particle = document.createElement('div');
             particle.className = 'dna-particle';
             particle.style.top = `${(i / config.count) * 100}%`;
-            particle.style.animationDuration = '4s';
-            particle.style.animationDelay = `${(i / config.count) * 2}s`;
+            particle.style.animationDuration = `${4 / baseSpeed}s`;
+            particle.style.animationDelay = `${((i / config.count) * 2) / baseSpeed}s`;
 
             if (config.color) {
                 particle.style.background = config.color;
@@ -494,6 +520,8 @@ export class BackgroundManager {
         const firefliesContainer = document.createElement('div');
         firefliesContainer.className = 'fireflies-container';
 
+        const baseSpeed = config.speed || 1.0;
+
         for (let i = 0; i < (config.count || 20); i++) {
             const firefly = document.createElement('div');
             firefly.className = 'firefly';
@@ -503,7 +531,7 @@ export class BackgroundManager {
             firefly.style.left = `${startX}%`;
             firefly.style.top = `${startY}%`;
 
-            const duration = Math.random() * 5 + 5;
+            const duration = (Math.random() * 5 + 5) / baseSpeed;
             const delay = Math.random() * 3;
 
             if (config.color) {
@@ -517,23 +545,23 @@ export class BackgroundManager {
             const dy = (Math.random() - 0.5) * 300;
 
             const keyframes = `
-            @keyframes ${animationName} {
-                0%, 100% {
-                    transform: translate(0, 0);
-                    opacity: 0.3;
-                }
-                25% {
-                    opacity: 1;
-                }
-                50% {
-                    transform: translate(${dx}px, ${dy}px);
-                    opacity: 0.5;
-                }
-                75% {
-                    opacity: 1;
-                }
+        @keyframes ${animationName} {
+            0%, 100% {
+                transform: translate(0, 0);
+                opacity: 0.3;
             }
-        `;
+            25% {
+                opacity: 1;
+            }
+            50% {
+                transform: translate(${dx}px, ${dy}px);
+                opacity: 0.5;
+            }
+            75% {
+                opacity: 1;
+            }
+        }
+    `;
 
             // Inject keyframes
             const styleSheet = document.createElement('style');
