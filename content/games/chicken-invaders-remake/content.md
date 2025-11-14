@@ -234,14 +234,14 @@ Our goal was to recreate the original game's idea with modern visuals and reimag
 <div class="image-gallery">
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/intro.mp4" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/intro.mp4" alt="Intro sequence">
+            <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/intro-thumbnail.png" alt="Intro sequence">
             <figcaption>Intro sequence</figcaption>
         </a>
     </figure>
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/credits.mp4" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/credits.mp4" alt="Credits sequence">
-            <figcaption>Intro sequence</figcaption>
+            <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/credits-thumbnail.png" alt="Credits sequence">
+            <figcaption>Credits sequence</figcaption>
         </a>
     </figure>
 </div>
