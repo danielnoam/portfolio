@@ -119,18 +119,12 @@ Our goal was to recreate the original game's idea with modern visuals and reimag
 
 ### User Interface
 
-- Designed complete UI/UX including HUD, menus, pause system, and settings
+- Designed complete UI/UX including HUD, shop, main menu, pause system, and settings
 - Built dynamic HUD system that responds to player movement with position offset and shake effects, and changes color based on damage type (health/shield)
 - Created diegetic main menu integrated into the game world
 - Implemented adaptive stage progression bar that adjusts icon sizes and animates transitions
 
 <div class="image-gallery">
-    <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/StoreGif.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/StoreGif.gif" alt="Store Interface">
-            <figcaption>Shop and upgrades</figcaption>
-        </a>
-    </figure>
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/MainMenuGif.gif" target="_blank">
             <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/MainMenuGif.gif" alt="Main Menu">
@@ -163,10 +157,20 @@ Our goal was to recreate the original game's idea with modern visuals and reimag
     </figure>
 </div>
 
-### Shop & Upgrade Economy
+### Shop & Upgrade
 
 - Built upgrade store with currency system and purchase validation using ScriptableObjects
 - Tracks owned upgrades and applies stat changes dynamically
+
+<div class="image-gallery">
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/StoreGif.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/StoreGif.gif" alt="Store Interface">
+            <figcaption>Shop & Buying upgrades</figcaption>
+        </a>
+    </figure>
+</div>
+
 
 ### Save System & Data Persistence
 
