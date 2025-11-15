@@ -27,11 +27,14 @@ Our goal was to recreate the original game's idea with modern visuals and reimag
 
 ### Player Controller & Weapons
 
-- modular player controller where components (movement, health, aiming, weapons) communicate through C# events
+- modular player controller where components (movement, health, aiming, weapons) communicate through events
+- Constrained movement in a boundary box with smooth acceleration and deceleration and dodge mechanic
 - Designed flexible weapon system using ScriptableObjects and composable behaviors - allows configuring weapon types, behaviors, effects, and targeting limits through data without code changes
 - Reticle feedback showing heat, spread, and lock state
+- Created aim assist system that snaps to nearest enemy within a configurable angle and distance
 - Implemented rail-constrained movement system with dodge mechanic
 - Health system uses shield/health pools with regeneration and iframe damage prevention
+- Resource pickup system with visual/audio feedback
 
 <div class="image-gallery">
     <figure>
@@ -46,23 +49,36 @@ Our goal was to recreate the original game's idea with modern visuals and reimag
             <figcaption>Different weapons behaviors</figcaption>
         </a>
     </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/reticle.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/reticle.gif" alt="Reticle">
+            <figcaption>Dynamic reticle size, spread, and heat bar</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/weaponsSO.png" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/weaponsSO.png" alt="Weapon scriptable object">
+            <figcaption>Easily customize a weapon behaviors and stats</figcaption>
+        </a>
+    </figure>
 </div>
 
 ### Camera
 
-- Integrated Cinemachine for dynamic camera behavior including screen shake, and combat feedback (Dynamic rotation and position depending on player position and aim direction)
+- Integrated Cinemachine for camera positioning (Dynamic rotation and position depending on player position and aim direction)
+- Created a camera shake system with easily configurable intensity and duration
 - Implemented multiple camera setups for different sections with seamless transitions (intro, gameplay, shop, outro, passing through obstacles)
 
 <div class="image-gallery">
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/introcamera.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/introcamera.gif" alt="Intro cmera">
+            <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/introcamera.gif" alt="Intro camera">
             <figcaption>Intro camera has different positions</figcaption>
         </a>
     </figure>
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/passcamera.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/passcamera.gif" alt="Passthrough Ccamera">
+            <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/passcamera.gif" alt="Passthrough camera">
             <figcaption>Passing through building has different camera effects</figcaption>
         </a>
     </figure>
@@ -164,7 +180,7 @@ Our goal was to recreate the original game's idea with modern visuals and reimag
     </figure>
 </div>
 
-### Shop & Upgrade
+### Shop & Upgrades
 
 - Built upgrade store with currency system and purchase validation using ScriptableObjects
 - Tracks owned upgrades and applies stat changes dynamically
@@ -192,8 +208,8 @@ Our goal was to recreate the original game's idea with modern visuals and reimag
 
 ### Asset Integration
 
-- Integrated 3D models, textures, 2D art, and sound effects from art team
-- Created prefabs and materials for easy reuse
+- Integrated 3D models, textures, and 2D art from team members
+- Created prefabs and materials
 - Implemented scripts for various shader effects and materials 
 
 ### Audio
@@ -217,6 +233,12 @@ Our goal was to recreate the original game's idea with modern visuals and reimag
 - Created custom vibration system with spatial 3D positioning and distance attenuation
 
 <div class="image-gallery">
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/controllerUI.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/controllerUI.gif" alt="Button prompts">
+            <figcaption>Button prompts change depending on active device</figcaption>
+        </a>
+    </figure>
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/controllerrumble.png" target="_blank">
             <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/controllerrumble.png" alt="Controller rumble settings">
