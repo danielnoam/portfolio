@@ -36,7 +36,7 @@ Our goal was to recreate the original game's idea with modern visuals and reimag
 - Health system uses shield/health pools with regeneration and iframe damage prevention
 - Resource pickup system with visual/audio feedback
 
-<div class="image-gallery">
+<div class="image-gallery gallery-2-columns">
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/PlayerAndCameraGif.gif" target="_blank">
             <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/PlayerAndCameraGif.gif" alt="Player Movement">

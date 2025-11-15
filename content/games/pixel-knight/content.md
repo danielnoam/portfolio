@@ -40,7 +40,7 @@ Developing this project provided me with hands-on experience with the core aspec
 <div class="project-card">
     
 ## Gallery
-<div class="image-gallery">
+<div class="image-gallery gallery-2-columns">
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/pixel-knight/gameplay1.png" target="_blank">
             <img src="https://danielnoam.github.io/portfolio/assets/pixel-knight/gameplay1.png" alt="Campfire">

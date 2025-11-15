@@ -87,7 +87,7 @@ Players navigate through meticulously crafted levels filled with interactive ele
 - Portals that transport players to different parts of the level or to entirely new areas.
 - Checkpoints that allow players to save their progress and provide a sense of accomplishment.
 
-<div class="image-gallery">
+<div class="image-gallery gallery-2-columns">
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/square/movingplatform.gif" target="_blank">
             <img src="https://danielnoam.github.io/portfolio/assets/square/movingplatform.gif" alt="Moving platform">
