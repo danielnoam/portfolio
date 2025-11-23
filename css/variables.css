@@ -149,7 +149,8 @@
     
     /* Gallery */
     --gallery-columns: 3;
-    --gallery-gap: var(--space-4);
+    --gallery-columns-gap: var(--space-4);
+    --gallery-rows-gap: var(--space-2);
     --gallery-image-max-height: 250px;
     --gallery-image-max-width: 700px;
     

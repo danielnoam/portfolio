@@ -1,12 +1,12 @@
 <div class="page-content">
 
-# Square
+# 2DPlatformer
 
 
-<img src="https://danielnoam.github.io/portfolio/assets/square/main.gif" alt="Intro" class="page-logo">
+<img src="https://danielnoam.github.io/portfolio/assets/2dplatformer/main.gif" alt="Intro" class="page-logo">
 
 <p class="text-center">
-    <a href="https://danielnoam.itch.io/square">Itch.io</a>
+    <a href="https://danielnoam.itch.io/2dplatformer">Itch.io</a>
 </p>
 
 
@@ -14,7 +14,7 @@
 
 ## Overview
 
-"Square" is a project developed for my second-semester school project to learn and expand skills.
+"2DPlatformer" is a project developed for my second-semester school project to learn and expand skills.
 It features fluid movement mechanics including wall-jumping and dashing, complemented by systems like coyote time and jump buffering.
 
 Players navigate through meticulously crafted levels filled with interactive elements such as soft platforms, and crumbling platforms, all supported by fine-tuned player movement and an adaptive camera.
@@ -35,44 +35,44 @@ Players navigate through meticulously crafted levels filled with interactive ele
 
 <div class="image-gallery">
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/square/doublejump.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/square/doublejump.gif" alt="Double jump">
+        <a href="https://danielnoam.github.io/portfolio/assets/2dplatformer/doublejump.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/2dplatformer/doublejump.gif" alt="Double jump">
             <figcaption>Double jump</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/square/wallslide.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/square/wallslide.gif" alt="Wall slide">
+        <a href="https://danielnoam.github.io/portfolio/assets/2dplatformer/wallslide.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/2dplatformer/wallslide.gif" alt="Wall slide">
             <figcaption>Wall slide</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/square/walljump.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/square/walljump.gif" alt="Wall jump">
+        <a href="https://danielnoam.github.io/portfolio/assets/2dplatformer/walljump.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/2dplatformer/walljump.gif" alt="Wall jump">
             <figcaption>Wall jump</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/square/variableJump.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/square/variableJump.gif" alt="Variable jump height">
+        <a href="https://danielnoam.github.io/portfolio/assets/2dplatformer/variableJump.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/2dplatformer/variableJump.gif" alt="Variable jump height">
             <figcaption>Variable jump height</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/square/player1.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/square/player1.gif" alt="Coyote jump">
+        <a href="https://danielnoam.github.io/portfolio/assets/2dplatformer/player1.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/2dplatformer/player1.gif" alt="Coyote jump">
             <figcaption>Coyote jump</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/square/Physics1.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/square/Physics1.gif" alt="Predictable movement">
+        <a href="https://danielnoam.github.io/portfolio/assets/2dplatformer/Physics1.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/2dplatformer/Physics1.gif" alt="Predictable movement">
             <figcaption>Predictable movement</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/square/Physics2.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/square/Physics2.gif" alt="Player acceleration">
+        <a href="https://danielnoam.github.io/portfolio/assets/2dplatformer/Physics2.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/2dplatformer/Physics2.gif" alt="Player acceleration">
             <figcaption>Player acceleration</figcaption>
         </a>
     </figure>
@@ -89,26 +89,26 @@ Players navigate through meticulously crafted levels filled with interactive ele
 
 <div class="image-gallery gallery-2-columns">
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/square/movingplatform.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/square/movingplatform.gif" alt="Moving platform">
+        <a href="https://danielnoam.github.io/portfolio/assets/2dplatformer/movingplatform.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/2dplatformer/movingplatform.gif" alt="Moving platform">
             <figcaption>Moving platform</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/square/softPlatform.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/square/softPlatform.gif" alt="Soft platform">
+        <a href="https://danielnoam.github.io/portfolio/assets/2dplatformer/softPlatform.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/2dplatformer/softPlatform.gif" alt="Soft platform">
             <figcaption>Soft platform</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/square/crumblingobject.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/square/crumblingobject.gif" alt="Crumbling platform">
+        <a href="https://danielnoam.github.io/portfolio/assets/2dplatformer/crumblingobject.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/2dplatformer/crumblingobject.gif" alt="Crumbling platform">
             <figcaption>Crumbling platform</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/square/spikes.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/square/spikes.gif" alt="Spikes">
+        <a href="https://danielnoam.github.io/portfolio/assets/2dplatformer/spikes.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/2dplatformer/spikes.gif" alt="Spikes">
             <figcaption>Spikes</figcaption>
         </a>
     </figure>
@@ -122,20 +122,20 @@ Players navigate through meticulously crafted levels filled with interactive ele
 
 <div class="image-gallery">
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/square/Hazard3.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/square/Hazard3.gif" alt="Unique level mechanics">
+        <a href="https://danielnoam.github.io/portfolio/assets/2dplatformer/Hazard3.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/2dplatformer/Hazard3.gif" alt="Unique level mechanics">
             <figcaption>Unique level mechanics</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/square/hiddenarea.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/square/hiddenarea.gif" alt="Hidden collectible">
+        <a href="https://danielnoam.github.io/portfolio/assets/2dplatformer/hiddenarea.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/2dplatformer/hiddenarea.gif" alt="Hidden collectible">
             <figcaption>Hidden collectible</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/square/hazard1.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/square/hazard1.gif" alt="Platforming puzzle">
+        <a href="https://danielnoam.github.io/portfolio/assets/2dplatformer/hazard1.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/2dplatformer/hazard1.gif" alt="Platforming puzzle">
             <figcaption>Platforming puzzle</figcaption>
         </a>
     </figure>
@@ -150,20 +150,20 @@ Players navigate through meticulously crafted levels filled with interactive ele
 
 <div class="image-gallery">
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/square/camera1.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/square/camera1.gif" alt="Different camera states">
+        <a href="https://danielnoam.github.io/portfolio/assets/2dplatformer/camera1.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/2dplatformer/camera1.gif" alt="Different camera states">
             <figcaption>Different camera states</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/square/camera2.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/square/camera2.gif" alt="Smooth zooming">
+        <a href="https://danielnoam.github.io/portfolio/assets/2dplatformer/camera2.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/2dplatformer/camera2.gif" alt="Smooth zooming">
             <figcaption>Smooth zooming</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/square/camera4.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/square/camera4.gif" alt="Different camera states">
+        <a href="https://danielnoam.github.io/portfolio/assets/2dplatformer/camera4.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/2dplatformer/camera4.gif" alt="Different camera states">
             <figcaption>Different camera states</figcaption>
         </a>
     </figure>
@@ -177,32 +177,32 @@ Players navigate through meticulously crafted levels filled with interactive ele
 
 <div class="image-gallery">
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/square/PlayerStats.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/square/PlayerStats.gif" alt="Player stats customization">
+        <a href="https://danielnoam.github.io/portfolio/assets/2dplatformer/PlayerStats.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/2dplatformer/PlayerStats.gif" alt="Player stats customization">
             <figcaption>Adjustable player stats editor</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/square/PlayerAbilitys.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/square/PlayerAbilitys.gif" alt="Player abilities editor">
+        <a href="https://danielnoam.github.io/portfolio/assets/2dplatformer/PlayerAbilitys.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/2dplatformer/PlayerAbilitys.gif" alt="Player abilities editor">
             <figcaption>Player ability customization</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/square/Length.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/square/Length.gif" alt="Jump measurement tool">
+        <a href="https://danielnoam.github.io/portfolio/assets/2dplatformer/Length.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/2dplatformer/Length.gif" alt="Jump measurement tool">
             <figcaption>Jump measurement tool</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/square/CameraTrigger.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/square/CameraTrigger.gif" alt="Camera trigger system">
+        <a href="https://danielnoam.github.io/portfolio/assets/2dplatformer/CameraTrigger.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/2dplatformer/CameraTrigger.gif" alt="Camera trigger system">
             <figcaption>Camera trigger editor</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/square/PlatformMovement.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/square/PlatformMovement.gif" alt="Platform movement editor">
+        <a href="https://danielnoam.github.io/portfolio/assets/2dplatformer/PlatformMovement.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/2dplatformer/PlatformMovement.gif" alt="Platform movement editor">
             <figcaption>Platform path visualizer</figcaption>
         </a>
     </figure>

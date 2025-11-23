@@ -84,25 +84,6 @@ Our goal was to recreate the original game's idea with modern visuals and reimag
     </figure>
 </div>
 
-### Object Pooling
-
-- Implemented centralized pooling system for projectiles, audio effects, enemies, and visual effects
-- Allows pre warming each pool before gameplay to minimize runtime instantiation overhead
-
-<div class="image-gallery">
-    <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/ObjectPoolingGif.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/ObjectPoolingGif.gif" alt="Object pooling">
-            <figcaption>Object pooling</figcaption>
-        </a>
-    </figure>
-    <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/objectpooler.png" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/objectpooler.png" alt="Object pooler">
-            <figcaption>Object pooler</figcaption>
-        </a>
-    </figure>
-</div>
 
 ### Level Design & Progression
 
@@ -201,32 +182,6 @@ Our goal was to recreate the original game's idea with modern visuals and reimag
 </div>
 
 
-### Save System & Data Persistence
-
-- Implemented saving of data for level completion and scores, user settings, and session data for health/currency/upgrades/weapons
-- Handles serialization of ScriptableObject references and Dictionary collections
-
-### Asset Integration
-
-- Integrated 3D models, textures, and 2D art from team members
-- Created prefabs and materials
-- Implemented scripts for various shader effects and materials 
-
-### Audio
-
-- Built audio system using ScriptableObjects for designer-friendly implementation
-- Created music manager with cross-fade transitions, dynamic volume on pause, and stage-based theme switching
-
-<div class="image-gallery">
-    <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/audioso.png" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/audioso.png" alt="Audio scriptable object">
-            <figcaption>Scriptable object system for playing sfx</figcaption>
-        </a>
-    </figure>
-</div>
-
-
 ### Controller Support
 
 - Implemented full gamepad support with seamless device switching and dynamic UI updating button prompts
@@ -243,6 +198,27 @@ Our goal was to recreate the original game's idea with modern visuals and reimag
         <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/controllerrumble.png" target="_blank">
             <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/controllerrumble.png" alt="Controller rumble settings">
             <figcaption>Customizable controller rumble effect</figcaption>
+        </a>
+    </figure>
+</div>
+
+
+### Object Pooling
+
+- Implemented centralized pooling system for projectiles, audio effects, enemies, and visual effects
+- Allows pre warming each pool before gameplay to minimize runtime instantiation overhead
+
+<div class="image-gallery">
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/ObjectPoolingGif.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/ObjectPoolingGif.gif" alt="Object pooling">
+            <figcaption>Object pooling</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/objectpooler.png" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/objectpooler.png" alt="Object pooler">
+            <figcaption>Object pooler</figcaption>
         </a>
     </figure>
 </div>
@@ -276,14 +252,29 @@ Our goal was to recreate the original game's idea with modern visuals and reimag
 <div class="image-gallery">
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/intro.mp4" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/intro-thumbnail.png" alt="Intro sequence">
+            <video src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/intro.mp4" autoplay loop muted playsinline></video>
             <figcaption>Intro sequence</figcaption>
         </a>
     </figure>
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/credits.mp4" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/credits-thumbnail.png" alt="Credits sequence">
+            <video src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/credits.mp4" autoplay loop muted playsinline></video>
             <figcaption>Credits sequence</figcaption>
+        </a>
+    </figure>
+</div>
+
+
+### Audio
+
+- Built audio system using ScriptableObjects for designer-friendly implementation
+- Created music manager with cross-fade transitions, dynamic volume on pause, and stage-based theme switching
+
+<div class="image-gallery">
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/audioso.png" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/audioso.png" alt="Audio scriptable object">
+            <figcaption>Scriptable object system for playing sfx</figcaption>
         </a>
     </figure>
 </div>
@@ -301,6 +292,18 @@ Our goal was to recreate the original game's idea with modern visuals and reimag
         </a>
     </figure>
 </div>
+
+
+### Save System & Data Persistence
+
+- Implemented saving of data for level completion and scores, user settings, and session data for health/currency/upgrades/weapons
+- Handles serialization of ScriptableObject references and Dictionary collections
+
+### Asset Integration
+
+- Integrated 3D models, textures, and 2D art from team members
+- Created prefabs and materials
+- Implemented scripts for various shader effects and materials
 
 
 </div>

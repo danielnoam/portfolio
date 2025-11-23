@@ -42,11 +42,11 @@ const CONFIG = {
                 target: "_blank"
             },
             {
-                title: "LinkedIn",
+                title: "Github",
                 type: "external",
-                url: "https://linkedin.com/in/daniel-noam",
+                url: "https://github.com/danielnoam",
                 target: "_blank"
-            }
+            },
         ]
     },
     
@@ -57,16 +57,9 @@ const CONFIG = {
                 { title: "PopACorn", folder: "popacorn", visible: false },
                 { title: "Chicken Invaders Remake", folder: "chicken-invaders-remake", visible: true },
                 { title: "Project UMN", folder: "project-umn", visible: true },
-                { title: "Square", folder: "square", visible: true },
+                { title: "2DPlatformer", folder: "2dplatformer", visible: true },
                 { title: "School These Sh*ts", folder: "school-these-shits", visible: true },
                 { title: "Pixel Knight", folder: "pixel-knight", visible: true },
-            ]
-        },
-        "Unity Extensions": {
-            path: "content/other",
-            pages: [
-                { title: "Controller Rumble", folder: "controller-rumble", visible: true },
-                { title: "DNExtensions", folder: "dnextenstions", visible: true },
             ]
         },
         "GameJams": {
@@ -74,6 +67,13 @@ const CONFIG = {
             pages: [
                 { title: "Power Factory - KenneyJam 2025", folder: "power-factory", visible: true },
                 { title: "Bubblerena - GGJ 2025", folder: "bubblerena", visible: true },
+            ]
+        },
+        "Unity Extensions": {
+            path: "content/other",
+            pages: [
+                { title: "Controller Rumble", folder: "controller-rumble", visible: true },
+                { title: "DNExtensions", folder: "dnextenstions", visible: true },
             ]
         },
         "Other": {

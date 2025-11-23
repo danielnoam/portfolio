@@ -14,6 +14,17 @@ My experience spans from modding existing games to creating original adventures 
 My main expertise is in Unity, with additional experience in Unreal, Blender, Photoshop, Git, and Aseprite.
 
 
+
+
+<h2 class="text-left-heading">Contact</h2>
+
+Phone: (+972)52-8984779
+
+Email: danielnoam1999@gmail.com
+
+LinkedIn: https://linkedin.com/in/daniel-noam
+
+
 </div>
 
 <div class="content-right">
@@ -32,9 +43,9 @@ My main expertise is in Unity, with additional experience in Unreal, Blender, Ph
         </a>
     </figure>
     <figure>
-        <a href="#" onclick="handleNavigationClick(`${baseUrl}/content/games/square/content.md`, document.querySelector('a[onclick*=\'square\']')); return false;">
-            <img src="https://danielnoam.github.io/portfolio/assets/square/main.gif" alt="Square">
-            <figcaption>Square</figcaption>
+        <a href="#" onclick="handleNavigationClick(`${baseUrl}/content/games/2dplatformer/content.md`, document.querySelector('a[onclick*=\'2dplatformer\']')); return false;">
+            <img src="https://danielnoam.github.io/portfolio/assets/2dplatformer/main.gif" alt="2DPlatformer">
+            <figcaption>2DPlatformer</figcaption>
         </a>
     </figure>
     <figure>
@@ -74,6 +85,7 @@ My main expertise is in Unity, with additional experience in Unreal, Blender, Ph
         </a>
     </figure>
 </div>
+
 
 </div>
 

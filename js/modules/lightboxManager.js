@@ -80,9 +80,9 @@ export class LightboxManager {
 
     addVideoIndicator(link) {
         const figure = link.closest('figure');
-        const img = figure.querySelector('img');
+        const media = figure.querySelector('img, video');
 
-        if (figure.querySelector('.video-indicator') || !img) {
+        if (figure.querySelector('.video-indicator') || !media) {
             return;
         }
 
@@ -92,18 +92,21 @@ export class LightboxManager {
         figure.appendChild(indicator);
 
         const positionIndicator = () => {
-            const imgRect = img.getBoundingClientRect();
+            const mediaRect = media.getBoundingClientRect();
             const figureRect = figure.getBoundingClientRect();
-            const top = imgRect.top - figureRect.top + 8;
-            const right = figureRect.right - imgRect.right + 8;
+            const top = mediaRect.top - figureRect.top + 8;
+            const right = figureRect.right - mediaRect.right + 8;
             indicator.style.top = top + 'px';
             indicator.style.right = right + 'px';
         };
 
-        if (img.complete && img.naturalWidth > 0) {
+        // Update: Check readyState for video or complete for image
+        if ((media.tagName === 'IMG' && media.complete && media.naturalWidth > 0) ||
+            (media.tagName === 'VIDEO' && media.readyState >= 1)) {
             positionIndicator();
         } else {
-            img.addEventListener('load', positionIndicator);
+            media.addEventListener('load', positionIndicator);
+            media.addEventListener('loadedmetadata', positionIndicator); // For video
         }
 
         window.addEventListener('resize', positionIndicator);
