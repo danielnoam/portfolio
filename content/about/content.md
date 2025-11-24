@@ -32,7 +32,7 @@ LinkedIn: https://linkedin.com/in/daniel-noam
 <div class="image-gallery no-lightbox">
     <figure>
         <a href="#" onclick="handleNavigationClick(`${baseUrl}/content/games/electro-grid/content.md`, document.querySelector('a[onclick*=\'electro-grid\']')); return false;">
-            <img src="https://danielnoam.github.io/portfolio/assets/electro-grid/main.png" alt="Electro Grid">
+            <img src="https://danielnoam.github.io/portfolio/assets/electro-grid/main.gif" alt="Electro Grid">
             <figcaption>Electro Grid</figcaption>
         </a>
     </figure>
@@ -55,15 +55,15 @@ LinkedIn: https://linkedin.com/in/daniel-noam
         </a>
     </figure>
     <figure>
-        <a href="#" onclick="handleNavigationClick(`${baseUrl}/content/games/school-these-shits/content.md`, document.querySelector('a[onclick*=\'school-these-shits\']')); return false;">
-            <img src="https://danielnoam.github.io/portfolio/assets/school-these-shits/main.png" alt="School These Sh*ts">
-            <figcaption>School These Sh*ts</figcaption>
-        </a>
-    </figure>
-    <figure>
         <a href="#" onclick="handleNavigationClick(`${baseUrl}/content/other/dnextenstions/content.md`, document.querySelector('a[onclick*=\'dnextenstions\']')); return false;">
             <img src="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" alt="DNExtensions">
             <figcaption>DNExtensions</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="#" onclick="handleNavigationClick(`${baseUrl}/content/games/school-these-shits/content.md`, document.querySelector('a[onclick*=\'school-these-shits\']')); return false;">
+            <img src="https://danielnoam.github.io/portfolio/assets/school-these-shits/main.png" alt="School These Sh*ts">
+            <figcaption>School These Sh*ts</figcaption>
         </a>
     </figure>
     <figure>

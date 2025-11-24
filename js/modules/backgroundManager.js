@@ -23,9 +23,14 @@ export class BackgroundManager {
                     {type: 'binary', count: 20, speed: 1.25},
                 ]
             },
-            'square': {
+            'electro-grid': {
                 effects: [
                     {type: 'shapes', count: 25,},
+                ]
+            },
+            '2dplatformer': {
+                effects: [
+                    {type: 'shapes', shape: 'square', count: 25,},
                 ]
             },
             'school-these-shits': {
@@ -222,10 +227,25 @@ export class BackgroundManager {
         shapesContainer.className = 'shapes-container';
 
         const baseSpeed = config.speed || 1.0;
+        const shapeType = config.shape || 'both'; // Renamed to avoid conflict
 
         for (let i = 0; i < (config.count || 20); i++) {
             const shape = document.createElement('div');
-            shape.className = `shape ${Math.random() > 0.5 ? 'square' : 'circle'}`;
+
+            // Determine which shape to create based on config
+            let shapeClass;
+            if (shapeType === 'both') {
+                shapeClass = Math.random() > 0.5 ? 'square' : 'circle';
+            } else if (shapeType === 'circle') {
+                shapeClass = 'circle';
+            } else if (shapeType === 'square') {
+                shapeClass = 'square';
+            } else {
+                // Default to random if invalid value
+                shapeClass = Math.random() > 0.5 ? 'square' : 'circle';
+            }
+
+            shape.className = `shape ${shapeClass}`;
 
             const size = Math.random() * 50 + 30;
             shape.style.width = `${size}px`;
@@ -245,23 +265,23 @@ export class BackgroundManager {
             const dy = (Math.random() - 0.5) * 300;
 
             const keyframes = `
-        @keyframes ${animationName} {
-            from {
-                transform: translate(0, 0) rotate(0deg);
-                opacity: 0;
+            @keyframes ${animationName} {
+                from {
+                    transform: translate(0, 0) rotate(0deg);
+                    opacity: 0;
+                }
+                10% {
+                    opacity: 0.1;
+                }
+                90% {
+                    opacity: 0.1;
+                }
+                to {
+                    transform: translate(${dx}px, ${dy}px) rotate(360deg);
+                    opacity: 0;
+                }
             }
-            10% {
-                opacity: 0.1;
-            }
-            90% {
-                opacity: 0.1;
-            }
-            to {
-                transform: translate(${dx}px, ${dy}px) rotate(360deg);
-                opacity: 0;
-            }
-        }
-    `;
+        `;
 
             // Inject keyframes
             const styleSheet = document.createElement('style');
