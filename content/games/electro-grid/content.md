@@ -12,58 +12,52 @@
 
 ## Overview
 
-"Electro Grid" is a match-3 puzzle game developed as my fifth-semester project. With a concise one-month development timeline, the project focused on creating a highly polished, smaller-scoped experience.
+"Electro Grid" is a match-3 puzzle game developed as my fifth-semester project. With a one-month development timeline, the project focused on creating a highly polished short experience optimized for mobile devices, with full PC and WebGL support.
 
-The game challenges players to clear circuits and objectives on dynamic, non-standard grid layouts, featuring a custom-built grid system and a "juicy" game feel optimized for mobile devices.
+The game challenges players to complete objectives by matching colored pieces on dynamic, non-standard grid layouts. Players manage different object types and must complete varied objectives while avoiding different loss conditions.
+
 
 </div>
 
 <div class="project-card">
 
-## Grid System
+## Core Design Elements
 
-To support unique level designs beyond standard rectangles, I developed a robust custom grid system that serves as the game's foundation.
+### Grid System
 
-- Scriptable Object Architecture: Grid shapes are stored as data assets, allowing for easy reuse and modification across different levels without touching code.
-- Custom Inspector Tools: A dedicated editor tool allows designers to visually "paint" valid grid cells directly in the Inspector. It includes quality-of-life features like:
-    - Click-and-drag painting to toggle active cells.
-    - Quick manipulation tools to invert, clear, or fill the grid.
-    - Symmetry tools to flip the grid horizontally or vertically for balanced layouts.
-- Flexible Coordinate Conversion: The system uses an abstract conversion class to handle translation between grid indices and world space. This supports different layouts (Vertical vs. Horizontal) and handles cell spacing and centering automatically.
+To support unique level designs beyond standard rectangles, I engineered a robust custom grid system that serves as the game's foundation.
+
+- Grid shapes and layouts are stored as data assets, allowing for rapid reuse without code changes. This single data source was then used to generate the gameplay board, background, and level previews.
+- A custom Inspector tool allows designers to visually "paint" valid grid cells. It includes quality-of-life features like click-and-drag painting, symmetry tools for balanced layouts, and bulk manipulation options.
+- The system uses an abstract conversion layer to handle translation between grid indices and world space, automatically handling cell spacing, centering, and different layout orientations.
 
 <div class="image-gallery gallery-2-columns">
     <figure>
-        <a href="#" target="_blank">
-            <img src="assets/electro-grid/grid_editor.gif" alt="Custom Grid Editor">
+        <a href="https://danielnoam.github.io/portfolio/assets/electro-grid/grid_editor.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/electro-grid/grid_editor.gif" alt="Custom Grid Editor">
             <figcaption>Custom Grid Editor</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="#" target="_blank">
-            <img src="assets/electro-grid/grid_shapes.png" alt="Various Grid Shapes">
+        <a href="https://danielnoam.github.io/portfolio/assets/electro-grid/grid_shapes.png" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/electro-grid/grid_shapes.png" alt="Various Grid Shapes">
             <figcaption>Various Grid Shapes</figcaption>
         </a>
     </figure>
 </div>
 
-</div>
-
-<div class="project-card">
-
-## Game Feel
+### Game Feel
 
 Given the short development time, a major focus was placed on making every interaction feel satisfying and responsive, extending from the gameplay into the User Interface.
 
-- Reactive UI Elements: The UI is fully animated using tweening libraries. Objective counters punch (scale up and down) whenever progress is made, providing immediate visual feedback for every match.
-- Unified Feedback: Interaction is consistent across the entire game; clicking UI buttons (like Retry or Next Level) triggers a subtle camera shake, maintaining immersion even in menus.
-- Visual Feedback: Comprehensive use of particle effects and screen shake for matching, destroying obstacles, and spawning items.
-- Custom Haptics: A specialized haptic feedback solution designed for Android delivers distinct vibration patterns for different actions (light ticks vs. heavy impacts).
+- The UI is designed to feel fully alive, featuring smooth transitions between menu screens, dynamic pop-ups for information, and impactful sequences for starting or ending a level, while every button press has feedback.
+- A unified screen shake system makes interaction feel impactful throughout the entire game.
+- Extensive use of particle effects transforms standard match-3 mechanics into a high-energy spectacle, providing "juicy" visual feedback for matching, destruction, and special abilities.
+- To match the game's aesthetic, I selected upbeat synthwave music that provides a flow to the gameplay, paired with distinct, retro-inspired SFX for every interaction.
+- A custom VFX system streamlines visual effects, dynamically changing post-processing and triggering complex effect sequences.
+- A specialized haptic feedback solution for Android adds tactile depth, delivering distinct vibration patterns that distinguish between light UI ticks and heavy gameplay impacts.
 
-</div>
-
-<div class="project-card">
-
-## Gameplay Mechanics
+### Gameplay Mechanics
 
 The core loop revolves around strategic matching and objective completion, powered by a modular objective system.
 
@@ -71,6 +65,8 @@ The core loop revolves around strategic matching and objective completion, power
 - Square Stars: Item that must be guided to valid exit points at the bottom of the grid.
 - Double Stars: Static blockers that require adjacent matches or power-ups to clear.
 - Linebreak: A specialized match mechanic that clears entire rows or columns.
+- Objectives: A modular system supporting varied challenges such as collection quotas, escort missions, and score targets.
+- Lose Conditions: Configurable failure states including move limits or time limits to vary the pacing of levels.
 
 </div>
 
@@ -78,10 +74,10 @@ The core loop revolves around strategic matching and objective completion, power
 
 ## Development Insights
 
-- Event-Driven UI: The HUD is fully decoupled from the game loop. It dynamically instantiates UI elements based on the level's specific objectives and subscribes to events to update in real-time without polling.
-- Scoped for Polish: By limiting the scope to one month, I focused on depth rather than breadth, ensuring the core mechanics were rock solid.
-- Tool-Driven Design: Building the custom grid tools first allowed for rapid level iteration.
-- Modular Logic: The abstract objective and lose condition classes allowed me to mix and match rules (Time Limits, Move Limits, Collection Quotas) to create varied level types without writing new code for each variation.
+- Starting with custom editor tools upfront was a game-changer, allowing me to "paint" levels creatively and iterate on designs much faster than manually configuring data.
+- The short time limit made it so, I had to limit myself to get the "feel" and polish of the core mechanics instead of getting lost in feature creep.
+- Decoupled the UI from game logic by building an event-driven HUD that updates automatically, which kept my code clean and easy to maintain.
+- I designed the objective system to be modular, which let me mix and match different rules like time limits or collection quotas to create unique levels without writing new code for every variation.
 
 </div>
 

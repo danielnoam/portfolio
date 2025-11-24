@@ -31,6 +31,12 @@ LinkedIn: https://linkedin.com/in/daniel-noam
 
 <div class="image-gallery no-lightbox">
     <figure>
+        <a href="#" onclick="handleNavigationClick(`${baseUrl}/content/games/electro-grid/content.md`, document.querySelector('a[onclick*=\'electro-grid\']')); return false;">
+            <img src="https://danielnoam.github.io/portfolio/assets/electro-grid/main.png" alt="Electro Grid">
+            <figcaption>Electro Grid</figcaption>
+        </a>
+    </figure>
+    <figure>
         <a href="#" onclick="handleNavigationClick(`${baseUrl}/content/games/chicken-invaders-remake/content.md`, document.querySelector('a[onclick*=\'chicken-invaders-remake\']')); return false;">
             <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/Cover.png" alt="Chicken Invaders Remake">
             <figcaption>Chicken Invaders Remake</figcaption>
@@ -76,12 +82,6 @@ LinkedIn: https://linkedin.com/in/daniel-noam
         <a href="#" onclick="handleNavigationClick(`${baseUrl}/content/games/pixel-knight/content.md`, document.querySelector('a[onclick*=\'pixel-knight\']')); return false;">
             <img src="https://danielnoam.github.io/portfolio/assets/pixel-knight/main.gif" alt="Pixel Knight">
             <figcaption>Pixel Knight</figcaption>
-        </a>
-    </figure>
-    <figure>
-        <a href="#" onclick="handleNavigationClick(`${baseUrl}/content/other/controller-rumble/content.md`, document.querySelector('a[onclick*=\'controller-rumble\']')); return false;">
-            <img src="https://danielnoam.github.io/portfolio/assets/controllerlogo.jpg" alt="Controller Rumble">
-            <figcaption>Controller Rumble</figcaption>
         </a>
     </figure>
 </div>
