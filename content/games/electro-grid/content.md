@@ -31,21 +31,6 @@ To support unique level designs beyond standard rectangles, I engineered a robus
 - A custom Inspector tool allows designers to visually "paint" valid grid cells. It includes quality-of-life features like click-and-drag painting, symmetry tools for balanced layouts, and bulk manipulation options.
 - The system uses an abstract conversion layer to handle translation between grid indices and world space, automatically handling cell spacing, centering, and different layout orientations.
 
-<div class="image-gallery gallery-2-columns">
-    <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/electro-grid/grid_editor.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/electro-grid/grid_editor.gif" alt="Custom Grid Editor">
-            <figcaption>Custom Grid Editor</figcaption>
-        </a>
-    </figure>
-    <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/electro-grid/grid_shapes.png" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/electro-grid/grid_shapes.png" alt="Various Grid Shapes">
-            <figcaption>Various Grid Shapes</figcaption>
-        </a>
-    </figure>
-</div>
-
 ### Game Feel
 
 Given the short development time, a major focus was placed on making every interaction feel satisfying and responsive, extending from the gameplay into the User Interface.
@@ -57,6 +42,7 @@ Given the short development time, a major focus was placed on making every inter
 - A custom VFX system streamlines visual effects, dynamically changing post-processing and triggering complex effect sequences.
 - A specialized haptic feedback solution for Android adds tactile depth, delivering distinct vibration patterns that distinguish between light UI ticks and heavy gameplay impacts.
 
+
 ### Gameplay Mechanics
 
 The core loop revolves around strategic matching and objective completion, powered by a modular objective system.
@@ -67,6 +53,7 @@ The core loop revolves around strategic matching and objective completion, power
 - Linebreak: A specialized match mechanic that clears entire rows or columns.
 - Objectives: A modular system supporting varied challenges such as collection quotas, escort missions, and score targets.
 - Lose Conditions: Configurable failure states including move limits or time limits to vary the pacing of levels.
+
 
 </div>
 
