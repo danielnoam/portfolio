@@ -54,7 +54,7 @@ const CONFIG = {
         "Games": {
             path: "content/games",
             pages: [
-                { title: "Electro Grid", folder: "electro-grid", visible: false },
+                { title: "Electro Grid", folder: "electro-grid", visible: true },
                 { title: "Chicken Invaders Remake", folder: "chicken-invaders-remake", visible: true },
                 { title: "Project UMN", folder: "project-umn", visible: true },
                 { title: "2DPlatformer", folder: "2dplatformer", visible: true },

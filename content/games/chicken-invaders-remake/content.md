@@ -27,12 +27,10 @@ Our goal was to recreate the original game's idea with modern visuals and reimag
 
 ### Player Controller & Weapons
 
-- modular player controller where components (movement, health, aiming, weapons) communicate through events
-- Constrained movement in a boundary box with smooth acceleration and deceleration and dodge mechanic
+- Constrained movement in a boundary with smooth acceleration and deceleration and dodge mechanic
 - Designed flexible weapon system using ScriptableObjects and composable behaviors - allows configuring weapon types, behaviors, effects, and targeting limits through data without code changes
 - Reticle feedback showing heat, spread, and lock state
 - Created aim assist system that snaps to nearest enemy within a configurable angle and distance
-- Implemented rail-constrained movement system with dodge mechanic
 - Health system uses shield/health pools with regeneration and iframe damage prevention
 - Resource pickup system with visual/audio feedback
 
@@ -242,6 +240,12 @@ Our goal was to recreate the original game's idea with modern visuals and reimag
             <figcaption>Stage subscriber component</figcaption>
         </a>
     </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/audioso.png" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/audioso.png" alt="Audio scriptable object">
+            <figcaption>Scriptable object system for playing sfx</figcaption>
+        </a>
+    </figure>
 </div>
 
 ### Narrative Design
@@ -265,20 +269,6 @@ Our goal was to recreate the original game's idea with modern visuals and reimag
 </div>
 
 
-### Audio
-
-- Built audio system using ScriptableObjects for designer-friendly implementation
-- Created music manager with cross-fade transitions, dynamic volume on pause, and stage-based theme switching
-
-<div class="image-gallery">
-    <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/audioso.png" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/audioso.png" alt="Audio scriptable object">
-            <figcaption>Scriptable object system for playing sfx</figcaption>
-        </a>
-    </figure>
-</div>
-
 
 ### Custom Shaders
 
@@ -292,6 +282,12 @@ Our goal was to recreate the original game's idea with modern visuals and reimag
         </a>
     </figure>
 </div>
+
+
+### Audio
+
+- Built audio system using ScriptableObjects for designer-friendly implementation
+- Created music manager with cross-fade transitions, dynamic volume on pause, and stage-based theme switching
 
 
 ### Save System & Data Persistence
