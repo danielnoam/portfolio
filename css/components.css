@@ -296,7 +296,7 @@
 /* Two-column layout for content */
 .content-two-column {
     display: grid;
-    grid-template-columns: 700px 1fr;
+    grid-template-columns: 600px 1fr;
     gap: var(--space-8);
     align-items: flex-start;
     margin: var(--space-6) auto; 
@@ -337,19 +337,6 @@
     position: static;
 }
 
-
-/* Scale up on larger viewports - keep left small, right gets bigger */
-@media (min-width: 1400px) {
-    .content-two-column {
-        grid-template-columns: 600px 1fr;
-    }
-}
-
-@media (min-width: 1800px) {
-    .content-two-column {
-        grid-template-columns: 600px 1fr;
-    }
-}
 
 /* Responsive: stack on mobile */
 @media (max-width: 1300px) {

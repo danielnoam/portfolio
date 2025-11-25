@@ -125,6 +125,21 @@ export class LightboxManager {
     }
 
     close() {
+        // Stop any playing media
+        const video = this.container.querySelector('video');
+        const audio = this.container.querySelector('audio');
+
+        if (video) {
+            video.pause();
+            video.currentTime = 0;
+        }
+
+        if (audio) {
+            audio.pause();
+            audio.currentTime = 0;
+        }
+
+        // Existing close logic
         this.container.classList.remove('active');
         setTimeout(() => {
             this.container.style.display = 'none';
@@ -177,7 +192,8 @@ export class LightboxManager {
         video.className = 'lightbox-video';
         video.src = src;
         video.controls = true;
-        video.autoplay = false;
+        video.autoplay = true;
+        video.volume = 0.5;
         video.loop = true;
         container.appendChild(video);
     }
