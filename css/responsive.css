@@ -92,7 +92,12 @@
         left: var(--space-4);
         right: var(--space-4);
     }
-    
+
+    .image-gallery,
+    .image-gallery.gallery-2-columns,
+    .image-gallery.gallery-3-columns {
+        grid-template-columns: repeat(1, 1fr);
+    }
     .image-gallery.gallery-4-columns {
         grid-template-columns: repeat(2, 1fr);
     }

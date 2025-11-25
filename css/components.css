@@ -338,7 +338,7 @@
 }
 
 
-/* Responsive: stack on mobile */
+/* Responsive: stack on smaller screens */
 @media (max-width: 1400px) {
     .content-two-column {
         grid-template-columns: 2fr;
