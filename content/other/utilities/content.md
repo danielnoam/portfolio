@@ -1,6 +1,6 @@
 <div class="page-content">
 
-# DNExtensions
+# Utilities
 
 
 <img src="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" alt="Intro" class="page-logo">
@@ -19,33 +19,6 @@ Each tool was created to solve specific problems, then refined and expanded as n
 
 
 </div>
-
-
-<div class="project-card">
-
-## VFX & Transition System
-Visual effects system managing post-processing, UI transitions, and scene loading with seamless continuity.
-
-- Automatic post-processing volume setup and management
-- Scriptable Object-based effect sequences for designers
-- Scene transition system with customizable visual effects
-- Support for post-processing and UI effects
-- Automatic cleanup and reset functionality
-- PrimeTween integration for smooth animations
-
-
-## Object Pooling System
-High-performance pooling system eliminating instantiation costs and reducing garbage collection overhead.
-
-- Generic pooling system supporting any GameObject
-- Automatic pool management with configurable size limits
-- Pre-warming capabilities for optimal performance
-- Support for IPooledObject interface for custom initialization
-- Scene persistence options with DontDestroyOnLoad support
-- Fallback mechanisms for missing pools
-
-</div>
-
 
 
 <div class="project-card">
