@@ -59,13 +59,12 @@ const CONFIG = {
                 { title: "Project UMN", folder: "project-umn", visible: true },
                 { title: "2DPlatformer", folder: "2dplatformer", visible: true },
                 { title: "School These Sh*ts", folder: "school-these-shits", visible: true },
-                { title: "Pixel Knight", folder: "pixel-knight", visible: true },
             ]
         },
         "GameJams": {
             path: "content/jams",
             pages: [
-                { title: "Power Factory - KenneyJam 2025", folder: "power-factory", visible: true },
+                { title: "Power Factory - KJ 2025", folder: "power-factory", visible: true },
                 { title: "Bubblerena - GGJ 2025", folder: "bubblerena", visible: true },
             ]
         },
@@ -73,12 +72,15 @@ const CONFIG = {
             path: "content/other",
             pages: [
                 { title: "Controller Rumble", folder: "controller-rumble", visible: true },
-                { title: "DNExtensions", folder: "dnextenstions", visible: true },
+                { title: "Object Pooling", folder: "object-pooling", visible: true },
+                { title: "VFX & Transitions", folder: "vfx-transitions", visible: true },
+                { title: "Utilities", folder: "utilities", visible: true },
             ]
         },
         "Other": {
             path: "content/other",
             pages: [
+                { title: "Pixel Knight", folder: "pixel-knight", visible: true },
                 { title: "Shaders", folder: "shaders", visible: false },
                 { title: "Models", folder: "models", visible: false },
                 { title: "Procedural Animations", folder: "procedural-animations", visible: false },

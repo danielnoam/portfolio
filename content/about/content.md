@@ -79,7 +79,7 @@ LinkedIn: https://linkedin.com/in/daniel-noam
         </a>
     </figure>
     <figure>
-        <a href="#" onclick="handleNavigationClick(`${baseUrl}/content/games/pixel-knight/content.md`, document.querySelector('a[onclick*=\'pixel-knight\']')); return false;">
+        <a href="#" onclick="handleNavigationClick(`${baseUrl}/content/other/pixel-knight/content.md`, document.querySelector('a[onclick*=\'pixel-knight\']')); return false;">
             <img src="https://danielnoam.github.io/portfolio/assets/pixel-knight/main.gif" alt="Pixel Knight">
             <figcaption>Pixel Knight</figcaption>
         </a>

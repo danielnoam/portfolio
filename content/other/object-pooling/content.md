@@ -1,6 +1,6 @@
 <div class="page-content">
 
-# Object Pooling System
+# Object Pooling
 
 <img src="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" alt="Intro" class="page-logo">
 

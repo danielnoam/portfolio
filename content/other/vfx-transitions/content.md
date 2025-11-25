@@ -1,6 +1,6 @@
 <div class="page-content">
 
-# VFX & Transition System
+# VFX & Transition
 
 <img src="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" alt="Intro" class="page-logo">
 
