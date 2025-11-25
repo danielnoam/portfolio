@@ -6,6 +6,7 @@
 <img src="https://danielnoam.github.io/portfolio/assets/bubblerena/logo.gif" alt="Logo" class="page-logo">
 
 <p class="text-center">
+    <a href="https://github.com/danielnoam/Bobblerena">Github</a> |
     <a href="https://globalgamejam.org/">Global Game Jam 2025</a>
 </p>
 

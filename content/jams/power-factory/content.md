@@ -7,7 +7,8 @@
 
 
 <p class="text-center">
-    <a href="https://danielnoam.itch.io/power-factory">Itch.io</a> |
+    <a href="https://danielnoam.itch.io/power-factory">Itch.io</a> | 
+    <a href="https://github.com/danielnoam/ProjectPower">Github</a> |
     <a href="https://itch.io/jam/kenney-jam-2025">Kenney Jam 2025</a>
 </p>
 

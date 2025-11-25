@@ -5,7 +5,8 @@
 <img src="https://danielnoam.github.io/portfolio/assets/electro-grid/main.gif" alt="Electro Grid Gameplay" class="page-logo">
 
 <p class="text-center">
-    <a href="https://danielnoam.itch.io/electro-grid">Itch.io</a>
+    <a href="https://danielnoam.itch.io/electro-grid">Itch.io</a> | 
+    <a href="https://github.com/danielnoam/ElectroGrid">Github</a>
 </p>
 
 <div class="project-card">

@@ -6,6 +6,7 @@
 
 <p class="text-center">
     <a href="https://tay-dev.itch.io/chicken-invaders-remake">Itch.io</a> | 
+    <a href="https://github.com/danielnoam/ProjectChicken">Github</a> |
     <a href="https://docs.google.com/document/d/15oJfTMVTdB9uJKfskemjhVx1XfsIAPWvOurxZK-_GJw/edit?usp=sharing">GDD</a> | 
     <a href="https://youtu.be/kjTa3ECVQwo">Intro</a>
 </p>
