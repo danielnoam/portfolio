@@ -2,7 +2,7 @@
 
 # Pixel Knight
 
-<img src="https://danielnoam.github.io/portfolio/assets/pixel-knight/main.png" alt="Game Screenshot" class="page-logo">
+<img src="https://danielnoam.github.io/portfolio/assets/pixel-knight/main.gif" alt="Game Screenshot" class="page-logo">
 
 <div class="project-card">
 

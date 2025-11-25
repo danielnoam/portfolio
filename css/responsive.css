@@ -93,15 +93,9 @@
         right: var(--space-4);
     }
 
-    .image-gallery {
-        grid-template-columns: 2fr;
-    }
-    
-    .image-gallery.gallery-3-columns {
-        grid-template-columns: 2fr;
-    }
+
     .image-gallery.gallery-4-columns {
-        grid-template-columns: 3fr;
+        grid-template-columns: 2fr;
     }
 
     #back-to-top {

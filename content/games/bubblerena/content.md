@@ -2,7 +2,7 @@
 
 # Bubblerena
 
-<img src="https://danielnoam.github.io/portfolio/assets/bobblerena/main.png" alt="Game Screenshot" class="page-logo">
+<img src="https://danielnoam.github.io/portfolio/assets/bubblerena/main.gif" alt="Game Screenshot" class="page-logo">
 
 <p class="text-center">
     <a href="https://github.com/danielnoam/Bobblerena">Github</a> |
