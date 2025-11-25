@@ -2,28 +2,20 @@
 
 # Utilities
 
-
-<img src="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" alt="Intro" class="page-logo">
-
 <p class="text-center">
     <a href="https://github.com/danielnoam/DNExtensions/">GitHub</a>
 </p>
 
+
+<div class="content-two-column sticky-right">
+<div class="content-left">
+
+
 <div class="project-card">
 
 ## Overview
-
-A collection of small Unity tools developed while working on various projects. 
+A collection of small Unity tools developed while working on various projects.
 Each tool was created to solve specific problems, then refined and expanded as new needs emerged across different games and prototypes.
-
-
-
-</div>
-
-
-<div class="project-card">
-
-## Utility Tools
 
 ### ChanceList
 Weighted random selection tool with built-in normalization and designer-friendly Inspector integration. Features generic type support, automatic chance normalization, locking mechanism for fixed probabilities, and support for single/multiple item selection.
@@ -51,6 +43,42 @@ Property drawer attribute making Inspector fields non-editable while preserving 
 
 ### Conditional Attributes
 Inspector field visibility and interaction controls based on other field values. Features ShowIf/HideIf for dynamic layouts, EnableIf/DisableIf for conditional interaction, and support for boolean, enum, and custom value comparisons.
+
+</div>
+</div>
+
+<div class="content-right">
+
+
+
+<div class="image-gallery gallery-2-columns">
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" alt="Unity Logo">
+            <figcaption>Documentation</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" alt="Unity Logo">
+            <figcaption>Documentation</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" alt="Unity Logo">
+            <figcaption>Documentation</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" alt="Unity Logo">
+            <figcaption>Documentation</figcaption>
+        </a>
+    </figure>
+</div>
+</div>
+
 
 </div>
 

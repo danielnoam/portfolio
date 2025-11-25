@@ -1,34 +1,35 @@
 <div class="page-content">
-    
+
 # Pixel Knight
 
 
+<div class="content-two-column">
 
-<img src="https://danielnoam.github.io/portfolio/assets/pixel-knight/main.gif" alt="Game Screenshot" class="page-logo">
-
-
+<div class="content-left">
 
 <div class="project-card">
-    
+
 ## Overview
 "Pixel Knight" is a short Action-RPG developed during my high school years while learning Game Maker.
 The game features dynamic combat, resource management, and a diverse roster of enemies and bosses.
-</div>
 
-<div class="project-card">
-    
-## Core Design Elements
 ### Combat
 - Melee attacks, special abilities (dashing, AOE attack), and a ranged fireball spell create a varied combat experience.
 - A diverse monster roster with unique abilities, such as inflicting status effects (poison, fire damage), creates varied challenges.
 - Boss battles featuring distinct combat patterns test players' skills and adaptability.
+
 ### Resource Management
 - The health, stamina, and mana management system challenges players to balance their resources effectively.
 - Healing options, such as consumable potions and rest points, provide players with strategic choices during combat.
 </div>
 
+
+</div>
+
+<div class="content-right">
+
 <div class="project-card">
-    
+
 ## Development Insights
 Developing this project provided me with hands-on experience with the core aspects of game development, including:
 - Programming fundamentals, such as game logic, player controls, and enemy AI.
@@ -37,9 +38,6 @@ Developing this project provided me with hands-on experience with the core aspec
 - Game balance and difficulty tuning to ensure a challenging yet enjoyable player experience.
 </div>
 
-<div class="project-card">
-    
-## Gallery
 <div class="image-gallery gallery-2-columns">
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/pixel-knight/gameplay1.png" target="_blank">
@@ -66,5 +64,11 @@ Developing this project provided me with hands-on experience with the core aspec
         </a>
     </figure>
 </div>
+
+
 </div>
+
+
+</div>
+
 </div>

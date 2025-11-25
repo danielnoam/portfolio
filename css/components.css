@@ -57,6 +57,7 @@
     padding-top: var(--space-2);
 }
 
+
 /* Image Gallery */
 .image-gallery {
     display: grid;
@@ -250,7 +251,7 @@
 
 .page-content ul,
 .page-content ol {
-    max-width: 600px;
+    max-width: 900px;
     margin: var(--space-5) auto;
     padding-left: var(--space-6);
     text-align: left;
@@ -259,6 +260,7 @@
 .page-content li {
     margin-bottom: var(--space-3);
     line-height: var(--leading-relaxed);
+    
 }
 
 .page-content .text-left-heading {
@@ -297,71 +299,81 @@
 /* Two-column layout for content */
 .content-two-column {
     display: grid;
-    grid-template-columns: 300px 1fr;
+    grid-template-columns: 700px 1fr;
     gap: var(--space-8);
-    align-items: center;
-    margin: var(--space-6) 0;
-    margin-left: calc(-1 * var(--space-6));
-    width: calc(100% + var(--space-6) * 2);
+    align-items: flex-start;
+    margin: var(--space-6) auto; 
+    max-width: 1400px;
+    padding: 0 var(--space-6);
 }
 
 .content-two-column .content-left {
     position: sticky;
     top: var(--space-6);
-    padding-left: var(--space-6);
 }
 
 .content-two-column .content-right {
     max-width: 100%;
-    padding-right: var(--space-6);
     overflow: visible;
+    align-self: flex-start;
 }
 
 .content-two-column .image-gallery {
     max-width: 100%;
 }
 
-/* Mobile: all galleries use 1 column */
-@media (max-width: 768px) {
-    .image-gallery.gallery-1-column,
-    .image-gallery.gallery-2-columns,
-    .image-gallery.gallery-3-columns,
-    .image-gallery.gallery-4-columns {
-        grid-template-columns: 1fr;
-    }
+
+
+/* Variant: right sticky (for Unity extensions) */
+.content-two-column.sticky-right .content-left {
+    position: static; /* remove sticky */
 }
+
+.content-two-column.sticky-right .content-right {
+    position: sticky;
+    top: var(--space-6);
+}
+
+/* Variant: no sticky */
+.content-two-column.no-sticky .content-left,
+.content-two-column.no-sticky .content-right {
+    position: static;
+}
+
 
 /* Scale up on larger viewports - keep left small, right gets bigger */
 @media (min-width: 1400px) {
     .content-two-column {
-        grid-template-columns: 450px 1fr;
-        gap: var(--space-10);
+        grid-template-columns: 600px 1fr;
     }
 }
 
 @media (min-width: 1800px) {
     .content-two-column {
-        grid-template-columns: 500px 1fr;
-        gap: var(--space-12);
+        grid-template-columns: 600px 1fr;
     }
 }
 
 /* Responsive: stack on mobile */
-@media (max-width: 968px) {
+@media (max-width: 1300px) {
     .content-two-column {
         grid-template-columns: 1fr;
         gap: var(--space-6);
-        margin-left: 0;
-        width: 100%;
     }
 
-    .content-two-column .content-left {
-        position: static;
-        padding-left: 0;
-    }
-
+    .content-two-column .content-left,
     .content-two-column .content-right {
-        padding-right: 0;
-        overflow: visible;
+        position: static;
+    }
+
+    .image-gallery {
+        grid-template-columns: 2fr;
+    }
+    
+    .image-gallery.gallery-3-columns {
+        grid-template-columns: 2fr;
+    }
+    .image-gallery.gallery-4-columns {
+        grid-template-columns: 3fr;
     }
 }

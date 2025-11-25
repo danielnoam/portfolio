@@ -2,18 +2,21 @@
 
 # Controller Rumble
 
-
-<img src="https://danielnoam.github.io/portfolio/assets/controllerlogo.jpg" alt="logo" class="page-logo">
-
 <p class="text-center">
     <a href="https://github.com/danielnoam/DNExtensions/">GitHub</a>
 </p>
 
 
+<div class="content-two-column sticky-right">
+
+
+<div class="content-left">
+
 <div class="project-card">
 
+
 ## Overview
-Initially developed for my Chicken Invaders Remake project, this system was expanded and designed to work easily with any other project. 
+Initially developed for my Chicken Invaders Remake project, this system was expanded and designed to work easily with any other project.
 
 It features 3D spatial positioning and advanced effect management for precise controller vibration control.
 
@@ -28,7 +31,42 @@ It features 3D spatial positioning and advanced effect management for precise co
 - Includes specific support for DualShock controller features, such as controlling the light bar color.
 - Allows for easy in-editor testing of rumble effects directly from the source component's Inspector.
 
+</div>
+</div>
+
+<div class="content-right">
+
+
+<div class="image-gallery gallery-2-columns">
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" alt="Unity Logo">
+            <figcaption>Documentation</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" alt="Unity Logo">
+            <figcaption>Documentation</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" alt="Unity Logo">
+            <figcaption>Documentation</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" alt="Unity Logo">
+            <figcaption>Documentation</figcaption>
+        </a>
+    </figure>
+</div>
 
 
 </div>
+
+</div>
+
 </div>

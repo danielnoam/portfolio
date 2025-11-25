@@ -59,6 +59,7 @@ const CONFIG = {
                 { title: "Project UMN", folder: "project-umn", visible: true },
                 { title: "2DPlatformer", folder: "2dplatformer", visible: true },
                 { title: "School These Sh*ts", folder: "school-these-shits", visible: true },
+                { title: "Pixel Knight", folder: "pixel-knight", visible: true },
             ]
         },
         "GameJams": {
@@ -80,7 +81,6 @@ const CONFIG = {
         "Other": {
             path: "content/other",
             pages: [
-                { title: "Pixel Knight", folder: "pixel-knight", visible: true },
                 { title: "Shaders", folder: "shaders", visible: false },
                 { title: "Models", folder: "models", visible: false },
                 { title: "Procedural Animations", folder: "procedural-animations", visible: false },
