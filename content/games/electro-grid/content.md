@@ -32,17 +32,47 @@ To support unique level designs beyond standard rectangles, I engineered a robus
 - A custom Inspector tool allows designers to visually "paint" valid grid cells. It includes quality-of-life features like click-and-drag painting, symmetry tools for balanced layouts, and bulk manipulation options.
 - The system uses an abstract conversion layer to handle translation between grid indices and world space, automatically handling cell spacing, centering, and different layout orientations.
 
+<div class="image-gallery">
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/intro.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/intro.mp4" autoplay loop muted playsinline></video>
+            <figcaption>Intro sequence</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/credits.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/credits.mp4" autoplay loop muted playsinline></video>
+            <figcaption>Credits sequence</figcaption>
+        </a>
+    </figure>
+</div>
+
 ### Game Feel
 
 Given the short development time, a major focus was placed on making every interaction feel satisfying and responsive, extending from the gameplay into the User Interface.
 
-- The UI is designed to feel fully alive, featuring smooth transitions between menu screens, dynamic pop-ups for information, and impactful sequences for starting or ending a level, while every button press has feedback.
+- The UI is designed to feel fully alive, featuring smooth transitions between menu screens, window pop-up for information, and impactful effects for starting or ending a level.
 - A unified screen shake system makes interaction feel impactful throughout the entire game.
-- Extensive use of particle effects transforms standard match-3 mechanics into a high-energy spectacle, providing "juicy" visual feedback for matching, destruction, and special abilities.
+- Extensive use of particle effects transforms standard mechanics into a high-energy spectacle, providing "juicy" visual feedback for matching, destruction, and special abilities.
 - To match the game's aesthetic, I selected upbeat synthwave music that provides a flow to the gameplay, paired with distinct, retro-inspired SFX for every interaction.
 - A custom VFX system streamlines visual effects, dynamically changing post-processing and triggering complex effect sequences.
 - A specialized haptic feedback solution for Android adds tactile depth, delivering distinct vibration patterns that distinguish between light UI ticks and heavy gameplay impacts.
 
+
+<div class="image-gallery">
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/intro.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/intro.mp4" autoplay loop muted playsinline></video>
+            <figcaption>Intro sequence</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/credits.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/credits.mp4" autoplay loop muted playsinline></video>
+            <figcaption>Credits sequence</figcaption>
+        </a>
+    </figure>
+</div>
 
 ### Gameplay Mechanics
 
@@ -55,6 +85,20 @@ The core loop revolves around strategic matching and objective completion, power
 - Objectives: A modular system supporting varied challenges such as collection quotas, escort missions, and score targets.
 - Lose Conditions: Configurable failure states including move limits or time limits to vary the pacing of levels.
 
+<div class="image-gallery">
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/intro.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/intro.mp4" autoplay loop muted playsinline></video>
+            <figcaption>Intro sequence</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/credits.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/credits.mp4" autoplay loop muted playsinline></video>
+            <figcaption>Credits sequence</figcaption>
+        </a>
+    </figure>
+</div>
 
 </div>
 
