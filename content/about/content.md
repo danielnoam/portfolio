@@ -44,7 +44,7 @@ LinkedIn: https://linkedin.com/in/daniel-noam
     </figure>
     <figure>
         <a href="#" onclick="handleNavigationClick(`${baseUrl}/content/games/project-umn/content.md`, document.querySelector('a[onclick*=\'project-umn\']')); return false;">
-            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/introon.gif" alt="Project UMN">
+            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/main.gif" alt="Project UMN">
             <figcaption>Project UMN</figcaption>
         </a>
     </figure>
@@ -68,13 +68,13 @@ LinkedIn: https://linkedin.com/in/daniel-noam
     </figure>
     <figure>
         <a href="#" onclick="handleNavigationClick(`${baseUrl}/content/games/power-factory/content.md`, document.querySelector('a[onclick*=\'power-factory\']')); return false;">
-            <img src="https://danielnoam.github.io/portfolio/assets/power-factory/logo.png" alt="Power Factory">
+            <img src="https://danielnoam.github.io/portfolio/assets/power-factory/main.png" alt="Power Factory">
             <figcaption>Power Factory</figcaption>
         </a>
     </figure>
     <figure>
         <a href="#" onclick="handleNavigationClick(`${baseUrl}/content/games/bubblerena/content.md`, document.querySelector('a[onclick*=\'bubblerena\']')); return false;">
-            <img src="https://danielnoam.github.io/portfolio/assets/bubblerena/logo.gif" alt="Bubblerena">
+            <img src="https://danielnoam.github.io/portfolio/assets/bubblerena/main.gif" alt="Bubblerena">
             <figcaption>Bubblerena</figcaption>
         </a>
     </figure>

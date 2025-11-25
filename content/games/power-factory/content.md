@@ -1,7 +1,8 @@
 <div class="page-content">
 
-
 # Power Factory
+
+<img src="https://danielnoam.github.io/portfolio/assets/power-factory/main.png" alt="Game Screenshot" class="page-logo">
 
 <p class="text-center">
     <a href="https://danielnoam.itch.io/power-factory">Itch.io</a> | 
@@ -9,31 +10,28 @@
     <a href="https://itch.io/jam/kenney-jam-2025">Kenney Jam 2025</a>
 </p>
 
-
-<div class="content-two-column">
-
-<div class="content-left">
 <div class="project-card">
 
 ## Overview
+
 "Power Factory" is a first-person mathematical puzzle game developed in under 48 hours for Kenney Jam 2025 using only Kenney and KayKit assets.
 
 Players pick up numbered packages and throw them into power machines (x², x⁴) to fulfill required numbers on the order screen.
 
-
 ### Game Mechanics
+
 - First-person perspective with physics-based throwing, and interactive object handling.
 - Factory upgrades allowing players to enhance machines for better efficiency.
 - Order completion rewards where successfully fulfilling orders grants money for upgrades.
 - Progressive daily system with increasing difficulty and specific quota requirements.
 
 </div>
-</div>
 
-<div class="content-right">
+<div class="project-card">
 
+## Gallery
 
-<div class="image-gallery gallery-2-columns">
+<div class="image-gallery">
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/power-factory/recyclemachine.gif" target="_blank">
             <img src="https://danielnoam.github.io/portfolio/assets/power-factory/recyclemachine.gif" alt="Recycle Machine">
@@ -83,8 +81,6 @@ Players pick up numbered packages and throw them into power machines (x², x⁴)
         </a>
     </figure>
 </div>
-</div>
-
 
 </div>
 
