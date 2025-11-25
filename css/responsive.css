@@ -92,10 +92,9 @@
         left: var(--space-4);
         right: var(--space-4);
     }
-
-
+    
     .image-gallery.gallery-4-columns {
-        grid-template-columns: 2fr;
+        grid-template-columns: repeat(2, 1fr);
     }
 
     #back-to-top {
