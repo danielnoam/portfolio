@@ -34,15 +34,21 @@ To support unique level designs beyond standard rectangles, I engineered a robus
 
 <div class="image-gallery">
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/intro.mp4" target="_blank">
-            <video src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/intro.mp4" autoplay loop muted playsinline></video>
-            <figcaption>Intro sequence</figcaption>
+        <a href="https://danielnoam.github.io/portfolio/assets/electro-grid/Grid1.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/electro-grid/Grid1.mp4" autoplay loop muted playsinline></video>
+            <figcaption>Grid editor</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/credits.mp4" target="_blank">
-            <video src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/credits.mp4" autoplay loop muted playsinline></video>
-            <figcaption>Credits sequence</figcaption>
+        <a href="https://danielnoam.github.io/portfolio/assets/electro-grid/Grid2.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/electro-grid/Grid2.mp4" autoplay loop muted playsinline></video>
+            <figcaption>Make the grid horizontal or vertical</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/electro-grid/Grid3DifferantLevels.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/electro-grid/Grid3DifferantLevels.mp4" autoplay loop muted playsinline></video>
+            <figcaption>Level editor uses the grid to easily edit the layout</figcaption>
         </a>
     </figure>
 </div>
@@ -54,22 +60,33 @@ Given the short development time, a major focus was placed on making every inter
 - The UI is designed to feel fully alive, featuring smooth transitions between menu screens, window pop-up for information, and impactful effects for starting or ending a level.
 - A unified screen shake system makes interaction feel impactful throughout the entire game.
 - Extensive use of particle effects transforms standard mechanics into a high-energy spectacle, providing "juicy" visual feedback for matching, destruction, and special abilities.
-- To match the game's aesthetic, I selected upbeat synthwave music that provides a flow to the gameplay, paired with distinct, retro-inspired SFX for every interaction.
 - A custom VFX system streamlines visual effects, dynamically changing post-processing and triggering complex effect sequences.
 - A specialized haptic feedback solution for Android adds tactile depth, delivering distinct vibration patterns that distinguish between light UI ticks and heavy gameplay impacts.
 
 
-<div class="image-gallery">
+<div class="image-gallery gallery-2-columns">
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/intro.mp4" target="_blank">
-            <video src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/intro.mp4" autoplay loop muted playsinline></video>
-            <figcaption>Intro sequence</figcaption>
+        <a href="https://danielnoam.github.io/portfolio/assets/electro-grid/FeelStartingLevel.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/electro-grid/FeelStartingLevel.mp4" autoplay loop muted playsinline></video>
+            <figcaption>Starting a level</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/credits.mp4" target="_blank">
-            <video src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/credits.mp4" autoplay loop muted playsinline></video>
-            <figcaption>Credits sequence</figcaption>
+        <a href="https://danielnoam.github.io/portfolio/assets/electro-grid/FeelEndingLevel.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/electro-grid/FeelEndingLevel.mp4" autoplay loop muted playsinline></video>
+            <figcaption>Ending a level</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/electro-grid/FeelInfoWindow.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/electro-grid/FeelInfoWindow.mp4" autoplay loop muted playsinline></video>
+            <figcaption>Information window</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/electro-grid/FeelMainMenu.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/electro-grid/FeelMainMenu.mp4" autoplay loop muted playsinline></video>
+            <figcaption>Main menu</figcaption>
         </a>
     </figure>
 </div>
@@ -85,17 +102,29 @@ The core loop revolves around strategic matching and objective completion, power
 - Objectives: A modular system supporting varied challenges such as collection quotas, escort missions, and score targets.
 - Lose Conditions: Configurable failure states including move limits or time limits to vary the pacing of levels.
 
-<div class="image-gallery">
+<div class="image-gallery gallery-2-columns">
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/intro.mp4" target="_blank">
-            <video src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/intro.mp4" autoplay loop muted playsinline></video>
-            <figcaption>Intro sequence</figcaption>
+        <a href="https://danielnoam.github.io/portfolio/assets/electro-grid/GameplayMatching.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/electro-grid/GameplayMatching.mp4" autoplay loop muted playsinline></video>
+            <figcaption>Basic matching</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/credits.mp4" target="_blank">
-            <video src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/credits.mp4" autoplay loop muted playsinline></video>
-            <figcaption>Credits sequence</figcaption>
+        <a href="https://danielnoam.github.io/portfolio/assets/electro-grid/GameplaySquareStar.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/electro-grid/GameplaySquareStar.mp4" autoplay loop muted playsinline></video>
+            <figcaption>Square star objective</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/electro-grid/GameplayLineBreak.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/electro-grid/GameplayLineBreak.mp4" autoplay loop muted playsinline></video>
+            <figcaption>Line breaking</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/electro-grid/GameplayDoubleStar.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/electro-grid/GameplayDoubleStar.mp4" autoplay loop muted playsinline></video>
+            <figcaption>Double star objective</figcaption>
         </a>
     </figure>
 </div>
