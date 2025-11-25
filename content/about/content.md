@@ -67,13 +67,13 @@ LinkedIn: https://linkedin.com/in/daniel-noam
         </a>
     </figure>
     <figure>
-        <a href="#" onclick="handleNavigationClick(`${baseUrl}/content/jams/power-factory/content.md`, document.querySelector('a[onclick*=\'power-factory\']')); return false;">
+        <a href="#" onclick="handleNavigationClick(`${baseUrl}/content/games/power-factory/content.md`, document.querySelector('a[onclick*=\'power-factory\']')); return false;">
             <img src="https://danielnoam.github.io/portfolio/assets/power-factory/logo.png" alt="Power Factory">
             <figcaption>Power Factory</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="#" onclick="handleNavigationClick(`${baseUrl}/content/jams/bubblerena/content.md`, document.querySelector('a[onclick*=\'bubblerena\']')); return false;">
+        <a href="#" onclick="handleNavigationClick(`${baseUrl}/content/games/bubblerena/content.md`, document.querySelector('a[onclick*=\'bubblerena\']')); return false;">
             <img src="https://danielnoam.github.io/portfolio/assets/bubblerena/logo.gif" alt="Bubblerena">
             <figcaption>Bubblerena</figcaption>
         </a>

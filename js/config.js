@@ -63,7 +63,7 @@ const CONFIG = {
             ]
         },
         "GameJams": {
-            path: "content/jams",
+            path: "content/games",
             pages: [
                 { title: "Power Factory - KJ 2025", folder: "power-factory", visible: true },
                 { title: "Bubblerena - GGJ 2025", folder: "bubblerena", visible: true },
