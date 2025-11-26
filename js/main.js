@@ -53,6 +53,17 @@ class PortfolioApp {
         this.modules.router.init();
         this.modules.background.init();
 
+        // Handle gallery navigation links with data-navigate attribute
+        document.addEventListener('click', (e) => {
+            const link = e.target.closest('a[data-navigate]');
+            if (link) {
+                e.preventDefault();
+                const path = this.config.baseUrl + link.dataset.navigate;
+                window.handleGalleryNavigationClick(path);
+            }
+        });
+
+
         // Load initial route
         await this.modules.router.handleInitialRoute();
 
@@ -81,6 +92,26 @@ class PortfolioApp {
                 this.modules.content
             );
         };
+
+        // Simple gallery navigation - just load content, navigation will sync automatically
+        window.handleGalleryNavigationClick = (path) => {
+            this.modules.content.loadContent(path);
+            this.modules.navigation.closeMobileSidebar();
+
+            const pathSegments = path.split('/');
+            const section = pathSegments[pathSegments.length - 3];
+            const pageName = pathSegments[pathSegments.length - 2];
+
+            let newUrl;
+            if (section === "about") {
+                newUrl = `${this.config.baseUrl}/about`;
+            } else {
+                newUrl = `${this.config.baseUrl}/${pageName}`;
+            }
+
+            history.pushState({path: path}, '', newUrl);
+        };
+
         window.baseUrl = this.config.baseUrl;
     }
 }

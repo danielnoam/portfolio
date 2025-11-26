@@ -3,7 +3,7 @@
 # Project UMN
 
 
-<img src="https://danielnoam.github.io/portfolio/assets/project-umn/introon.gif" alt="Intro" class="page-logo">
+<img src="https://danielnoam.github.io/portfolio/assets/project-umn/main.gif" alt="Intro" class="page-logo">
 
 <p class="text-center">
     <a href="https://danielnoam.itch.io/project-umd">Itch.io</a> | 
@@ -35,8 +35,8 @@ The story unfolds through environmental design with minimal text, culminating in
 
 <div class="image-gallery">
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/project-umn/player.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/player.gif" alt="Player Animation Tree">
+        <a href="https://danielnoam.github.io/portfolio/assets/project-umn/player.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/project-umn/player.mp4" autoplay loop muted playsinline></video>
             <figcaption>Player Animation Tree</figcaption>
         </a>
     </figure>

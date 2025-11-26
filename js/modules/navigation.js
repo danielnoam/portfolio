@@ -2,7 +2,6 @@
             NAVIGATION MODULE
 ================================================*/
 
-
 export class NavigationManager {
     constructor(config) {
         this.config = config;
@@ -17,6 +16,23 @@ export class NavigationManager {
             link.classList.add('active');
             this.activeLink = link;
         }
+    }
+
+    // Add this new method
+    syncActiveLink(contentPath) {
+        // Find the nav link that matches this content path
+        const nav = document.getElementById('main-nav');
+        const links = nav.querySelectorAll('a[data-content-path]');
+
+        for (const link of links) {
+            if (link.dataset.contentPath === contentPath) {
+                this.setActiveLink(link);
+                return;
+            }
+        }
+
+        // If no match found, clear active state
+        this.setActiveLink(null);
     }
 
     findNavigationLink(contentPath) {
@@ -75,7 +91,9 @@ export class NavigationManager {
             link.textContent = linkConfig.title;
 
             if (linkConfig.type === 'content') {
-                link.onclick = () => onClickHandler(`${this.config.baseUrl}/${linkConfig.path}`, link);
+                const fullPath = `${this.config.baseUrl}/${linkConfig.path}`;
+                link.dataset.contentPath = fullPath;
+                link.onclick = () => onClickHandler(fullPath, link);
             } else if (linkConfig.type === 'external') {
                 this._setupExternalLink(link, linkConfig);
             }
@@ -94,10 +112,9 @@ export class NavigationManager {
                 visiblePages.forEach(page => {
                     const link = document.createElement('a');
                     link.textContent = page.title;
-                    link.onclick = () => onClickHandler(
-                        `${this.config.baseUrl}/${content.path}/${page.folder}/content.md`,
-                        link
-                    );
+                    const fullPath = `${this.config.baseUrl}/${content.path}/${page.folder}/content.md`;
+                    link.dataset.contentPath = fullPath;
+                    link.onclick = () => onClickHandler(fullPath, link);
                     nav.appendChild(link);
                 });
             }

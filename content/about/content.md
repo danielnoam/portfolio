@@ -8,12 +8,10 @@
 
 <h1 class="text-left-heading">ABOUT</h1>
 
-I'm a Game Designer and Programmer who began my journey in game development during high school.
+I'm Daniel Noam, a Game Designer and Programmer who began my journey in game development during high school.
 My experience spans from modding existing games to creating original adventures using various game engines.
 
-My main expertise is in Unity, with additional experience in Unreal, Blender, Photoshop, Git, and Aseprite.
-
-
+My main expertise is in Unity, with additional experience in Unreal, Blender, Photoshop, and Git.
 
 
 <h2 class="text-left-heading">Contact</h2>
@@ -31,55 +29,55 @@ LinkedIn: https://linkedin.com/in/daniel-noam
 
 <div class="image-gallery no-lightbox">
     <figure>
-        <a href="#" onclick="handleNavigationClick(`${baseUrl}/content/games/electro-grid/content.md`, document.querySelector('a[onclick*=\'electro-grid\']')); return false;">
+        <a href="#" data-navigate="/content/games/electro-grid/content.md">
             <img src="https://danielnoam.github.io/portfolio/assets/electro-grid/main.gif" alt="Electro Grid">
             <figcaption>Electro Grid</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="#" onclick="handleNavigationClick(`${baseUrl}/content/games/chicken-invaders-remake/content.md`, document.querySelector('a[onclick*=\'chicken-invaders-remake\']')); return false;">
+        <a href="#" data-navigate="/content/games/chicken-invaders-remake/content.md">
             <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/Cover.png" alt="Chicken Invaders Remake">
             <figcaption>Chicken Invaders Remake</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="#" onclick="handleNavigationClick(`${baseUrl}/content/games/project-umn/content.md`, document.querySelector('a[onclick*=\'project-umn\']')); return false;">
+        <a href="#" data-navigate="/content/games/project-umn/content.md">
             <img src="https://danielnoam.github.io/portfolio/assets/project-umn/main.gif" alt="Project UMN">
             <figcaption>Project UMN</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="#" onclick="handleNavigationClick(`${baseUrl}/content/games/2dplatformer/content.md`, document.querySelector('a[onclick*=\'2dplatformer\']')); return false;">
+        <a href="#" data-navigate="/content/games/2dplatformer/content.md">
             <img src="https://danielnoam.github.io/portfolio/assets/2dplatformer/main.gif" alt="2DPlatformer">
             <figcaption>2DPlatformer</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="#" onclick="handleNavigationClick(`${baseUrl}/content/other/dnextenstions/content.md`, document.querySelector('a[onclick*=\'dnextenstions\']')); return false;">
-            <img src="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" alt="DNExtensions">
-            <figcaption>DNExtensions</figcaption>
+        <a href="#" data-navigate="/content/other/editor-utilities/content.md">
+            <img src="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" alt="Controller Rumble">
+            <figcaption>Editor Utilities</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="#" onclick="handleNavigationClick(`${baseUrl}/content/games/school-these-shits/content.md`, document.querySelector('a[onclick*=\'school-these-shits\']')); return false;">
+        <a href="#" data-navigate="/content/games/school-these-shits/content.md">
             <img src="https://danielnoam.github.io/portfolio/assets/school-these-shits/main.png" alt="School These Sh*ts">
             <figcaption>School These Sh*ts</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="#" onclick="handleNavigationClick(`${baseUrl}/content/games/power-factory/content.md`, document.querySelector('a[onclick*=\'power-factory\']')); return false;">
+        <a href="#" data-navigate="/content/games/power-factory/content.md">
             <img src="https://danielnoam.github.io/portfolio/assets/power-factory/main.png" alt="Power Factory">
             <figcaption>Power Factory</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="#" onclick="handleNavigationClick(`${baseUrl}/content/games/bubblerena/content.md`, document.querySelector('a[onclick*=\'bubblerena\']')); return false;">
+        <a href="#" data-navigate="/content/games/bubblerena/content.md">
             <img src="https://danielnoam.github.io/portfolio/assets/bubblerena/main.gif" alt="Bubblerena">
             <figcaption>Bubblerena</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="#" onclick="handleNavigationClick(`${baseUrl}/content/games/pixel-knight/content.md`, document.querySelector('a[onclick*=\'pixel-knight\']')); return false;">
+        <a href="#" data-navigate="/content/games/pixel-knight/content.md">
             <img src="https://danielnoam.github.io/portfolio/assets/pixel-knight/main.gif" alt="Pixel Knight">
             <figcaption>Pixel Knight</figcaption>
         </a>

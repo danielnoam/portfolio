@@ -1,6 +1,6 @@
 <div class="page-content">
 
-# Utilities
+# Editor Utilities
 
 <p class="text-center">
     <a href="https://github.com/danielnoam/DNExtensions/">GitHub</a>

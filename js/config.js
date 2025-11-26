@@ -75,7 +75,7 @@ const CONFIG = {
                 { title: "Controller Rumble", folder: "controller-rumble", visible: true },
                 { title: "Object Pooling", folder: "object-pooling", visible: true },
                 { title: "VFX & Transitions", folder: "vfx-transitions", visible: true },
-                { title: "Utilities", folder: "utilities", visible: true },
+                { title: "Editor Utilities", folder: "editor-utilities", visible: true },
             ]
         },
         "Other": {
