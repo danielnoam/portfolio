@@ -46,7 +46,7 @@ Teleports player to Scene View camera position on play via Tools menu or shortcu
 ### Audio Event
 ScriptableObject-based audio system with randomization and spatial positioning. Random clip selection, volume/pitch ranges via RangedFloat, 3D sound controls, and object pooling integration.
 
-<div class="image-gallery gallery-1-column">
+<div class="image-gallery gallery-2-columns">
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/dnextensions/AudioEvent.mp4" target="_blank">
             <video src="https://danielnoam.github.io/portfolio/assets/dnextensions/AudioEvent.mp4" autoplay loop muted playsinline></video>
@@ -56,24 +56,6 @@ ScriptableObject-based audio system with randomization and spatial positioning. 
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/dnextensions/Button.mp4" target="_blank">
             <video src="https://danielnoam.github.io/portfolio/assets/dnextensions/Button.mp4" autoplay loop muted playsinline></video>
-            <figcaption>Button Attribute</figcaption>
-        </a>
-    </figure>
-    <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/dnextensions/ChanceList.mp4" target="_blank">
-            <video src="https://danielnoam.github.io/portfolio/assets/dnextensions/ChanceList.mp4" autoplay loop muted playsinline></video>
-            <figcaption>Button Attribute</figcaption>
-        </a>
-    </figure>
-    <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/dnextensions/Fields.mp4" target="_blank">
-            <video src="https://danielnoam.github.io/portfolio/assets/dnextensions/Fields.mp4" autoplay loop muted playsinline></video>
-            <figcaption>Button Attribute</figcaption>
-        </a>
-    </figure>
-    <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/dnextensions/RangedValues.mp4" target="_blank">
-            <video src="https://danielnoam.github.io/portfolio/assets/dnextensions/RangedValues.mp4" autoplay loop muted playsinline></video>
             <figcaption>Button Attribute</figcaption>
         </a>
     </figure>
@@ -105,35 +87,23 @@ Serializable range types (RangedFloat/RangedInt) with min-max slider interface. 
 ### ChanceList
 Weighted random selection with automatic normalization and designer-friendly interface. Generic type support, probability locking, and configurable single/multiple selection with duplicates.
 
-<div class="image-gallery gallery-2-columns">
+<div class="image-gallery gallery-3-columns">
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" alt="InterfaceReference">
-            <figcaption>InterfaceReference</figcaption>
+        <a href="https://danielnoam.github.io/portfolio/assets/dnextensions/ChanceList.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/dnextensions/ChanceList.mp4" autoplay loop muted playsinline></video>
+            <figcaption>Button Attribute</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" alt="SceneField">
-            <figcaption>SceneField</figcaption>
+        <a href="https://danielnoam.github.io/portfolio/assets/dnextensions/Fields.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/dnextensions/Fields.mp4" autoplay loop muted playsinline></video>
+            <figcaption>Button Attribute</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" alt="SortingLayerField">
-            <figcaption>SortingLayerField</figcaption>
-        </a>
-    </figure>
-    <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" alt="RangedFloat">
-            <figcaption>RangedFloat</figcaption>
-        </a>
-    </figure>
-    <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" alt="ChanceList">
-            <figcaption>ChanceList</figcaption>
+        <a href="https://danielnoam.github.io/portfolio/assets/dnextensions/RangedValues.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/dnextensions/RangedValues.mp4" autoplay loop muted playsinline></video>
+            <figcaption>Button Attribute</figcaption>
         </a>
     </figure>
 </div>
@@ -141,33 +111,6 @@ Weighted random selection with automatic normalization and designer-friendly int
 
 </div>
 
-
-<div class="project-card">
-
-## Cinemachine Extensions
-
-### Impulse Source Extensions
-Extension methods for CinemachineImpulseSource with ScriptableObject-style configurations. Customizable impulse shapes, duration, intensity, and spatial propagation.
-
-### Rotation Offset Extension
-Cinemachine extension for additional rotation offsets at the Aim stage. Runtime modification support with additive adjustments and pipeline integration.
-
-<div class="image-gallery gallery-2-columns">
-    <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" alt="Impulse Extensions">
-            <figcaption>Impulse Extensions</figcaption>
-        </a>
-    </figure>
-    <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" alt="Rotation Offset">
-            <figcaption>Rotation Offset</figcaption>
-        </a>
-    </figure>
-</div>
-
-</div>
 
 </div>
 

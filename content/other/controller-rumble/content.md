@@ -8,9 +8,6 @@
 
 <div class="project-card">
 
-<div class="content-two-column sticky-right">
-
-<div class="content-left">
 
 ## Overview
 Initially developed for my Chicken Invaders Remake project, this system was expanded and designed to work easily with any other project.
@@ -23,46 +20,30 @@ It features 3D spatial positioning and advanced effect management for precise co
 - Enables 3D spatial positioning for rumble sources, with customizable distance-based falloff and attenuation curves.
 - Includes convenient built-in methods for common effects like fade-ins, fade-outs, and procedural pulses.
 - Provides a serializable settings class for creating, customizing, and reusing rumble effect presets in the Inspector.
-- Integrates with Unity's Input System to safely handle gamepad connections and control scheme changes.
 - Offers master frequency range clamping on the listener, allowing for global rumble intensity control or accessibility options.
 - Includes specific support for DualShock controller features, such as controlling the light bar color.
-- Allows for easy in-editor testing of rumble effects directly from the source component's Inspector.
 
-</div>
 
-<div class="content-right">
-
-<div class="image-gallery gallery-1-column">
+<div class="image-gallery gallery-3-columns">
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" alt="Unity Logo">
+        <a href="https://danielnoam.github.io/portfolio/assets/dnextensions/controllerlogo.jpg" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/dnextensions/controllerlogo.jpg" alt="Unity Logo">
             <figcaption>Documentation</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" alt="Unity Logo">
+        <a href="https://danielnoam.github.io/portfolio/assets/dnextensions/controllerlogo.jpg" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/dnextensions/controllerlogo.jpg" alt="Unity Logo">
             <figcaption>Documentation</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" alt="Unity Logo">
-            <figcaption>Documentation</figcaption>
-        </a>
-    </figure>
-    <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" alt="Unity Logo">
+        <a href="https://danielnoam.github.io/portfolio/assets/dnextensions/controllerlogo.jpg" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/dnextensions/controllerlogo.jpg" alt="Unity Logo">
             <figcaption>Documentation</figcaption>
         </a>
     </figure>
 </div>
-
-</div>
-
-</div>
-
 </div>
 
 </div>

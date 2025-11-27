@@ -17,7 +17,7 @@ High-performance pooling system eliminating instantiation costs and reducing gar
 
 - Generic pooling system supporting any GameObject
 - Automatic pool management with configurable size limits
-- Pre-warming capabilities for optimal performance
+- Per scene pre-warming options for optimal performance
 - Support for IPooledObject interface for custom initialization
 - Scene persistence options with DontDestroyOnLoad support
 - Fallback mechanisms for missing pools
@@ -26,28 +26,16 @@ High-performance pooling system eliminating instantiation costs and reducing gar
 
 <div class="content-right">
 
-<div class="image-gallery gallery-1-column">
+<div class="image-gallery gallery-2-columns">
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" alt="Unity Logo">
+        <a href="https://danielnoam.github.io/portfolio/assets/dnextensions/unitylogo.jpg" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/dnextensions/unitylogo.jpg" alt="Unity Logo">
             <figcaption>Documentation</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" alt="Unity Logo">
-            <figcaption>Documentation</figcaption>
-        </a>
-    </figure>
-    <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" alt="Unity Logo">
-            <figcaption>Documentation</figcaption>
-        </a>
-    </figure>
-    <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" alt="Unity Logo">
+        <a href="https://danielnoam.github.io/portfolio/assets/dnextensions/unitylogo.jpg" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/dnextensions/unitylogo.jpg" alt="Unity Logo">
             <figcaption>Documentation</figcaption>
         </a>
     </figure>
