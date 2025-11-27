@@ -46,53 +46,35 @@ Teleports player to Scene View camera position on play via Tools menu or shortcu
 ### Audio Event
 ScriptableObject-based audio system with randomization and spatial positioning. Random clip selection, volume/pitch ranges via RangedFloat, 3D sound controls, and object pooling integration.
 
-<div class="image-gallery gallery-2-columns">
+<div class="image-gallery gallery-1-column">
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" alt="Button Attribute">
+        <a href="https://danielnoam.github.io/portfolio/assets/dnextensions/AudioEvent.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/dnextensions/AudioEvent.mp4" autoplay loop muted playsinline></video>
             <figcaption>Button Attribute</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" alt="Conditional Attributes">
-            <figcaption>Conditional Attributes</figcaption>
+        <a href="https://danielnoam.github.io/portfolio/assets/dnextensions/Button.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/dnextensions/Button.mp4" autoplay loop muted playsinline></video>
+            <figcaption>Button Attribute</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" alt="InfoBox">
-            <figcaption>InfoBox</figcaption>
+        <a href="https://danielnoam.github.io/portfolio/assets/dnextensions/ChanceList.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/dnextensions/ChanceList.mp4" autoplay loop muted playsinline></video>
+            <figcaption>Button Attribute</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" alt="Preview Attribute">
-            <figcaption>Preview Attribute</figcaption>
+        <a href="https://danielnoam.github.io/portfolio/assets/dnextensions/Fields.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/dnextensions/Fields.mp4" autoplay loop muted playsinline></video>
+            <figcaption>Button Attribute</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" alt="ReadOnly">
-            <figcaption>ReadOnly</figcaption>
-        </a>
-    </figure>
-    <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" alt="Separator">
-            <figcaption>Separator</figcaption>
-        </a>
-    </figure>
-    <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" alt="Play From Camera">
-            <figcaption>Play From Camera</figcaption>
-        </a>
-    </figure>
-    <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" alt="Audio Event">
-            <figcaption>Audio Event</figcaption>
+        <a href="https://danielnoam.github.io/portfolio/assets/dnextensions/RangedValues.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/dnextensions/RangedValues.mp4" autoplay loop muted playsinline></video>
+            <figcaption>Button Attribute</figcaption>
         </a>
     </figure>
 </div>

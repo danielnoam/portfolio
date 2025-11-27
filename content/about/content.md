@@ -54,7 +54,7 @@ LinkedIn: https://linkedin.com/in/daniel-noam
     </figure>
     <figure>
         <a href="#" data-navigate="/content/other/editor-utilities/content.md">
-            <img src="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" alt="Controller Rumble">
+            <img src="https://danielnoam.github.io/portfolio/assets/dnextenstions/unitylogo.jpg" alt="Controller Rumble">
             <figcaption>Editor Utilities</figcaption>
         </a>
     </figure>
