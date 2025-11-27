@@ -6,14 +6,11 @@
     <a href="https://github.com/danielnoam/DNExtensions/">GitHub</a>
 </p>
 
+<div class="project-card">
 
 <div class="content-two-column sticky-right">
 
-
 <div class="content-left">
-
-<div class="project-card">
-
 
 ## Overview
 Initially developed for my Chicken Invaders Remake project, this system was expanded and designed to work easily with any other project.
@@ -32,12 +29,10 @@ It features 3D spatial positioning and advanced effect management for precise co
 - Allows for easy in-editor testing of rumble effects directly from the source component's Inspector.
 
 </div>
-</div>
 
 <div class="content-right">
 
-
-<div class="image-gallery gallery-2-columns">
+<div class="image-gallery gallery-1-column">
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" target="_blank">
             <img src="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" alt="Unity Logo">
@@ -64,6 +59,7 @@ It features 3D spatial positioning and advanced effect management for precise co
     </figure>
 </div>
 
+</div>
 
 </div>
 

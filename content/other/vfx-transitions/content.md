@@ -1,19 +1,16 @@
 <div class="page-content">
 
-
-# VFX & Transition
+# VFX & Transitions
 
 <p class="text-center">
     <a href="https://github.com/danielnoam/DNExtensions/">GitHub</a>
 </p>
 
-
-
-<div class="content-two-column sticky-right">
-<div class="content-left">
-
-
 <div class="project-card">
+
+<div class="content-two-column no-sticky">
+
+<div class="content-left">
 
 ## Overview
 Visual effects system managing post-processing, UI transitions, and scene loading with seamless continuity.
@@ -26,37 +23,36 @@ Visual effects system managing post-processing, UI transitions, and scene loadin
 - PrimeTween integration for smooth animations
 
 </div>
-</div>
-
 
 <div class="content-right">
 
+<div class="image-gallery gallery-1-column">
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" alt="Unity Logo">
+            <figcaption>Documentation</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" alt="Unity Logo">
+            <figcaption>Documentation</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" alt="Unity Logo">
+            <figcaption>Documentation</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" alt="Unity Logo">
+            <figcaption>Documentation</figcaption>
+        </a>
+    </figure>
+</div>
 
-<div class="image-gallery gallery-2-columns">
-    <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" alt="Unity Logo">
-            <figcaption>Documentation</figcaption>
-        </a>
-    </figure>
-    <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" alt="Unity Logo">
-            <figcaption>Documentation</figcaption>
-        </a>
-    </figure>
-    <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" alt="Unity Logo">
-            <figcaption>Documentation</figcaption>
-        </a>
-    </figure>
-    <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/unitylogo.jpg" alt="Unity Logo">
-            <figcaption>Documentation</figcaption>
-        </a>
-    </figure>
 </div>
 
 </div>
