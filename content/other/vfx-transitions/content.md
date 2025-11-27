@@ -8,9 +8,6 @@
 
 <div class="project-card">
 
-<div class="content-two-column no-sticky">
-
-<div class="content-left">
 
 ## Overview
 Visual effects system managing post-processing, UI transitions, and scene loading with seamless continuity.
@@ -22,9 +19,6 @@ Visual effects system managing post-processing, UI transitions, and scene loadin
 - Automatic cleanup and reset functionality
 - PrimeTween integration for smooth animations
 
-</div>
-
-<div class="content-right">
 
 <div class="image-gallery gallery-1-column">
     <figure>
@@ -55,8 +49,5 @@ Visual effects system managing post-processing, UI transitions, and scene loadin
 
 </div>
 
-</div>
-
-</div>
 
 </div>

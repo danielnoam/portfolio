@@ -8,9 +8,6 @@
 
 <div class="project-card">
 
-<div class="content-two-column no-sticky">
-
-<div class="content-left">
 
 ## Overview
 High-performance pooling system eliminating instantiation costs and reducing garbage collection overhead.
@@ -21,10 +18,6 @@ High-performance pooling system eliminating instantiation costs and reducing gar
 - Support for IPooledObject interface for custom initialization
 - Scene persistence options with DontDestroyOnLoad support
 - Fallback mechanisms for missing pools
-
-</div>
-
-<div class="content-right">
 
 <div class="image-gallery gallery-2-columns">
     <figure>
@@ -39,10 +32,6 @@ High-performance pooling system eliminating instantiation costs and reducing gar
             <figcaption>Documentation</figcaption>
         </a>
     </figure>
-</div>
-
-</div>
-
 </div>
 
 </div>
