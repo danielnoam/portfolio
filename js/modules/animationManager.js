@@ -7,7 +7,6 @@ export class AnimationManager {
         this.contentObserver = null;
         this.animatedElements = [
             '.project-card',
-            '.image-gallery figure',
             '.page-content h1',
             '.page-content h2',
             '.page-content p',

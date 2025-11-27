@@ -54,6 +54,32 @@ export class LightboxManager {
         galleryLinks.forEach((link, index) => {
             const gallery = link.closest('.image-gallery');
             const lightboxDisabled = gallery && gallery.classList.contains('no-lightbox');
+            const figure = link.closest('figure');
+            const media = link.querySelector('img, video');
+
+            // Set up loading state
+            if (media) {
+                const onMediaLoaded = () => {
+                    figure.classList.add('loaded');
+                    media.classList.add('loaded');
+                };
+
+                if (media.tagName === 'IMG') {
+                    if (media.complete && media.naturalWidth > 0) {
+                        onMediaLoaded();
+                    } else {
+                        media.addEventListener('load', onMediaLoaded);
+                        media.addEventListener('error', onMediaLoaded); // Handle errors gracefully
+                    }
+                } else if (media.tagName === 'VIDEO') {
+                    if (media.readyState >= 2) { // HAVE_CURRENT_DATA or higher
+                        onMediaLoaded();
+                    } else {
+                        media.addEventListener('loadeddata', onMediaLoaded);
+                        media.addEventListener('error', onMediaLoaded);
+                    }
+                }
+            }
 
             const href = link.getAttribute('href');
             const isVideo = href && this.isVideoFile(href);
@@ -86,6 +112,14 @@ export class LightboxManager {
             return;
         }
 
+        const href = link.getAttribute('href');
+        const hasAudio = link.getAttribute('data-has-audio') === 'true';
+
+        // Only add indicator if it's a video with audio
+        if (!this.isVideoFile(href) || !hasAudio) {
+            return;
+        }
+
         const indicator = document.createElement('div');
         indicator.className = 'video-indicator';
         indicator.textContent = '';
@@ -100,18 +134,16 @@ export class LightboxManager {
             indicator.style.right = right + 'px';
         };
 
-        // Update: Check readyState for video or complete for image
         if ((media.tagName === 'IMG' && media.complete && media.naturalWidth > 0) ||
             (media.tagName === 'VIDEO' && media.readyState >= 1)) {
             positionIndicator();
         } else {
             media.addEventListener('load', positionIndicator);
-            media.addEventListener('loadedmetadata', positionIndicator); // For video
+            media.addEventListener('loadedmetadata', positionIndicator);
         }
 
         window.addEventListener('resize', positionIndicator);
     }
-
     open(index, images) {
         this.currentIndex = index;
         this.images = images;

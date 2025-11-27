@@ -119,10 +119,6 @@
     box-shadow: var(--shadow-lg);
 }
 
-.image-gallery figure:hover .video-indicator {
-    transform: scale(1.2);
-    z-index: var(--z-dropdown);
-}
 
 .image-gallery figure {
     position: relative;
@@ -135,6 +131,75 @@
     width: fit-content;
 }
 
+.image-gallery figure:hover .video-indicator {
+    transform: scale(1.2);
+    z-index: var(--z-dropdown);
+}
+
+
+/* Loading state for gallery items */
+.image-gallery figure::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 150px;
+    max-width: 100%;
+    max-height: var(--gallery-image-max-height);
+    background: var(--card-bg);
+    border-radius: var(--radius-md);
+    z-index: 1;
+    opacity: 1;
+    transition: opacity var(--transition-normal);
+    pointer-events: none;
+}
+
+.image-gallery figure.loaded::before {
+    opacity: 0;
+}
+
+/* Loading spinner */
+.image-gallery figure::after {
+    content: '⟳';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: var(--text-3xl);
+    color: var(--text-secondary);
+    z-index: 2;
+    opacity: 1;
+    transition: opacity var(--transition-normal);
+    animation: spin 1s linear infinite;
+    pointer-events: none;
+}
+
+.image-gallery figure.loaded::after {
+    opacity: 0;
+}
+
+@keyframes spin {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+/* Ensure media is initially hidden during load */
+.image-gallery img:not(.loaded),
+.image-gallery video:not(.loaded) {
+    opacity: 0;
+    transition: opacity var(--transition-normal);
+}
+
+.image-gallery img.loaded,
+.image-gallery video.loaded {
+    opacity: 1;
+}
 
 .image-gallery figcaption {
     position: absolute;
@@ -190,8 +255,9 @@
 }
 
 .video-indicator::before {
-    content: '▶';
+    content: '🔊';
     font-size: 0.75rem;
+    opacity: 0.5;
     margin-right: var(--space-1);
 }
 
