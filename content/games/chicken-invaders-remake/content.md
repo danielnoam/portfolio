@@ -123,8 +123,8 @@ Our goal was to recreate the original game's idea with modern visuals and reimag
 
 <div class="image-gallery">
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/MainMenuGif.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/MainMenuGif.gif" alt="Main menu">
+        <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/MainMenu.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/MainMenu.mp4" autoplay loop muted playsinline></video>
             <figcaption>Main menu</figcaption>
         </a>
     </figure>
@@ -209,8 +209,8 @@ Our goal was to recreate the original game's idea with modern visuals and reimag
 
 <div class="image-gallery">
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/ObjectPoolingGif.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/ObjectPoolingGif.gif" alt="Object pooling">
+        <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/ObjectPooling.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/ObjectPooling.mp4" autoplay loop muted playsinline></video>
             <figcaption>Object pooling</figcaption>
         </a>
     </figure>
@@ -329,14 +329,20 @@ This project served as an invaluable learning experience in collaborative game d
 ## Gallery
 <div class="image-gallery">
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/Gamepay1Gif.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/Gamepay1Gif.gif" alt="Gameplay">
+        <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/Gameplay1.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/Gameplay1.mp4" autoplay loop muted playsinline></video>
             <figcaption>Gameplay</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/Gamepay2Gif.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/Gamepay2Gif.gif" alt="Gameplay">
+        <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/Gameplay2.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/Gameplay2.mp4" autoplay loop muted playsinline></video>
+            <figcaption>Gameplay</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/Gameplay3.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/Gameplay3.mp4" autoplay loop muted playsinline></video>
             <figcaption>Gameplay</figcaption>
         </a>
     </figure>

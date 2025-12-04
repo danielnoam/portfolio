@@ -31,8 +31,8 @@ It features 3D spatial positioning and advanced effect management for precise co
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/dnextensions/ListenerAndSource.jpg" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/dnextensions/ListenerAndSource.jpg" alt="Listener and source">
+        <a href="https://danielnoam.github.io/portfolio/assets/dnextensions/ListenerAndSource.png" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/dnextensions/ListenerAndSource.png" alt="Listener and source">
             <figcaption>Listener and source</figcaption>
         </a>
     </figure>
