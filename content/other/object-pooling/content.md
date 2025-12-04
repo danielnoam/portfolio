@@ -12,12 +12,12 @@
 ## Overview
 High-performance pooling system eliminating instantiation costs and reducing garbage collection overhead.
 
-- Generic pooling system supporting any GameObject
+- Generic pooling system that supports any GameObject
 - Automatic pool management with configurable size limits
 - Per scene pre-warming options for optimal performance
-- Support for IPooledObject interface for custom initialization
-- Scene persistence options with DontDestroyOnLoad support
-- Fallback mechanisms for missing pools
+- Interface for custom initialization
+- Scene persistence options with DontDestroyOnLoad
+- Fallback for missing pools
 
 <div class="image-gallery gallery-2-columns">
     <figure>

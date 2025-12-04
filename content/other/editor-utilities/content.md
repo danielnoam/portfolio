@@ -50,7 +50,7 @@ ScriptableObject-based audio system with randomization and spatial positioning. 
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/dnextensions/AudioEvent.mp4" target="_blank">
             <video src="https://danielnoam.github.io/portfolio/assets/dnextensions/AudioEvent.mp4" autoplay loop muted playsinline></video>
-            <figcaption>Button Attribute</figcaption>
+            <figcaption>Audio event</figcaption>
         </a>
     </figure>
     <figure>
@@ -91,19 +91,19 @@ Weighted random selection with automatic normalization and designer-friendly int
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/dnextensions/ChanceList.mp4" target="_blank">
             <video src="https://danielnoam.github.io/portfolio/assets/dnextensions/ChanceList.mp4" autoplay loop muted playsinline></video>
-            <figcaption>Button Attribute</figcaption>
+            <figcaption>Chance list</figcaption>
         </a>
     </figure>
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/dnextensions/Fields.mp4" target="_blank">
             <video src="https://danielnoam.github.io/portfolio/assets/dnextensions/Fields.mp4" autoplay loop muted playsinline></video>
-            <figcaption>Button Attribute</figcaption>
+            <figcaption>Custom fields</figcaption>
         </a>
     </figure>
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/dnextensions/RangedValues.mp4" target="_blank">
             <video src="https://danielnoam.github.io/portfolio/assets/dnextensions/RangedValues.mp4" autoplay loop muted playsinline></video>
-            <figcaption>Button Attribute</figcaption>
+            <figcaption>Ranged values</figcaption>
         </a>
     </figure>
 </div>
