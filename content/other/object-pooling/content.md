@@ -19,17 +19,23 @@ High-performance pooling system eliminating instantiation costs and reducing gar
 - Scene persistence options with DontDestroyOnLoad
 - Fallback for missing pools
 
-<div class="image-gallery gallery-2-columns">
+<div class="image-gallery gallery">
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/dnextensions/unitylogo.jpg" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/dnextensions/unitylogo.jpg" alt="Unity Logo">
-            <figcaption>Documentation</figcaption>
+        <a href="https://danielnoam.github.io/portfolio/assets/dnextensions/ObjectPooling.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/dnextensions/ObjectPooling.mp4" autoplay loop muted playsinline></video>
+            <figcaption>Object pooling</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/dnextensions/unitylogo.jpg" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/dnextensions/unitylogo.jpg" alt="Unity Logo">
-            <figcaption>Documentation</figcaption>
+        <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/ObjectPooling.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/ObjectPooling.mp4" autoplay loop muted playsinline></video>
+            <figcaption>Used in chicken invaders</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/dnextensions/ObjectPooler.png" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/dnextensions/ObjectPooler.png" alt="Unity Logo">
+            <figcaption>Object pooler settings</figcaption>
         </a>
     </figure>
 </div>
