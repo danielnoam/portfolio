@@ -129,6 +129,28 @@ To support unique level designs beyond standard rectangles, I engineered a robus
     </figure>
 </div>
 
+### Firebase Integration
+
+Implemented Firebase Analytics and Remote Config for live game tuning and behavior tracking on mobile platforms.
+
+- Analytics: Tracks level progression, player retention, and feature usage
+- Remote Config: Enables real-time balance adjustments without app updates (screen shake intensity, haptic feedback, difficulty modifiers)
+
+<div class="image-gallery gallery-2-columns">
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/electro-grid/RemoteControl.png" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/electro-grid/RemoteControl.png" alt="Analytics dashboard">
+            <figcaption>Firebase analytics dashboard</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/electro-grid/RemoteControl.png" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/electro-grid/RemoteControl.png" alt="Remote console">
+            <figcaption>Firebase remote console</figcaption>
+        </a>
+    </figure>
+</div>
+
 
 </div>
 
