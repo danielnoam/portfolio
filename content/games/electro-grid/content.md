@@ -133,8 +133,8 @@ To support unique level designs beyond standard rectangles, I engineered a robus
 
 Implemented Firebase Analytics and Remote Config for live game tuning and behavior tracking on mobile platforms.
 
-- Analytics: Tracks level progression, player retention, and feature usage
-- Remote Config: Enables real-time balance adjustments without app updates (screen shake intensity, haptic feedback, difficulty modifiers)
+- Tracks level progression, player retention, and feature usage
+- Enables real-time balance adjustments without app updates (screen shake intensity, haptic feedback, difficulty modifiers)
 
 <div class="image-gallery gallery-2-columns">
     <figure>
