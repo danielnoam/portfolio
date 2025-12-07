@@ -76,14 +76,7 @@ const CONFIG = {
                 { title: "Object Pooling", folder: "object-pooling", visible: true },
                 { title: "VFX & Transitions", folder: "vfx-transitions", visible: true },
                 { title: "Editor Utilities", folder: "editor-utilities", visible: true },
-            ]
-        },
-        "Other": {
-            path: "content/other",
-            pages: [
                 { title: "Shaders", folder: "shaders", visible: false },
-                { title: "Models", folder: "models", visible: false },
-                { title: "Procedural Animations", folder: "procedural-animations", visible: false },
             ]
         },
         
