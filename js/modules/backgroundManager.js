@@ -25,7 +25,11 @@ export class BackgroundManager {
             },
             'electro-grid': {
                 effects: [
-                    {type: 'shapes', count: 25,},
+                    {
+                        type: 'shapes',
+                        count: 25,
+                        colors: ['#00ff3c', '#0800ff', '#ddff00', '#ff8400', '#ff0000']
+                    }
                 ]
             },
             '2dplatformer': {
@@ -227,7 +231,8 @@ export class BackgroundManager {
         shapesContainer.className = 'shapes-container';
 
         const baseSpeed = config.speed || 1.0;
-        const shapeType = config.shape || 'both'; // Renamed to avoid conflict
+        const shapeType = config.shape || 'both';
+        const colors = config.colors || null;
 
         for (let i = 0; i < (config.count || 20); i++) {
             const shape = document.createElement('div');
@@ -250,6 +255,12 @@ export class BackgroundManager {
             const size = Math.random() * 50 + 30;
             shape.style.width = `${size}px`;
             shape.style.height = `${size}px`;
+
+            // Apply random color if colors array exists
+            if (colors && colors.length > 0) {
+                const randomColor = colors[Math.floor(Math.random() * colors.length)];
+                shape.style.borderColor = randomColor;
+            }
 
             const startX = Math.random() * 100;
             const startY = Math.random() * 100;

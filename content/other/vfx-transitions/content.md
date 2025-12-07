@@ -20,13 +20,7 @@ Visual effects system managing post-processing, UI transitions, and scene loadin
 - PrimeTween integration for smooth animations
 
 
-<div class="image-gallery gallery-1-column">
-    <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/dnextensions/unitylogo.jpg" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/dnextensions/unitylogo.jpg" alt="Unity Logo">
-            <figcaption>Documentation</figcaption>
-        </a>
-    </figure>
+<div class="image-gallery gallery">
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/dnextensions/unitylogo.jpg" target="_blank">
             <img src="https://danielnoam.github.io/portfolio/assets/dnextensions/unitylogo.jpg" alt="Unity Logo">

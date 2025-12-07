@@ -140,13 +140,13 @@ Implemented Firebase Analytics and Remote Config for live game tuning and behavi
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/electro-grid/RemoteControl.png" target="_blank">
             <img src="https://danielnoam.github.io/portfolio/assets/electro-grid/RemoteControl.png" alt="Analytics dashboard">
-            <figcaption>Firebase analytics dashboard</figcaption>
+            <figcaption>Analytics dashboard</figcaption>
         </a>
     </figure>
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/electro-grid/RemoteControl.png" target="_blank">
             <img src="https://danielnoam.github.io/portfolio/assets/electro-grid/RemoteControl.png" alt="Remote console">
-            <figcaption>Firebase remote console</figcaption>
+            <figcaption>Remote console</figcaption>
         </a>
     </figure>
 </div>
