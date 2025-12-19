@@ -8,42 +8,31 @@
 
 <div class="project-card">
 
+## Dither Distance Fade
 
-## Overview
-Various shader effects made using unity's shader graph
+A Shader Graph implementation that creates distance-based transparency using dithering patterns. The shader dynamically fades objects based on their proximity to a reference transform, supporting custom reference objects like cameras or players for flexible distance calculations.
 
-- Dither shader
-- fullscreen crt shader
-
-
-<div class="image-gallery gallery-2-columns">
+<div class="image-gallery gallery-3-columns">
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/dnextensions/unitylogo.jpg" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/dnextensions/unitylogo.jpg" alt="Unity Logo">
-            <figcaption>Documentation</figcaption>
+        <a href="https://danielnoam.github.io/portfolio/assets/shaders/Dither.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/shaders/Dither.mp4" autoplay loop muted playsinline></video>
+            <figcaption>Dither effect demonstration</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/dnextensions/unitylogo.jpg" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/dnextensions/unitylogo.jpg" alt="Unity Logo">
-            <figcaption>Documentation</figcaption>
+        <a href="https://danielnoam.github.io/portfolio/assets/shaders/DitherChicken.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/shaders/DitherChicken.mp4" autoplay loop muted playsinline></video>
+            <figcaption>Player boundary in Chicken Invaders</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/dnextensions/unitylogo.jpg" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/dnextensions/unitylogo.jpg" alt="Unity Logo">
-            <figcaption>Documentation</figcaption>
-        </a>
-    </figure>
-    <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/dnextensions/unitylogo.jpg" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/dnextensions/unitylogo.jpg" alt="Unity Logo">
-            <figcaption>Documentation</figcaption>
+        <a href="https://danielnoam.github.io/portfolio/assets/shaders/DitherUMN.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/shaders/DitherUMN.mp4" autoplay loop muted playsinline></video>
+            <figcaption>Puzzle mechanic in Project UMN</figcaption>
         </a>
     </figure>
 </div>
 
 </div>
-
 
 </div>
