@@ -52,6 +52,19 @@ A fullscreen post-processing shader that replicates the visual characteristics o
     </figure>
 </div>
 
+## Dissolve Effect
+
+A versatile dissolve shader featuring customizable edge effects and animated noise patterns. Supports directional control, adjustable edge width and color, and time-based noise animation for dynamic dissolve transitions.
+
+<div class="image-gallery gallery-1-column">
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/shaders/Dissolve.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/shaders/Dissolve.mp4" autoplay loop muted playsinline></video>
+            <figcaption>Dissolve effect with edge glow</figcaption>
+        </a>
+    </figure>
+</div>
+
 </div>
 
 </div>
