@@ -69,14 +69,14 @@ const CONFIG = {
                 { title: "Bubblerena - GGJ 2025", folder: "bubblerena", visible: true },
             ]
         },
-        "Unity Extensions": {
+        "Unity": {
             path: "content/other",
             pages: [
+                { title: "Shaders", folder: "shaders", visible: true },
                 { title: "Controller Rumble", folder: "controller-rumble", visible: true },
                 { title: "Object Pooling", folder: "object-pooling", visible: true },
                 { title: "VFX & Transitions", folder: "vfx-transitions", visible: true },
                 { title: "Editor Utilities", folder: "editor-utilities", visible: true },
-                { title: "Shaders", folder: "shaders", visible: false },
             ]
         },
         

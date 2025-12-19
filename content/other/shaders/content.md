@@ -16,7 +16,7 @@ Various shader effects made using unity's shader graph
 - fullscreen crt shader
 
 
-<div class="image-gallery gallery-1-column">
+<div class="image-gallery gallery-2-columns">
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/dnextensions/unitylogo.jpg" target="_blank">
             <img src="https://danielnoam.github.io/portfolio/assets/dnextensions/unitylogo.jpg" alt="Unity Logo">
