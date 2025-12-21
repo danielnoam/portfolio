@@ -53,6 +53,7 @@ const CONFIG = {
     structure: {
         "Games": {
             path: "content/games",
+            foldout: false,
             pages: [
                 { title: "Electro Grid", folder: "electro-grid", visible: true },
                 { title: "Chicken Invaders Remake", folder: "chicken-invaders-remake", visible: true },
@@ -64,6 +65,7 @@ const CONFIG = {
         },
         "GameJams": {
             path: "content/games",
+            foldout: false,
             pages: [
                 { title: "Power Factory - KJ 2025", folder: "power-factory", visible: true },
                 { title: "Bubblerena - GGJ 2025", folder: "bubblerena", visible: true },
@@ -71,12 +73,20 @@ const CONFIG = {
         },
         "Unity": {
             path: "content/other",
+            foldout: false,
             pages: [
                 { title: "Shaders", folder: "shaders", visible: true },
                 { title: "Controller Rumble", folder: "controller-rumble", visible: true },
                 { title: "Object Pooling", folder: "object-pooling", visible: true },
                 { title: "VFX & Transitions", folder: "vfx-transitions", visible: true },
                 { title: "Editor Utilities", folder: "editor-utilities", visible: true },
+            ]
+        },
+        "Misc": {
+            path: "content/other",
+            foldout: true,
+            pages: [
+
             ]
         },
         

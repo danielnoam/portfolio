@@ -107,16 +107,62 @@ export class NavigationManager {
             if (visiblePages.length > 0) {
                 const header = document.createElement('h2');
                 header.textContent = section;
-                nav.appendChild(header);
 
-                visiblePages.forEach(page => {
-                    const link = document.createElement('a');
-                    link.textContent = page.title;
-                    const fullPath = `${this.config.baseUrl}/${content.path}/${page.folder}/content.md`;
-                    link.dataset.contentPath = fullPath;
-                    link.onclick = () => onClickHandler(fullPath, link);
-                    nav.appendChild(link);
-                });
+                // Check if this section should be a foldout
+                if (content.foldout === true) {
+                    header.classList.add('foldout-header');
+
+                    // Add arrow icon
+                    const arrow = document.createElement('span');
+                    arrow.className = 'foldout-arrow';
+                    arrow.textContent = '▶';
+                    header.insertBefore(arrow, header.firstChild);
+
+                    // Create collapsible container
+                    const container = document.createElement('div');
+                    container.className = 'foldout-content';
+
+                    // Check localStorage for saved state
+                    const storageKey = `foldout-${section}`;
+                    const isOpen = localStorage.getItem(storageKey) === 'true';
+
+                    if (isOpen) {
+                        header.classList.add('open');
+                        container.classList.add('open');
+                    }
+
+                    // Add click handler to toggle
+                    header.onclick = () => {
+                        const isCurrentlyOpen = header.classList.toggle('open');
+                        container.classList.toggle('open');
+                        localStorage.setItem(storageKey, isCurrentlyOpen);
+                    };
+
+                    // Add pages to container
+                    visiblePages.forEach(page => {
+                        const link = document.createElement('a');
+                        link.textContent = page.title;
+                        const fullPath = `${this.config.baseUrl}/${content.path}/${page.folder}/content.md`;
+                        link.dataset.contentPath = fullPath;
+                        link.onclick = () => onClickHandler(fullPath, link);
+                        container.appendChild(link);
+                    });
+
+                    nav.appendChild(header);
+                    nav.appendChild(container);
+                } else {
+                    // Regular header (not a foldout)
+                    nav.appendChild(header);
+
+                    visiblePages.forEach(page => {
+                        const link = document.createElement('a');
+                        link.textContent = page.title;
+                        const fullPath = `${this.config.baseUrl}/${content.path}/${page.folder}/content.md`;
+                        link.dataset.contentPath = fullPath;
+                        link.onclick = () => onClickHandler(fullPath, link);
+                        nav.appendChild(link);
+                    });
+                }
             }
         }
     }

@@ -345,6 +345,78 @@ nav a:not([target="_blank"]).active::before {
     align-items: center;
 }
 
+
+/*==============================================
+            FOLDOUT NAVIGATION
+================================================*/
+
+/* Foldout header styling */
+nav h2.foldout-header {
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    transition: color var(--transition-base);
+}
+
+nav h2.foldout-header:hover {
+    color: var(--text-color);
+}
+
+/* Arrow icon */
+.foldout-arrow {
+    display: inline-block;
+    transition: transform var(--transition-base);
+    font-size: 0.7em;
+    color: var(--text-secondary);
+}
+
+nav h2.foldout-header.open .foldout-arrow {
+    transform: rotate(90deg);
+}
+
+/* Collapsible content container */
+.foldout-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height var(--transition-normal) ease-out;
+    position: relative;
+    z-index: 1;
+}
+
+.foldout-content.open {
+    max-height: 1000px;
+    transition: max-height var(--transition-normal) ease-in;
+    overflow: visible;
+}
+
+/* Links inside foldout - add slight indent */
+.foldout-content a {
+    padding-left: var(--space-5);
+}
+
+/* Mobile: Disable foldout behavior, show all content */
+@media (max-width: 768px) {
+    nav h2.foldout-header {
+        cursor: default;
+        pointer-events: none;
+    }
+
+    .foldout-arrow {
+        display: none;
+    }
+
+    .foldout-content {
+        max-height: none !important;
+        overflow: visible !important;
+    }
+
+    .foldout-content a {
+        padding-left: 0; /* Remove indent on mobile */
+    }
+}
+
 /*==============================================
             UI ELEMENTS
 ================================================*/

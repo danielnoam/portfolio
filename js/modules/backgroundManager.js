@@ -57,6 +57,17 @@ export class BackgroundManager {
 
     init() {
         this.createContainer();
+
+        // Re-initialize about backgrounds when content changes
+        const contentElement = document.getElementById('content');
+        if (contentElement) {
+            const observer = new MutationObserver(() => {
+                setTimeout(() => {
+                    this.initAboutPageBackgrounds();
+                }, 100);
+            });
+            observer.observe(contentElement, { childList: true, subtree: true });
+        }
     }
 
     createContainer() {
@@ -137,6 +148,82 @@ export class BackgroundManager {
                 this.container.classList.add('active');
             }, 50);
         }, 500);
+    }
+
+    initAboutPageBackgrounds() {
+        // Only run on desktop
+        if (window.innerWidth <= 768) return;
+
+        const galleryLinks = document.querySelectorAll('.image-gallery a[data-background-video], .image-gallery a[data-background-image]');
+
+        galleryLinks.forEach(link => {
+            const videoUrl = link.dataset.backgroundVideo;
+            const imageUrl = link.dataset.backgroundImage;
+
+            if (!videoUrl && !imageUrl) return;
+
+            link.addEventListener('mouseenter', () => {
+                this.showAboutBackground(videoUrl, imageUrl);
+            });
+
+            link.addEventListener('mouseleave', () => {
+                this.hideAboutBackground();
+            });
+        });
+    }
+
+    showAboutBackground(videoUrl, imageUrl) {
+        // Clear any existing about background
+        const existingAbout = this.container.querySelector('.about-background');
+        if (existingAbout) {
+            existingAbout.remove();
+        }
+
+        const aboutBg = document.createElement('div');
+        aboutBg.className = 'about-background';
+
+        // If image exists, show it first
+        if (imageUrl) {
+            const img = document.createElement('img');
+            img.src = imageUrl;
+            img.className = 'about-bg-image';
+            aboutBg.appendChild(img);
+        }
+
+        // If video exists, load it
+        if (videoUrl) {
+            const video = document.createElement('video');
+            video.src = videoUrl;
+            video.className = 'about-bg-video';
+            video.autoplay = true;
+            video.loop = true;
+            video.muted = true;
+            video.playsInline = true;
+
+            // Fade in video when loaded (if image exists, it fades over the image)
+            video.addEventListener('loadeddata', () => {
+                video.classList.add('loaded');
+            });
+
+            aboutBg.appendChild(video);
+        }
+
+        this.container.appendChild(aboutBg);
+
+        // Trigger fade in
+        setTimeout(() => {
+            aboutBg.classList.add('active');
+        }, 50);
+    }
+
+    hideAboutBackground() {
+        const aboutBg = this.container.querySelector('.about-background');
+        if (aboutBg) {
+            aboutBg.classList.remove('active');
+            setTimeout(() => {
+                aboutBg.remove();
+            }, 500); // Match CSS transition time
+        }
     }
 
     createRainEffect(config) {
