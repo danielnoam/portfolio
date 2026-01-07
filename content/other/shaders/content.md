@@ -107,15 +107,21 @@ Includes a breathing animation that pulses the effect intensity for dynamic feed
 
 <div class="image-gallery gallery-2-columns">
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/shaders/VignetteBasic.png" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/shaders/VignetteBasic.png" alt="Vignette with color tint">
-            <figcaption>Vignette with color tint</figcaption>
+        <a href="https://danielnoam.github.io/portfolio/assets/shaders/VignetteEditor.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/shaders/VignetteEditor.mp4" autoplay loop muted playsinline></video>
+            <figcaption>Distortion, Pixelation, Ripple</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/shaders/VignetteNoise.png" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/shaders/VignetteNoise.png" alt="Noise texture effects">
-            <figcaption>Noise texture for fire/frost effects</figcaption>
+        <a href="https://danielnoam.github.io/portfolio/assets/shaders/VignetteFreeze.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/shaders/VignetteFreeze.mp4" autoplay loop muted playsinline></video>
+            <figcaption>Distortion, Pixelation, Ripple</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/shaders/VignetteHurt.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/shaders/VignetteHurt.mp4" autoplay loop muted playsinline></video>
+            <figcaption>Distortion, Pixelation, Ripple</figcaption>
         </a>
     </figure>
 </div>
