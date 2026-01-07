@@ -13,7 +13,7 @@
 
 ## Overview
 
-"Electro Grid" is a match-3 puzzle game developed as my fifth-semester project. With a one-month development timeline, the project focused on creating a highly polished short experience optimized for mobile devices, with full PC and WebGL support.
+"Electro Grid" is a match-3 puzzle game developed as my fifth-semester project. With a one-month development timeline, the project focused on creating a highly polished short experience optimized for mobile devices, with support for PC and WebGL .
 
 The game challenges players to complete objectives by matching colored pieces on dynamic, non-standard grid layouts. Players manage different object types and must complete varied objectives while avoiding different loss conditions.
 
@@ -26,14 +26,14 @@ The game challenges players to complete objectives by matching colored pieces on
 
 ### Gameplay Mechanics
 
-The core loop revolves around matching and objective completion, powered by a modular objective system.
+The core loop revolves around matching shapes and completing objectives. 
 
 - Plus: Special item that dynamically grant resources (time or moves) when destroyed.
 - Square Stars: Item that must be guided to valid exit points at the bottom of the grid.
 - Double Stars: Static blockers that require adjacent matches or power-ups to clear.
 - Linebreak: A specialized match mechanic that clears entire rows or columns.
 - Objectives: A modular system supporting varied challenges such as collection quotas, escort missions, and score targets.
-- Lose Conditions: Configurable failure states including move limits or time limits to vary the pacing of levels.
+- Lose Conditions: Configurable failure states including move limit or time limits to vary the pacing of levels.
 
 <div class="image-gallery gallery-4-columns">
     <figure>
@@ -64,9 +64,9 @@ The core loop revolves around matching and objective completion, powered by a mo
 
 ### Game Feel
 
-Given the short development time, a major focus was placed on making every interaction feel satisfying and responsive, extending from the gameplay into the User Interface.
+A major focus was placed on making every interaction feel satisfying and responsive, extending from the gameplay into the user interface.
 
-- The UI is designed to feel fully alive, featuring smooth transitions between menu screens, window pop-up for information, and impactful effects for starting or ending a level.
+- The UI features smooth transitions between menu screens, window pop-up for information, and impactful effects for starting or ending a level.
 - A unified screen shake system makes interaction feel impactful throughout the entire game.
 - Extensive use of particle effects transforms standard mechanics into a high-energy spectacle, providing "juicy" visual feedback for matching, destruction, and special abilities.
 - A custom VFX system streamlines visual effects, dynamically changing post-processing and triggering complex effect sequences.
@@ -102,7 +102,7 @@ Given the short development time, a major focus was placed on making every inter
 
 ### Grid System
 
-To support unique level designs beyond standard rectangles, I engineered a robust custom grid system that serves as the game's foundation.
+To support unique level designs beyond standard rectangles, I created a custom grid system that serves as the game's foundation.
 
 - Grid shapes and layouts are stored as data assets, allowing for rapid reuse without code changes. This single data source was then used to generate the gameplay board, background, and level previews.
 - A custom Inspector tool allows designers to visually "paint" valid grid cells. It includes quality-of-life features like click-and-drag painting, symmetry tools for balanced layouts, and bulk manipulation options.
