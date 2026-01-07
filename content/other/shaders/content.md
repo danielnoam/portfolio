@@ -105,7 +105,7 @@ A multipurpose shader providing various real-time image effects through a unifie
 A post-processing vignette effect with customizable color tinting and noise texture support for environmental storytelling (fire, frost, poison, etc.).
 Includes a breathing animation that pulses the effect intensity for dynamic feedback.
 
-<div class="image-gallery gallery-2-columns">
+<div class="image-gallery gallery-3-columns">
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/shaders/VignetteEditor.mp4" target="_blank">
             <video src="https://danielnoam.github.io/portfolio/assets/shaders/VignetteEditor.mp4" autoplay loop muted playsinline></video>
