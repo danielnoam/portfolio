@@ -64,6 +64,12 @@ A versatile dissolve shader featuring customizable edge effects and animated noi
             <figcaption>Dissolve effect with edge glow</figcaption>
         </a>
     </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/shaders/DissolveRobot.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/shaders/DissolveRobot.mp4" autoplay loop muted playsinline></video>
+            <figcaption>Robot model from Project UMN</figcaption>
+        </a>
+    </figure>
 </div>
 
 
@@ -113,7 +119,7 @@ Line Sparkle - Animated highlight sweep that draws attention to UI elements like
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/shaders/CanvasLineSparkle.png" target="_blank">
             <img src="https://danielnoam.github.io/portfolio/assets/shaders/CanvasLineSparkle.png" alt="Line sparkle">
-            <figcaption>Line sparkle for UI attention</figcaption>
+            <figcaption>Line sparkle</figcaption>
         </a>
     </figure>
 </div>
@@ -144,30 +150,6 @@ Includes a breathing animation that pulses the effect intensity for dynamic feed
     </figure>
 </div>
 
-## Fullscreen Outline
-
-A post-processing edge detection shader that analyzes depth, normals, and color buffers to generate stylized outlines around objects, with customizable outline color and thickness.
-
-<div class="image-gallery gallery-2-columns">
-    <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/shaders/OutlineBasic.png" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/shaders/OutlineBasic.png" alt="Basic outline effect">
-            <figcaption>Basic outline effect</figcaption>
-        </a>
-    </figure>
-    <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/shaders/OutlineCustom.png" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/shaders/OutlineCustom.png" alt="Custom color and thickness">
-            <figcaption>Customizable color and thickness</figcaption>
-        </a>
-    </figure>
-    <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/shaders/OutlineProject.png" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/shaders/OutlineProject.png" alt="Used in current project">
-            <figcaption>Implemented in current project</figcaption>
-        </a>
-    </figure>
-</div>
 
 </div>
 
