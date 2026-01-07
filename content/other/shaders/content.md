@@ -85,41 +85,17 @@ Rainbow - Color cycling for power-ups or special states
 Dissolve - Texture-based fade transitions
 Line Sparkle - Animated highlight sweep that draws attention to UI elements like buttons
 
-<div class="image-gallery gallery-3-columns">
+<div class="image-gallery gallery-2-columns">
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/shaders/CanvasRipple.png" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/shaders/CanvasRipple.png" alt="Ripple effect">
-            <figcaption>Ripple effect</figcaption>
+        <a href="https://danielnoam.github.io/portfolio/assets/shaders/UI1.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/shaders/UI1.mp4" autoplay loop muted playsinline></video>
+            <figcaption>Rainbow, Dissolve, Line Shine</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/shaders/CanvasPixelation.png" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/shaders/CanvasPixelation.png" alt="Pixelation effect">
-            <figcaption>Pixelation effect</figcaption>
-        </a>
-    </figure>
-    <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/shaders/CanvasDistortion.png" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/shaders/CanvasDistortion.png" alt="Distortion effect">
-            <figcaption>Distortion effect</figcaption>
-        </a>
-    </figure>
-    <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/shaders/CanvasContrast.png" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/shaders/CanvasContrast.png" alt="Contrast adjustment">
-            <figcaption>Contrast adjustment</figcaption>
-        </a>
-    </figure>
-    <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/shaders/CanvasRainbow.png" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/shaders/CanvasRainbow.png" alt="Rainbow effect">
-            <figcaption>Rainbow effect</figcaption>
-        </a>
-    </figure>
-    <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/shaders/CanvasLineSparkle.png" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/shaders/CanvasLineSparkle.png" alt="Line sparkle">
-            <figcaption>Line sparkle</figcaption>
+        <a href="https://danielnoam.github.io/portfolio/assets/shaders/UI2.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/shaders/UI2.mp4" autoplay loop muted playsinline></video>
+            <figcaption>Distortion, Pixelation, Ripple</figcaption>
         </a>
     </figure>
 </div>
