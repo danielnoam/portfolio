@@ -17,7 +17,6 @@
 
 "Project UMN" is a third-person puzzle game developed as my third-semester school project. 
 Players control an entity alongside a companion through a series of minimalist simulation tests, each featuring unique mechanics.
-The story unfolds through environmental design with minimal text, culminating in a single moral choice that explores the balance between efficiency and companionship.
 
 </div>
 
