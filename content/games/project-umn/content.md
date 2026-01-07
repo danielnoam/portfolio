@@ -127,22 +127,5 @@ The story unfolds through environmental design with minimal text, culminating in
 
 </div>
 
-<div class="project-card">
-
-## Development Insights
-
-This project helped me develop skills with C# interfaces, abstract classes, and Unity's Shader Graph, Scriptable Objects, Animator, and animation tweening libraries.
-
-- Using a GDD to plan the game's scope, mechanics, and story progression.
-- Used Scriptable Objects to build modular, reusable components for puzzles.
-- Implemented Cinemachine for dynamic camera movements and cutscenes.
-- Built custom shaders with Shader Graph to create the game's distinctive minimalist look.
-- Designed a robust player controller using a state machine architecture to manage different movement states and behaviors with clean code organization.
-- Learned to use Unity's Animator to create a comprehensive state machine for character animations, ensuring smooth and natural transitions between walking, running, idle, and interaction states.
-- Implemented Inverse Kinematics (IK) to create a responsive player character with natural head tracking that adapts to player actions.
-- Integrated Unity's new Input System to provide full controller support alongside keyboard and mouse controls.
-
-
-</div>
 </div>
 

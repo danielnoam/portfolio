@@ -115,14 +115,4 @@ Armed with textbooks as projectiles and momentum-based movement, the player must
 </div>
 </div>
 
-<div class="project-card">
-    
-## Development Insights
-- Extensive playtesting, which helped refine gameplay mechanics and balance difficulty.
-- Successfully managed project scope to deliver a complete game within the project's deadline.
-- Created modular systems for student behaviors and obstacles to enable quick iteration and testing.
-- Designed intuitive movement and throwing mechanics that feel satisfying while remaining simple to learn.
-- Implemented an audio system with distinct sound cues and triggers to provide player feedback and enhance the game's atmosphere.
-</div>
-
 </div>

@@ -307,23 +307,6 @@ Our goal was to recreate the original game's idea with modern visuals and reimag
 
 
 
-
-
-<div class="project-card">
-
-## Development Insights
-
-This project served as an invaluable learning experience in collaborative game development, teaching essential skills in:
-
-- Working effectively with programmers, artists, and technical artists to ensure smooth project workflow and consistent communication.
-- Using Git to manage code changes across multiple team members without conflicts.
-- Coordinating tasks, deadlines, and deliverables across team members with different specializations and schedules.
-- Writing clean, documented, and modular code that other team members can understand, modify, and build upon.
-
-
-</div>
-
-
 <div class="project-card">
 
 ## Gallery

@@ -211,19 +211,5 @@ Players navigate through meticulously crafted levels filled with interactive ele
 
 </div>
 
-<div class="project-card">
-    
-## Development Insights
-
-- Studied popular platformers to understand what makes movement feel great to players.
-- Added "juice" through subtle animations and visual feedback to make the player, world, and UI elements feel alive and responsive.
-- Learned how to connect different game scenes smoothly while maintaining player progress.
-- Built helpful tools that saved development time.
-- Created a flexible player controller that allows me to quickly tweak values and see results immediately.
-- Balanced making levels challenging enough to be fun but not frustratingly difficult.
-- Saving the player's progress (checkpoint, collectibles, and best time and deaths for each level) using Unity's PlayerPrefs.
-
-
-</div>
 </div>
 

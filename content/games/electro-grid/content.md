@@ -148,15 +148,4 @@ Implemented Firebase Analytics and Remote Config for live game tuning and behavi
 
 </div>
 
-<div class="project-card">
-
-## Development Insights
-
-- Starting with custom editor tools upfront was a game-changer, allowing me to "paint" levels and iterate on designs much faster than manually configuring data.
-- The short time limit made it so, I had to limit myself to get the "feel" and polish of the core mechanics instead of getting lost in feature creep.
-- Decoupled the UI from game logic by building an event-driven HUD that updates automatically, which kept my code clean and easy to maintain.
-- I designed the objective system to be modular, which let me mix and match different rules like time limits or collection quotas to create unique levels without writing new code for every variation.
-
-</div>
-
 </div>

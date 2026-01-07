@@ -21,17 +21,6 @@
 
 </div>
 
-<div class="project-card">
-
-## Development Insights
-
-Developing this project provided me with hands-on experience with the core aspects of game development, including:
-- Programming fundamentals, such as game logic, player controls, and enemy AI.
-- Level design principles and implementation.
-- User interface design aimed at clearly communicating player stats and resources.
-- Game balance and difficulty tuning to ensure a challenging yet enjoyable player experience.
-
-</div>
 
 <div class="project-card">
 
