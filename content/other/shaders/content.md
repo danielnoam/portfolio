@@ -109,19 +109,19 @@ Includes a breathing animation that pulses the effect intensity for dynamic feed
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/shaders/VignetteEditor.mp4" target="_blank">
             <video src="https://danielnoam.github.io/portfolio/assets/shaders/VignetteEditor.mp4" autoplay loop muted playsinline></video>
-            <figcaption>Distortion, Pixelation, Ripple</figcaption>
+            <figcaption>Easily editable using the inspector</figcaption>
         </a>
     </figure>
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/shaders/VignetteFreeze.mp4" target="_blank">
             <video src="https://danielnoam.github.io/portfolio/assets/shaders/VignetteFreeze.mp4" autoplay loop muted playsinline></video>
-            <figcaption>Distortion, Pixelation, Ripple</figcaption>
+            <figcaption>Frozen effect</figcaption>
         </a>
     </figure>
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/shaders/VignetteHurt.mp4" target="_blank">
             <video src="https://danielnoam.github.io/portfolio/assets/shaders/VignetteHurt.mp4" autoplay loop muted playsinline></video>
-            <figcaption>Distortion, Pixelation, Ripple</figcaption>
+            <figcaption>Low health pulse effect</figcaption>
         </a>
     </figure>
 </div>
