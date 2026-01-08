@@ -25,15 +25,6 @@ A collection of Unity editor tools and runtime utilities developed to streamline
 ### Button Attribute
 Inspector buttons that execute methods directly in the editor. Supports custom styling, play mode restrictions, parameter input, and grouping.
 
-### InfoBox Attribute
-Displays message boxes in the Inspector with customizable styling. Supports Info, Warning, Error, and Success types with spacing control.
-
-### Preview Attribute
-Shows thumbnail previews of sprites, textures, and prefabs below object fields. Customizable size, background color, and asset details.
-
-### Separator Attribute
-Creates visual separator lines in the Inspector with optional titles. Customizable spacing and title styling for organizing sections.
-
 ### Play From Camera
 Teleports player to Scene View camera position on play via Tools menu or shortcut (Ctrl+Alt+Shift+P). Configurable player selection (tag or path), rotation matching, and CharacterController/Rigidbody handling.
 
