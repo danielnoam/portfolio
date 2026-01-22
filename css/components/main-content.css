@@ -65,10 +65,10 @@ main {
 }
 
 .page-content {
-    min-height: 85vh; /* Takes up most of the viewport height */
+    min-height: 85vh; 
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centers content vertically */
+    justify-content: center;
 }
 
 /* Two-column layout for content */
@@ -99,9 +99,9 @@ main {
 
 
 
-/* Variant: right sticky (for Unity extensions) */
+/* Variant: right sticky */
 .content-two-column.sticky-right .content-left {
-    position: static; /* remove sticky */
+    position: static;
 }
 
 .content-two-column.sticky-right .content-right {

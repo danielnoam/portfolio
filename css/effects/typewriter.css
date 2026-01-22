@@ -1,0 +1,59 @@
+/*==============================================
+            TYPEWRITER ANIMATION
+================================================*/
+
+/* Customizable settings */
+:root {
+    --typewriter-speed: 0.3s;        /* Speed per character (lower = faster) */
+    --typewriter-delay: 1s;        /* Delay before typing starts */
+    --typewriter-cursor: true;       /* Show blinking cursor (not used directly, but for reference) */
+    --typewriter-cursor-speed: 1s;   /* Cursor blink speed */
+    --char-count: 20;
+}
+
+/* Typewriter container */
+.typewriter {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid var(--text-color);
+    animation:
+            typewriter-cursor var(--typewriter-cursor-speed) step-end infinite;
+}
+
+/* Typing animation - dynamically set via JavaScript */
+.typewriter.typing {
+    animation:
+            typing var(--typewriter-speed) steps(var(--char-count, 20)) var(--typewriter-delay) forwards,
+            typewriter-cursor var(--typewriter-cursor-speed) step-end infinite;
+}
+
+/* After typing completes, just blink cursor */
+.typewriter.typing-complete {
+    border-right: 2px solid var(--text-color);
+    animation: typewriter-cursor var(--typewriter-cursor-speed) step-end infinite;
+}
+
+/* Hide cursor variant */
+.typewriter.no-cursor {
+    border-right: none;
+    animation: none;
+}
+
+/* Typing animation keyframes */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Cursor blink animation */
+@keyframes typewriter-cursor {
+    50% {
+        border-color: transparent;
+    }
+}

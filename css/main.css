@@ -15,9 +15,11 @@
 @import url('components/mobile-top-bar.css');
 @import url('components/button.css');
 @import url('components/tags.css');
+@import url('components/contact-card.css');
 
 /* Effects */
 @import url('effects/animations.css');
+@import url('effects/typewriter.css');
 @import url('effects/backgrounds/shared.css');
 @import url('effects/backgrounds/rain.css');
 @import url('effects/backgrounds/particles.css');

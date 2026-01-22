@@ -136,24 +136,35 @@
     transition: var(--transition-base) !important;
 }
 
+
 .page-title {
     font-size: var(--text-xl) !important;
     text-align: left !important;
     transition: var(--transition-base) !important;
     cursor: default;
     color: var(--text-color);
+    min-height: 1.5em;
+}
+
+
+.page-title .default-text,
+.page-title .hover-text {
+    transition: opacity var(--transition-base);
 }
 
 .page-title .hover-text {
-    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
 }
 
 .page-title:hover .default-text {
-    display: none;
+    opacity: 0;
 }
 
 .page-title:hover .hover-text {
-    display: inline;
+    opacity: 1;
 }
 
 .page-title span::after {

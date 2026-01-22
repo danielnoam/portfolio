@@ -15,8 +15,7 @@
 
 
 <h2 class="text-left-heading">ABOUT</h2>
-
-I'm **Daniel Noam**, a Game Developer who began my journey in game development during high school.
+I'm Daniel Noam, a Game Developer who began my journey in game development during high school.
 My experience spans from modding existing games to creating original adventures using various game engines.
 
 <div class="tags-group">
@@ -31,11 +30,29 @@ My experience spans from modding existing games to creating original adventures 
 
 <h2 class="text-left-heading">Contact</h2>
 
-Phone: (+972)52-8984779
-
-Email: danielnoam1999@gmail.com
-
-LinkedIn: https://linkedin.com/in/daniel-noam
+<div class="contact-group horizontal small">
+    <a href="mailto:danielnoam1999@gmail.com" class="contact-card">
+        <span class="contact-icon">📧</span>
+        <div class="contact-content">
+            <span class="contact-label">Email</span>
+            <span class="contact-info">danielnoam1999@gmail.com</span>
+        </div>
+    </a>
+    <a href="tel:+972528984779" class="contact-card">
+        <span class="contact-icon">📱</span>
+        <div class="contact-content">
+            <span class="contact-label">Phone</span>
+            <span class="contact-info">+972 52-898-4779</span>
+        </div>
+    </a>
+    <a href="https://linkedin.com/in/daniel-noam" target="_blank" class="contact-card">
+        <span class="contact-icon">💼</span>
+        <div class="contact-content">
+            <span class="contact-label">LinkedIn</span>
+            <span class="contact-info">daniel-noam</span>
+        </div>
+    </a>
+</div>
 
 
 </div>

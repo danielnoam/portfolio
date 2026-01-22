@@ -182,6 +182,18 @@ export class BackgroundManager {
         const aboutBg = document.createElement('div');
         aboutBg.className = 'about-background';
 
+        // Find the gallery container
+        const gallery = document.querySelector('.image-gallery');
+        if (gallery) {
+            const rect = gallery.getBoundingClientRect();
+            const centerX = rect.left + rect.width / 2;
+            const centerY = rect.top + rect.height / 2;
+
+            // Position background at gallery center
+            aboutBg.style.left = `${centerX}px`;
+            aboutBg.style.top = `${centerY}px`;
+        }
+
         // If image exists, show it first
         if (imageUrl) {
             const img = document.createElement('img');
@@ -200,7 +212,6 @@ export class BackgroundManager {
             video.muted = true;
             video.playsInline = true;
 
-            // Fade in video when loaded (if image exists, it fades over the image)
             video.addEventListener('loadeddata', () => {
                 video.classList.add('loaded');
             });
