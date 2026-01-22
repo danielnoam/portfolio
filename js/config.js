@@ -1,6 +1,7 @@
 /*==============================================
                 CONFIGURATION
 ================================================*/
+
 const CONFIG = {
     // Base URL for the site
     baseUrl: '/portfolio',

@@ -119,3 +119,51 @@
 .text-center {
     text-align: center !important;
 }
+
+/* About page */
+.page-header {
+    margin-bottom: var(--space-5);
+    display: inline-block;
+}
+
+.page-name {
+    font-size: var(--text-3xl);
+    font-weight: var(--weight-verybold) !important;
+    text-align: left !important;
+    line-height: 1 !important;
+    margin: 0 !important;
+    transform-origin: bottom left;
+    transition: var(--transition-base) !important;
+}
+
+.page-title {
+    font-size: var(--text-xl) !important;
+    text-align: left !important;
+    transition: var(--transition-base) !important;
+    cursor: default;
+    color: var(--text-color);
+}
+
+.page-title .hover-text {
+    display: none;
+}
+
+.page-title:hover .default-text {
+    display: none;
+}
+
+.page-title:hover .hover-text {
+    display: inline;
+}
+
+.page-title span::after {
+    content: '_';
+    display: inline-block;
+    margin-left: 2px;
+    animation: blink 1s step-end infinite;
+    color: var(--text-color);
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}

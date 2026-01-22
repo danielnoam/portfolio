@@ -64,6 +64,13 @@ main {
     margin-bottom: var(--space-4);
 }
 
+.page-content {
+    min-height: 85vh; /* Takes up most of the viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers content vertically */
+}
+
 /* Two-column layout for content */
 .content-two-column {
     display: grid;

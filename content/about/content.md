@@ -5,14 +5,29 @@
 <div class="content-left">
 
 
+<div class="page-header">
+    <h1 class="page-name">Daniel Noam</h1>
+    <p class="page-title">
+        <span class="default-text">game developer</span>
+        <span class="hover-text">game programmer</span>
+    </p>
+</div>
 
-<h1 class="text-left-heading">ABOUT</h1>
 
-I'm Daniel Noam, a Game Designer and Programmer who began my journey in game development during high school.
+<h2 class="text-left-heading">ABOUT</h2>
+
+I'm **Daniel Noam**, a Game Developer who began my journey in game development during high school.
 My experience spans from modding existing games to creating original adventures using various game engines.
 
-My main expertise is in Unity, with additional experience in Unreal, Blender, Photoshop, and Git.
-
+<div class="tags-group">
+    <span class="tag">C#</span>
+    <span class="tag">Unity</span>
+    <span class="tag">Git</span>
+    <span class="tag">AI Workflows</span>
+    <span class="tag">Unreal</span>
+    <span class="tag">Blender</span>
+    <span class="tag">Photoshop</span>
+</div>
 
 <h2 class="text-left-heading">Contact</h2>
 

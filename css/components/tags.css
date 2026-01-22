@@ -1,0 +1,30 @@
+/*==============================================
+            TAGS COMPONENT
+================================================*/
+
+.tags-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    margin: var(--space-4) 0;
+}
+
+.tag {
+    display: inline-block;
+    padding: var(--space-1) var(--space-3);
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    border: 1px solid var(--text-secondary);
+    border-radius: var(--radius-md);
+    font-size: var(--text-sm);
+    font-weight: var(--weight-medium);
+    white-space: nowrap;
+    transition: all var(--transition-base);
+}
+
+.tag:hover {
+    background-color: var(--heading-color);
+    color: white;
+    border-color: var(--heading-color);
+    transform: scale(1.05);
+}
