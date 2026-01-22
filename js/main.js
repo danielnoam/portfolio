@@ -9,6 +9,7 @@ import { AnimationManager } from './modules/animationManager.js';
 import { Router } from './modules/router.js';
 import { LightboxManager } from './modules/lightboxManager.js';
 import { BackgroundManager } from './modules/backgroundManager.js';
+import { LogoManager } from './modules/logoManager.js';
 
 /*==============================================
             APPLICATION CLASS
@@ -28,6 +29,7 @@ class PortfolioApp {
         this.modules.ui = new UIManager(this.config);
         this.modules.animation = new AnimationManager();
         this.modules.lightbox = new LightboxManager();
+        this.modules.logo = new LogoManager();
         this.modules.router = new Router(
             this.config,
             this.modules.content,
@@ -52,6 +54,7 @@ class PortfolioApp {
         this.modules.ui.applyVisibilitySettings();
         this.modules.router.init();
         this.modules.background.init();
+        this.modules.logo.init();
 
         // Handle gallery navigation links with data-navigate attribute
         document.addEventListener('click', (e) => {

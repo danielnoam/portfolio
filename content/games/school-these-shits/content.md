@@ -7,7 +7,7 @@
 
 
 <p class="text-center">
-    <a href="https://danielnoam.itch.io/school-these-shts">Itch.io</a>
+    <a href="https://danielnoam.itch.io/school-these-shts" target="_blank">Itch.io</a>
 </p>
 
 <div class="project-card">

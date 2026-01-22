@@ -5,9 +5,9 @@
 <img src="https://danielnoam.github.io/portfolio/assets/power-factory/main.png" alt="Game Screenshot" class="page-logo">
 
 <p class="text-center">
-    <a href="https://danielnoam.itch.io/power-factory">Itch.io</a> | 
-    <a href="https://github.com/danielnoam/ProjectPower">Github</a> |
-    <a href="https://itch.io/jam/kenney-jam-2025">Kenney Jam 2025</a>
+    <a href="https://danielnoam.itch.io/power-factory" target="_blank">Itch.io</a> | 
+    <a href="https://github.com/danielnoam/ProjectPower" target="_blank">Github</a> |
+    <a href="https://itch.io/jam/kenney-jam-2025" target="_blank">Kenney Jam 2025</a>
 </p>
 
 <div class="project-card">

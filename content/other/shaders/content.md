@@ -2,9 +2,6 @@
 
 # Shaders
 
-<p class="text-center">
-    <a href="https://github.com/danielnoam/DNExtensions/">GitHub</a>
-</p>
 
 <div class="project-card">
 

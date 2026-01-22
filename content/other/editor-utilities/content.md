@@ -3,7 +3,7 @@
 # Editor Utilities
 
 <p class="text-center">
-    <a href="https://github.com/danielnoam/DNExtensions/">GitHub</a>
+    <a href="https://github.com/danielnoam/DNExtensions/" target="_blank">GitHub</a>
 </p>
 
 <div class="project-card">

@@ -5,10 +5,10 @@
 <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/Cover.png" alt="Intro" class="page-logo">
 
 <p class="text-center">
-    <a href="https://tay-dev.itch.io/chicken-invaders-remake">Itch.io</a> | 
-    <a href="https://github.com/danielnoam/ProjectChicken">Github</a> |
-    <a href="https://docs.google.com/document/d/15oJfTMVTdB9uJKfskemjhVx1XfsIAPWvOurxZK-_GJw/edit?usp=sharing">GDD</a> | 
-    <a href="https://youtu.be/kjTa3ECVQwo">Intro</a>
+    <a href="https://tay-dev.itch.io/chicken-invaders-remake" target="_blank">Itch.io</a> | 
+    <a href="https://github.com/danielnoam/ProjectChicken" target="_blank">Github</a> |
+    <a href="https://docs.google.com/document/d/15oJfTMVTdB9uJKfskemjhVx1XfsIAPWvOurxZK-_GJw/edit?usp=sharing" target="_blank">GDD</a> | 
+    <a href="https://youtu.be/kjTa3ECVQwo" target="_blank">Intro</a>
 </p>
 
 <div class="project-card">
