@@ -1,0 +1,59 @@
+/*==============================================
+            UTILITY CLASSES
+================================================*/
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+#content.loading {
+    opacity: var(--opacity-60);
+}
+
+:root.hide-urls a[href^="http"],
+:root.hide-urls a[href^="https"],
+:root.hide-urls a[href^="/"] {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+:root:not(.show-theme-toggle) .theme-toggle {
+    display: none !important;
+}
+
+:root.show-theme-toggle .mobile-theme-toggle {
+    display: flex;
+}
+
+:root:not(.show-theme-toggle) .mobile-theme-toggle {
+    display: none !important;
+}
+
+:root:not(.show-top-bar) .mobile-top-bar {
+    display: none !important;
+}
+
+:root:not(.show-top-bar) .menu-toggle {
+    position: fixed;
+    top: var(--space-4);
+    left: var(--space-4);
+    z-index: var(--z-modal);
+    background-color: var(--bg-color);
+}
+
+:root:not(.show-theme-toggle) .mobile-top-bar {
+    justify-content: flex-start;
+}
+
+:root:not(.show-theme-toggle) .menu-toggle {
+    display: block;
+}

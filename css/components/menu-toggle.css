@@ -1,0 +1,14 @@
+/*==============================================
+            MENU TOGGLE
+================================================*/
+
+/* Menu Toggle */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: 1px solid var(--text-color);
+    color: var(--text-color);
+    font-size: var(--text-xl);
+    cursor: pointer;
+    padding: var(--space-2);
+}

@@ -1,0 +1,19 @@
+/*==============================================
+            MOBILE TOP BAR
+================================================*/
+
+/* Mobile Top Bar */
+.mobile-top-bar {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--mobile-topbar-height);
+    background-color: var(--bg-color);
+    border-bottom: 1px solid var(--card-bg);
+    padding: var(--space-2) var(--space-4);
+    z-index: var(--z-modal);
+    justify-content: space-between;
+    align-items: center;
+}

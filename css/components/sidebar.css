@@ -1,30 +1,3 @@
-/* Load variables first */
-@import url('variables.css');
-
-/* Load components and responsive styles */
-@import url('components.css');
-@import url('responsive.css');
-
-/*==============================================
-                CORE SETUP
-================================================*/
-
-/* Base Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: var(--font-family, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif);
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    display: flex;
-    min-height: 100vh;
-    transition: background-color var(--transition-normal), color var(--transition-normal);
-}
-
 /*==============================================
             LAYOUT & STRUCTURE
 ================================================*/
@@ -115,60 +88,6 @@ body {
     font-weight: var(--weight-bold);
     color: var(--text-color);
 }
-
-/* Main Content Layout */
-main {
-    flex-grow: 1;
-    max-width: 100%;
-    margin-right: auto;
-    margin-left: auto;
-    padding: var(--space-6) var(--space-6) var(--space-6) 250px;
-    font-family: var(--font-family, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif);
-}
-
-#content {
-    width: 100%;
-    max-width: var(--content-inner-max-width);
-    margin: 0 auto;
-    padding: var(--space-6);
-    opacity: var(--opacity-100);
-    transform: translateY(0);
-    transition: opacity 0.4s ease, transform 0.4s ease;
-}
-
-/* Grow content area on larger screens */
-@media (min-width: 1200px) {
-    #content {
-        max-width: 1100px;
-    }
-}
-
-@media (min-width: 1400px) {
-    #content {
-        max-width: 1300px;
-    }
-}
-
-@media (min-width: 1800px) {
-    #content {
-        max-width: 1600px;
-    }
-}
-
-@media (min-width: 2200px) {
-    #content {
-        max-width: 1800px;
-    }
-}
-
-
-#content.page-transitioning {
-    opacity: var(--opacity-0);
-    transform: translateY(50px);
-}
-
-
-
 
 /*==============================================
             NAVIGATION COMPONENTS
@@ -329,23 +248,6 @@ nav a:not([target="_blank"]).active::before {
     transform: translateX(4px) scale(1.02);
 }
 
-/* Mobile Top Bar */
-.mobile-top-bar {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: var(--mobile-topbar-height);
-    background-color: var(--bg-color);
-    border-bottom: 1px solid var(--card-bg);
-    padding: var(--space-2) var(--space-4);
-    z-index: var(--z-modal);
-    justify-content: space-between;
-    align-items: center;
-}
-
-
 /*==============================================
             FOLDOUT NAVIGATION
 ================================================*/
@@ -469,76 +371,4 @@ nav h2.foldout-header.open .foldout-arrow {
     width: 42px;
     height: 42px;
     font-size: var(--text-xl);
-}
-
-/* Back to Top Button */
-#back-to-top {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    background-color: var(--heading-color);
-    color: var(--bg-color);
-    width: 50px;
-    height: 50px;
-    border-radius: var(--radius-full);
-    border: none;
-    cursor: pointer;
-    font-size: 24px;
-    box-shadow: var(--shadow-md);
-    transition: background-color var(--transition-normal),
-    transform var(--transition-normal),
-    opacity var(--transition-normal),
-    visibility var(--transition-normal);
-    z-index: var(--z-sticky);
-    opacity: var(--opacity-0);
-    visibility: hidden;
-    transform: translateY(20px) scale(0.8);
-}
-
-#back-to-top.show {
-    opacity: var(--opacity-100);
-    visibility: visible;
-    transform: translateY(0) scale(1);
-    animation: buttonAppear 0.4s ease;
-}
-
-#back-to-top:hover {
-    background-color: var(--subheading-color);
-    transform: translateY(-3px) scale(1.05);
-}
-
-@keyframes buttonAppear {
-    0% {
-        opacity: var(--opacity-0);
-        transform: translateY(20px) scale(0.5);
-    }
-    60% {
-        transform: translateY(-5px) scale(1.1);
-    }
-    100% {
-        opacity: var(--opacity-100);
-        transform: translateY(0) scale(1);
-    }
-}
-
-/* Menu Toggle */
-.menu-toggle {
-    display: none;
-    background: none;
-    border: 1px solid var(--text-color);
-    color: var(--text-color);
-    font-size: var(--text-xl);
-    cursor: pointer;
-    padding: var(--space-2);
-}
-
-/* Error Message */
-.error-message {
-    text-align: center;
-    padding: var(--space-8);
-}
-
-.error-message h1 {
-    color: #ff4a4a;
-    margin-bottom: var(--space-4);
 }

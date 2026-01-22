@@ -1,0 +1,27 @@
+/*==============================================
+            NETWORK/CONSTELLATION EFFECT
+================================================*/
+
+/* Network/constellation effect */
+.network-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.network-node {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: var(--heading-color);
+    border-radius: 50%;
+    opacity: 0.5;
+}
+
+.network-line {
+    position: absolute;
+    height: 1px;
+    background: var(--heading-color);
+    opacity: 0.2;
+    transform-origin: left center;
+}

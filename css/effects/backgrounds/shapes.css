@@ -1,0 +1,43 @@
+/*==============================================
+            GEOMETRIC SHAPES EFFECT
+================================================*/
+
+/* Geometric shapes effect */
+.shapes-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.shape {
+    position: absolute;
+    border: 2px solid var(--heading-color);
+    animation: rotate-shape linear infinite;
+    opacity: 0;
+}
+
+.shape.square {
+    border-radius: 4px;
+}
+
+.shape.circle {
+    border-radius: 50%;
+}
+
+
+@keyframes rotate-shape {
+    from {
+        transform: translate(0, 0) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.1;
+    }
+    90% {
+        opacity: 0.1;
+    }
+    to {
+        transform: rotate(360deg);
+        opacity: 0;
+    }
+}

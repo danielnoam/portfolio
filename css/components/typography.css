@@ -1,0 +1,121 @@
+/*==============================================
+            TYPOGRAPHY
+================================================*/
+
+/* Content Links */
+#content a {
+    color: var(--heading-color);
+    text-decoration: none;
+    position: relative;
+    transition: color var(--transition-base);
+}
+
+#content a:hover {
+    color: var(--subheading-color);
+}
+
+#content a[target="_blank"] {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-1);
+}
+
+#content a[target="_blank"]:not(.image-gallery a):after {
+    content: '↗';
+    font-size: 0.8em;
+    opacity: var(--opacity-70);
+}
+
+/* Page Content */
+.page-content h1 {
+    font-size: var(--text-3xl);
+    margin-bottom: var(--space-6);
+    text-align: center;
+    color: var(--heading-color);
+    font-weight: var(--weight-normal);
+    opacity: 1;
+    transition: opacity var(--transition-normal);
+}
+
+.page-content h1.logo-loaded {
+    opacity: 0;
+    height: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.page-content .page-logo {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    display: block;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-lg);
+    margin-bottom: var(--card-gap);
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0;
+    transition: opacity var(--transition-normal);
+}
+
+.page-content .page-logo.loaded {
+    opacity: 1;
+}
+
+.page-content h2 {
+    font-size: var(--text-2xl);
+    margin: var(--space-6) 0 var(--space-4) 0;
+    text-align: center;
+    color: var(--subheading-color);
+}
+
+.page-content p {
+    line-height: var(--leading-loose);
+    margin-bottom: var(--space-5);
+    text-align: left;
+    font-size: var(--text-lg);
+    color: var(--text-color);
+}
+
+.page-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: var(--space-7) auto;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-lg);
+}
+
+.page-content .page-logo {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    display: block;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-lg);
+    margin-bottom: var(--card-gap);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.page-content ul,
+.page-content ol {
+    max-width: 900px;
+    margin: var(--space-5) auto;
+    padding-left: var(--space-6);
+    text-align: left;
+}
+
+.page-content li {
+    margin-bottom: var(--space-3);
+    line-height: var(--leading-relaxed);
+
+}
+
+.page-content .text-left-heading {
+    text-align: left !important;
+}
+
+.text-center {
+    text-align: center !important;
+}

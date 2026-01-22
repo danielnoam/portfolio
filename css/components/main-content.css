@@ -1,0 +1,122 @@
+/*==============================================
+            MAIN CONTENT LAYOUT
+================================================*/
+
+/* Main Content Layout */
+main {
+    flex-grow: 1;
+    max-width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding: var(--space-6) var(--space-6) var(--space-6) 250px;
+    font-family: var(--font-family, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif);
+}
+
+#content {
+    width: 100%;
+    max-width: var(--content-inner-max-width);
+    margin: 0 auto;
+    padding: var(--space-6);
+    opacity: var(--opacity-100);
+    transform: translateY(0);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+/* Grow content area on larger screens */
+@media (min-width: 1200px) {
+    #content {
+        max-width: 1100px;
+    }
+}
+
+@media (min-width: 1400px) {
+    #content {
+        max-width: 1300px;
+    }
+}
+
+@media (min-width: 1800px) {
+    #content {
+        max-width: 1600px;
+    }
+}
+
+@media (min-width: 2200px) {
+    #content {
+        max-width: 1800px;
+    }
+}
+
+
+#content.page-transitioning {
+    opacity: var(--opacity-0);
+    transform: translateY(50px);
+}
+
+/* Error Message */
+.error-message {
+    text-align: center;
+    padding: var(--space-8);
+}
+
+.error-message h1 {
+    color: #ff4a4a;
+    margin-bottom: var(--space-4);
+}
+
+/* Two-column layout for content */
+.content-two-column {
+    display: grid;
+    grid-template-columns: 500px 1fr;
+    gap: var(--space-8);
+    align-items: flex-start;
+    margin: var(--space-6) auto;
+    max-width: 1400px;
+    padding: 0 var(--space-6);
+}
+
+.content-two-column .content-left {
+    position: sticky;
+    top: var(--space-6);
+}
+
+.content-two-column .content-right {
+    max-width: 100%;
+    overflow: visible;
+    align-self: flex-start;
+}
+
+.content-two-column .image-gallery {
+    max-width: 100%;
+}
+
+
+
+/* Variant: right sticky (for Unity extensions) */
+.content-two-column.sticky-right .content-left {
+    position: static; /* remove sticky */
+}
+
+.content-two-column.sticky-right .content-right {
+    position: sticky;
+    top: var(--space-6);
+}
+
+/* Variant: no sticky */
+.content-two-column.no-sticky .content-left,
+.content-two-column.no-sticky .content-right {
+    position: static;
+}
+
+
+/* Responsive: stack on smaller screens */
+@media (max-width: 1400px) {
+    .content-two-column {
+        grid-template-columns: 2fr;
+    }
+
+    .content-two-column .content-left,
+    .content-two-column .content-right {
+        position: static;
+    }
+}

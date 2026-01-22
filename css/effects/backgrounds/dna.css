@@ -1,0 +1,46 @@
+/*==============================================
+            DNA HELIX EFFECT
+================================================*/
+
+/* DNA Helix effect */
+.dna-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dna-strand {
+    position: relative;
+    width: 100px;
+    height: 100%;
+}
+
+.dna-particle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--heading-color);
+    animation: dna-rotate linear infinite;
+}
+
+@keyframes dna-rotate {
+    0% {
+        transform: translateX(0) translateZ(0);
+    }
+    25% {
+        transform: translateX(40px) translateZ(-20px);
+    }
+    50% {
+        transform: translateX(0) translateZ(-40px);
+    }
+    75% {
+        transform: translateX(-40px) translateZ(-20px);
+    }
+    100% {
+        transform: translateX(0) translateZ(0);
+    }
+}
