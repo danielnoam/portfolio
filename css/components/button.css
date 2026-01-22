@@ -1,0 +1,66 @@
+/*==============================================
+            BUTTON COMPONENT
+================================================*/
+
+.button-group {
+    display: flex;
+    gap: var(--space-3);
+    justify-content: center;
+    align-items: center;
+    margin: var(--space-4) 0;
+}
+
+.button-group.vertical {
+    flex-direction: column;
+}
+
+.button-group.horizontal {
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-3) var(--space-5);
+    background-color: var(--heading-color);
+    color: var(--bg-color)  !important;
+    text-decoration: none;
+    border-radius: var(--radius-md);
+    font-size: var(--text-base);
+    font-weight: var(--weight-medium);
+    transition: all var(--transition-base) !important;
+    box-shadow: var(--shadow-sm);
+    white-space: nowrap;
+}
+
+a.button:hover {
+    background-color: var(--subheading-color);
+    transform: scale(1.05);
+    box-shadow: var(--shadow-md);
+}
+
+a.button:active {
+    transform: scale(0.95);
+}
+
+/* External link icon */
+a.button[target="_blank"]:after {
+    content: '↗';
+    font-size: 1em;
+    opacity: var(--opacity-100);
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .button-group.horizontal {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .button {
+        width: 100%;
+        justify-content: center;
+    }
+}

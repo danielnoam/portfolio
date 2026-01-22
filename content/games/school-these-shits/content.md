@@ -6,9 +6,9 @@
 <img src="https://danielnoam.github.io/portfolio/assets/school-these-shits/main.png" alt="Game Screenshot" class="page-logo">
 
 
-<p class="text-center">
-    <a href="https://danielnoam.itch.io/school-these-shts" target="_blank">Itch.io</a>
-</p>
+<div class="button-group horizontal">
+    <a href="https://github.com/danielnoam/DNExtensions" target="_blank" class="button">Github</a>
+</div>
 
 <div class="project-card">
     

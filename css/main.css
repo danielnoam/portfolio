@@ -13,6 +13,7 @@
 @import url('components/back-to-top.css');
 @import url('components/menu-toggle.css');
 @import url('components/mobile-top-bar.css');
+@import url('components/button.css');
 
 /* Effects */
 @import url('effects/animations.css');

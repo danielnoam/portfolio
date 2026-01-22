@@ -5,10 +5,11 @@
 
 <img src="https://danielnoam.github.io/portfolio/assets/2dplatformer/main.gif" alt="Intro" class="page-logo">
 
-<p class="text-center">
-    <a href="https://danielnoam.itch.io/2dplatformer" target="_blank">Itch.io</a> | 
-    <a href="https://github.com/danielnoam/2DPlatformer" target="_blank">Github</a>
-</p>
+
+<div class="button-group horizontal">
+    <a href="https://danielnoam.itch.io/2dplatformer" target="_blank" class="button">Itch.io</a>
+    <a href="https://github.com/danielnoam/2DPlatformer" target="_blank" class="button">Github</a>
+</div>
 
 <div class="project-card">
 

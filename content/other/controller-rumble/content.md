@@ -2,9 +2,10 @@
 
 # Controller Rumble
 
-<p class="text-center">
-    <a href="https://github.com/danielnoam/DNExtensions/" target="_blank">GitHub</a>
-</p>
+<div class="button-group horizontal">
+    <a href="https://github.com/danielnoam/DNExtensions" target="_blank" class="button">Github</a>
+</div>
+
 <div class="project-card">
 
 

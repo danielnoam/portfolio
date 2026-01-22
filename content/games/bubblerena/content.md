@@ -4,10 +4,12 @@
 
 <img src="https://danielnoam.github.io/portfolio/assets/bubblerena/main.gif" alt="Game Screenshot" class="page-logo">
 
-<p class="text-center">
-    <a href="https://github.com/danielnoam/Bobblerena" target="_blank">Github</a> |
-    <a href="https://globalgamejam.org/" target="_blank">Global Game Jam 2025</a>
-</p>
+
+<div class="button-group horizontal">
+    <a href="https://github.com/danielnoam/Bobblerena" target="_blank" class="button">Github</a>
+    <a href="https://globalgamejam.org/" target="_blank" class="button">Global Game Jam 2025</a>
+</div>
+
 
 <div class="project-card">
 

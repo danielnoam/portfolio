@@ -5,11 +5,13 @@
 
 <img src="https://danielnoam.github.io/portfolio/assets/project-umn/main.gif" alt="Intro" class="page-logo">
 
-<p class="text-center">
-    <a href="https://danielnoam.itch.io/project-umd" target="_blank">Itch.io</a> | 
-    <a href="https://github.com/danielnoam/ProjectUMN" target="_blank">Github</a> |
-    <a href="https://docs.google.com/document/d/1cU73PA5Ix3AxZ0AB7ok3quzK6Il2FuIT4DuwFEk2508/edit?usp=sharing" target="_blank">GDD</a>
-</p>
+
+<div class="button-group horizontal">
+    <a href="https://danielnoam.itch.io/project-umd" target="_blank" class="button">Itch.io</a>
+    <a href="https://github.com/danielnoam/ProjectUMN" target="_blank" class="button">Github</a>
+    <a href="https://docs.google.com/document/d/1cU73PA5Ix3AxZ0AB7ok3quzK6Il2FuIT4DuwFEk2508/edit?usp=sharing" target="_blank" class="button">GDD</a>
+</div>
+
 
 <div class="project-card">
 

@@ -4,11 +4,11 @@
 
 <img src="https://danielnoam.github.io/portfolio/assets/power-factory/main.png" alt="Game Screenshot" class="page-logo">
 
-<p class="text-center">
-    <a href="https://danielnoam.itch.io/power-factory" target="_blank">Itch.io</a> | 
-    <a href="https://github.com/danielnoam/ProjectPower" target="_blank">Github</a> |
-    <a href="https://itch.io/jam/kenney-jam-2025" target="_blank">Kenney Jam 2025</a>
-</p>
+<div class="button-group horizontal">
+    <a href="https://danielnoam.itch.io/power-factory" target="_blank" class="button">Itch.io</a>
+    <a href="https://github.com/danielnoam/ProjectPower" target="_blank" class="button">Github</a>
+    <a href="https://itch.io/jam/kenney-jam-2025" target="_blank" class="button">Kenney Jam 2025</a>
+</div>
 
 <div class="project-card">
 

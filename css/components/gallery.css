@@ -15,6 +15,8 @@
     align-items: center;
 }
 
+
+
 .image-gallery.gallery-1-column {
     grid-template-columns: 1fr;
 }
@@ -61,6 +63,11 @@
 .image-gallery video:hover {
     transform: scale(1.05);
     box-shadow: var(--shadow-lg);
+}
+
+.image-gallery img:active,
+.image-gallery video:active {
+    transform: scale(0.98);
 }
 
 
