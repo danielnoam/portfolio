@@ -7,6 +7,7 @@ import { ThemeManager } from './modules/themeManager.js';
 import { UIManager } from './modules/uiManager.js';
 import { AnimationManager } from './modules/animationManager.js';
 import { Router } from './modules/router.js';
+import { CarouselManager } from './modules/carouselManager.js';
 import { LightboxManager } from './modules/lightboxManager.js';
 import { BackgroundManager } from './modules/backgroundManager.js';
 import { LogoManager } from './modules/logoManager.js';
@@ -29,6 +30,7 @@ class PortfolioApp {
         this.modules.theme = new ThemeManager();
         this.modules.ui = new UIManager(this.config);
         this.modules.animation = new AnimationManager();
+        this.modules.carousel = new CarouselManager();
         this.modules.lightbox = new LightboxManager();
         this.modules.logo = new LogoManager();
         this.modules.typewriter = new TypewriterManager();
@@ -55,6 +57,7 @@ class PortfolioApp {
         this.modules.ui.initScrollToTop();
         this.modules.ui.applyVisibilitySettings();
         this.modules.router.init();
+        this.modules.carousel.init();
         this.modules.background.init();
         this.modules.logo.init();
         this.modules.typewriter.init();
@@ -83,6 +86,7 @@ class PortfolioApp {
             const observer = new MutationObserver(() => {
                 clearTimeout(this.reinitTimeout);
                 this.reinitTimeout = setTimeout(() => {
+                    this.modules.carousel.reinitialize();
                     this.modules.lightbox.reinitialize();
                 }, 100);
             });
