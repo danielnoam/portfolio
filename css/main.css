@@ -3,17 +3,19 @@
 @import url('core/reset.css');
 @import url('core/utilities.css');
 
+/* Layout */
+@import url('layout/sidebar.css');
+@import url('layout/mobile-top-bar.css');
+@import url('layout/menu-toggle.css');
+@import url('layout/main-content.css');
+
 /* Components */
-@import url('components/sidebar.css');
-@import url('components/main-content.css');
 @import url('components/typography.css');
 @import url('components/cards.css');
 @import url('components/gallery.css');
 @import url('components/carousel.css');
 @import url('components/lightbox.css');
 @import url('components/back-to-top.css');
-@import url('components/menu-toggle.css');
-@import url('components/mobile-top-bar.css');
 @import url('components/button.css');
 @import url('components/tags.css');
 @import url('components/contact-card.css');
@@ -37,4 +39,5 @@
 @import url('effects/backgrounds/about-hover.css');
 
 /* Responsive overrides - MUST BE LAST */
-@import url('core/responsive.css');
+@import url('layout/responsive.css');
+

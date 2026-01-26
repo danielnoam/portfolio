@@ -1,17 +1,17 @@
 /*==============================================
             MAIN APPLICATION
 ================================================*/
-import { NavigationManager } from './modules/navigation.js';
-import { ContentManager } from './modules/contentManager.js';
-import { ThemeManager } from './modules/themeManager.js';
-import { UIManager } from './modules/uiManager.js';
-import { AnimationManager } from './modules/animationManager.js';
-import { Router } from './modules/router.js';
-import { CarouselManager } from './modules/carouselManager.js';
-import { LightboxManager } from './modules/lightboxManager.js';
-import { BackgroundManager } from './modules/backgroundManager.js';
-import { LogoManager } from './modules/logoManager.js';
-import { TypewriterManager } from './modules/typewriterManager.js';
+import { NavigationManager } from './ui/navigation.js';
+import { ContentManager } from './content/contentManager.js';
+import { ThemeManager } from './ui/themeManager.js';
+import { UIManager } from './ui/uiManager.js';
+import { AnimationManager } from './effects/animationManager.js';
+import { Router } from './core/router.js';
+import { CarouselManager } from './ui/carouselManager.js';
+import { LightboxManager } from './ui/lightboxManager.js';
+import { BackgroundManager } from './effects/backgroundManager.js';
+import { LogoManager } from './effects/logoManager.js';
+import { TypewriterManager } from './effects/typewriterManager.js';
 
 /*==============================================
             APPLICATION CLASS
