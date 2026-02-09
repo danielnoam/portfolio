@@ -134,7 +134,7 @@
     --sidebar-padding: var(--space-5);
     
     /* Navigation */
-    --nav-link-padding: var(--space-2) 0;
+    --nav-link-padding: 0;
     --nav-gap: var(--space-2);
     --nav-header-spacing: var(--space-5) 0 var(--space-2) 0;
     
