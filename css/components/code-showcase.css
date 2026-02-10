@@ -60,6 +60,33 @@
     transform: rotate(90deg);
 }
 
+/* Code container */
+.code-block-code {
+    flex: 1;
+    overflow: auto;
+    position: relative;
+}
+
+/* description below the header */
+.code-block-description {
+    padding: var(--space-2);
+    border-bottom: 1px solid var(--text-secondary);
+    color: var(--text-secondary);
+    font-size: var(--text-sm);
+    line-height: var(--leading-relaxed);
+}
+
+/* Loading */
+.code-block-code .loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-8);
+    color: var(--text-secondary);
+    flex: 1;
+}
+
+
 /* Content area (shared by all code blocks) */
 .code-showcase-content {
     display: grid;
@@ -102,57 +129,33 @@
     transform: translateY(0);
 }
 
-/* Description text */
-.code-block-description {
-    padding: var(--space-2);
-    border-bottom: 1px solid var(--text-secondary);
-    color: var(--text-secondary);
-    font-size: var(--text-sm);
-    line-height: var(--leading-relaxed);
-}
-
-/* Code container */
-.code-block-code {
-    flex: 1;
-    overflow: auto;
-}
-
 /* Let Prism handle everything */
 .code-showcase-content pre {
     margin: 0 !important;
     background: rgba(0, 0, 0, 0.3) !important;
     border-radius: 0 0 var(--radius-lg) var(--radius-lg) !important;
+    overflow: visible !important;
+    min-height: 100% !important;
+    min-width: 100% !important;
+    width: fit-content !important;
 }
-
-
-/* Loading */
-.code-block-code .loading {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: var(--space-8);
-    color: var(--text-secondary);
-    flex: 1;
-}
-
-
-
-/* Don't wrap long lines */
 .code-showcase-content code {
     white-space: pre !important;
 }
 
-/* Style scrollbars */
-.code-block-code::-webkit-scrollbar {
-    width: 12px;
-    height: 12px;
+/* Font size control - targets both code and line numbers */
+.code-showcase-content pre[class*="language-"] {
+    font-size: 0.6rem !important; /* Adjust this value */
 }
 
-.code-block-code::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0.2);
+/* Line height control */
+.code-showcase-content pre[class*="language-"] {
+    line-height: 0.6rem !important; /* Adjust spacing between lines */
 }
 
-/* Style scrollbars */
+
+
+/* Style scrollbars on code-block-code */
 .code-block-code::-webkit-scrollbar {
     width: 12px;
     height: 12px;
@@ -172,11 +175,12 @@
     background: var(--heading-color);
 }
 
-/* Corner where scrollbars meet */
 .code-block-code::-webkit-scrollbar-corner {
     background: rgba(0, 0, 0, 0.2);
     border-radius: 0 0 var(--radius-lg) 0;
 }
+
+
 /* Copy button styling */
 .code-showcase-content .toolbar-item button {
     background: var(--heading-color) !important;
@@ -198,6 +202,11 @@
 
 .code-showcase-content .toolbar-item button:active {
     transform: scale(0.95) !important;
+}
+
+/* Hide the Prism toolbar */
+.code-showcase-content .toolbar {
+    display: none !important;
 }
 
 /* Copy success state */
