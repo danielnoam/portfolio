@@ -142,7 +142,7 @@ export class NavigationManager {
                     visiblePages.forEach(page => {
                         const link = document.createElement('a');
                         link.textContent = page.title;
-                        const fullPath = `${this.config.baseUrl}/${content.path}/${page.folder}/content.md`;
+                        const fullPath = `${this.config.baseUrl}/${page.folder}/content.md`;
                         link.dataset.contentPath = fullPath;
                         link.onclick = () => onClickHandler(fullPath, link);
                         container.appendChild(link);
@@ -157,7 +157,7 @@ export class NavigationManager {
                     visiblePages.forEach(page => {
                         const link = document.createElement('a');
                         link.textContent = page.title;
-                        const fullPath = `${this.config.baseUrl}/${content.path}/${page.folder}/content.md`;
+                        const fullPath = `${this.config.baseUrl}/${page.folder}/content.md`;
                         link.dataset.contentPath = fullPath;
                         link.onclick = () => onClickHandler(fullPath, link);
                         nav.appendChild(link);

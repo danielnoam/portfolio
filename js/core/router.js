@@ -117,9 +117,13 @@ export class Router {
 
     findContentPath(pageName) {
         for (const [section, content] of Object.entries(this.config.structure)) {
-            const matchingPage = content.pages.find(page => page.folder === pageName);
+            const matchingPage = content.pages.find(page => {
+                const folderName = page.folder.split('/').pop();
+                return folderName === pageName;
+            });
+
             if (matchingPage) {
-                const path = `${this.config.baseUrl}/${content.path}/${pageName}/content.md`;
+                const path = `${this.config.baseUrl}/${matchingPage.folder}/content.md`;
                 const links = document.querySelectorAll('nav a');
                 let link = null;
 

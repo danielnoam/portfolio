@@ -50,46 +50,41 @@ const CONFIG = {
             },
         ]
     },
-    
+
     structure: {
         "Games": {
-            path: "content/games",
             foldout: false,
             pages: [
-                { title: "Electro Grid", folder: "electro-grid", visible: true },
-                { title: "Chicken Invaders Remake", folder: "chicken-invaders-remake", visible: true },
-                { title: "Project UMN", folder: "project-umn", visible: true },
-                { title: "2DPlatformer", folder: "2dplatformer", visible: true },
-                { title: "School These Sh*ts", folder: "school-these-shits", visible: true },
-                { title: "Pixel Knight", folder: "pixel-knight", visible: true },
+                { title: "Electro Grid", folder: "content/games/electro-grid", visible: true },
+                { title: "Chicken Invaders Remake", folder: "content/games/chicken-invaders-remake", visible: true },
+                { title: "Project UMN", folder: "content/games/project-umn", visible: true },
+                { title: "2DPlatformer", folder: "content/games/2dplatformer", visible: true },
+                { title: "School These Sh*ts", folder: "content/games/school-these-shits", visible: true },
+                { title: "Pixel Knight", folder: "content/games/pixel-knight", visible: true },
             ]
         },
         "GameJams": {
-            path: "content/games",
             foldout: false,
             pages: [
-                { title: "Power Factory - KJ 2025", folder: "power-factory", visible: true },
-                { title: "Bubblerena - GGJ 2025", folder: "bubblerena", visible: true },
+                { title: "Power Factory - KJ 2025", folder: "content/games/power-factory", visible: true },
+                { title: "Bubblerena - GGJ 2025", folder: "content/games/bubblerena", visible: true },
             ]
         },
         "Unity": {
-            path: "content/other",
             foldout: false,
             pages: [
-                { title: "Shaders", folder: "shaders", visible: true },
-                { title: "Controller Rumble", folder: "controller-rumble", visible: true },
-                { title: "Object Pooling", folder: "object-pooling", visible: true },
-                { title: "VFX & Transitions", folder: "vfx-transitions", visible: true },
-                { title: "Editor Utilities", folder: "editor-utilities", visible: true },
+                { title: "Shaders", folder: "content/other/shaders", visible: true },
+                { title: "Controller Rumble", folder: "content/other/controller-rumble", visible: true },
+                { title: "Object Pooling", folder: "content/other/object-pooling", visible: true },
+                { title: "VFX & Transitions", folder: "content/other/vfx-transitions", visible: true },
+                { title: "Editor Utilities", folder: "content/other/editor-utilities", visible: true },
             ]
         },
         "Misc": {
-            path: "content/other",
             foldout: true,
             pages: [
-
+                
             ]
         },
-        
     }
 };
