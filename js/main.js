@@ -12,6 +12,7 @@ import { LightboxManager } from './ui/lightboxManager.js';
 import { BackgroundManager } from './effects/backgroundManager.js';
 import { LogoManager } from './effects/logoManager.js';
 import { TypewriterManager } from './effects/typewriterManager.js';
+import { CodeShowcaseManager } from './effects/codeShowcaseManager.js';
 
 /*==============================================
             APPLICATION CLASS
@@ -34,6 +35,7 @@ class PortfolioApp {
         this.modules.lightbox = new LightboxManager();
         this.modules.logo = new LogoManager();
         this.modules.typewriter = new TypewriterManager();
+        this.modules.codeShowcase = new CodeShowcaseManager();
         this.modules.router = new Router(
             this.config,
             this.modules.content,
@@ -61,6 +63,7 @@ class PortfolioApp {
         this.modules.background.init();
         this.modules.logo.init();
         this.modules.typewriter.init();
+        this.modules.codeShowcase.init();
 
         // Handle gallery navigation links with data-navigate attribute
         document.addEventListener('click', (e) => {

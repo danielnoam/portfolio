@@ -1,0 +1,233 @@
+/*==============================================
+            CODE SHOWCASE COMPONENT
+================================================*/
+
+.code-showcase {
+    margin: var(--space-6) 0;
+}
+
+/* Horizontal header container */
+.code-showcase-headers {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+    margin-bottom: var(--space-4);
+}
+
+/* Individual header button - styled like tags */
+.code-block-header {
+    padding: var(--space-2) var(--space-4);
+    background-color: var(--card-bg);
+    border: 1px solid var(--text-secondary);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    user-select: none;
+    transition: all var(--transition-base);
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: var(--text-sm);
+    font-weight: var(--weight-medium);
+    color: var(--text-color);
+    white-space: nowrap;
+}
+
+.code-block-header:hover {
+    background-color: var(--heading-color);
+    border-color: var(--heading-color);
+    color: white;
+    transform: scale(1.05);
+}
+
+.code-block-header.active {
+    background-color: var(--heading-color);
+    border-color: var(--heading-color);
+    color: white;
+    transform: scale(1.05);
+}
+
+.code-block-title {
+    font-weight: var(--weight-medium);
+}
+
+.code-block-toggle {
+    font-size: var(--text-sm);
+    transition: transform var(--transition-base);
+    display: inline-block;
+}
+
+.code-block-header.active .code-block-toggle {
+    transform: rotate(90deg);
+}
+
+/* Content area (shared by all code blocks) */
+.code-showcase-content {
+    display: grid;
+    grid-template-rows: 0fr;
+    overflow: hidden;
+    background: var(--card-bg);
+    border-radius: var(--radius-lg);
+    opacity: 0;
+    transform: translateY(-10px);
+    transition:
+            grid-template-rows var(--transition-normal) ease-out,
+            opacity var(--transition-normal) ease-out,
+            transform var(--transition-slow) ease-out;
+}
+
+.code-showcase-content.active {
+    grid-template-rows: 1fr;
+    opacity: 1;
+    transform: translateY(0);
+    border: 1px solid var(--text-secondary);
+}
+
+
+.code-showcase-content-inner {
+    min-height: 0;
+    min-width: 0; /* Add this */
+    overflow: visible;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    max-height: 600px;
+    transform: translateY(20px);
+    transition:
+            opacity ease-out var(--transition-slow),
+            transform ease-out var(--transition-slow);
+}
+
+.code-showcase-content.active .code-showcase-content-inner {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Description text */
+.code-block-description {
+    padding: var(--space-2);
+    border-bottom: 1px solid var(--text-secondary);
+    color: var(--text-secondary);
+    font-size: var(--text-sm);
+    line-height: var(--leading-relaxed);
+}
+
+/* Code container */
+.code-block-code {
+    flex: 1;
+    overflow: auto;
+}
+
+/* Let Prism handle everything */
+.code-showcase-content pre {
+    margin: 0 !important;
+    background: rgba(0, 0, 0, 0.3) !important;
+    border-radius: 0 0 var(--radius-lg) var(--radius-lg) !important;
+}
+
+
+/* Loading */
+.code-block-code .loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-8);
+    color: var(--text-secondary);
+    flex: 1;
+}
+
+
+
+/* Don't wrap long lines */
+.code-showcase-content code {
+    white-space: pre !important;
+}
+
+/* Style scrollbars */
+.code-block-code::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+.code-block-code::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+/* Style scrollbars */
+.code-block-code::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+.code-block-code::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+}
+
+.code-block-code::-webkit-scrollbar-thumb {
+    background: var(--text-secondary);
+    border-radius: var(--radius-sm);
+}
+
+.code-block-code::-webkit-scrollbar-thumb:hover {
+    background: var(--heading-color);
+}
+
+/* Corner where scrollbars meet */
+.code-block-code::-webkit-scrollbar-corner {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 0 0 var(--radius-lg) 0;
+}
+/* Copy button styling */
+.code-showcase-content .toolbar-item button {
+    background: var(--heading-color) !important;
+    color: white !important;
+    border: none !important;
+    border-radius: var(--radius-sm) !important;
+    padding: var(--space-1) var(--space-3) !important;
+    font-size: var(--text-xs) !important;
+    font-weight: var(--weight-medium) !important;
+    cursor: pointer !important;
+    transition: all var(--transition-base) !important;
+    box-shadow: none !important;
+}
+
+.code-showcase-content .toolbar-item button:hover {
+    background: var(--subheading-color) !important;
+    transform: scale(1.05) !important;
+}
+
+.code-showcase-content .toolbar-item button:active {
+    transform: scale(0.95) !important;
+}
+
+/* Copy success state */
+.code-showcase-content .toolbar-item button[data-copy-state="copy-success"] {
+    background: #4caf50 !important;
+}
+
+/* Prism toolbar adjustments */
+.code-showcase-content .toolbar {
+    opacity: 0.7;
+    transition: opacity var(--transition-base);
+}
+
+.code-showcase-content:hover .toolbar {
+    opacity: 1;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .code-showcase-headers {
+        gap: var(--space-2);
+    }
+
+    .code-block-header {
+        padding: var(--space-2) var(--space-3);
+        font-size: var(--text-xs);
+    }
+
+    .code-block-code {
+        max-height: 400px;
+        font-size: var(--text-xs);
+    }
+}
