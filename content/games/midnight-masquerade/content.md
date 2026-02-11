@@ -20,8 +20,8 @@ The game is a frantic race against time when the player must disrupt a cultist r
 
 ### Key Features
 
-- Ritual Disruption: Players rush to find and dispose of ritualistic weapons scattered across the map to prevent the sacrifice.
-- Dynamic Music System: The soundtrack evolves reactively; as the player removes dangerous items, the music layers update to reflect the changing tension and progress.
+- Players rush to find and dispose of ritualistic weapons scattered across the map to prevent the sacrifice.
+- The soundtrack evolves as the player removes dangerous items, the music layers update to reflect the changing tension and progress.
 
 </div>
 
