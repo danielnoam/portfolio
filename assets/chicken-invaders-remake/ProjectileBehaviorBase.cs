@@ -1,0 +1,13 @@
+﻿using UnityEngine;
+
+[System.Serializable]
+public abstract class ProjectileBehaviorBase
+{
+    public abstract void OnSpawn(PlayerProjectile projectile, RailPlayer owner);
+    
+    public abstract void OnMovement(PlayerProjectile projectile, RailPlayer owner);
+    
+    public abstract void OnCollision(PlayerProjectile projectile, RailPlayer owner, IDamageable damageable);
+    
+    public abstract void OnDestroy(PlayerProjectile projectile, RailPlayer owner);
+}

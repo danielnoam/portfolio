@@ -35,6 +35,23 @@ The core loop revolves around matching shapes and completing objectives.
 - Objectives: A modular system supporting varied challenges such as collection quotas, escort missions, and score targets.
 - Lose Conditions: Configurable failure states including move limit or time limits to vary the pacing of levels.
 
+<div class="code-showcase">
+  <div class="code-block" 
+       data-file="/portfolio/assets/electro-grid/Match3Objective.cs" 
+       data-language="csharp"
+       data-title="Match3Objective.cs"
+       data-description="Abstract base class establishing the event-driven contract for all gameplay objectives.">
+  </div>
+
+  <div class="code-block" 
+       data-file="/portfolio/assets/electro-grid/GetSpecificItemMatches.cs" 
+       data-language="csharp"
+       data-title="GetSpecificItemMatches.cs"
+       data-description="Modular objective logic that tracks specific item matches.">
+  </div>
+</div>
+
+
 <div class="image-gallery gallery-4-columns">
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/electro-grid/GameplayMatching.mp4" target="_blank">
@@ -62,7 +79,7 @@ The core loop revolves around matching shapes and completing objectives.
     </figure>
 </div>
 
-### Game Feel
+### Game Feel & UI
 
 A major focus was placed on making every interaction feel satisfying and responsive, extending from the gameplay into the user interface.
 
@@ -70,8 +87,23 @@ A major focus was placed on making every interaction feel satisfying and respons
 - A unified screen shake system makes interaction feel impactful throughout the entire game.
 - Extensive use of particle effects transforms standard mechanics into a high-energy spectacle, providing "juicy" visual feedback for matching, destruction, and special abilities.
 - A custom VFX system streamlines visual effects, dynamically changing post-processing and triggering complex effect sequences.
-- A specialized haptic feedback solution for Android adds tactile depth, delivering distinct vibration patterns that distinguish between light UI ticks and heavy gameplay impacts.
+- Haptic feedback for Android adds tactile depth, delivering distinct vibration patterns that distinguish between light UI ticks and heavy gameplay impacts.
 
+<div class="code-showcase">
+  <div class="code-block" 
+       data-file="/portfolio/assets/electro-grid/MenuManager.cs" 
+       data-language="csharp"
+       data-title="MenuManager.cs"
+       data-description="The central controller for UI flow. It uses a Dictionary of types and a generic method to manage screen transitions.">
+  </div>
+
+  <div class="code-block" 
+       data-file="/portfolio/assets/electro-grid/LevelSelectionScreen.cs" 
+       data-language="csharp"
+       data-title="LevelSelectionScreen.cs"
+       data-description="Reads the raw Grid data from the level asset and instantiates a visual representation for the player preview.">
+  </div>
+</div>
 
 <div class="image-gallery gallery-4-columns">
     <figure>
@@ -108,6 +140,30 @@ To support unique level designs beyond standard rectangles, I created a custom g
 - A custom Inspector tool allows designers to visually "paint" valid grid cells. It includes quality-of-life features like click-and-drag painting, symmetry tools for balanced layouts, and bulk manipulation options.
 - The system uses an abstract conversion layer to handle translation between grid indices and world space, automatically handling cell spacing, centering, and different layout orientations.
 
+
+<div class="code-showcase">
+  <div class="code-block" 
+       data-file="/portfolio/assets/electro-grid/Grid.cs" 
+       data-language="csharp"
+       data-title="Grid.cs"
+       data-description="Serializable class using a flattened array to store 2D grid data.">
+  </div>
+
+  <div class="code-block" 
+       data-file="/portfolio/assets/electro-grid/GridDrawer.cs" 
+       data-language="csharp"
+       data-title="GridDrawer.cs"
+       data-description="CustomPropertyDrawer that allows painting grid cells with the mouse.">
+  </div>
+
+  <div class="code-block" 
+       data-file="/portfolio/assets/electro-grid/CoordinateConverter.cs" 
+       data-language="csharp"
+       data-title="CoordinateConverter.cs"
+       data-description="Strategy pattern handling World-to-Grid conversion, abstracting differences between vertical and horizontal layouts.">
+  </div>
+</div>
+
 <div class="image-gallery">
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/electro-grid/Grid1.mp4" target="_blank">
@@ -135,6 +191,15 @@ Implemented Firebase Analytics and Remote Config for live game tuning and behavi
 
 - Tracks level progression, player retention, and feature usage
 - Enables real-time balance adjustments without app updates (screen shake intensity, haptic feedback, difficulty modifiers)
+
+<div class="code-showcase">
+  <div class="code-block" 
+       data-file="/portfolio/assets/electro-grid/FirebaseManager.cs" 
+       data-language="csharp"
+       data-title="FirebaseManager.cs"
+       data-description="Fetches Remote Config values with fallback defaults, and provides a clean API for logging custom analytics events.">
+  </div>
+</div>
 
 <div class="image-gallery gallery-1-column">
     <figure>

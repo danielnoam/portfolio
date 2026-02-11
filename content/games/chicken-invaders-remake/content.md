@@ -35,22 +35,28 @@ Our goal was to recreate the original game's idea with modern visuals and reimag
 - Health system uses shield/health pools with regeneration and iframe damage prevention
 - Resource pickup system with visual/audio feedback
 
-
 <div class="code-showcase">
   <div class="code-block" 
-       data-file="/portfolio/assets/chicken-invaders-remake/PlayerController.cs" 
+       data-file="/portfolio/assets/chicken-invaders-remake/SOWeaponData.cs" 
        data-language="csharp"
-       data-title="Player Controller"
-       data-description="State machine-based movement with smooth acceleration and boundary constraints.">
+       data-title="SOWeaponData.cs"
+       data-description="ScriptableObject acting as a configuration hub, utilizing polymorphism to store a list of abstract behaviors.">
   </div>
+
   <div class="code-block" 
-       data-file="/portfolio/assets/chicken-invaders-remake/PlayerController.cs" 
+       data-file="/portfolio/assets/chicken-invaders-remake/ProjectileBehaviorBase.cs" 
        data-language="csharp"
-       data-title="Weapon System"
-       data-description="ScriptableObject-based weapon configuration with composable behaviors and targeting.">
+       data-title="ProjectileBehaviorBase.cs"
+       data-description="Abstract base class defining the lifecycle hooks (Spawn, Move, Collision) that all projectile logic must implement.">
+  </div>
+
+  <div class="code-block" 
+       data-file="/portfolio/assets/chicken-invaders-remake/PlayerProjectile.cs" 
+       data-language="csharp"
+       data-title="PlayerProjectile.cs"
+       data-description="The runtime component that acts as the context, iterating through data-defined behaviors to execute logic.">
   </div>
 </div>
-
 
 <div class="image-gallery gallery-2-columns">
     <figure>
@@ -110,6 +116,22 @@ Our goal was to recreate the original game's idea with modern visuals and reimag
 - Implemented radio message system with priority handling and warning system for critical events
 - Balanced difficulty progression and designed tutorial
 
+<div class="code-showcase">
+  <div class="code-block" 
+       data-file="/portfolio/assets/chicken-invaders-remake/StageEvent.cs" 
+       data-language="csharp"
+       data-title="StageEvent.cs"
+       data-description="Abstract base class for all level events. It allows the LevelManager to execute diverse logic (Spawning, Dialogue, Delays) through a unified interface.">
+  </div>
+  <div class="code-block" 
+       data-file="/portfolio/assets/chicken-invaders-remake/SpawnEnemyEvent.cs" 
+       data-language="csharp"
+       data-title="SpawnEnemyEvent.cs"
+       data-description="Concrete implementation that handles wave logic, spawning intervals, and object pooling references within a specific stage.">
+  </div>
+</div>
+
+
 <div class="image-gallery">
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/ObstaclesStageGif.gif" target="_blank">
@@ -131,12 +153,29 @@ Our goal was to recreate the original game's idea with modern visuals and reimag
     </figure>
 </div>
 
+
+
 ### User Interface
 
 - Designed complete UI/UX including HUD, shop, main menu, pause system, and settings
 - Built dynamic HUD system that responds to player movement with position offset and shake effects, and changes color based on damage type (health/shield)
 - Created diegetic main menu integrated into the game world
 - Implemented adaptive stage progression bar that adjusts icon sizes and animates transitions
+
+<div class="code-showcase">
+  <div class="code-block" 
+       data-file="/portfolio/assets/chicken-invaders-remake/HUDManager.cs" 
+       data-language="csharp"
+       data-title="HUDManager.cs"
+       data-description="The UI controller that handles 'Juice'. It implements a dynamic motion system that tilts the HUD based on input and manages DOTween sequences for health/shield feedback.">
+  </div>
+  <div class="code-block" 
+       data-file="/portfolio/assets/chicken-invaders-remake/StageProgressionBar.cs" 
+       data-language="csharp"
+       data-title="StageProgressionBar.cs"
+       data-description="UI component that generates the level timeline. It calculates icon size and spacing to ensure any number of stages fit within the bounds.">
+  </div>
+</div>
 
 <div class="image-gallery">
     <figure>
@@ -182,6 +221,27 @@ Our goal was to recreate the original game's idea with modern visuals and reimag
 - Built upgrade store with currency system and purchase validation using ScriptableObjects
 - Tracks owned upgrades and applies stat changes dynamically
 
+<div class="code-showcase">
+  <div class="code-block" 
+       data-file="/portfolio/assets/chicken-invaders-remake/SOUpgradeBase.cs" 
+       data-language="csharp"
+       data-title="SOUpgradeBase.cs"
+       data-description="Abstract base class. It encapsulates the upgrade logic and validation rules (e.g., prerequisites, stack limits).">
+  </div>
+  <div class="code-block" 
+       data-file="/portfolio/assets/chicken-invaders-remake/SOMaxHeatUpgrade.cs" 
+       data-language="csharp"
+       data-title="SOMaxHeatUpgrade.cs"
+       data-description="Concrete implementation that applies specific stat changes to the player.">
+  </div>
+  <div class="code-block" 
+       data-file="/portfolio/assets/chicken-invaders-remake/RailPlayer.cs" 
+       data-language="csharp"
+       data-title="RailPlayer.cs (Partial)"
+       data-description="The receiver class that manages the dictionary of active upgrades and exposes methods for modifying stats.">
+  </div>
+</div>
+
 <div class="image-gallery">
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/StoreGif.gif" target="_blank">
@@ -203,6 +263,21 @@ Our goal was to recreate the original game's idea with modern visuals and reimag
 - Implemented full gamepad support with seamless device switching and dynamic UI updating button prompts
 - Created custom vibration system with spatial 3D positioning and distance attenuation
 
+<div class="code-showcase">
+  <div class="code-block" 
+       data-file="/portfolio/assets/chicken-invaders-remake/ControllerVibrationListener.cs" 
+       data-language="csharp"
+       data-title="ControllerVibrationListener.cs"
+       data-description="Haptic mixer that combines multiple vibration sources (explosions, shooting) into a single motor output.">
+  </div>
+  <div class="code-block" 
+       data-file="/portfolio/assets/chicken-invaders-remake/ControllerVibrationSource.cs" 
+       data-language="csharp"
+       data-title="ControllerVibrationSource.cs"
+       data-description="Spatial component that calculates vibration intensity based on distance to the player.">
+  </div>
+</div>
+
 <div class="image-gallery">
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/controllerUI.gif" target="_blank">
@@ -217,6 +292,7 @@ Our goal was to recreate the original game's idea with modern visuals and reimag
         </a>
     </figure>
 </div>
+
 
 
 ### Object Pooling
@@ -244,6 +320,15 @@ Our goal was to recreate the original game's idea with modern visuals and reimag
 - Created editor tools and inspector buttons for rapid testing
 - Developed tools that allow non-programmers to configure complex behaviors through ScriptableObjects and components
 - Built debug visualizations using Gizmos for easer debugging
+
+<div class="code-showcase">
+  <div class="code-block" 
+       data-file="/portfolio/assets/chicken-invaders-remake/StageSubscriber.cs" 
+       data-language="csharp"
+       data-title="StageSubscriber.cs"
+       data-description="A bridge component that links ScriptableObject-based stage events to UnityEvents, allowing designers to trigger scene logic (animations, UI) without writing code.">
+  </div>
+</div>
 
 <div class="image-gallery">
     <figure>
@@ -307,11 +392,35 @@ Our goal was to recreate the original game's idea with modern visuals and reimag
 - Built audio system using ScriptableObjects for designer-friendly implementation
 - Created music manager with cross-fade transitions, dynamic volume on pause, and stage-based theme switching
 
+<div class="code-showcase">
+  <div class="code-block" 
+       data-file="/portfolio/assets/chicken-invaders-remake/SOAudioEvent.cs" 
+       data-language="csharp"
+       data-title="SOAudioEvent.cs"
+       data-description="ScriptableObject wrapper that randomizes clips, pitch and volume.">
+  </div>
+</div>
 
 ### Save System & Data Persistence
 
 - Implemented saving of data for level completion and scores, user settings, and session data for health/currency/upgrades/weapons
 - Handles serialization of ScriptableObject references and Dictionary collections
+
+<div class="code-showcase">
+  <div class="code-block" 
+       data-file="/portfolio/assets/chicken-invaders-remake/SaveManager.cs" 
+       data-language="csharp"
+       data-title="SaveManager.cs"
+       data-description="The core singleton that handles File I/O operations. It manages the loading order and writes data to disk using JSON serialization.">
+  </div>
+  <div class="code-block" 
+       data-file="/portfolio/assets/chicken-invaders-remake/PlayerProgressData.cs" 
+       data-language="csharp"
+       data-title="Data Containers"
+       data-description="Serializable classes that define the saved data.">
+  </div>
+</div>
+
 
 ### Asset Integration
 
@@ -319,6 +428,14 @@ Our goal was to recreate the original game's idea with modern visuals and reimag
 - Created prefabs and materials
 - Implemented scripts for various shader effects and materials
 
+<div class="code-showcase">
+  <div class="code-block" 
+       data-file="/portfolio/assets/chicken-invaders-remake/FullScreenCAController.cs" 
+       data-language="csharp"
+       data-title="FullScreenCAController.cs"
+       data-description="C# controller that drives the shader effect.">
+  </div>
+</div>
 
 </div>
 

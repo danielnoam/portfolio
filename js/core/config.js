@@ -66,6 +66,7 @@ const CONFIG = {
         "GameJams": {
             foldout: false,
             pages: [
+                { title: "Midnight Masquerade - GGJ 2026", folder: "content/games/midnight-masquerade", visible: true },
                 { title: "Power Factory - KJ 2025", folder: "content/games/power-factory", visible: true },
                 { title: "Bubblerena - GGJ 2025", folder: "content/games/bubblerena", visible: true },
             ]

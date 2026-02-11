@@ -1,0 +1,24 @@
+﻿using System;
+using System.Collections.Generic;
+
+[Serializable]
+public class PlayerProgressData
+{
+    public bool watchedIntro;
+    public List<LevelProgress> levelProgresses = new();
+}
+
+[Serializable]
+public class LevelProgress
+{
+    public string scenePath;
+    public bool isCompleted;
+    public List<int> bestScores;
+    
+    public LevelProgress(string path)
+    {
+        scenePath = path;
+        isCompleted = false;
+        bestScores = new List<int>();
+    }
+}
