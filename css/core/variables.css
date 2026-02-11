@@ -130,8 +130,8 @@
     ------------------------------------------*/
     
     /* Sidebar */
-    --sidebar-width: 255px;
-    --sidebar-padding: var(--space-5);
+    --sidebar-width: 275px;
+    --sidebar-padding: var(--space-4);
     
     /* Navigation */
     --nav-link-padding: 0;

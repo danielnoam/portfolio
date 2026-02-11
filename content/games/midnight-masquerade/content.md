@@ -2,7 +2,7 @@
 
 # Midnight Masquerade
 
-<img src="https://danielnoam.github.io/portfolio/assets/midnight-masquerade/logo.png" alt="Midnight Masquerade Gameplay" class="page-logo">
+<img src="https://danielnoam.github.io/portfolio/assets/midnight-masquerade/logo.jpg" alt="Midnight Masquerade Gameplay" class="page-logo">
 
 <div class="button-group horizontal">
     <a href="https://danielnoam.itch.io/midnight-masquerade" target="_blank" class="button">Itch.io</a>
@@ -25,25 +25,5 @@ The game is a frantic race against time when the player must disrupt a cultist r
 
 </div>
 
-<div class="project-card">
-
-## Gallery
-
-<div class="image-gallery">
-    <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/midnight-masquerade/player1.png" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/midnight-masquerade/player1.png" alt="Gameplay">
-            <figcaption>Stopping the ritual</figcaption>
-        </a>
-    </figure>
-    <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/midnight-masquerade/player2.png" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/midnight-masquerade/player2.png" alt="Item Interaction">
-            <figcaption>Removing ritual objects</figcaption>
-        </a>
-    </figure>
-</div>
-
-</div>
 
 </div>
