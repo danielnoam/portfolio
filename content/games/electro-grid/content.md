@@ -1,7 +1,7 @@
 ---
 thumbnail: /portfolio/assets/electro-grid/main.gif
-shortDescription: Match-3 mobile puzzle game with power-ups
-tags: [games, unity, mobile, web-gl, pc, solo, featured]
+shortDescription: Match-3 mobile puzzle game with power-ups and various objectives.
+tags: [games, unity, mobile, web-gl, "2025", pc, solo, featured]
 ---
 <div class="page-content">
 
@@ -21,6 +21,7 @@ tags: [games, unity, mobile, web-gl, pc, solo, featured]
 "Electro Grid" is a match-3 puzzle game developed as my fifth-semester project. With a one-month development timeline, the project focused on creating a highly polished short experience optimized for mobile devices, with support for PC and WebGL .
 
 The game challenges players to complete objectives by matching colored pieces on dynamic, non-standard grid layouts. Players manage different object types and must complete varied objectives while avoiding different loss conditions.
+
 
 
 </div>

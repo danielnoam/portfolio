@@ -65,21 +65,25 @@ main {
 }
 
 .page-content {
-    min-height: 85vh; 
+    min-height: 85vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    overflow-x: hidden; /* Add this */
+    width: 100%; /* Add this */
 }
+
 
 /* Two-column layout for content */
 .content-two-column {
     display: grid;
-    grid-template-columns: 500px 1fr;
+    grid-template-columns: minmax(300px, 500px) 1fr; /* Change this line */
     gap: var(--space-8);
     align-items: flex-start;
     margin: var(--space-6) auto;
     max-width: 1400px;
     padding: 0 var(--space-6);
+    overflow-x: hidden;
 }
 
 .content-two-column .content-left {

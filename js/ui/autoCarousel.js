@@ -67,32 +67,71 @@ export class AutoCarousel {
         `;
     }
 }
-
 class ProjectCarousel {
     constructor(element, config, projects) {
         this.element = element;
         this.config = config;
         this.projects = projects;
         this.track = element.querySelector('.carousel-track');
-        this.items = Array.from(element.querySelectorAll('figure'));
+        this.originalItems = Array.from(element.querySelectorAll('figure'));
         this.currentIndex = 0;
         this.autoPlayInterval = null;
         this.touchStartX = 0;
         this.touchEndX = 0;
+        this.isTransitioning = false;
 
-        this.interval = 5000;
+        this.interval = 3000; // seconds
         this.autoPlay = true;
+
+        // Clone items for infinite effect
+        this.cloneCount = 3; // Number of clones on each side
+        this.createInfiniteLoop();
+
+        this.items = Array.from(this.track.querySelectorAll('figure'));
+        this.currentIndex = this.cloneCount; // Start at first real item
 
         this.initialize();
     }
 
+    createInfiniteLoop() {
+        const figures = Array.from(this.track.querySelectorAll('figure'));
+
+        // If we don't have enough items for cloning, reduce clone count
+        const actualCloneCount = Math.min(this.cloneCount, figures.length);
+
+        // Clone last few items and prepend (in correct order)
+        const lastClones = [];
+        for (let i = figures.length - actualCloneCount; i < figures.length; i++) {
+            const clone = figures[i].cloneNode(true);
+            clone.classList.add('clone');
+            lastClones.push(clone);
+        }
+        lastClones.reverse().forEach(clone => {
+            this.track.insertBefore(clone, this.track.firstChild);
+        });
+
+        // Clone first few items and append
+        for (let i = 0; i < actualCloneCount; i++) {
+            const clone = figures[i].cloneNode(true);
+            clone.classList.add('clone');
+            this.track.appendChild(clone);
+        }
+
+        // Update clone count for positioning calculations
+        this.cloneCount = actualCloneCount;
+    }
+
     initialize() {
         if (this.items.length === 0) return;
-        
+
         this.setupDots();
         this.setupTouchEvents();
         this.setupClickHandlers();
-        this.updateCarousel();
+        requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+                this.updateCarousel(false);
+            });
+        });
 
         if (this.autoPlay) {
             this.startAutoPlay();
@@ -102,8 +141,12 @@ class ProjectCarousel {
         this.element.addEventListener('mouseleave', () => {
             if (this.autoPlay) this.startAutoPlay();
         });
+
+        // Listen for transition end to handle seamless loop
+        this.track.addEventListener('transitionend', () => {
+            this.handleInfiniteLoop();
+        });
     }
-    
 
     setupDots() {
         if (this.element.querySelector('.carousel-dots')) {
@@ -113,11 +156,12 @@ class ProjectCarousel {
         const dotsContainer = document.createElement('div');
         dotsContainer.className = 'carousel-dots';
 
-        this.items.forEach((_, index) => {
+        // Only create dots for original items, not clones
+        this.originalItems.forEach((_, index) => {
             const dot = document.createElement('button');
             dot.className = 'carousel-dot';
             dot.setAttribute('aria-label', `Go to slide ${index + 1}`);
-            dot.addEventListener('click', () => this.goTo(index));
+            dot.addEventListener('click', () => this.goTo(index + this.cloneCount));
             dotsContainer.appendChild(dot);
         });
 
@@ -150,18 +194,26 @@ class ProjectCarousel {
 
     setupClickHandlers() {
         this.items.forEach((item, index) => {
-            // Click on the figure itself (non-active) makes it active
             item.addEventListener('click', (e) => {
-                // If clicking on an inactive item, just make it active
                 if (!item.classList.contains('active')) {
                     e.preventDefault();
                     e.stopPropagation();
-                    this.goTo(index);
+
+                    // Map clone index to real item index
+                    let targetIndex = index;
+                    if (index < this.cloneCount) {
+                        // Clicked on start clone, map to real item at end
+                        targetIndex = this.items.length - this.cloneCount - (this.cloneCount - index);
+                    } else if (index >= this.items.length - this.cloneCount) {
+                        // Clicked on end clone, map to real item at start
+                        targetIndex = this.cloneCount + (index - (this.items.length - this.cloneCount));
+                    }
+
+                    this.goTo(targetIndex);
                     return;
                 }
             });
 
-            // Click on the image of active item navigates
             const img = item.querySelector('img');
             if (img) {
                 img.addEventListener('click', (e) => {
@@ -175,7 +227,12 @@ class ProjectCarousel {
             }
         });
     }
-    updateCarousel() {
+
+    updateCarousel(useTransition = true) {
+        if (!useTransition) {
+            this.track.style.transition = 'none';
+        }
+
         this.items.forEach((item, index) => {
             const isActive = index === this.currentIndex;
             const distance = Math.abs(index - this.currentIndex);
@@ -197,9 +254,11 @@ class ProjectCarousel {
             }
         });
 
+        // Update dots (map current index to original item)
         const dots = this.element.querySelectorAll('.carousel-dot');
+        const realIndex = (this.currentIndex - this.cloneCount + this.originalItems.length) % this.originalItems.length;
         dots.forEach((dot, index) => {
-            dot.classList.toggle('active', index === this.currentIndex);
+            dot.classList.toggle('active', index === realIndex);
         });
 
         const carouselWidth = this.element.offsetWidth;
@@ -209,15 +268,34 @@ class ProjectCarousel {
 
         const offset = (carouselWidth / 2) - activeItemLeft - (activeItemWidth / 2);
         this.track.style.transform = `translateX(${offset}px)`;
+
+        if (!useTransition) {
+            // Force reflow
+            this.track.offsetHeight;
+            this.track.style.transition = '';
+        }
+    }
+
+    handleInfiniteLoop() {
+        // If we're at a clone, jump to the real item without transition
+        if (this.currentIndex < this.cloneCount) {
+            // At start clones, jump to end
+            this.currentIndex = this.items.length - this.cloneCount - (this.cloneCount - this.currentIndex);
+            this.updateCarousel(false);
+        } else if (this.currentIndex >= this.items.length - this.cloneCount) {
+            // At end clones, jump to start
+            this.currentIndex = this.cloneCount + (this.currentIndex - (this.items.length - this.cloneCount));
+            this.updateCarousel(false);
+        }
     }
 
     next() {
-        this.currentIndex = (this.currentIndex + 1) % this.items.length;
+        this.currentIndex++;
         this.updateCarousel();
     }
 
     prev() {
-        this.currentIndex = (this.currentIndex - 1 + this.items.length) % this.items.length;
+        this.currentIndex--;
         this.updateCarousel();
     }
 
@@ -225,12 +303,22 @@ class ProjectCarousel {
         this.currentIndex = index;
         this.updateCarousel();
     }
-    startAutoPlay() {
-        console.log('Starting autoplay for carousel');
-        this.stopAutoPlay();
-        this.autoPlayInterval = setInterval(() => this.next(), this.interval);
-    }
 
+    startAutoPlay() {
+        this.stopAutoPlay();
+        this.autoPlayInterval = setInterval(() => {
+            // Calculate next index
+            let nextIndex = this.currentIndex + 1;
+
+            // If next would be a clone, map to real item
+            if (nextIndex >= this.items.length - this.cloneCount) {
+                // Would hit end clone, go to first real item
+                nextIndex = this.cloneCount;
+            }
+
+            this.goTo(nextIndex);
+        }, this.interval);
+    }
 
     stopAutoPlay() {
         if (this.autoPlayInterval) {
@@ -240,7 +328,6 @@ class ProjectCarousel {
     }
 
     destroy() {
-        console.log('Destroying carousel');
         this.stopAutoPlay();
     }
 }

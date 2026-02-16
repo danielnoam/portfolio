@@ -1,7 +1,7 @@
 ---
 thumbnail: /portfolio/assets/chicken-invaders-remake/Cover.png
-shortDescription: Chicken Invaders Remake
-tags: [games, unity, pc, team, featured]
+shortDescription: Remake to the old chicken invaders reimagined as third person rail shooter.
+tags: [games, unity, pc, "2025", team, featured]
 ---
 <div class="page-content">
 

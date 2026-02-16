@@ -9,12 +9,15 @@
     row-gap: var(--gallery-rows-gap);
     column-gap: var(--gallery-columns-gap);
     margin: var(--space-4) auto;
-    max-width: fit-content;
+    max-width: 100%; /* Change from fit-content to 100% */
+    width: 100%; /* Add this */
     justify-content: center;
     justify-items: center;
     align-items: center;
+    position: relative;
+    z-index: 1;
+    overflow: visible;
 }
-
 
 
 .image-gallery.gallery-1-column {
@@ -79,8 +82,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-width: 200px;
+    min-width: 0px;
     min-height: 150px;
+    max-width: 100%;
 }
 
 .image-gallery figure:hover .video-indicator {

@@ -1,7 +1,7 @@
 ---
 thumbnail: /portfolio/assets/2dplatformer/main.gif
-shortDescription: 2D Platformer
-tags: [games, unity, pc, solo, web-gl, featured]
+shortDescription: Platformer featuring various player and world mechanics.
+tags: [games, unity, pc, solo, "2024", web-gl, featured]
 ---
 
 <div class="page-content">
