@@ -1,3 +1,8 @@
+---
+thumbnail: /portfolio/assets/chicken-invaders-remake/Cover.png
+shortDescription: Chicken Invaders Remake
+tags: [games, unity, pc, team, featured]
+---
 <div class="page-content">
 
 # Chicken Invaders Remake

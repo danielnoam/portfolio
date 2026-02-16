@@ -1,3 +1,8 @@
+---
+thumbnail: /portfolio/assets/electro-grid/main.gif
+shortDescription: Match-3 mobile puzzle game with power-ups
+tags: [games, unity, mobile, web-gl, pc, solo, featured]
+---
 <div class="page-content">
 
 # Electro Grid

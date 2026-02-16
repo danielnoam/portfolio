@@ -60,7 +60,16 @@ const CONFIG = {
                 { title: "Project UMN", folder: "content/games/project-umn", visible: true },
                 { title: "2DPlatformer", folder: "content/games/2dplatformer", visible: true },
                 { title: "School These Sh*ts", folder: "content/games/school-these-shits", visible: true },
-                { title: "Pixel Knight", folder: "content/games/pixel-knight", visible: true },
+            ]
+        },
+        "Unity": {
+            foldout: false,
+            pages: [
+                { title: "Shaders", folder: "content/other/shaders", visible: true },
+                { title: "Controller Rumble", folder: "content/other/controller-rumble", visible: true },
+                { title: "Object Pooling", folder: "content/other/object-pooling", visible: true },
+                { title: "VFX & Transitions", folder: "content/other/vfx-transitions", visible: true },
+                { title: "Utilities", folder: "content/other/utilities", visible: true },
             ]
         },
         "GameJams": {
@@ -71,20 +80,10 @@ const CONFIG = {
                 { title: "Bubblerena - GGJ 2025", folder: "content/games/bubblerena", visible: true },
             ]
         },
-        "Unity": {
+        "Archive": {
             foldout: false,
             pages: [
-                { title: "Shaders", folder: "content/other/shaders", visible: true },
-                { title: "Controller Rumble", folder: "content/other/controller-rumble", visible: true },
-                { title: "Object Pooling", folder: "content/other/object-pooling", visible: true },
-                { title: "VFX & Transitions", folder: "content/other/vfx-transitions", visible: true },
-                { title: "Editor Utilities", folder: "content/other/editor-utilities", visible: true },
-            ]
-        },
-        "Misc": {
-            foldout: true,
-            pages: [
-                
+                { title: "Pixel Knight", folder: "content/games/pixel-knight", visible: false },
             ]
         },
     }

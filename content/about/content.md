@@ -126,8 +126,12 @@ My experience spans from modding existing games to creating original adventures 
 </div>
 
 
+
+
 </div>
 
 </div>
+
+<div class="auto-carousel" data-tags="games" data-exclude-tags=""></div>
 
 </div>

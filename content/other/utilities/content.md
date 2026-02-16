@@ -1,6 +1,6 @@
 <div class="page-content">
 
-# Editor Utilities
+# Utilities
 
 <div class="button-group horizontal">
     <a href="https://github.com/danielnoam/DNExtensions" target="_blank" class="button">Github</a>
@@ -9,7 +9,7 @@
 <div class="project-card">
 
 ## Overview
-A collection of Unity editor tools and runtime utilities developed to streamline workflow and solve recurring development challenges. Each utility addresses specific pain points discovered across multiple projects, then refined into reusable, production-ready tools.
+A collection of Unity editor tools and runtime utilities developed to streamline workflow and solve recurring development challenges.
 
 </div>
 

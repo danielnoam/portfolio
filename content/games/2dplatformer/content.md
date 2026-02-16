@@ -1,3 +1,9 @@
+---
+thumbnail: /portfolio/assets/2dplatformer/main.gif
+shortDescription: 2D Platformer
+tags: [games, unity, pc, solo, web-gl, featured]
+---
+
 <div class="page-content">
 
 # 2DPlatformer

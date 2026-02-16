@@ -1,139 +1,109 @@
 /*==============================================
-            CAROUSEL MANAGER MODULE
+            AUTO CAROUSEL MODULE
 ================================================*/
-export class CarouselManager {
-    constructor() {
+
+export class AutoCarousel {
+    constructor(config, contentManager) {
+        this.config = config;
+        this.contentManager = contentManager;
         this.carousels = [];
     }
 
-    init() {
-        this.setupCarousels();
+    initialize() {
+        console.log('AutoCarousel initialize called');
+        console.log('Existing carousels:', this.carousels.length);
+        
+        
+        this.carousels.forEach(carousel => carousel.destroy());
+        this.carousels = [];
 
-        // Re-initialize when content changes
-        const contentElement = document.getElementById('content');
-        if (contentElement) {
-            const observer = new MutationObserver(() => {
-                setTimeout(() => this.setupCarousels(), 100);
-            });
-            observer.observe(contentElement, { childList: true, subtree: true });
-        }
-    }
+        const carouselContainers = document.querySelectorAll('.auto-carousel');
 
-    setupCarousels() {
-        const carouselElements = document.querySelectorAll('.carousel:not(.carousel-initialized)');
+        carouselContainers.forEach(container => {
+            container.innerHTML = '';
+            
+            const includeTags = this.parseTags(container.dataset.tags);
+            const excludeTags = this.parseTags(container.dataset.excludeTags);
 
-        carouselElements.forEach(element => {
-            if (element.querySelector('.carousel-nav')) {
+            const filteredProjects = this.contentManager.filterProjectsByTags(includeTags, excludeTags);
+
+            if (filteredProjects.length === 0) {
+                container.style.display = 'none';
                 return;
             }
 
-            element.classList.add('carousel-initialized');
-            const carousel = new Carousel(element);
-            this.carousels.push(carousel);
+            this.buildCarousel(container, filteredProjects);
         });
     }
 
-    reinitialize() {
-        this.setupCarousels();
+    parseTags(tagString) {
+        if (!tagString) return [];
+        return tagString.split(',').map(tag => tag.trim()).filter(tag => tag.length > 0);
+    }
+
+    buildCarousel(container, projects) {
+        container.innerHTML = `
+        <div class="carousel project-auto-carousel">
+            <div class="carousel-track">
+                ${projects.map(project => this.createProjectCard(project)).join('')}
+            </div>
+        </div>
+    `;
+
+        const carouselElement = container.firstElementChild;
+        const carousel = new ProjectCarousel(carouselElement, this.config, projects);
+        this.carousels.push(carousel);
+    }
+
+    createProjectCard(project) {
+        return `
+            <figure data-project="${project.id}" data-folder="${project.folder}">
+                <img src="${project.thumbnail}" alt="${project.title}">
+                <figcaption>
+                    <h3>${project.title}</h3>
+                    <p>${project.shortDescription}</p>
+                </figcaption>
+            </figure>
+        `;
     }
 }
 
-class Carousel {
-    constructor(element) {
+class ProjectCarousel {
+    constructor(element, config, projects) {
         this.element = element;
-        this.track = null;
-        this.items = [];
+        this.config = config;
+        this.projects = projects;
+        this.track = element.querySelector('.carousel-track');
+        this.items = Array.from(element.querySelectorAll('figure'));
         this.currentIndex = 0;
         this.autoPlayInterval = null;
         this.touchStartX = 0;
         this.touchEndX = 0;
 
-        // Settings
-        this.autoPlay = element.dataset.autoPlay === 'true';
-        this.interval = parseInt(element.dataset.interval) || 3000;
+        this.interval = 5000;
+        this.autoPlay = true;
 
         this.initialize();
     }
 
     initialize() {
-        // Get all figures
-        this.items = Array.from(this.element.querySelectorAll('figure'));
-
         if (this.items.length === 0) return;
-
-        // Create carousel structure
-        this.createStructure();
-        this.setupNavigation();  // Now just adds click handlers
+        
         this.setupDots();
         this.setupTouchEvents();
-        this.setupLightboxIntegration();
+        this.setupClickHandlers();
         this.updateCarousel();
 
-        // Start autoplay if enabled
         if (this.autoPlay) {
             this.startAutoPlay();
         }
 
-        // Pause autoplay on hover
         this.element.addEventListener('mouseenter', () => this.stopAutoPlay());
         this.element.addEventListener('mouseleave', () => {
             if (this.autoPlay) this.startAutoPlay();
         });
     }
-
-    createStructure() {
-        // Check if track already exists
-        const existingTrack = this.element.querySelector('.carousel-track');
-        if (existingTrack) {
-            this.track = existingTrack;
-            return;
-        }
-
-        // Wrap items in track
-        this.track = document.createElement('div');
-        this.track.className = 'carousel-track';
-
-        this.items.forEach((item, index) => {
-            this.track.appendChild(item);
-
-            // Setup loading state
-            const media = item.querySelector('img, video');
-            if (media) {
-                const onLoad = () => {
-                    item.classList.add('loaded');
-                };
-
-                if (media.tagName === 'IMG') {
-                    if (media.complete) {
-                        onLoad();
-                    } else {
-                        media.addEventListener('load', onLoad);
-                    }
-                } else {
-                    media.addEventListener('loadeddata', onLoad);
-                }
-            }
-        });
-
-        this.element.appendChild(this.track);
-    }
-
-    setupNavigation() {
-        // Click on side items to navigate
-        this.items.forEach((item, index) => {
-            item.addEventListener('click', (e) => {
-                // If clicking active item, let lightbox handle it
-                if (index === this.currentIndex) {
-                    return;
-                }
-
-                // Otherwise navigate to that slide
-                e.preventDefault();
-                e.stopPropagation();
-                this.goTo(index);
-            });
-        });
-    }
+    
 
     setupDots() {
         if (this.element.querySelector('.carousel-dots')) {
@@ -178,70 +148,66 @@ class Carousel {
         }
     }
 
-    setupLightboxIntegration() {
+    setupClickHandlers() {
         this.items.forEach((item, index) => {
-            const link = item.querySelector('a');
-            if (link && window.portfolioApp?.modules?.lightbox) {
-                link.addEventListener('click', (e) => {
+            // Click on the figure itself (non-active) makes it active
+            item.addEventListener('click', (e) => {
+                // If clicking on an inactive item, just make it active
+                if (!item.classList.contains('active')) {
                     e.preventDefault();
+                    e.stopPropagation();
+                    this.goTo(index);
+                    return;
+                }
+            });
 
-                    // Build images array for lightbox
-                    const images = this.items.map(fig => {
-                        const a = fig.querySelector('a');
-                        const caption = fig.querySelector('figcaption');
-                        return {
-                            src: a.getAttribute('href'),
-                            caption: caption ? caption.textContent : ''
-                        };
-                    });
-
-                    window.portfolioApp.modules.lightbox.open(index, images);
+            // Click on the image of active item navigates
+            const img = item.querySelector('img');
+            if (img) {
+                img.addEventListener('click', (e) => {
+                    if (item.classList.contains('active')) {
+                        e.stopPropagation();
+                        const folder = item.dataset.folder;
+                        const path = `${this.config.baseUrl}/${folder}/content.md`;
+                        window.handleNavigationClick(path, null);
+                    }
                 });
             }
         });
     }
-
     updateCarousel() {
-        // Update active states and distance-based classes
         this.items.forEach((item, index) => {
             const isActive = index === this.currentIndex;
             const distance = Math.abs(index - this.currentIndex);
             const isBefore = index < this.currentIndex;
             const isAfter = index > this.currentIndex;
 
-            // Remove all distance classes
             item.classList.remove('active', 'before-active', 'after-active',
                 'distance-1', 'distance-2', 'distance-3');
 
-            // Add appropriate classes
             if (isActive) {
                 item.classList.add('active');
             } else {
                 if (isBefore) item.classList.add('before-active');
                 if (isAfter) item.classList.add('after-active');
 
-                // Add distance class
                 if (distance <= 3) {
                     item.classList.add(`distance-${distance}`);
                 }
             }
         });
 
-        // Update dots
         const dots = this.element.querySelectorAll('.carousel-dot');
         dots.forEach((dot, index) => {
             dot.classList.toggle('active', index === this.currentIndex);
         });
 
-        // Calculate transform to center active item
         const carouselWidth = this.element.offsetWidth;
         const activeItem = this.items[this.currentIndex];
         const activeItemLeft = activeItem.offsetLeft;
         const activeItemWidth = activeItem.offsetWidth;
 
-        // Center the active item in the viewport
         const offset = (carouselWidth / 2) - activeItemLeft - (activeItemWidth / 2);
-
         this.track.style.transform = `translateX(${offset}px)`;
     }
 
@@ -259,11 +225,12 @@ class Carousel {
         this.currentIndex = index;
         this.updateCarousel();
     }
-
     startAutoPlay() {
+        console.log('Starting autoplay for carousel');
         this.stopAutoPlay();
         this.autoPlayInterval = setInterval(() => this.next(), this.interval);
     }
+
 
     stopAutoPlay() {
         if (this.autoPlayInterval) {
@@ -273,6 +240,7 @@ class Carousel {
     }
 
     destroy() {
+        console.log('Destroying carousel');
         this.stopAutoPlay();
     }
 }

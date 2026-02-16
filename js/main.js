@@ -7,7 +7,7 @@ import { ThemeManager } from './ui/themeManager.js';
 import { UIManager } from './ui/uiManager.js';
 import { AnimationManager } from './effects/animationManager.js';
 import { Router } from './core/router.js';
-import { CarouselManager } from './ui/carouselManager.js';
+import { AutoCarousel } from './ui/autoCarousel.js';
 import { LightboxManager } from './ui/lightboxManager.js';
 import { BackgroundManager } from './effects/backgroundManager.js';
 import { LogoManager } from './effects/logoManager.js';
@@ -27,11 +27,12 @@ class PortfolioApp {
         // Initialize modules
         this.modules.background = new BackgroundManager();
         this.modules.content = new ContentManager(this.config);
+        await this.modules.content.loadProjects();
         this.modules.navigation = new NavigationManager(this.config);
         this.modules.theme = new ThemeManager();
         this.modules.ui = new UIManager(this.config);
         this.modules.animation = new AnimationManager();
-        this.modules.carousel = new CarouselManager();
+        this.modules.autoCarousel = new AutoCarousel(this.config, this.modules.content);
         this.modules.lightbox = new LightboxManager();
         this.modules.logo = new LogoManager();
         this.modules.typewriter = new TypewriterManager();
@@ -59,7 +60,6 @@ class PortfolioApp {
         this.modules.ui.initScrollToTop();
         this.modules.ui.applyVisibilitySettings();
         this.modules.router.init();
-        this.modules.carousel.init();
         this.modules.background.init();
         this.modules.logo.init();
         this.modules.typewriter.init();
@@ -89,7 +89,6 @@ class PortfolioApp {
             const observer = new MutationObserver(() => {
                 clearTimeout(this.reinitTimeout);
                 this.reinitTimeout = setTimeout(() => {
-                    this.modules.carousel.reinitialize();
                     this.modules.lightbox.reinitialize();
                 }, 100);
             });
