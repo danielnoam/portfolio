@@ -66,9 +66,9 @@ const CONFIG = {
             foldout: false,
             pages: [
                 { title: "Shaders", folder: "content/other/shaders", visible: true },
-                { title: "Utilities", folder: "content/other/utilities", visible: true },
-                { title: "Controller Rumble", folder: "content/other/controller-rumble", visible: true },
+                { title: "Editor Utilities", folder: "content/other/utilities", visible: true },
                 { title: "Object Pooling", folder: "content/other/object-pooling", visible: true },
+                { title: "Controller Rumble", folder: "content/other/controller-rumble", visible: true },
                 { title: "VFX & Transitions", folder: "content/other/vfx-transitions", visible: true },
             ]
         },

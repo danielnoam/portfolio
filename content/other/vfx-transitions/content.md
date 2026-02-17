@@ -1,7 +1,7 @@
 ---
 thumbnail: /portfolio/assets/dnextensions/unitylogo.jpg
 shortDescription: Visual effects system managing post-processing, UI transitions, and scene loading with seamless continuity.
-tags: [tool, unity, pc, "2025", solo, featured]
+tags: [tool, unity, pc, "2025", solo]
 ---
 <div class="page-content">
 

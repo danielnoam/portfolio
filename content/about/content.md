@@ -119,8 +119,8 @@ My experience spans from modding existing games to creating original adventures 
     <figure>
         <a href="#" data-navigate="/content/other/object-pooling/content.md"
            data-background-video="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/ObjectPooling.mp4">
-            <img src="https://danielnoam.github.io/portfolio/assets/dnextensions/unitylogo.jpg" alt="Object Pooling System">
-            <figcaption>Object Pooling System</figcaption>
+            <img src="https://danielnoam.github.io/portfolio/assets/dnextensions/unitylogo.jpg" alt="Object Pooling">
+            <figcaption>Object Pooling</figcaption>
         </a>
     </figure>
 </div>
@@ -133,6 +133,6 @@ My experience spans from modding existing games to creating original adventures 
 </div>
 
 
-<div class="auto-carousel" data-tags="unity" data-exclude-tags=""></div>
+<div class="auto-carousel" data-tags="" data-exclude-tags="featured"></div>
 
 </div>
