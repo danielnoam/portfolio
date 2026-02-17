@@ -1,3 +1,8 @@
+---
+thumbnail: /portfolio/assets/power-factory/main.png
+shortDescription: A first-person mathematical puzzle game developed for Kenny Jam 2025.
+tags: [games, unity, pc, "2025", solo, game-jam]
+---
 <div class="page-content">
 
 # Power Factory

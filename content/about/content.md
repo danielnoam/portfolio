@@ -89,10 +89,10 @@ My experience spans from modding existing games to creating original adventures 
         </a>
     </figure>
     <figure>
-        <a href="#" data-navigate="/content/other/shaders/content.md"
-           data-background-video="https://danielnoam.github.io/portfolio/assets/shaders/Dither.mp4">
+        <a href="#" data-navigate="/content/other/utilities/content.md"
+           data-background-video="https://danielnoam.github.io/portfolio/assets/dnextensions/Button.mp4">
             <img src="https://danielnoam.github.io/portfolio/assets/dnextensions/unitylogo.jpg" alt="Editor Utilities">
-            <figcaption>Shaders</figcaption>
+            <figcaption>Editor Utilities</figcaption>
         </a>
     </figure>
     <figure>
@@ -103,6 +103,13 @@ My experience spans from modding existing games to creating original adventures 
         </a>
     </figure>
     <figure>
+        <a href="#" data-navigate="/content/other/shaders/content.md"
+           data-background-video="https://danielnoam.github.io/portfolio/assets/shaders/Dither.mp4">
+            <img src="https://danielnoam.github.io/portfolio/assets/dnextensions/unitylogo.jpg" alt="Editor Utilities">
+            <figcaption>Shaders</figcaption>
+        </a>
+    </figure>
+    <figure>
         <a href="#" data-navigate="/content/games/power-factory/content.md"
            data-background-image="https://danielnoam.github.io/portfolio/assets/power-factory/ordercomplete.gif">
             <img src="https://danielnoam.github.io/portfolio/assets/power-factory/main.png" alt="Power Factory">
@@ -110,17 +117,10 @@ My experience spans from modding existing games to creating original adventures 
         </a>
     </figure>
     <figure>
-        <a href="#" data-navigate="/content/games/bubblerena/content.md"
-           data-background-image="https://danielnoam.github.io/portfolio/assets/bubblerena/poppingbubbles3.gif">
-            <img src="https://danielnoam.github.io/portfolio/assets/bubblerena/main.gif" alt="Bubblerena">
-            <figcaption>Bubblerena</figcaption>
-        </a>
-    </figure>
-    <figure>
-        <a href="#" data-navigate="/content/games/pixel-knight/content.md"
-           data-background-image="https://danielnoam.github.io/portfolio/assets/pixel-knight/gameplay5.gif">
-            <img src="https://danielnoam.github.io/portfolio/assets/pixel-knight/main.gif" alt="Pixel Knight">
-            <figcaption>Pixel Knight</figcaption>
+        <a href="#" data-navigate="/content/other/object-pooling/content.md"
+           data-background-video="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/ObjectPooling.mp4">
+            <img src="https://danielnoam.github.io/portfolio/assets/dnextensions/unitylogo.jpg" alt="Object Pooling System">
+            <figcaption>Object Pooling System</figcaption>
         </a>
     </figure>
 </div>
@@ -132,6 +132,7 @@ My experience spans from modding existing games to creating original adventures 
 
 </div>
 
-<div class="auto-carousel" data-tags="games" data-exclude-tags=""></div>
+
+<div class="auto-carousel" data-tags="unity" data-exclude-tags=""></div>
 
 </div>

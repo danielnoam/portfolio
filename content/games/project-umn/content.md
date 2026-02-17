@@ -1,3 +1,8 @@
+---
+thumbnail: /portfolio/assets/project-umn/main.gif
+shortDescription: A third-person puzzle game where you solve different puzzles with your robot companion.
+tags: [games, unity, pc, "2025", solo, featured]
+---
 <div class="page-content">
 
 # Project UMN

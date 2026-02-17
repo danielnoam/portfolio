@@ -1,3 +1,8 @@
+---
+thumbnail: /portfolio/assets/dnextensions/unitylogo.jpg
+shortDescription: High-performance pooling system eliminating instantiation costs and reducing garbage collection overhead.
+tags: [tool, unity, pc, "2025", solo, featured]
+---
 <div class="page-content">
 
 # Object Pooling

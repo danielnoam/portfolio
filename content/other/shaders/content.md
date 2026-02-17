@@ -1,3 +1,8 @@
+---
+thumbnail: /portfolio/assets/dnextensions/unitylogo.jpg
+shortDescription: Various shaders made in unity for different projects and learning shader graph.
+tags: [tool, unity, pc, "2025", solo, featured]
+---
 <div class="page-content">
 
 # Shaders

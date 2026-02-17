@@ -1,3 +1,8 @@
+---
+thumbnail: /portfolio/assets/dnextensions/unitylogo.jpg
+shortDescription: A collection of Unity editor tools and utilities developed to streamline workflow and solve recurring development challenges.
+tags: [tool, unity, pc, "2025", solo, featured]
+---
 <div class="page-content">
 
 # Utilities
@@ -9,7 +14,7 @@
 <div class="project-card">
 
 ## Overview
-A collection of Unity editor tools and runtime utilities developed to streamline workflow and solve recurring development challenges.
+A collection of Unity editor tools and utilities developed to streamline workflow and solve recurring development challenges.
 
 </div>
 
