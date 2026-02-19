@@ -1,5 +1,5 @@
 ---
-thumbnail: /portfolio/assets/dnextensions/unitylogo.jpg
+thumbnail: /portfolio/assets/dnextensions/objectpooling.jpg
 shortDescription: High-performance pooling system eliminating instantiation costs and reducing garbage collection overhead.
 tags: [tool, unity, pc, "2025", solo, featured]
 ---
@@ -52,9 +52,15 @@ High-performance pooling system eliminating instantiation costs and reducing gar
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/dnextensions/ObjectPooler.png" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/dnextensions/ObjectPooler.png" alt="Object pooler settings">
+        <a href="https://danielnoam.github.io/portfolio/assets/dnextensions/ObjectPoolerSettings.png" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/dnextensions/ObjectPoolerSettings.png" alt="Object pooler settings">
             <figcaption>Object pooler settings</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/dnextensions/ObjectPoolerRuntime.png" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/dnextensions/ObjectPoolerRuntime.png" alt="Object pooler runtime">
+            <figcaption>Object pooler runtime</figcaption>
         </a>
     </figure>
 </div>
