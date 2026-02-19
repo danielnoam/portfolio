@@ -38,7 +38,7 @@ High-performance pooling system eliminating instantiation costs and reducing gar
   </div>
 </div>
 
-<div class="image-gallery gallery">
+<div class="image-gallery gallery-2-columns">
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/dnextensions/ObjectPooling.mp4" target="_blank">
             <video src="https://danielnoam.github.io/portfolio/assets/dnextensions/ObjectPooling.mp4" autoplay loop muted playsinline></video>
