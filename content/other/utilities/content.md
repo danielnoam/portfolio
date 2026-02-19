@@ -16,7 +16,9 @@ tags: [tool, unity, pc, "2025", solo, featured]
 ## Overview
 A collection of Unity editor tools, inspector utilities, and serialization systems built to reduce friction and improve workflow across projects. 
 
-Includes an extensive collection of extension methods for Unity types (Vector2/3, Transform, GameObject, Rigidbody, Color, Camera, String, List and more), serializable field types like SceneField and RangedFloat/RangedInt, Inspector attributes (InfoBox, ReadOnly, Separator, Preview, Foldout, and conditional ShowIf/HideIf/EnableIf/DisableIf), and smaller utilities like Component Dragger, Audio Preview, Better Unity Event, Note Component, and Toolbar Extensions (timescale control, reload assembly, and project shortcut buttons).
+Includes an extensive collection of extension methods for Unity types (Vector2/3, Transform, GameObject, Rigidbody, Color, Camera, String, List and more),
+serializable field types like SceneField and RangedFloat/RangedInt, Inspector attributes (InfoBox, ReadOnly, Separator, Preview, and conditional ShowIf/HideIf/EnableIf/DisableIf), 
+and smaller utilities like Component Dragger, Audio Preview,  Better Transform Editor, Better Unity Event, and Toolbar Extensions (timescale control, reload assembly, and project shortcut buttons).
 
 <div class="image-gallery gallery-2-columns">
     <figure>
@@ -35,6 +37,12 @@ Includes an extensive collection of extension methods for Unity types (Vector2/3
         <a href="https://danielnoam.github.io/portfolio/assets/dnextensions/TimeScaleToolbar.png" target="_blank">
             <img src="https://danielnoam.github.io/portfolio/assets/dnextensions/TimeScaleToolbar.png" alt="Timescale in toolbar">
             <figcaption>Timescale Toolbar</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/dnextensions/BetterTransform.png" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/dnextensions/BetterTransform.png" alt="Better transform">
+            <figcaption>Better Transform</figcaption>
         </a>
     </figure>
 </div>
@@ -59,12 +67,9 @@ Inspired by Unreal Engine's Play From Here feature. Teleports the player to the 
 ### ScriptableObject Editor
 A custom editor window for managing all ScriptableObject assets in the project by type. Supports multi-selection, inline Inspector editing, single and bulk rename with index pattern support, find references across scenes and prefabs, create/duplicate/delete with undo support, name filtering, and persists the last selected type between sessions.
 
-### Better Transform Editor
-Enhanced transform component with reset buttons for individual position, rotation, and scale axes, copy/paste transform values, and snap to grid functionality.
-
-### Button Attribute & ComponentHeaderButton
-Inspector buttons that execute methods with a single click. Supports play mode restrictions, custom height, spacing, and color per button. Project-wide defaults are configurable via Project Settings, with per-button overrides. ComponentHeaderButton adds the same functionality at the component header level.
-
+### Button Attribute
+Inspector buttons that execute methods with a single click. Supports play mode restrictions, custom height, spacing, and color per button. 
+Project-wide defaults are configurable via Project Settings, with per-button overrides.
 
 
 <div class="image-gallery gallery-2-columns">
@@ -84,12 +89,6 @@ Inspector buttons that execute methods with a single click. Supports play mode r
         <a href="https://danielnoam.github.io/portfolio/assets/dnextensions/SaveInPlayMode.mp4" target="_blank">
             <video src="https://danielnoam.github.io/portfolio/assets/dnextensions/SaveInPlayMode.mp4" autoplay loop muted playsinline></video>
             <figcaption>Save In Play Mode</figcaption>
-        </a>
-    </figure>
-    <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/dnextensions/BetterTransform.png" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/dnextensions/BetterTransform.png" alt="Better transform">
-            <figcaption>Better Transform</figcaption>
         </a>
     </figure>
     <figure>
@@ -129,9 +128,6 @@ Renders a referenced ScriptableObject's properties directly inline in the Inspec
 
 ### ChanceList
 Weighted random selection list with automatic probability normalization. Supports generic types, probability locking, and configurable single or multiple selection with duplicates.
-
-### OptionalField&lt;T&gt;
-A serializable wrapper for optional values, similar to C# Nullable. Lets designers toggle fields on or off without requiring code changes, making components more flexible and team-friendly.
 
 
 

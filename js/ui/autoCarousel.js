@@ -18,10 +18,6 @@ export class AutoCarousel {
     }
 
     initialize() {
-        console.log('AutoCarousel initialize called');
-        console.log('Existing carousels:', this.carousels.length);
-
-
         this.carousels.forEach(carousel => carousel.destroy());
         this.carousels = [];
 
