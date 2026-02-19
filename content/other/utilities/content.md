@@ -26,9 +26,15 @@ Includes an extensive collection of extension methods for Unity types (Vector2/3
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/dnextensions/Fields.mp4" target="_blank">
-            <video src="https://danielnoam.github.io/portfolio/assets/dnextensions/Fields.mp4" autoplay loop muted playsinline></video>
+        <a href="https://danielnoam.github.io/portfolio/assets/dnextensions/CustomField.png" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/dnextensions/CustomField.png" alt="Custom fields">
             <figcaption>Custom fields</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/dnextensions/TimeScaleToolbar.png" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/dnextensions/TimeScaleToolbar.png" alt="Timescale in toolbar">
+            <figcaption>Timescale in toolbar</figcaption>
         </a>
     </figure>
 </div>
