@@ -90,6 +90,12 @@ A custom editor window for managing all ScriptableObject assets in the project b
             <figcaption>Save In Play Mode</figcaption>
         </a>
     </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/dnextensions/BetterTransform.png" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/dnextensions/BetterTransform.png" alt="Better transform">
+            <figcaption>Better transform</figcaption>
+        </a>
+    </figure>
 </div>
 
 </div>
@@ -127,19 +133,25 @@ Automatically populates serialized component references using attributes (AutoGe
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/dnextensions/ChanceList.mp4" target="_blank">
             <video src="https://danielnoam.github.io/portfolio/assets/dnextensions/ChanceList.mp4" autoplay loop muted playsinline></video>
-            <figcaption>Chance list</figcaption>
+            <figcaption>Chance List</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/dnextensions/Inline.mp4" target="_blank">
-            <video src="https://danielnoam.github.io/portfolio/assets/dnextensions/Inline.mp4" autoplay loop muted playsinline></video>
+        <a href="https://danielnoam.github.io/portfolio/assets/dnextensions/Inline.png" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/dnextensions/Inline.png" alt="Inline">
             <figcaption>Inline Attribute</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/dnextensions/AutoGet.mp4" target="_blank">
-            <video src="https://danielnoam.github.io/portfolio/assets/dnextensions/AutoGet.mp4" autoplay loop muted playsinline></video>
-            <figcaption>AutoGet</figcaption>
+        <a href="https://danielnoam.github.io/portfolio/assets/dnextensions/AutoGetSettings.png" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/dnextensions/AutoGetSettings.png" alt="Auto get settings window">
+            <figcaption>Auto Get settings window</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/dnextensions/PrefabSelector.png" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/dnextensions/PrefabSelector.png" alt="Prefab selector">
+            <figcaption>Prefab Selector</figcaption>
         </a>
     </figure>
 </div>
