@@ -1,5 +1,5 @@
 ---
-thumbnail: /portfolio/assets/dnextensions/shaderlogo.jpg
+thumbnail: /portfolio/assets/shaders/shaderlogo.jpg
 shortDescription: Various shaders made in unity for different projects and learning shader graph.
 tags: [tool, unity, pc, "2025", solo, featured]
 ---

@@ -1,5 +1,5 @@
 ---
-thumbnail: /portfolio/assets/dnextensions/unitylogo.jpg
+thumbnail: /portfolio/assets/dnextensions/vfxlogo.jpg
 shortDescription: Visual effects system managing post-processing, UI transitions, and scene loading with seamless continuity.
 tags: [tool, unity, pc, "2025", solo]
 ---
