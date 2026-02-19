@@ -2,6 +2,14 @@
             AUTO CAROUSEL MODULE
 ================================================*/
 
+function debounce(fn, delay) {
+    let timer;
+    return (...args) => {
+        clearTimeout(timer);
+        timer = setTimeout(() => fn(...args), delay);
+    };
+}
+
 export class AutoCarousel {
     constructor(config, contentManager) {
         this.config = config;
@@ -12,8 +20,8 @@ export class AutoCarousel {
     initialize() {
         console.log('AutoCarousel initialize called');
         console.log('Existing carousels:', this.carousels.length);
-        
-        
+
+
         this.carousels.forEach(carousel => carousel.destroy());
         this.carousels = [];
 
@@ -21,7 +29,7 @@ export class AutoCarousel {
 
         carouselContainers.forEach(container => {
             container.innerHTML = '';
-            
+
             const includeTags = this.parseTags(container.dataset.tags);
             const excludeTags = this.parseTags(container.dataset.excludeTags);
 
@@ -142,10 +150,13 @@ class ProjectCarousel {
             if (this.autoPlay) this.startAutoPlay();
         });
 
-        // Listen for transition end to handle seamless loop
         this.track.addEventListener('transitionend', () => {
             this.handleInfiniteLoop();
         });
+
+        const onResize = debounce(() => this.updateCarousel(false), 100);
+        this.resizeObserver = new ResizeObserver(onResize);
+        this.resizeObserver.observe(this.element);
     }
 
     setupDots() {
@@ -307,12 +318,9 @@ class ProjectCarousel {
     startAutoPlay() {
         this.stopAutoPlay();
         this.autoPlayInterval = setInterval(() => {
-            // Calculate next index
             let nextIndex = this.currentIndex + 1;
 
-            // If next would be a clone, map to real item
             if (nextIndex >= this.items.length - this.cloneCount) {
-                // Would hit end clone, go to first real item
                 nextIndex = this.cloneCount;
             }
 
@@ -329,5 +337,6 @@ class ProjectCarousel {
 
     destroy() {
         this.stopAutoPlay();
+        if (this.resizeObserver) this.resizeObserver.disconnect();
     }
 }
