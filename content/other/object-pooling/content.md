@@ -1,7 +1,7 @@
 ---
 thumbnail: /portfolio/assets/dnextensions/objectpooling.jpg
 shortDescription: High-performance pooling system eliminating instantiation costs and reducing garbage collection overhead.
-tags: [tool, unity, pc, "2025", solo, featured]
+tags: [tool, unity, pc, "2025", solo]
 ---
 <div class="page-content">
 

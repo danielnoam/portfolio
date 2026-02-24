@@ -59,7 +59,7 @@ My experience spans from modding existing games to creating original adventures 
 
 <div class="content-right">
 
-<div class="image-gallery no-lightbox">
+<div class="image-gallery gallery-2-columns no-lightbox">
     <figure>
         <a href="#" data-navigate="/content/games/electro-grid/content.md"
            data-background-video="https://danielnoam.github.io/portfolio/assets/electro-grid/GameplaySquareStar.mp4">
@@ -96,31 +96,10 @@ My experience spans from modding existing games to creating original adventures 
         </a>
     </figure>
     <figure>
-        <a href="#" data-navigate="/content/games/power-factory/content.md"
-           data-background-image="https://danielnoam.github.io/portfolio/assets/power-factory/ordercomplete.gif">
-            <img src="https://danielnoam.github.io/portfolio/assets/power-factory/main.png" alt="Power Factory">
-            <figcaption>Power Factory</figcaption>
-        </a>
-    </figure>
-    <figure>
         <a href="#" data-navigate="/content/other/shaders/content.md"
            data-background-video="https://danielnoam.github.io/portfolio/assets/shaders/Dither.mp4">
             <img src="https://danielnoam.github.io/portfolio/assets/shaders/shaderlogo.jpg" alt="Shaders">
             <figcaption>Shaders</figcaption>
-        </a>
-    </figure>
-    <figure>
-        <a href="#" data-navigate="/content/other/object-pooling/content.md"
-           data-background-video="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/ObjectPooling.mp4">
-            <img src="https://danielnoam.github.io/portfolio/assets/dnextensions/objectpooling.jpg" alt="Object Pooling">
-            <figcaption>Object Pooling</figcaption>
-        </a>
-    </figure>
-    <figure>
-        <a href="#" data-navigate="/content/games/controller-rumble/content.md"
-           data-background-video="https://danielnoam.github.io/portfolio/assets/dnextensions/MultipleSources.mp4">
-            <img src="https://danielnoam.github.io/portfolio/assets/dnextensions/controllerrumblelogo.jpg" alt="Controller Rumble">
-            <figcaption>Controller Rumble</figcaption>
         </a>
     </figure>
 </div>

@@ -1,7 +1,7 @@
 ---
 thumbnail: /portfolio/assets/dnextensions/controllerrumblelogo.jpg
 shortDescription: Rumble system featuring 3D spatial positioning and advanced effect management for precise controller vibration control.
-tags: [tool, unity, pc, "2025", solo, featured]
+tags: [tool, unity, pc, "2025", solo]
 ---
 <div class="page-content">
 
