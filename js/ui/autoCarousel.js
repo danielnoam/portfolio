@@ -46,7 +46,9 @@ export class AutoCarousel {
     }
 
     buildCarousel(container, projects) {
+        const title = container.dataset.title;
         container.innerHTML = `
+        ${title ? `<h2 class="carousel-heading">${title}</h2>` : ''}
         <div class="carousel project-auto-carousel">
             <div class="carousel-track">
                 ${projects.map(project => this.createProjectCard(project)).join('')}
@@ -54,7 +56,7 @@ export class AutoCarousel {
         </div>
     `;
 
-        const carouselElement = container.firstElementChild;
+        const carouselElement = container.querySelector('.carousel');
         const carousel = new ProjectCarousel(carouselElement, this.config, projects);
         this.carousels.push(carousel);
     }
@@ -168,7 +170,10 @@ class ProjectCarousel {
             const dot = document.createElement('button');
             dot.className = 'carousel-dot';
             dot.setAttribute('aria-label', `Go to slide ${index + 1}`);
-            dot.addEventListener('click', () => this.goTo(index + this.cloneCount));
+            dot.addEventListener('click', () => {
+                this.goTo(index + this.cloneCount);
+                this.resetAutoPlay();
+            });
             dotsContainer.appendChild(dot);
         });
 
@@ -196,6 +201,7 @@ class ProjectCarousel {
             } else {
                 this.prev();
             }
+            this.resetAutoPlay();
         }
     }
 
@@ -334,5 +340,12 @@ class ProjectCarousel {
     destroy() {
         this.stopAutoPlay();
         if (this.resizeObserver) this.resizeObserver.disconnect();
+    }
+
+    resetAutoPlay() {
+        if (this.autoPlay) {
+            this.stopAutoPlay();
+            this.startAutoPlay();
+        }
     }
 }

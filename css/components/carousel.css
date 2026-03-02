@@ -7,7 +7,7 @@
     max-width: 1100px;
     margin: var(--space-6) auto;
     overflow: hidden;
-    padding: var(--space-3) 0;
+    padding: var(--space-1) 0;
     width: 100%;
 }
 
@@ -84,7 +84,7 @@
     transform: scale(1.02);
 }
 
-/* Caption - only visible on active item */
+/* Caption */
 .carousel figcaption {
     position: static;
     transform: none;
@@ -150,6 +150,14 @@
     opacity: 1;
 }
 
+/* Header */
+
+.carousel-heading {
+    font-size: var(--text-3xl);
+    color: var(--subheading-color);
+    font-weight: var(--weight-verybold);
+    text-align: center;
+}
 /* Responsive */
 
 @media (max-width: 1400px) {
