@@ -11,10 +11,6 @@ tags: [games, unity, pc, "2024", solo]
 <img src="https://danielnoam.github.io/portfolio/assets/school-these-shits/main.png" alt="Game Screenshot" class="page-logo">
 
 
-<div class="button-group horizontal">
-    <a href="https://github.com/danielnoam/DNExtensions" target="_blank" class="button">Github</a>
-</div>
-
 <div class="project-card">
     
 ## Overview
