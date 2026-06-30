@@ -46,7 +46,7 @@ export class Router {
             return true;
         }
 
-        const pageMatch = redirectPath.match(/\/portfolio\/([^\/]+)$/);
+        const pageMatch = redirectPath.match(new RegExp(`^${this.config.baseUrl}/([^/]+)$`));
         if (pageMatch) {
             const pageName = pageMatch[1];
             const foundPath = this.findContentPath(pageName);
@@ -72,7 +72,7 @@ export class Router {
 
     async loadFromPath(currentPath) {
         const aboutMatch = currentPath === `${this.config.baseUrl}/about`;
-        const pageMatch = currentPath.match(/\/portfolio\/([^\/]+)$/);
+        const pageMatch = currentPath.match(new RegExp(`^${this.config.baseUrl}/([^/]+)$`));
 
         if (aboutMatch) {
             await this.loadDefault();

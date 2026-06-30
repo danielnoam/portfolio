@@ -5,14 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redirecting...</title>
     <script>
-        // Get the current path excluding the '/portfolio' prefix
-        let path = window.location.pathname;
+        // Derive the project-page prefix from the current location (the repo
+        // name is the first path segment), so this file isn't coupled to it.
+        var base = '/' + (window.location.pathname.split('/')[1] || '');
 
-        // Store the current path in localStorage so the main page can access it
-        localStorage.setItem('redirectPath', path);
+        // Store the requested path so the main page's router can restore it.
+        localStorage.setItem('redirectPath', window.location.pathname);
 
-        // Redirect to the main page
-        window.location.href = '/portfolio/';
+        // Redirect to the app root.
+        window.location.replace(base + '/');
     </script>
 </head>
 <body>

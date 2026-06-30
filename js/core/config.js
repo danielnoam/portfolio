@@ -2,12 +2,16 @@
                 CONFIGURATION
 ================================================*/
 
+// The single source of truth for the project-page prefix. The repo name
+// should appear here and nowhere else — everything else derives from it.
+const BASE_URL = '/portfolio';
+
 const CONFIG = {
     // Base URL for the site
-    baseUrl: '/portfolio',
+    baseUrl: BASE_URL,
 
-    // Default content path
-    defaultPath: '/portfolio/content/about/content.md',
+    // Default content path (derived from baseUrl)
+    defaultPath: `${BASE_URL}/content/about/content.md`,
 
     // Site title
     siteTitle: 'Daniel Noam - Portfolio',
