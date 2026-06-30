@@ -49,7 +49,10 @@ the `actions/deploy-pages` flow) and out of scope here.
    `main`: do the work, verify locally (step 7), bump the version +
    changelog (step 6), commit, and `git push origin main`. No PR, no
    `gh-pages` branch, no merge dance. (Use a short-lived branch only if
-   you genuinely want a review first, then merge to `main` to publish.)
+   you genuinely want a review first, then merge to `main` to publish —
+   and **always delete that feature branch afterward**, local and remote
+   (`git branch -d <branch> && git push origin --delete <branch>`), so the
+   repo doesn't accumulate stale merged branches.)
 
 ## 3. Get the base path right — the #1 source of breakage
 
