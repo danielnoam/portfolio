@@ -55,6 +55,7 @@ class PortfolioApp {
         this.modules.navigation.buildBottomNavigation();
 
         // Initialize UI
+        this.modules.ui.renderVersion();
         this.modules.ui.initMobileMenu();
         this.modules.theme.init();
         this.modules.ui.initScrollToTop();

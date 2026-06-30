@@ -369,3 +369,20 @@ nav h2.foldout-header.open .foldout-arrow {
     height: 42px;
     font-size: var(--text-xl);
 }
+
+/*==============================================
+            VERSION MARKER
+================================================*/
+
+/* Visible deploy smoke signal — pinned at the bottom of the sidebar */
+.version-marker {
+    flex-shrink: 0;
+    margin-top: var(--space-3);
+    padding-top: var(--space-2);
+    text-align: center;
+    font-size: var(--text-xs, 0.75rem);
+    letter-spacing: var(--tracking-wide);
+    color: var(--text-secondary);
+    opacity: var(--opacity-70);
+    user-select: none;
+}

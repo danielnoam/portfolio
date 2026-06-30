@@ -59,6 +59,24 @@ export class UIManager {
         }
     }
 
+    renderVersion() {
+        const sidebar = document.querySelector('.sidebar');
+        if (!sidebar || !this.config.version) return;
+
+        // Keep idempotent in case this runs more than once
+        let marker = document.getElementById('version-marker');
+        if (!marker) {
+            marker = document.createElement('div');
+            marker.id = 'version-marker';
+            marker.className = 'version-marker';
+        }
+
+        marker.textContent = `v${this.config.version}`;
+
+        // Always keep it as the last element in the sidebar
+        sidebar.appendChild(marker);
+    }
+
     applyVisibilitySettings() {
         const { showUrls, showTopBar, showThemeToggle } = this.config.uiSettings;
 

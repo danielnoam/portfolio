@@ -7,6 +7,11 @@
 const BASE_URL = '/portfolio';
 
 const CONFIG = {
+    // Single source of truth for the site version. Bump on every deploy
+    // (semver) and keep CHANGELOG.md's top entry in sync. Rendered at the
+    // bottom of the sidebar as the visible "did my deploy land?" marker.
+    version: '1.0.0',
+
     // Base URL for the site
     baseUrl: BASE_URL,
 
