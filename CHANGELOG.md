@@ -7,6 +7,13 @@ and the project adheres to [Semantic Versioning](https://semver.org/).
 The top entry below must always match the `version` constant in
 `js/core/config.js`, which is rendered at the bottom of the sidebar.
 
+## [1.2.2] - 2026-07-01
+
+### Changed
+
+- Set the bottom static nav links (Archived) in their own divider-separated
+  group so they no longer read as part of the last section above them.
+
 ## [1.2.1] - 2026-07-01
 
 ### Changed

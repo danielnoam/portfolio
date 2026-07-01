@@ -145,10 +145,17 @@ export class NavigationManager {
             }
         }
 
-        // Static content links pinned to the end of the nav list
-        (this.config.navigation.staticLinksBottom || []).forEach(linkConfig => {
-            nav.appendChild(this._createStaticLink(linkConfig, onClickHandler));
-        });
+        // Static content links pinned to the end of the nav list, in their own
+        // divider-separated group so they don't read as part of the last section.
+        const bottomStatic = this.config.navigation.staticLinksBottom || [];
+        if (bottomStatic.length > 0) {
+            const group = document.createElement('div');
+            group.className = 'nav-bottom-links';
+            bottomStatic.forEach(linkConfig => {
+                group.appendChild(this._createStaticLink(linkConfig, onClickHandler));
+            });
+            nav.appendChild(group);
+        }
     }
 
     _createStaticLink(linkConfig, onClickHandler) {

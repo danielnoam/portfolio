@@ -137,6 +137,17 @@ nav a:not([target="_blank"]).active::before {
     }
 }
 
+/* Standalone content links pinned below the sections (e.g. Archived) —
+   set off with a divider so they don't read as part of the last section. */
+.sidebar #main-nav .nav-bottom-links {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+    margin-top: var(--space-5);
+    padding-top: var(--space-5);
+    border-top: 2px solid var(--card-bg);
+}
+
 .bottom-nav {
     position: static;
     display: flex;
