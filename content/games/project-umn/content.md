@@ -39,7 +39,7 @@ Players control an entity alongside a companion through a series of minimalist s
 - Versatile camera system that switches between exploration mode with a free-orbiting view and a focused over-the-shoulder perspective for precise interactions.
 
 
-<div class="image-gallery">
+<div class="showcase" data-layout="grid">
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/project-umn/player.mp4" target="_blank">
             <video src="https://danielnoam.github.io/portfolio/assets/project-umn/player.mp4" autoplay loop muted playsinline></video>
@@ -63,7 +63,7 @@ Players control an entity alongside a companion through a series of minimalist s
 - Environmental reveal mechanics that allow the robot to uncover hidden pathways.
 
 
-<div class="image-gallery">
+<div class="showcase" data-layout="grid">
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/project-umn/robot1.gif" target="_blank">
             <img src="https://danielnoam.github.io/portfolio/assets/project-umn/robot1.gif" alt="Robot Movement">
@@ -92,7 +92,7 @@ Players control an entity alongside a companion through a series of minimalist s
 - Test chambers that build themselves through animated sequences, creating dramatic scene changes and reinforcing the artificial testing environment.
 
 
-<div class="image-gallery">
+<div class="showcase" data-layout="grid">
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/project-umn/world1.gif" target="_blank">
             <img src="https://danielnoam.github.io/portfolio/assets/project-umn/world1.gif" alt="Dynamic Stairs">

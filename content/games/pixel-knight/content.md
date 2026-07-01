@@ -31,7 +31,7 @@ tags: [games, gamemaker, "2016", pc, solo]
 
 ## Gallery
 
-<div class="image-gallery gallery-2-columns">
+<div class="showcase" data-layout="grid" data-columns="2">
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/pixel-knight/gameplay1.png" target="_blank">
             <img src="https://danielnoam.github.io/portfolio/assets/pixel-knight/gameplay1.png" alt="Campfire">

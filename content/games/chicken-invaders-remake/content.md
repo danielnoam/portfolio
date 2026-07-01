@@ -63,7 +63,7 @@ Our goal was to recreate the original game's idea with modern visuals and reimag
   </div>
 </div>
 
-<div class="image-gallery gallery-2-columns">
+<div class="showcase" data-layout="grid" data-columns="2">
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/PlayerAndCameraGif.gif" target="_blank">
             <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/PlayerAndCameraGif.gif" alt="Player Movement">
@@ -96,7 +96,7 @@ Our goal was to recreate the original game's idea with modern visuals and reimag
 - Created a camera shake system with easily configurable intensity and duration
 - Implemented multiple camera setups for different sections with seamless transitions (intro, gameplay, shop, outro, passing through obstacles)
 
-<div class="image-gallery">
+<div class="showcase" data-layout="grid">
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/introcamera.gif" target="_blank">
             <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/introcamera.gif" alt="Intro camera">
@@ -137,7 +137,7 @@ Our goal was to recreate the original game's idea with modern visuals and reimag
 </div>
 
 
-<div class="image-gallery">
+<div class="showcase" data-layout="grid">
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/ObstaclesStageGif.gif" target="_blank">
             <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/ObstaclesStageGif.gif" alt="Obstacles stage">
@@ -182,7 +182,7 @@ Our goal was to recreate the original game's idea with modern visuals and reimag
   </div>
 </div>
 
-<div class="image-gallery">
+<div class="showcase" data-layout="grid">
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/MainMenu.mp4" target="_blank">
             <video src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/MainMenu.mp4" autoplay loop muted playsinline></video>
@@ -247,7 +247,7 @@ Our goal was to recreate the original game's idea with modern visuals and reimag
   </div>
 </div>
 
-<div class="image-gallery">
+<div class="showcase" data-layout="grid">
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/StoreGif.gif" target="_blank">
             <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/StoreGif.gif" alt="Store interface">
@@ -283,7 +283,7 @@ Our goal was to recreate the original game's idea with modern visuals and reimag
   </div>
 </div>
 
-<div class="image-gallery">
+<div class="showcase" data-layout="grid">
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/controllerUI.gif" target="_blank">
             <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/controllerUI.gif" alt="Button prompts">
@@ -305,7 +305,7 @@ Our goal was to recreate the original game's idea with modern visuals and reimag
 - Implemented centralized pooling system for projectiles, audio effects, enemies, and visual effects
 - Allows pre warming each pool before gameplay to minimize runtime instantiation overhead
 
-<div class="image-gallery">
+<div class="showcase" data-layout="grid">
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/ObjectPooling.mp4" target="_blank">
             <video src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/ObjectPooling.mp4" autoplay loop muted playsinline></video>
@@ -335,7 +335,7 @@ Our goal was to recreate the original game's idea with modern visuals and reimag
   </div>
 </div>
 
-<div class="image-gallery">
+<div class="showcase" data-layout="grid">
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/CustomEditorGif.gif" target="_blank">
             <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/CustomEditorGif.gif" alt="Custom Editor Tools">
@@ -361,7 +361,7 @@ Our goal was to recreate the original game's idea with modern visuals and reimag
 - Created story, dialogue
 - Made intro/credits sequences using timeline and cinemachine
 
-<div class="image-gallery">
+<div class="showcase" data-layout="grid">
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/intro.mp4" target="_blank">
             <video src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/intro.mp4" autoplay loop muted playsinline></video>
@@ -382,7 +382,7 @@ Our goal was to recreate the original game's idea with modern visuals and reimag
 
 - Created dither shader for level boundaries that fade in as player approaches using distance-based transparency
 
-<div class="image-gallery">
+<div class="showcase" data-layout="grid">
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/boundaryshader.gif" target="_blank">
             <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/boundaryshader.gif" alt="Boundary Shader">
@@ -449,7 +449,7 @@ Our goal was to recreate the original game's idea with modern visuals and reimag
 <div class="project-card">
 
 ## Gallery
-<div class="image-gallery">
+<div class="showcase" data-layout="grid">
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/Gameplay1.mp4" target="_blank">
             <video src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/Gameplay1.mp4" autoplay loop muted playsinline></video>

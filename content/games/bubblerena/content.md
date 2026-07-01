@@ -40,7 +40,7 @@ Players need to run, jump, dash, and shoot colored bubbles from their gun to cre
 
 ## Gallery
 
-<div class="image-gallery">
+<div class="showcase" data-layout="grid">
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/bubblerena/dash.gif" target="_blank">
             <img src="https://danielnoam.github.io/portfolio/assets/bubblerena/dash.gif" alt="Dashing">

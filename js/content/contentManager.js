@@ -127,8 +127,8 @@ export class ContentManager {
             this.contentElement.innerHTML = marked.parse(markdownContent);
             this.contentElement.classList.remove('loading');
 
-            if (window.portfolioApp && window.portfolioApp.modules.autoCarousel) {
-                window.portfolioApp.modules.autoCarousel.initialize();
+            if (window.portfolioApp && window.portfolioApp.modules.showcase) {
+                window.portfolioApp.modules.showcase.initialize();
             }
 
             setTimeout(() => {

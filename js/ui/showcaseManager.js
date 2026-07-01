@@ -1,5 +1,19 @@
 /*==============================================
-            AUTO CAROUSEL MODULE
+            SHOWCASE MANAGER MODULE
+
+    One component that renders either a GRID or a
+    CAROUSEL, populated from either inline <figure>
+    media or a tag-filtered project list.
+
+    Layout:  data-layout="grid" | "carousel"
+    Source:  inferred — a data-tags/data-exclude-tags
+             attribute means "generate project items";
+             otherwise the authored inline <figure>s are used.
+    Click:   follows the item type — media opens the
+             lightbox, projects navigate to their page.
+
+    Legacy .image-gallery (grid+media) and .auto-carousel
+    (carousel+projects) are still recognised as aliases.
 ================================================*/
 
 function debounce(fn, delay) {
@@ -10,34 +24,56 @@ function debounce(fn, delay) {
     };
 }
 
-export class AutoCarousel {
-    constructor(config, contentManager) {
+export class ShowcaseManager {
+    constructor(config, contentManager, lightbox) {
         this.config = config;
         this.contentManager = contentManager;
+        this.lightbox = lightbox;
         this.carousels = [];
     }
 
     initialize() {
+        // Tear down carousels from the previous page (intervals, observers)
         this.carousels.forEach(carousel => carousel.destroy());
         this.carousels = [];
 
-        const carouselContainers = document.querySelectorAll('.auto-carousel');
+        document
+            .querySelectorAll('.showcase, .image-gallery, .auto-carousel')
+            .forEach(container => this.build(container));
+    }
 
-        carouselContainers.forEach(container => {
-            container.innerHTML = '';
+    build(container) {
+        const layout = this.getLayout(container);
 
-            const includeTags = this.parseTags(container.dataset.tags);
-            const excludeTags = this.parseTags(container.dataset.excludeTags);
+        // Generated (tag-driven) vs authored (inline figures)
+        const generated = container.hasAttribute('data-tags') ||
+            container.hasAttribute('data-exclude-tags');
 
-            const filteredProjects = this.contentManager.filterProjectsByTags(includeTags, excludeTags);
-
-            if (filteredProjects.length === 0) {
+        let generatedFigures = null;
+        if (generated) {
+            const include = this.parseTags(container.dataset.tags);
+            const exclude = this.parseTags(container.dataset.excludeTags);
+            const projects = this.contentManager.filterProjectsByTags(include, exclude);
+            if (projects.length === 0) {
                 container.style.display = 'none';
                 return;
             }
+            generatedFigures = projects
+                .map(project => this.projectFigure(project, layout))
+                .join('');
+        }
 
-            this.buildCarousel(container, filteredProjects);
-        });
+        if (layout === 'carousel') {
+            this.renderCarousel(container, generatedFigures);
+        } else {
+            this.renderGrid(container, generatedFigures);
+        }
+    }
+
+    getLayout(container) {
+        if (container.dataset.layout) return container.dataset.layout;
+        // Legacy alias: .auto-carousel -> carousel, everything else -> grid
+        return container.classList.contains('auto-carousel') ? 'carousel' : 'grid';
     }
 
     parseTags(tagString) {
@@ -45,39 +81,82 @@ export class AutoCarousel {
         return tagString.split(',').map(tag => tag.trim()).filter(tag => tag.length > 0);
     }
 
-    buildCarousel(container, projects) {
-        const title = container.dataset.title;
-        container.innerHTML = `
-        ${title ? `<h2 class="carousel-heading">${title}</h2>` : ''}
-        <div class="carousel project-auto-carousel">
-            <div class="carousel-track">
-                ${projects.map(project => this.createProjectCard(project)).join('')}
-            </div>
-        </div>
-    `;
-
-        const carouselElement = container.querySelector('.carousel');
-        const carousel = new ProjectCarousel(carouselElement, this.config, projects);
-        this.carousels.push(carousel);
-    }
-
-    createProjectCard(project) {
-        return `
+    // A project item. Grid -> a navigable thumbnail; carousel -> a rich card.
+    projectFigure(project, layout) {
+        if (layout === 'carousel') {
+            return `
             <figure data-project="${project.id}" data-folder="${project.folder}">
                 <img src="${project.thumbnail}" alt="${project.title}">
                 <figcaption>
                     <h3>${project.title}</h3>
                     <p>${project.shortDescription}</p>
                 </figcaption>
-            </figure>
+            </figure>`;
+        }
+        return `
+        <figure>
+            <a href="#" data-navigate="/${project.folder}/content.md">
+                <img src="${project.thumbnail}" alt="${project.title}">
+                <figcaption>${project.title}</figcaption>
+            </a>
+        </figure>`;
+    }
+
+    renderGrid(container, generatedFigures) {
+        container.classList.add('showcase');
+        container.setAttribute('data-layout', 'grid');
+        // `image-gallery` is the shared CSS style-hook for a figure grid
+        // (defined in css/components/gallery.css); reused here so a showcase
+        // grid gets the same layout/hover/loading styling as a legacy gallery.
+        container.classList.add('image-gallery');
+
+        const columns = container.dataset.columns;
+        if (columns) container.style.setProperty('--gallery-columns', columns);
+
+        // Authored galleries keep their inline figures; generated grids inject theirs.
+        if (generatedFigures !== null) container.innerHTML = generatedFigures;
+
+        // Lightbox wiring for media figures is handled centrally by
+        // LightboxManager.setupGalleryImages(); project figures (data-navigate)
+        // are skipped there and navigate via the global click handler.
+    }
+
+    renderCarousel(container, generatedFigures) {
+        const title = container.dataset.title;
+
+        // For authored media carousels, capture the inline figures before we
+        // overwrite the container with the carousel scaffold.
+        const figuresHTML = generatedFigures !== null
+            ? generatedFigures
+            : Array.from(container.querySelectorAll(':scope > figure'))
+                .map(figure => figure.outerHTML).join('');
+
+        container.classList.add('showcase');
+        container.setAttribute('data-layout', 'carousel');
+        container.innerHTML = `
+            ${title ? `<h2 class="carousel-heading">${title}</h2>` : ''}
+            <div class="carousel">
+                <div class="carousel-track">${figuresHTML}</div>
+            </div>
         `;
+
+        const carouselElement = container.querySelector('.carousel');
+        this.carousels.push(new Carousel(carouselElement, this.config, this.lightbox));
     }
 }
-class ProjectCarousel {
-    constructor(element, config, projects) {
+
+/*==============================================
+            CAROUSEL (rotating strip)
+
+    Works over any <figure>s in .carousel-track.
+    On the active item: a project figure (data-folder)
+    navigates; a media figure (<a href>) opens the lightbox.
+================================================*/
+class Carousel {
+    constructor(element, config, lightbox) {
         this.element = element;
         this.config = config;
-        this.projects = projects;
+        this.lightbox = lightbox;
         this.track = element.querySelector('.carousel-track');
         this.originalItems = Array.from(element.querySelectorAll('figure'));
         this.currentIndex = 0;
@@ -86,26 +165,32 @@ class ProjectCarousel {
         this.touchEndX = 0;
         this.isTransitioning = false;
 
-        this.interval = 3000; // seconds
+        this.interval = 3000; // ms
         this.autoPlay = true;
 
-        // Clone items for infinite effect
-        this.cloneCount = 3; // Number of clones on each side
+        // Media items -> lightbox set, aligned 1:1 with originalItems.
+        this.images = this.originalItems.map(figure => {
+            const link = figure.querySelector('a[href]');
+            return link ? {
+                src: link.getAttribute('href'),
+                caption: figure.querySelector('figcaption')?.textContent || ''
+            } : null;
+        });
+
+        // Clone items for the infinite-loop effect
+        this.cloneCount = 3;
         this.createInfiniteLoop();
 
         this.items = Array.from(this.track.querySelectorAll('figure'));
-        this.currentIndex = this.cloneCount; // Start at first real item
+        this.currentIndex = this.cloneCount; // start at first real item
 
         this.initialize();
     }
 
     createInfiniteLoop() {
         const figures = Array.from(this.track.querySelectorAll('figure'));
-
-        // If we don't have enough items for cloning, reduce clone count
         const actualCloneCount = Math.min(this.cloneCount, figures.length);
 
-        // Clone last few items and prepend (in correct order)
         const lastClones = [];
         for (let i = figures.length - actualCloneCount; i < figures.length; i++) {
             const clone = figures[i].cloneNode(true);
@@ -116,14 +201,12 @@ class ProjectCarousel {
             this.track.insertBefore(clone, this.track.firstChild);
         });
 
-        // Clone first few items and append
         for (let i = 0; i < actualCloneCount; i++) {
             const clone = figures[i].cloneNode(true);
             clone.classList.add('clone');
             this.track.appendChild(clone);
         }
 
-        // Update clone count for positioning calculations
         this.cloneCount = actualCloneCount;
     }
 
@@ -165,7 +248,6 @@ class ProjectCarousel {
         const dotsContainer = document.createElement('div');
         dotsContainer.className = 'carousel-dots';
 
-        // Only create dots for original items, not clones
         this.originalItems.forEach((_, index) => {
             const dot = document.createElement('button');
             dot.className = 'carousel-dot';
@@ -207,38 +289,49 @@ class ProjectCarousel {
 
     setupClickHandlers() {
         this.items.forEach((item, index) => {
+            // Clicking an inactive item brings it to the centre.
             item.addEventListener('click', (e) => {
                 if (!item.classList.contains('active')) {
                     e.preventDefault();
                     e.stopPropagation();
 
-                    // Map clone index to real item index
                     let targetIndex = index;
                     if (index < this.cloneCount) {
-                        // Clicked on start clone, map to real item at end
                         targetIndex = this.items.length - this.cloneCount - (this.cloneCount - index);
                     } else if (index >= this.items.length - this.cloneCount) {
-                        // Clicked on end clone, map to real item at start
                         targetIndex = this.cloneCount + (index - (this.items.length - this.cloneCount));
                     }
 
                     this.goTo(targetIndex);
-                    return;
                 }
             });
 
-            const img = item.querySelector('img');
-            if (img) {
-                img.addEventListener('click', (e) => {
-                    if (item.classList.contains('active')) {
-                        e.stopPropagation();
-                        const folder = item.dataset.folder;
-                        const path = `${this.config.baseUrl}/${folder}/content.md`;
-                        window.handleNavigationClick(path, null);
-                    }
+            // Clicking the active item acts on its type.
+            const target = item.querySelector('a') || item.querySelector('img');
+            if (target) {
+                target.addEventListener('click', (e) => {
+                    if (!item.classList.contains('active')) return;
+                    e.preventDefault();
+                    e.stopPropagation();
+                    this.activate(item, index);
                 });
             }
         });
+    }
+
+    activate(item, index) {
+        if (item.dataset.folder) {
+            // Project item -> navigate to its page
+            const path = `${this.config.baseUrl}/${item.dataset.folder}/content.md`;
+            window.handleNavigationClick(path, null);
+            return;
+        }
+        // Media item -> open the lightbox at the matching original index
+        if (this.lightbox) {
+            const realIndex = (index - this.cloneCount + this.originalItems.length) % this.originalItems.length;
+            const images = this.images.filter(Boolean);
+            if (images.length) this.lightbox.open(realIndex, images);
+        }
     }
 
     updateCarousel(useTransition = true) {
@@ -267,7 +360,6 @@ class ProjectCarousel {
             }
         });
 
-        // Update dots (map current index to original item)
         const dots = this.element.querySelectorAll('.carousel-dot');
         const realIndex = (this.currentIndex - this.cloneCount + this.originalItems.length) % this.originalItems.length;
         dots.forEach((dot, index) => {
@@ -283,20 +375,16 @@ class ProjectCarousel {
         this.track.style.transform = `translateX(${offset}px)`;
 
         if (!useTransition) {
-            // Force reflow
-            this.track.offsetHeight;
+            this.track.offsetHeight; // force reflow
             this.track.style.transition = '';
         }
     }
 
     handleInfiniteLoop() {
-        // If we're at a clone, jump to the real item without transition
         if (this.currentIndex < this.cloneCount) {
-            // At start clones, jump to end
             this.currentIndex = this.items.length - this.cloneCount - (this.cloneCount - this.currentIndex);
             this.updateCarousel(false);
         } else if (this.currentIndex >= this.items.length - this.cloneCount) {
-            // At end clones, jump to start
             this.currentIndex = this.cloneCount + (this.currentIndex - (this.items.length - this.cloneCount));
             this.updateCarousel(false);
         }

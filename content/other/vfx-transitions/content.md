@@ -25,7 +25,7 @@ Visual effects system managing post-processing, UI transitions, and scene loadin
 - Automatic cleanup and reset functionality
 
 
-<div class="image-gallery gallery">
+<div class="showcase" data-layout="grid">
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/dnextensions/MultipleEffects.mp4" target="_blank">
             <video src="https://danielnoam.github.io/portfolio/assets/dnextensions/MultipleEffects.mp4" autoplay loop muted playsinline></video>

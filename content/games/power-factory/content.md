@@ -36,7 +36,7 @@ Players pick up numbered packages and throw them into power machines (x², x⁴)
 
 ## Gallery
 
-<div class="image-gallery">
+<div class="showcase" data-layout="grid">
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/power-factory/recyclemachine.gif" target="_blank">
             <img src="https://danielnoam.github.io/portfolio/assets/power-factory/recyclemachine.gif" alt="Recycle Machine">

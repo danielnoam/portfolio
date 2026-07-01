@@ -7,7 +7,7 @@ import { ThemeManager } from './ui/themeManager.js';
 import { UIManager } from './ui/uiManager.js';
 import { AnimationManager } from './effects/animationManager.js';
 import { Router } from './core/router.js';
-import { AutoCarousel } from './ui/autoCarousel.js';
+import { ShowcaseManager } from './ui/showcaseManager.js';
 import { LightboxManager } from './ui/lightboxManager.js';
 import { BackgroundManager } from './effects/backgroundManager.js';
 import { LogoManager } from './effects/logoManager.js';
@@ -33,8 +33,12 @@ class PortfolioApp {
         this.modules.theme = new ThemeManager();
         this.modules.ui = new UIManager(this.config);
         this.modules.animation = new AnimationManager();
-        this.modules.autoCarousel = new AutoCarousel(this.config, this.modules.content);
         this.modules.lightbox = new LightboxManager();
+        this.modules.showcase = new ShowcaseManager(
+            this.config,
+            this.modules.content,
+            this.modules.lightbox
+        );
         this.modules.logo = new LogoManager();
         this.modules.typewriter = new TypewriterManager();
         this.modules.codeShowcase = new CodeShowcaseManager();

@@ -51,58 +51,69 @@ export class LightboxManager {
     }
 
     setupGalleryImages() {
-        const galleryLinks = document.querySelectorAll('.image-gallery figure a');
-        const galleryImages = Array.from(galleryLinks).map(link => ({
-            src: link.getAttribute('href'),
-            caption: link.querySelector('figcaption')?.textContent || ''
-        }));
+        // Grid showcases (and the legacy .image-gallery). Each gallery gets its
+        // own lightbox set; project items (a[data-navigate]) are skipped — they
+        // navigate instead of opening the lightbox.
+        const galleries = document.querySelectorAll('.image-gallery, .showcase[data-layout="grid"]');
 
-        galleryLinks.forEach((link, index) => {
-            const gallery = link.closest('.image-gallery');
-            const lightboxDisabled = gallery && gallery.classList.contains('no-lightbox');
-            const figure = link.closest('figure');
-            const media = link.querySelector('img, video');
+        galleries.forEach(gallery => {
+            const lightboxDisabled = gallery.classList.contains('no-lightbox');
 
-            // Set up loading state
-            if (media) {
-                const onMediaLoaded = () => {
-                    figure.classList.add('loaded');
-                    media.classList.add('loaded');
-                };
+            // Loading state + video indicator for every figure (media or project)
+            gallery.querySelectorAll('figure').forEach(figure => {
+                const media = figure.querySelector('img, video');
+                if (media) this.wireLoadingState(figure, media);
 
-                if (media.tagName === 'IMG') {
-                    if (media.complete && media.naturalWidth > 0) {
-                        onMediaLoaded();
-                    } else {
-                        media.addEventListener('load', onMediaLoaded);
-                        media.addEventListener('error', onMediaLoaded); // Handle errors gracefully
-                    }
-                } else if (media.tagName === 'VIDEO') {
-                    if (media.readyState >= 2) { // HAVE_CURRENT_DATA or higher
-                        onMediaLoaded();
-                    } else {
-                        media.addEventListener('loadeddata', onMediaLoaded);
-                        media.addEventListener('error', onMediaLoaded);
-                    }
+                const link = figure.querySelector('a');
+                const href = link && link.getAttribute('href');
+                if (href && !link.hasAttribute('data-navigate') && this.isVideoFile(href)) {
+                    this.addVideoIndicator(link);
                 }
-            }
+            });
 
-            const href = link.getAttribute('href');
-            const isVideo = href && this.isVideoFile(href);
+            // Lightbox click wiring for media links only
+            const mediaLinks = Array.from(gallery.querySelectorAll('figure a'))
+                .filter(link => link.getAttribute('href') && !link.hasAttribute('data-navigate'));
 
-            if (isVideo) {
-                this.addVideoIndicator(link);
-            }
+            if (lightboxDisabled) return;
 
-            if (!lightboxDisabled) {
+            const images = mediaLinks.map(link => ({
+                src: link.getAttribute('href'),
+                caption: link.querySelector('figcaption')?.textContent || ''
+            }));
+
+            mediaLinks.forEach((link, index) => {
                 link.removeAttribute('target');
                 link.onclick = (e) => {
                     e.preventDefault();
-                    this.open(index, galleryImages);
+                    this.open(index, images);
                     return false;
                 };
-            }
+            });
         });
+    }
+
+    wireLoadingState(figure, media) {
+        const onMediaLoaded = () => {
+            figure.classList.add('loaded');
+            media.classList.add('loaded');
+        };
+
+        if (media.tagName === 'IMG') {
+            if (media.complete && media.naturalWidth > 0) {
+                onMediaLoaded();
+            } else {
+                media.addEventListener('load', onMediaLoaded);
+                media.addEventListener('error', onMediaLoaded); // Handle errors gracefully
+            }
+        } else if (media.tagName === 'VIDEO') {
+            if (media.readyState >= 2) { // HAVE_CURRENT_DATA or higher
+                onMediaLoaded();
+            } else {
+                media.addEventListener('loadeddata', onMediaLoaded);
+                media.addEventListener('error', onMediaLoaded);
+            }
+        }
     }
 
     isVideoFile(url) {
@@ -327,7 +338,7 @@ export class LightboxManager {
 
     adjustCaptionSizes() {
         observeContentChanges(() => {
-            const captions = document.querySelectorAll('.image-gallery figcaption');
+            const captions = document.querySelectorAll('.image-gallery figcaption, .showcase[data-layout="grid"] figcaption');
             captions.forEach(caption => {
                 const textLength = caption.textContent.length;
                 if (textLength > 30) {

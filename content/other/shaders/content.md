@@ -14,7 +14,7 @@ tags: [tool, unity, pc, "2025", solo, featured]
 
 A Shader Graph implementation that creates distance-based transparency using dithering. The shader dynamically fades objects based on their proximity to a reference transform, camera, or world position.
 
-<div class="image-gallery gallery-3-columns">
+<div class="showcase" data-layout="grid" data-columns="3">
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/shaders/Dither.mp4" target="_blank">
             <video src="https://danielnoam.github.io/portfolio/assets/shaders/Dither.mp4" autoplay loop muted playsinline></video>
@@ -39,7 +39,7 @@ A Shader Graph implementation that creates distance-based transparency using dit
 
 A fullscreen post-processing shader that replicates the visual characteristics of CRT displays. Built entirely in Shader Graph, the effect combines scanlines, chromatic aberration, noise, and screen wobble to create a retro display aesthetic.
 
-<div class="image-gallery gallery-2-columns">
+<div class="showcase" data-layout="grid" data-columns="2">
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/shaders/CRT.mp4" target="_blank">
             <video src="https://danielnoam.github.io/portfolio/assets/shaders/CRT.mp4" autoplay loop muted playsinline></video>
@@ -59,7 +59,7 @@ A fullscreen post-processing shader that replicates the visual characteristics o
 
 A versatile dissolve shader featuring customizable edge effects and animated noise patterns. Supports directional control, adjustable edge width and color, and time-based noise animation for dynamic dissolve transitions.
 
-<div class="image-gallery gallery-2-columns">
+<div class="showcase" data-layout="grid" data-columns="2">
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/shaders/Dissolve.mp4" target="_blank">
             <video src="https://danielnoam.github.io/portfolio/assets/shaders/Dissolve.mp4" autoplay loop muted playsinline></video>
@@ -87,7 +87,7 @@ A multipurpose shader providing various real-time image effects through a unifie
 - Dissolve: Texture-based fade transitions
 - Line Sparkle: Animated highlight sweep that draws attention to UI elements like buttons
 
-<div class="image-gallery gallery-2-columns">
+<div class="showcase" data-layout="grid" data-columns="2">
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/shaders/UI1.mp4" target="_blank">
             <video src="https://danielnoam.github.io/portfolio/assets/shaders/UI1.mp4" autoplay loop muted playsinline></video>
@@ -107,7 +107,7 @@ A multipurpose shader providing various real-time image effects through a unifie
 A post-processing vignette effect with customizable color tinting and noise texture support for environmental storytelling (fire, frost, poison, etc.).
 Includes a breathing animation that pulses the effect intensity for dynamic feedback.
 
-<div class="image-gallery gallery-3-columns">
+<div class="showcase" data-layout="grid" data-columns="3">
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/shaders/VignetteEditor.mp4" target="_blank">
             <video src="https://danielnoam.github.io/portfolio/assets/shaders/VignetteEditor.mp4" autoplay loop muted playsinline></video>

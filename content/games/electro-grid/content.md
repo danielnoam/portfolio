@@ -58,7 +58,7 @@ The core loop revolves around matching shapes and completing objectives.
 </div>
 
 
-<div class="image-gallery gallery-4-columns">
+<div class="showcase" data-layout="grid" data-columns="4">
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/electro-grid/GameplayMatching.mp4" target="_blank">
             <video src="https://danielnoam.github.io/portfolio/assets/electro-grid/GameplayMatching.mp4" autoplay loop muted playsinline></video>
@@ -111,7 +111,7 @@ A major focus was placed on making every interaction feel satisfying and respons
   </div>
 </div>
 
-<div class="image-gallery gallery-4-columns">
+<div class="showcase" data-layout="grid" data-columns="4">
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/electro-grid/FeelStartingLevel.mp4" target="_blank">
             <video src="https://danielnoam.github.io/portfolio/assets/electro-grid/FeelStartingLevel.mp4" autoplay loop muted playsinline></video>
@@ -170,7 +170,7 @@ To support unique level designs beyond standard rectangles, I created a custom g
   </div>
 </div>
 
-<div class="image-gallery">
+<div class="showcase" data-layout="grid">
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/electro-grid/Grid1.mp4" target="_blank">
             <video src="https://danielnoam.github.io/portfolio/assets/electro-grid/Grid1.mp4" autoplay loop muted playsinline></video>
@@ -207,7 +207,7 @@ Implemented Firebase Analytics and Remote Config for live game tuning and behavi
   </div>
 </div>
 
-<div class="image-gallery gallery-1-column">
+<div class="showcase" data-layout="grid" data-columns="1">
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/electro-grid/RemoteControl.png" target="_blank">
             <img src="https://danielnoam.github.io/portfolio/assets/electro-grid/RemoteControl.png" alt="Remote console">

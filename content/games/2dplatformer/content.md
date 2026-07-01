@@ -40,7 +40,7 @@ Players navigate through meticulously crafted levels filled with interactive ele
 - Fine-tuned gravity, friction, acceleration, and deceleration that allow for precise player control and predictable movement.
 
 
-<div class="image-gallery">
+<div class="showcase" data-layout="grid">
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/2dplatformer/doublejump.gif" target="_blank">
             <img src="https://danielnoam.github.io/portfolio/assets/2dplatformer/doublejump.gif" alt="Double jump">
@@ -94,7 +94,7 @@ Players navigate through meticulously crafted levels filled with interactive ele
 - Portals that transport players to different parts of the level or to entirely new areas.
 - Checkpoints that allow players to save their progress and provide a sense of accomplishment.
 
-<div class="image-gallery gallery-2-columns">
+<div class="showcase" data-layout="grid" data-columns="2">
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/2dplatformer/movingplatform.gif" target="_blank">
             <img src="https://danielnoam.github.io/portfolio/assets/2dplatformer/movingplatform.gif" alt="Moving platform">
@@ -127,7 +127,7 @@ Players navigate through meticulously crafted levels filled with interactive ele
 - Fake walls and hidden areas that reward exploration and encourage players to search for secrets.
 - Balanced difficulty curve that keeps players engaged and motivated to improve their skills.
 
-<div class="image-gallery">
+<div class="showcase" data-layout="grid">
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/2dplatformer/Hazard3.gif" target="_blank">
             <img src="https://danielnoam.github.io/portfolio/assets/2dplatformer/Hazard3.gif" alt="Unique level mechanics">
@@ -155,7 +155,7 @@ Players navigate through meticulously crafted levels filled with interactive ele
 - Intelligent camera positioning ensures optimal visibility of the player's surroundings.
 - Smooth camera transitions between different areas of the level create a seamless gameplay experience.
 
-<div class="image-gallery">
+<div class="showcase" data-layout="grid">
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/2dplatformer/camera1.gif" target="_blank">
             <img src="https://danielnoam.github.io/portfolio/assets/2dplatformer/camera1.gif" alt="Different camera states">
@@ -182,7 +182,7 @@ Players navigate through meticulously crafted levels filled with interactive ele
 - Custom editor tools and visual debugging systems to help with development and level design.
 
 
-<div class="image-gallery">
+<div class="showcase" data-layout="grid">
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/2dplatformer/PlayerStats.gif" target="_blank">
             <img src="https://danielnoam.github.io/portfolio/assets/2dplatformer/PlayerStats.gif" alt="Player stats customization">

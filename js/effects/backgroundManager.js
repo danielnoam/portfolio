@@ -124,7 +124,7 @@ export class BackgroundManager {
         // Only run on desktop
         if (window.innerWidth <= 768) return;
 
-        const galleryLinks = document.querySelectorAll('.image-gallery a[data-background-video], .image-gallery a[data-background-image]');
+        const galleryLinks = document.querySelectorAll('a[data-background-video], a[data-background-image]');
 
         galleryLinks.forEach(link => {
             const videoUrl = link.dataset.backgroundVideo;

@@ -59,7 +59,7 @@ My experience spans from modding existing games to creating original adventures 
 
 <div class="content-right">
 
-<div class="image-gallery gallery-2-columns no-lightbox">
+<div class="showcase" data-layout="grid" data-columns="2">
     <figure>
         <a href="#" data-navigate="/content/games/electro-grid/content.md"
            data-background-video="https://danielnoam.github.io/portfolio/assets/electro-grid/GameplaySquareStar.mp4">
@@ -112,6 +112,6 @@ My experience spans from modding existing games to creating original adventures 
 </div>
 
 
-<div class="auto-carousel" data-title="Other Projects" data-tags="" data-exclude-tags="featured"></div>
+<div class="showcase" data-layout="carousel" data-title="Other Projects" data-tags="" data-exclude-tags="featured"></div>
 
 </div>

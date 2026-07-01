@@ -45,7 +45,7 @@ Initially developed for my Chicken Invaders Remake project, this system was expa
   </div>
 </div>
 
-<div class="image-gallery gallery-2-columns">
+<div class="showcase" data-layout="grid" data-columns="2">
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/dnextensions/MultipleSources.mp4" target="_blank">
             <video src="https://danielnoam.github.io/portfolio/assets/dnextensions/MultipleSources.mp4" autoplay loop muted playsinline></video>

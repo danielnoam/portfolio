@@ -7,6 +7,26 @@ and the project adheres to [Semantic Versioning](https://semver.org/).
 The top entry below must always match the `version` constant in
 `js/core/config.js`, which is rendered at the bottom of the sidebar.
 
+## [1.1.0] - 2026-07-01
+
+### Added
+
+- Unified `showcase` component (`<div class="showcase" data-layout="grid|carousel">`)
+  that decouples layout from data source. Either layout can now be populated by
+  **inline `<figure>` media** or a **tag-filtered project list** (via
+  `data-tags`/`data-exclude-tags`), giving all four combinations: media grid,
+  project grid, media carousel, and project carousel. Click action follows the
+  item type — media opens the lightbox, projects navigate. `data-columns="N"`
+  sets grid columns.
+
+### Changed
+
+- Replaced `AutoCarousel` (`js/ui/autoCarousel.js`) with
+  `ShowcaseManager` (`js/ui/showcaseManager.js`); the lightbox collector and
+  About-page hover backgrounds now target `.showcase`. Migrated all gallery
+  (`.image-gallery`) and carousel (`.auto-carousel`) blocks in `content/` to the
+  new `showcase` tag; the About project grid no longer needs `no-lightbox`.
+
 ## [1.0.2] - 2026-07-01
 
 ### Fixed

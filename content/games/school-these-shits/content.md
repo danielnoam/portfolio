@@ -26,7 +26,7 @@ Armed with textbooks as projectiles and momentum-based movement, the player must
 - Precision-focused book throwing mechanic requiring careful aim and timing.
 - Various student obstacles requiring creative problem-solving, from retrieving lost items to freeing students from lockers.
 
-<div class="image-gallery">
+<div class="showcase" data-layout="grid">
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/school-these-shits/gameplay2.gif" target="_blank">
             <img src="https://danielnoam.github.io/portfolio/assets/school-these-shits/gameplay2.gif" alt="Various shortcuts">
@@ -63,7 +63,7 @@ Armed with textbooks as projectiles and momentum-based movement, the player must
 - Diverse school environment featuring classrooms, offices, a playground, and unique areas to explore.
 - Environmental storytelling through scattered notes, bulletin boards, and student items that expand on the game.
 
-<div class="image-gallery">
+<div class="showcase" data-layout="grid">
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/school-these-shits/layout1.png" target="_blank">
             <img src="https://danielnoam.github.io/portfolio/assets/school-these-shits/layout1.png" alt="Soccer field">
@@ -100,7 +100,7 @@ Armed with textbooks as projectiles and momentum-based movement, the player must
 - Time-pressured gameplay encouraging mastery of movement, accuracy, and route optimization.
 - Multiple difficulty levels allowing players to learn mechanics while providing increased challenge.
 
-<div class="image-gallery">
+<div class="showcase" data-layout="grid">
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/school-these-shits/gameplay1.gif" target="_blank">
             <img src="https://danielnoam.github.io/portfolio/assets/school-these-shits/gameplay1.gif" alt="Difficulty levels">

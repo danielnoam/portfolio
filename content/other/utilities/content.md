@@ -20,7 +20,7 @@ Includes an extensive collection of extension methods for Unity types (Vector2/3
 serializable field types like SceneField and RangedFloat/RangedInt, Inspector attributes (InfoBox, ReadOnly, Separator, Preview, and conditional ShowIf/HideIf/EnableIf/DisableIf), 
 and smaller utilities like Component Dragger, Audio Preview,  Better Transform Editor, Better Unity Event, and Toolbar Extensions (timescale control, reload assembly, and project shortcut buttons).
 
-<div class="image-gallery gallery-2-columns">
+<div class="showcase" data-layout="grid" data-columns="2">
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/dnextensions/RangedValues.mp4" target="_blank">
             <video src="https://danielnoam.github.io/portfolio/assets/dnextensions/RangedValues.mp4" autoplay loop muted playsinline></video>
@@ -72,7 +72,7 @@ Inspector buttons that execute methods with a single click. Supports play mode r
 Project-wide defaults are configurable via Project Settings, with per-button overrides.
 
 
-<div class="image-gallery gallery-2-columns">
+<div class="showcase" data-layout="grid" data-columns="2">
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/dnextensions/ScriptableEditorWindow.mp4" target="_blank">
             <video src="https://danielnoam.github.io/portfolio/assets/dnextensions/ScriptableEditorWindow.mp4" autoplay loop muted playsinline></video>
@@ -131,7 +131,7 @@ Weighted random selection list with automatic probability normalization. Support
 
 
 
-<div class="image-gallery gallery-2-columns">
+<div class="showcase" data-layout="grid" data-columns="2">
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/dnextensions/ChanceList.mp4" target="_blank">
             <video src="https://danielnoam.github.io/portfolio/assets/dnextensions/ChanceList.mp4" autoplay loop muted playsinline></video>
