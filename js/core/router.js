@@ -8,6 +8,12 @@ export class Router {
         this.navigationManager = navigationManager;
     }
 
+    // Match a `<base>/<page>` route, returning the page slug or null.
+    matchPageRoute(path) {
+        const match = path.match(new RegExp(`^${this.config.baseUrl}/([^/]+)$`));
+        return match ? match[1] : null;
+    }
+
     init() {
         window.onpopstate = (event) => {
             if (event.state && event.state.path) {
@@ -46,9 +52,8 @@ export class Router {
             return true;
         }
 
-        const pageMatch = redirectPath.match(new RegExp(`^${this.config.baseUrl}/([^/]+)$`));
-        if (pageMatch) {
-            const pageName = pageMatch[1];
+        const pageName = this.matchPageRoute(redirectPath);
+        if (pageName) {
             const foundPath = this.findContentPath(pageName);
 
             if (foundPath) {
@@ -72,7 +77,7 @@ export class Router {
 
     async loadFromPath(currentPath) {
         const aboutMatch = currentPath === `${this.config.baseUrl}/about`;
-        const pageMatch = currentPath.match(new RegExp(`^${this.config.baseUrl}/([^/]+)$`));
+        const pageName = this.matchPageRoute(currentPath);
 
         if (aboutMatch) {
             await this.loadDefault();
@@ -80,8 +85,7 @@ export class Router {
             return true;
         }
 
-        if (pageMatch) {
-            const pageName = pageMatch[1];
+        if (pageName) {
             const foundPath = this.findContentPath(pageName);
 
             if (foundPath) {

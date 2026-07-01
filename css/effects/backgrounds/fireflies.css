@@ -13,9 +13,9 @@
     position: absolute;
     width: 3px;
     height: 3px;
-    background: #ffeb3b;
+    background: var(--color-firefly);
     border-radius: 50%;
-    box-shadow: 0 0 10px #ffeb3b;
+    box-shadow: 0 0 10px var(--color-firefly);
     animation: firefly-float ease-in-out infinite;
 }
 

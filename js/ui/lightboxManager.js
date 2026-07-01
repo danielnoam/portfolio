@@ -1,6 +1,12 @@
 /*==============================================
             LIGHTBOX MANAGER MODULE
 ================================================*/
+import { observeContentChanges } from '../core/domUtils.js';
+
+// Single source of truth for media-type detection by file extension.
+const VIDEO_EXTENSIONS = ['mp4', 'webm', 'ogg', 'mov', 'avi', 'mkv'];
+const AUDIO_EXTENSIONS = ['wav', 'mp3', 'ogg', 'm4a'];
+
 export class LightboxManager {
     constructor() {
         this.container = null;
@@ -101,7 +107,7 @@ export class LightboxManager {
 
     isVideoFile(url) {
         const extension = url.split('.').pop().toLowerCase();
-        return ['mp4', 'webm', 'ogg', 'mov', 'avi', 'mkv'].includes(extension);
+        return VIDEO_EXTENSIONS.includes(extension);
     }
 
     addVideoIndicator(link) {
@@ -194,9 +200,9 @@ export class LightboxManager {
         const src = currentMedia.src;
         const extension = src.split('.').pop().toLowerCase();
 
-        if (['mp4', 'webm', 'ogg', 'mov'].includes(extension)) {
+        if (VIDEO_EXTENSIONS.includes(extension)) {
             this.createVideoElement(mediaContainer, src);
-        } else if (['wav', 'mp3', 'ogg', 'm4a'].includes(extension)) {
+        } else if (AUDIO_EXTENSIONS.includes(extension)) {
             this.createAudioElement(mediaContainer, src, currentMedia.caption);
         } else {
             this.createImageElement(mediaContainer, src);
@@ -320,24 +326,17 @@ export class LightboxManager {
     }
 
     adjustCaptionSizes() {
-        const observer = new MutationObserver(() => {
-            setTimeout(() => {
-                const captions = document.querySelectorAll('.image-gallery figcaption');
-                captions.forEach(caption => {
-                    const textLength = caption.textContent.length;
-                    if (textLength > 30) {
-                        caption.style.fontSize = '0.8rem';
-                    } else if (textLength > 20) {
-                        caption.style.fontSize = '0.85rem';
-                    }
-                });
-            }, 100);
+        observeContentChanges(() => {
+            const captions = document.querySelectorAll('.image-gallery figcaption');
+            captions.forEach(caption => {
+                const textLength = caption.textContent.length;
+                if (textLength > 30) {
+                    caption.style.fontSize = '0.8rem';
+                } else if (textLength > 20) {
+                    caption.style.fontSize = '0.85rem';
+                }
+            });
         });
-
-        const contentElement = document.getElementById('content');
-        if (contentElement) {
-            observer.observe(contentElement, { childList: true, subtree: true });
-        }
     }
 
     reinitialize() {

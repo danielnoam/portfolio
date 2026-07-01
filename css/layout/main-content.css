@@ -60,7 +60,7 @@ main {
 }
 
 .error-message h1 {
-    color: #ff4a4a;
+    color: var(--color-error);
     margin-bottom: var(--space-4);
 }
 

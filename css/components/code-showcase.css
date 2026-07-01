@@ -211,7 +211,7 @@
 
 /* Copy success state */
 .code-showcase-content .toolbar-item button[data-copy-state="copy-success"] {
-    background: #4caf50 !important;
+    background: var(--color-success) !important;
 }
 
 /* Prism toolbar adjustments */

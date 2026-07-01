@@ -1,6 +1,8 @@
 /*==============================================
             CODE SHOWCASE MANAGER
 ================================================*/
+import { observeContentChanges } from '../core/domUtils.js';
+
 export class CodeShowcaseManager {
     constructor() {
         this.codeCache = new Map();
@@ -9,14 +11,7 @@ export class CodeShowcaseManager {
 
     init() {
         this.setupCodeShowcases();
-
-        const contentElement = document.getElementById('content');
-        if (contentElement) {
-            const observer = new MutationObserver(() => {
-                setTimeout(() => this.setupCodeShowcases(), 100);
-            });
-            observer.observe(contentElement, { childList: true, subtree: true });
-        }
+        observeContentChanges(() => this.setupCodeShowcases());
     }
 
     setupCodeShowcases() {

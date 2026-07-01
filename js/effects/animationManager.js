@@ -1,6 +1,8 @@
 /*==============================================
             ANIMATION MANAGER MODULE
 ================================================*/
+import { observeContentChanges } from '../core/domUtils.js';
+
 export class AnimationManager {
     constructor() {
         this.observer = null;
@@ -33,16 +35,7 @@ export class AnimationManager {
     }
 
     setupContentObserver() {
-        const contentElement = document.getElementById('content');
-        if (contentElement) {
-            this.contentObserver = new MutationObserver(() => {
-                setTimeout(() => this.setupAnimations(), 100);
-            });
-            this.contentObserver.observe(contentElement, {
-                childList: true,
-                subtree: true
-            });
-        }
+        this.contentObserver = observeContentChanges(() => this.setupAnimations());
     }
 
     setupAnimations() {

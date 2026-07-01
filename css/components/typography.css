@@ -86,18 +86,6 @@
     box-shadow: var(--shadow-lg);
 }
 
-.page-content .page-logo {
-    width: 100%;
-    max-width: 900px;
-    height: auto;
-    display: block;
-    border-radius: var(--radius-md);
-    box-shadow: var(--shadow-lg);
-    margin-bottom: var(--card-gap);
-    margin-left: auto;
-    margin-right: auto;
-}
-
 .page-content ul,
 .page-content ol {
     max-width: 900px;

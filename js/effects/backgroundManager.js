@@ -1,6 +1,7 @@
 /*==============================================
         BACKGROUND MANAGER MODULE
 ================================================*/
+import { observeContentChanges, getContentId } from '../core/domUtils.js';
 
 export class BackgroundManager {
     constructor() {
@@ -53,21 +54,30 @@ export class BackgroundManager {
                 ]
             },
         };
+
+        // Effect type -> creator method. Dispatched in setBackground().
+        this.effectHandlers = {
+            rain: this.createRainEffect,
+            particles: this.createParticlesEffect,
+            shapes: this.createShapesEffect,
+            binary: this.createBinaryEffect,
+            waves: this.createWavesEffect,
+            image: this.createImageBackground,
+            bubbles: this.createBubblesEffect,
+            stars: this.createStarsEffect,
+            snow: this.createSnowEffect,
+            confetti: this.createConfettiEffect,
+            dna: this.createDNAEffect,
+            network: this.createNetworkEffect,
+            fireflies: this.createFirefliesEffect,
+        };
     }
 
     init() {
         this.createContainer();
 
         // Re-initialize about backgrounds when content changes
-        const contentElement = document.getElementById('content');
-        if (contentElement) {
-            const observer = new MutationObserver(() => {
-                setTimeout(() => {
-                    this.initAboutPageBackgrounds();
-                }, 100);
-            });
-            observer.observe(contentElement, { childList: true, subtree: true });
-        }
+        observeContentChanges(() => this.initAboutPageBackgrounds());
     }
 
     createContainer() {
@@ -77,8 +87,7 @@ export class BackgroundManager {
     }
 
     setBackground(pagePath) {
-        const pageMatch = pagePath.match(/\/([^\/]+)\/content\.md$/);
-        const pageId = pageMatch ? pageMatch[1] : 'default';
+        const pageId = getContentId(pagePath) || 'default';
 
         const config = this.backgroundConfigs[pageId];
 
@@ -98,48 +107,9 @@ export class BackgroundManager {
             this.container.innerHTML = '';
 
             // Loop through all effects in the array
-            config.effects.forEach((effectConfig, index) => {
-                switch(effectConfig.type) {
-                    case 'rain':
-                        this.createRainEffect(effectConfig);
-                        break;
-                    case 'particles':
-                        this.createParticlesEffect(effectConfig);
-                        break;
-                    case 'shapes':
-                        this.createShapesEffect(effectConfig);
-                        break;
-                    case 'binary':
-                        this.createBinaryEffect(effectConfig);
-                        break;
-                    case 'waves':
-                        this.createWavesEffect(effectConfig);
-                        break;
-                    case 'image':
-                        this.createImageBackground(effectConfig);
-                        break;
-                    case 'bubbles':
-                        this.createBubblesEffect(effectConfig);
-                        break;
-                    case 'stars':
-                        this.createStarsEffect(effectConfig);
-                        break;
-                    case 'snow':
-                        this.createSnowEffect(effectConfig);
-                        break;
-                    case 'confetti':
-                        this.createConfettiEffect(effectConfig);
-                        break;
-                    case 'dna':
-                        this.createDNAEffect(effectConfig);
-                        break;
-                    case 'network':
-                        this.createNetworkEffect(effectConfig);
-                        break;
-                    case 'fireflies':
-                        this.createFirefliesEffect(effectConfig);
-                        break;
-                }
+            config.effects.forEach((effectConfig) => {
+                const handler = this.effectHandlers[effectConfig.type];
+                if (handler) handler.call(this, effectConfig);
             });
 
             this.currentBackground = pageId;

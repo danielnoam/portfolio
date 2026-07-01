@@ -104,7 +104,12 @@
     --color-primary: #4a9eff;
     --color-primary-light: #77b6ff;
     --color-primary-dark: #2a7edf;
-    
+
+    /* Status / Accent Colors */
+    --color-error: #ff4a4a;
+    --color-success: #4caf50;
+    --color-firefly: #ffeb3b;
+
     /* Neutral Colors - Dark Theme */
     --color-dark-bg: rgba(26, 29, 33, 1);
     --color-dark-text: rgba(255, 255, 255, 1);
@@ -139,7 +144,6 @@
     --nav-header-spacing: var(--space-4) 0 var(--space-1) 0;
     
     /* Content */
-    --content-max-width: 1200px;
     --content-padding: var(--space-6);
     --content-inner-max-width: 800px;
     
@@ -153,8 +157,7 @@
     --gallery-columns-gap: var(--space-4);
     --gallery-rows-gap: var(--space-2);
     --gallery-image-max-height: 250px;
-    --gallery-image-max-width: 700px;
-    
+
     /* Mobile */
     --mobile-topbar-height: 60px;
     --mobile-padding: var(--space-4);

@@ -13,6 +13,7 @@ import { BackgroundManager } from './effects/backgroundManager.js';
 import { LogoManager } from './effects/logoManager.js';
 import { TypewriterManager } from './effects/typewriterManager.js';
 import { CodeShowcaseManager } from './effects/codeShowcaseManager.js';
+import { observeContentChanges, pageRouteUrl } from './core/domUtils.js';
 
 /*==============================================
             APPLICATION CLASS
@@ -85,16 +86,7 @@ class PortfolioApp {
         this.modules.lightbox.init();
 
         // Reinitialize lightbox when content changes
-        const contentElement = document.getElementById('content');
-        if (contentElement) {
-            const observer = new MutationObserver(() => {
-                clearTimeout(this.reinitTimeout);
-                this.reinitTimeout = setTimeout(() => {
-                    this.modules.lightbox.reinitialize();
-                }, 100);
-            });
-            observer.observe(contentElement, { childList: true, subtree: true });
-        }
+        observeContentChanges(() => this.modules.lightbox.reinitialize());
     }
 
     setupGlobalHandlers() {
@@ -111,17 +103,7 @@ class PortfolioApp {
             this.modules.content.loadContent(path);
             this.modules.navigation.closeMobileSidebar();
 
-            const pathSegments = path.split('/');
-            const section = pathSegments[pathSegments.length - 3];
-            const pageName = pathSegments[pathSegments.length - 2];
-
-            let newUrl;
-            if (section === "about") {
-                newUrl = `${this.config.baseUrl}/about`;
-            } else {
-                newUrl = `${this.config.baseUrl}/${pageName}`;
-            }
-
+            const newUrl = pageRouteUrl(this.config.baseUrl, path);
             history.pushState({path: path}, '', newUrl);
         };
 

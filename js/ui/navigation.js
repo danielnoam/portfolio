@@ -1,6 +1,7 @@
 /*==============================================
             NAVIGATION MODULE
 ================================================*/
+import { getContentId, pageRouteUrl } from '../core/domUtils.js';
 
 export class NavigationManager {
     constructor(config) {
@@ -40,11 +41,9 @@ export class NavigationManager {
 
         const nav = document.getElementById('main-nav');
         const links = nav.getElementsByTagName('a');
-        const folderMatch = contentPath.match(/\/([^\/]+)\/content\.md$/);
+        const folderName = getContentId(contentPath);
 
-        if (!folderMatch) return null;
-
-        const folderName = folderMatch[1];
+        if (!folderName) return null;
 
         for (const link of links) {
             if (link.onclick && link.onclick.toString().includes(folderName)) {
@@ -67,17 +66,7 @@ export class NavigationManager {
         this.setActiveLink(link);
         this.closeMobileSidebar();
 
-        const pathSegments = path.split('/');
-        const section = pathSegments[pathSegments.length - 3];
-        const pageName = pathSegments[pathSegments.length - 2];
-
-        let newUrl;
-        if (section === "about") {
-            newUrl = `${this.config.baseUrl}/about`;
-        } else {
-            newUrl = `${this.config.baseUrl}/${pageName}`;
-        }
-
+        const newUrl = pageRouteUrl(this.config.baseUrl, path);
         history.pushState({path: path}, '', newUrl);
     }
 
@@ -213,7 +202,6 @@ export class NavigationManager {
             link.target = linkConfig.target;
         }
         link.onclick = () => {
-            console.log(`${linkConfig.title} viewed`);
             this.closeMobileSidebar();
         };
     }

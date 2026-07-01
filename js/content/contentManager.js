@@ -1,6 +1,7 @@
 /*==============================================
             CONTENT MANAGER MODULE
 ================================================*/
+import { getPageName } from '../core/domUtils.js';
 
 export class ContentManager {
     constructor(config) {
@@ -163,8 +164,7 @@ export class ContentManager {
 
     updateDocumentTitle(path) {
         let title = this.config.siteTitle;
-        const pathSegments = path.split('/');
-        const pageName = pathSegments[pathSegments.length - 2].replace(/-/g, ' ');
+        const pageName = getPageName(path).replace(/-/g, ' ');
 
         if (pageName) {
             title = `${pageName.charAt(0).toUpperCase() + pageName.slice(1)} | ${title}`;

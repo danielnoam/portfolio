@@ -1,20 +1,14 @@
 /*==============================================
             LOGO MANAGER MODULE
 ================================================*/
-
+import { observeContentChanges } from '../core/domUtils.js';
 
 export class LogoManager {
     init() {
         this.handlePageLogos();
 
         // Re-run when content changes
-        const contentElement = document.getElementById('content');
-        if (contentElement) {
-            const observer = new MutationObserver(() => {
-                setTimeout(() => this.handlePageLogos(), 100);
-            });
-            observer.observe(contentElement, { childList: true, subtree: true });
-        }
+        observeContentChanges(() => this.handlePageLogos());
     }
 
     handlePageLogos() {
