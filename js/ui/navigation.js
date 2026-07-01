@@ -21,9 +21,8 @@ export class NavigationManager {
 
     // Add this new method
     syncActiveLink(contentPath) {
-        // Find the nav link that matches this content path
-        const nav = document.getElementById('main-nav');
-        const links = nav.querySelectorAll('a[data-content-path]');
+        // Find the nav link that matches this content path (main nav or footer)
+        const links = document.querySelectorAll('.sidebar a[data-content-path]');
 
         for (const link of links) {
             if (link.dataset.contentPath === contentPath) {
@@ -145,17 +144,6 @@ export class NavigationManager {
             }
         }
 
-        // Static content links pinned to the end of the nav list, in their own
-        // divider-separated group so they don't read as part of the last section.
-        const bottomStatic = this.config.navigation.staticLinksBottom || [];
-        if (bottomStatic.length > 0) {
-            const group = document.createElement('div');
-            group.className = 'nav-bottom-links';
-            bottomStatic.forEach(linkConfig => {
-                group.appendChild(this._createStaticLink(linkConfig, onClickHandler));
-            });
-            nav.appendChild(group);
-        }
     }
 
     _createStaticLink(linkConfig, onClickHandler) {
@@ -172,7 +160,7 @@ export class NavigationManager {
         return link;
     }
 
-    buildBottomNavigation() {
+    buildBottomNavigation(onClickHandler) {
         const existingBottomNav = document.querySelector('.bottom-nav');
         if (existingBottomNav) {
             existingBottomNav.remove();
@@ -183,14 +171,9 @@ export class NavigationManager {
             const bottomNav = document.createElement('nav');
             bottomNav.className = 'bottom-nav';
 
+            // Handles both content links (e.g. Archived) and external links.
             this.config.navigation.bottomLinks.forEach(linkConfig => {
-                const link = document.createElement('a');
-                link.textContent = linkConfig.title;
-
-                if (linkConfig.type === 'external') {
-                    this._setupExternalLink(link, linkConfig);
-                }
-                bottomNav.appendChild(link);
+                bottomNav.appendChild(this._createStaticLink(linkConfig, onClickHandler));
             });
 
             // Move theme toggle after bottom nav

@@ -7,6 +7,14 @@ and the project adheres to [Semantic Versioning](https://semver.org/).
 The top entry below must always match the `version` constant in
 `js/core/config.js`, which is rendered at the bottom of the sidebar.
 
+## [1.2.3] - 2026-07-01
+
+### Changed
+
+- Moved the Archived link into the sidebar footer (with Resume/Itch/Github)
+  instead of a standalone band in the nav, so it reads as a secondary
+  destination. `bottomLinks` now supports content links, not just external ones.
+
 ## [1.2.2] - 2026-07-01
 
 ### Changed

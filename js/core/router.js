@@ -149,7 +149,7 @@ export class Router {
         // be deep-linked and highlighted.
         const staticLinks = [
             ...(this.config.navigation.staticLinks || []),
-            ...(this.config.navigation.staticLinksBottom || [])
+            ...(this.config.navigation.bottomLinks || [])
         ];
         const staticMatch = staticLinks.find(
             link => link.type === 'content' && getPageName(link.path) === pageName

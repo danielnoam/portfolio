@@ -57,7 +57,7 @@ class PortfolioApp {
             );
         };
         this.modules.navigation.buildNavigation(navClickHandler);
-        this.modules.navigation.buildBottomNavigation();
+        this.modules.navigation.buildBottomNavigation(navClickHandler);
 
         // Initialize UI
         this.modules.ui.renderVersion();
