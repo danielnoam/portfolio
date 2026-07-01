@@ -7,6 +7,17 @@ and the project adheres to [Semantic Versioning](https://semver.org/).
 The top entry below must always match the `version` constant in
 `js/core/config.js`, which is rendered at the bottom of the sidebar.
 
+## [1.0.2] - 2026-07-01
+
+### Fixed
+
+- Sidebar navigation: the section links (e.g. the GameJams projects) were
+  trapped behind a nested, near-invisible scrollbar inside `#main-nav`, so the
+  bottom items looked missing. The sidebar now scrolls as a single unit — the
+  nav sizes to its content and the whole column scrolls when it doesn't fit,
+  keeping the bottom links and version marker reachable at every viewport
+  height, on desktop and in the mobile menu.
+
 ## [1.0.1] - 2026-07-01
 
 ### Changed

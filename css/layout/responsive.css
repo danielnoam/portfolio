@@ -47,8 +47,7 @@
     }
 
     .sidebar #main-nav {
-        flex: 1;
-        overflow-y: auto;
+        flex-shrink: 0;
         margin-bottom: var(--space-6);
     }
 
