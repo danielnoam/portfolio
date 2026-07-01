@@ -103,6 +103,7 @@ export class ShowcaseManager {
     }
 
     renderGrid(container, generatedFigures) {
+        container.style.display = ''; // undo any previous empty-state hide
         container.classList.add('showcase');
         container.setAttribute('data-layout', 'grid');
         // `image-gallery` is the shared CSS style-hook for a figure grid
@@ -131,6 +132,7 @@ export class ShowcaseManager {
             : Array.from(container.querySelectorAll(':scope > figure'))
                 .map(figure => figure.outerHTML).join('');
 
+        container.style.display = ''; // undo any previous empty-state hide
         container.classList.add('showcase');
         container.setAttribute('data-layout', 'carousel');
         container.innerHTML = `

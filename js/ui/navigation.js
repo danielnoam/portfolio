@@ -74,19 +74,9 @@ export class NavigationManager {
         const nav = document.getElementById('main-nav');
         nav.innerHTML = '';
 
-        // Build static links
+        // Build static links (top of the nav)
         this.config.navigation.staticLinks.forEach(linkConfig => {
-            const link = document.createElement('a');
-            link.textContent = linkConfig.title;
-
-            if (linkConfig.type === 'content') {
-                const fullPath = `${this.config.baseUrl}/${linkConfig.path}`;
-                link.dataset.contentPath = fullPath;
-                link.onclick = () => onClickHandler(fullPath, link);
-            } else if (linkConfig.type === 'external') {
-                this._setupExternalLink(link, linkConfig);
-            }
-            nav.appendChild(link);
+            nav.appendChild(this._createStaticLink(linkConfig, onClickHandler));
         });
 
         // Build dynamic sections
@@ -154,6 +144,25 @@ export class NavigationManager {
                 }
             }
         }
+
+        // Static content links pinned to the end of the nav list
+        (this.config.navigation.staticLinksBottom || []).forEach(linkConfig => {
+            nav.appendChild(this._createStaticLink(linkConfig, onClickHandler));
+        });
+    }
+
+    _createStaticLink(linkConfig, onClickHandler) {
+        const link = document.createElement('a');
+        link.textContent = linkConfig.title;
+
+        if (linkConfig.type === 'content') {
+            const fullPath = `${this.config.baseUrl}/${linkConfig.path}`;
+            link.dataset.contentPath = fullPath;
+            link.onclick = () => onClickHandler(fullPath, link);
+        } else if (linkConfig.type === 'external') {
+            this._setupExternalLink(link, linkConfig);
+        }
+        return link;
     }
 
     buildBottomNavigation() {

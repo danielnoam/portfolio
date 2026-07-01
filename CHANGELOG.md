@@ -7,6 +7,19 @@ and the project adheres to [Semantic Versioning](https://semver.org/).
 The top entry below must always match the `version` constant in
 `js/core/config.js`, which is rendered at the bottom of the sidebar.
 
+## [1.2.0] - 2026-07-01
+
+### Added
+
+- New **Archived** page, linked at the bottom of the sidebar nav, showing a
+  gallery of every project tagged `archived` (a showcase grid with
+  `data-tags="archived"`). Tagging is additive — a page stays in its normal
+  section and also appears here. Add the tag to a page's frontmatter to list it.
+- `navigation.staticLinksBottom` config slot for content links pinned to the end
+  of the nav list; the router now deep-links standalone static pages (not just
+  `structure` pages), so `/portfolio/archived` resolves on refresh and via the
+  404 redirect.
+
 ## [1.1.0] - 2026-07-01
 
 ### Added

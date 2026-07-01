@@ -10,7 +10,7 @@ const CONFIG = {
     // Single source of truth for the site version. Bump on every deploy
     // (semver) and keep CHANGELOG.md's top entry in sync. Rendered at the
     // bottom of the sidebar as the visible "did my deploy land?" marker.
-    version: '1.1.0',
+    version: '1.2.0',
 
     // Base URL for the site
     baseUrl: BASE_URL,
@@ -37,7 +37,16 @@ const CONFIG = {
                 path: "content/about/content.md"
             },
         ],
-        // Links that appear at the bottom of the navigation
+        // Content links pinned to the end of the nav list (after the sections,
+        // above the external bottomLinks below).
+        staticLinksBottom: [
+            {
+                title: "Archived",
+                type: "content",
+                path: "content/archived/content.md"
+            },
+        ],
+        // External links that appear in the sidebar footer (.bottom-nav)
         bottomLinks: [
             {
                 title: "Resume",

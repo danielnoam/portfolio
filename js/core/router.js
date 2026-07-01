@@ -1,6 +1,8 @@
 /*==============================================
             ROUTER MODULE
 ================================================*/
+import { getPageName } from './domUtils.js';
+
 export class Router {
     constructor(config, contentManager, navigationManager) {
         this.config = config;
@@ -141,6 +143,24 @@ export class Router {
                 return { path, link };
             }
         }
+
+        // Standalone content pages (e.g. Archived) live in the static-link
+        // lists rather than CONFIG.structure — resolve those too so they can
+        // be deep-linked and highlighted.
+        const staticLinks = [
+            ...(this.config.navigation.staticLinks || []),
+            ...(this.config.navigation.staticLinksBottom || [])
+        ];
+        const staticMatch = staticLinks.find(
+            link => link.type === 'content' && getPageName(link.path) === pageName
+        );
+        if (staticMatch) {
+            const path = `${this.config.baseUrl}/${staticMatch.path}`;
+            const link = [...document.querySelectorAll('nav a')]
+                .find(a => a.textContent === staticMatch.title) || null;
+            return { path, link };
+        }
+
         return null;
     }
 }
