@@ -7,6 +7,15 @@ and the project adheres to [Semantic Versioning](https://semver.org/).
 The top entry below must always match the `version` constant in
 `js/core/config.js`, which is rendered at the bottom of the sidebar.
 
+## [1.2.1] - 2026-07-01
+
+### Changed
+
+- Moved Midnight Masquerade, Bubblerena, and Pixel Knight to the Archived page:
+  tagged them `archived` and hid them from the main nav (Midnight Masquerade and
+  Bubblerena moved out of GameJams into the hidden Archive group; Pixel Knight
+  was already there). GameJams now lists Power Factory only.
+
 ## [1.2.0] - 2026-07-01
 
 ### Added

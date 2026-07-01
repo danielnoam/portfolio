@@ -1,7 +1,7 @@
 ---
 thumbnail: /portfolio/assets/midnight-masquerade/logo.jpg
 shortDescription: Short game made for GGJ 2026.
-tags: [games, unity, pc, "2026", team, game-jam]
+tags: [games, unity, pc, "2026", team, game-jam, archived]
 ---
 
 <div class="page-content">

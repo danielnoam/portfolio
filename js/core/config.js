@@ -10,7 +10,7 @@ const CONFIG = {
     // Single source of truth for the site version. Bump on every deploy
     // (semver) and keep CHANGELOG.md's top entry in sync. Rendered at the
     // bottom of the sidebar as the visible "did my deploy land?" marker.
-    version: '1.2.0',
+    version: '1.2.1',
 
     // Base URL for the site
     baseUrl: BASE_URL,
@@ -93,14 +93,14 @@ const CONFIG = {
         "GameJams": {
             foldout: false,
             pages: [
-                { title: "Midnight Masquerade - GGJ 2026", folder: "content/games/midnight-masquerade", visible: true },
                 { title: "Power Factory - KJ 2025", folder: "content/games/power-factory", visible: true },
-                { title: "Bubblerena - GGJ 2025", folder: "content/games/bubblerena", visible: true },
             ]
         },
         "Archive": {
             foldout: false,
             pages: [
+                { title: "Midnight Masquerade - GGJ 2026", folder: "content/games/midnight-masquerade", visible: false },
+                { title: "Bubblerena - GGJ 2025", folder: "content/games/bubblerena", visible: false },
                 { title: "Pixel Knight", folder: "content/games/pixel-knight", visible: false },
             ]
         },

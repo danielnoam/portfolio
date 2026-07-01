@@ -1,7 +1,7 @@
 ---
 thumbnail: /portfolio/assets/pixel-knight/main.gif
 shortDescription: A short action-rpg developed while i was in high school and learning gamemaker.
-tags: [games, gamemaker, "2016", pc, solo]
+tags: [games, gamemaker, "2016", pc, solo, archived]
 ---
 <div class="page-content">
 

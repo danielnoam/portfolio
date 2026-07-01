@@ -1,7 +1,7 @@
 ---
 thumbnail: /portfolio/assets/bubblerena/main.gif
 shortDescription: A first-person arena shooter combined with match-3 mechanics where the player needs to match different colored bubbles to pop them.
-tags: [games, unity, pc, solo, "2025", game-jam]
+tags: [games, unity, pc, solo, "2025", game-jam, archived]
 ---
 
 <div class="page-content">
