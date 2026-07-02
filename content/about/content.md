@@ -112,6 +112,6 @@ My experience spans from modding existing games to creating original adventures 
 </div>
 
 
-<div class="showcase" data-layout="carousel" data-title="Other Projects" data-tags="" data-exclude-tags="featured"></div>
+<div class="showcase" data-layout="carousel" data-title="Other Projects" data-tags="" data-exclude-tags="featured,archived"></div>
 
 </div>
