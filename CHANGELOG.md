@@ -7,6 +7,20 @@ and the project adheres to [Semantic Versioning](https://semver.org/).
 The top entry below must always match the `version` constant in
 `js/core/config.js`, which is rendered at the bottom of the sidebar.
 
+## [1.2.4] - 2026-07-02
+
+### Fixed
+
+- Sidebar scrolling on mobile: switched the fixed sidebar to `100dvh` (dynamic
+  viewport height) with `overscroll-behavior: contain`, so the bottom nav items
+  are reachable regardless of the mobile address bar showing/hiding.
+
+### Changed
+
+- Moved "School These Sh*ts" and "Power Factory" to the Archive (hidden from
+  their sections, `archived` tag added) so they appear on the Archived page.
+  GameJams now has no visible projects, so that section no longer renders.
+
 ## [1.2.3] - 2026-07-01
 
 ### Changed

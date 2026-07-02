@@ -1,7 +1,7 @@
 ---
 thumbnail: /portfolio/assets/school-these-shits/main.png
 shortDescription: A fast-paced "shooter" where players take on the role of an unconventional teacher.
-tags: [games, unity, pc, "2024", solo]
+tags: [games, unity, pc, "2024", solo, archived]
 ---
 <div class="page-content">
     

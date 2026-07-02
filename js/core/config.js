@@ -10,7 +10,7 @@ const CONFIG = {
     // Single source of truth for the site version. Bump on every deploy
     // (semver) and keep CHANGELOG.md's top entry in sync. Rendered at the
     // bottom of the sidebar as the visible "did my deploy land?" marker.
-    version: '1.2.3',
+    version: '1.2.4',
 
     // Base URL for the site
     baseUrl: BASE_URL,
@@ -73,7 +73,6 @@ const CONFIG = {
                 { title: "Chicken Invaders Remake", folder: "content/games/chicken-invaders-remake", visible: true },
                 { title: "Project UMN", folder: "content/games/project-umn", visible: true },
                 { title: "2DPlatformer", folder: "content/games/2dplatformer", visible: true },
-                { title: "School These Sh*ts", folder: "content/games/school-these-shits", visible: true },
             ]
         },
         "Unity": {
@@ -89,7 +88,6 @@ const CONFIG = {
         "GameJams": {
             foldout: false,
             pages: [
-                { title: "Power Factory - KJ 2025", folder: "content/games/power-factory", visible: true },
             ]
         },
         "Archive": {
@@ -98,6 +96,8 @@ const CONFIG = {
                 { title: "Midnight Masquerade - GGJ 2026", folder: "content/games/midnight-masquerade", visible: false },
                 { title: "Bubblerena - GGJ 2025", folder: "content/games/bubblerena", visible: false },
                 { title: "Pixel Knight", folder: "content/games/pixel-knight", visible: false },
+                { title: "School These Sh*ts", folder: "content/games/school-these-shits", visible: false },
+                { title: "Power Factory - KJ 2025", folder: "content/games/power-factory", visible: false },
             ]
         },
     }
