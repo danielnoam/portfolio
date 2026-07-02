@@ -10,7 +10,7 @@ const CONFIG = {
     // Single source of truth for the site version. Bump on every deploy
     // (semver) and keep CHANGELOG.md's top entry in sync. Rendered at the
     // bottom of the sidebar as the visible "did my deploy land?" marker.
-    version: '1.2.4',
+    version: '1.2.5',
 
     // Base URL for the site
     baseUrl: BASE_URL,
@@ -79,10 +79,7 @@ const CONFIG = {
             foldout: false,
             pages: [
                 { title: "Shaders", folder: "content/other/shaders", visible: true },
-                { title: "Editor Utilities", folder: "content/other/utilities", visible: true },
-                { title: "Object Pooling", folder: "content/other/object-pooling", visible: true },
-                { title: "Controller Rumble", folder: "content/other/controller-rumble", visible: true },
-                { title: "VFX & Transitions", folder: "content/other/vfx-transitions", visible: true },
+                { title: "DNExtensions", folder: "content/other/utilities", visible: true },
             ]
         },
         "GameJams": {

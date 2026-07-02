@@ -91,8 +91,8 @@ My experience spans from modding existing games to creating original adventures 
     <figure>
         <a href="#" data-navigate="/content/other/utilities/content.md"
            data-background-video="https://danielnoam.github.io/portfolio/assets/dnextensions/Button.mp4">
-            <img src="https://danielnoam.github.io/portfolio/assets/dnextensions/unitylogo.jpg" alt="Editor Utilities">
-            <figcaption>Editor Utilities</figcaption>
+            <img src="https://danielnoam.github.io/portfolio/assets/dnextensions/unitylogo.jpg" alt="DNExtensions">
+            <figcaption>DNExtensions</figcaption>
         </a>
     </figure>
     <figure>

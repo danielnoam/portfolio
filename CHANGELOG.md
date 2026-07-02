@@ -7,6 +7,15 @@ and the project adheres to [Semantic Versioning](https://semver.org/).
 The top entry below must always match the `version` constant in
 `js/core/config.js`, which is rendered at the bottom of the sidebar.
 
+## [1.2.5] - 2026-07-02
+
+### Changed
+
+- Merged Object Pooling, Controller Rumble, and VFX & Transitions into the
+  Editor Utilities page as panels alongside Editor Tools and Inspector &
+  Serialization, and renamed that page to "DNExtensions". Removed the three
+  standalone pages and their sidebar entries.
+
 ## [1.2.4] - 2026-07-02
 
 ### Fixed

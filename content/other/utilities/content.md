@@ -5,7 +5,7 @@ tags: [tool, unity, pc, "2025", solo, featured]
 ---
 <div class="page-content">
 
-# Editor Utilities
+# DNExtensions
 
 <div class="button-group horizontal">
     <a href="https://github.com/danielnoam/DNExtensions" target="_blank" class="button">Github</a>
@@ -101,6 +101,98 @@ Project-wide defaults are configurable via Project Settings, with per-button ove
 
 </div>
 
+<div class="project-card">
+
+## Object Pooling
+High-performance pooling system eliminating instantiation costs and reducing garbage collection overhead. Configured via a ScriptableObject settings asset and initializes automatically before scene load with no manual setup required.
+
+- Generic pooling system supporting any GameObject, with per-pool max size, pre-warming, and scene-specific pre-warming
+- Optional hierarchy organization, hidden pool holders, DontDestroyOnLoad, and configurable fallback behavior when no pool is found
+- `IPoolable` interface with `OnPoolGet`, `OnPoolReturn`, and `OnPoolRecycle` callbacks for custom initialization logic
+- Built-in poolable components: `PoolableParticleSystem`, `PoolableAudioSource`, and `PoolableAutoReturn`
+- Simple static API with generic versions for direct component access
+- Runtime Inspector showing live active and inactive counts per pool
+
+<div class="code-showcase">
+  <div class="code-block"
+       data-file="/portfolio/assets/dnextensions/PoolableParticleSystem.cs"
+       data-language="csharp"
+       data-title="PoolableParticleSystem.cs"
+       data-description="Built-in poolable component for particle systems. Automatically calculates duration from particle settings and returns itself to the pool when done.">
+  </div>
+  <div class="code-block"
+       data-file="/portfolio/assets/dnextensions/ObjectPooler.cs"
+       data-language="csharp"
+       data-title="ObjectPooler.cs"
+       data-description="The main pooling manager. Initialized once via settings asset, then accessible anywhere through a simple static API.">
+  </div>
+</div>
+
+<div class="showcase" data-layout="grid" data-columns="2">
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/dnextensions/ObjectPooling.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/dnextensions/ObjectPooling.mp4" autoplay loop muted playsinline></video>
+            <figcaption>Object pooling</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/ObjectPooling.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/ObjectPooling.mp4" autoplay loop muted playsinline></video>
+            <figcaption>Used in Chicken Invaders</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/dnextensions/ObjectPoolerSettings.png" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/dnextensions/ObjectPoolerSettings.png" alt="Object pooler settings">
+            <figcaption>Object pooler settings</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/dnextensions/ObjectPoolerRuntime.png" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/dnextensions/ObjectPoolerRuntime.png" alt="Object pooler runtime">
+            <figcaption>Object pooler runtime</figcaption>
+        </a>
+    </figure>
+</div>
+
+</div>
+
+<div class="project-card">
+
+## VFX &amp; Transitions
+Visual effects system managing post-processing, UI transitions, and scene loading with seamless continuity.
+
+- Scriptable Object-based effect sequences for designers (Add/Remove effects, Set durations, etc.)
+- Scene transition system with customizable visual effects (TransitionManager.TranisitionToScene("SceneName", OutEffect, InEffect))
+- Playing effects using a centralized manager (VFXManager.Instance.PlayEffect(SOEffect))
+- Support for post-processing and UI effects
+- Automatic post-processing volume setup and management
+- Automatic cleanup and reset functionality
+
+
+<div class="showcase" data-layout="grid">
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/dnextensions/MultipleEffects.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/dnextensions/MultipleEffects.mp4" autoplay loop muted playsinline></video>
+            <figcaption>Pre-built effect sequences</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/dnextensions/TransitioningAndUsingEffect.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/dnextensions/TransitioningAndUsingEffect.mp4" autoplay loop muted playsinline></video>
+            <figcaption>Transition between scenes using sequences</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/dnextensions/PostProccesEffects.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/dnextensions/PostProccesEffects.mp4" autoplay loop muted playsinline></video>
+            <figcaption>Used in Electro Grid</figcaption>
+        </a>
+    </figure>
+</div>
+
+</div>
+
 </div>
 
 <div class="content-right">
@@ -154,6 +246,57 @@ Weighted random selection list with automatic probability normalization. Support
         <a href="https://danielnoam.github.io/portfolio/assets/dnextensions/PrefabSelector.png" target="_blank">
             <img src="https://danielnoam.github.io/portfolio/assets/dnextensions/PrefabSelector.png" alt="Prefab selector">
             <figcaption>Prefab Selector</figcaption>
+        </a>
+    </figure>
+</div>
+
+</div>
+
+<div class="project-card">
+
+## Controller Rumble
+Initially developed for my Chicken Invaders Remake project, this system was expanded and designed to work easily with any other project.
+
+- Source-listener architecture with automatic discovery and connection
+- Manages multiple simultaneous effects, combining intensities per motor each frame
+- Dynamic intensity modulation over time using independent animation curves for low and high frequency motors
+- 3D spatial positioning with customizable distance-based falloff curves and scene view gizmos
+- Built-in effect presets: fade in, fade out, pulse, and continuous — all triggerable from the Inspector via Button attributes
+- Serializable `ControllerRumbleEffectSettings` for creating and reusing rumble presets in the Inspector
+- Master frequency range clamping on the listener for global intensity control or accessibility options
+
+<div class="code-showcase">
+  <div class="code-block"
+       data-file="/portfolio/assets/dnextensions/ControllerRumbleEffect.cs"
+       data-language="csharp"
+       data-title="ControllerRumbleEffect.cs"
+       data-description="Represents a single rumble effect. Supports both timed effects with animation curves and continuous effects that persist until stopped manually.">
+  </div>
+  <div class="code-block"
+       data-file="/portfolio/assets/dnextensions/ControllerRumbleSource.cs"
+       data-language="csharp"
+       data-title="ControllerRumbleSource.cs"
+       data-description="Triggers rumble effects on connected listeners. Includes built-in presets for common patterns like fade in, fade out, and pulse.">
+  </div>
+  <div class="code-block"
+       data-file="/portfolio/assets/dnextensions/ControllerRumbleListener.cs"
+       data-language="csharp"
+       data-title="ControllerRumbleListener.cs"
+       data-description="Receives and processes effects from connected sources, combining intensities and driving the gamepad motors each frame.">
+  </div>
+</div>
+
+<div class="showcase" data-layout="grid" data-columns="2">
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/dnextensions/MultipleSources.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/dnextensions/MultipleSources.mp4" autoplay loop muted playsinline></video>
+            <figcaption>Multiple sources</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/dnextensions/ListenerAndSource.png" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/dnextensions/ListenerAndSource.png" alt="Listener and source">
+            <figcaption>Listener and source</figcaption>
         </a>
     </figure>
 </div>
