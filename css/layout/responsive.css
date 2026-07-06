@@ -82,7 +82,26 @@
     }
 
     #content {
+        padding: var(--mobile-padding);
         transition: 0.1s;
+    }
+
+    .project-card {
+        padding: var(--space-1) var(--mobile-padding) var(--mobile-padding) var(--mobile-padding);
+    }
+
+    .content-two-column {
+        gap: var(--space-4);
+        padding: 0;
+    }
+
+    .page-content ul,
+    .page-content ol {
+        padding-left: var(--space-4);
+    }
+
+    .contact-group.large .contact-card {
+        padding: var(--space-3) var(--space-4);
     }
 
     .theme-toggle {
