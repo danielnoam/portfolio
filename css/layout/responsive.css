@@ -111,13 +111,18 @@
         right: var(--space-4);
     }
 
-    .image-gallery,
-    .image-gallery.gallery-2-columns,
-    .image-gallery.gallery-3-columns {
-        grid-template-columns: repeat(1, 1fr);
-    }
-    .image-gallery.gallery-4-columns {
+    .image-gallery {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Default to a full-width row; portrait media (tagged by LightboxManager
+       once its real dimensions are known) pairs up two-per-row instead. */
+    .image-gallery figure {
+        grid-column: span 2;
+    }
+
+    .image-gallery figure.is-portrait {
+        grid-column: span 1;
     }
 
     #back-to-top {

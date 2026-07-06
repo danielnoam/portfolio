@@ -97,6 +97,7 @@ export class LightboxManager {
         const onMediaLoaded = () => {
             figure.classList.add('loaded');
             media.classList.add('loaded');
+            this.markOrientation(figure, media);
         };
 
         if (media.tagName === 'IMG') {
@@ -113,6 +114,16 @@ export class LightboxManager {
                 media.addEventListener('loadeddata', onMediaLoaded);
                 media.addEventListener('error', onMediaLoaded);
             }
+        }
+    }
+
+    // Tags portrait media so the mobile gallery grid (css/layout/responsive.css)
+    // can pair two of them per row instead of giving every item a full-width row.
+    markOrientation(figure, media) {
+        const width = media.tagName === 'IMG' ? media.naturalWidth : media.videoWidth;
+        const height = media.tagName === 'IMG' ? media.naturalHeight : media.videoHeight;
+        if (width > 0 && height > 0) {
+            figure.classList.toggle('is-portrait', height > width);
         }
     }
 

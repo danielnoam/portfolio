@@ -7,6 +7,16 @@ and the project adheres to [Semantic Versioning](https://semver.org/).
 The top entry below must always match the `version` constant in
 `js/core/config.js`, which is rendered at the bottom of the sidebar.
 
+## [1.2.7] - 2026-07-06
+
+### Changed
+
+- Mobile image galleries: every item used to take a full-width row, wasting
+  space on portrait screenshots/videos. `LightboxManager` now tags each
+  gallery figure `is-portrait` once its real media dimensions are known, and
+  the mobile grid pairs two portrait items per row while landscape items
+  still span the full row.
+
 ## [1.2.6] - 2026-07-06
 
 ### Fixed
