@@ -7,6 +7,17 @@ and the project adheres to [Semantic Versioning](https://semver.org/).
 The top entry below must always match the `version` constant in
 `js/core/config.js`, which is rendered at the bottom of the sidebar.
 
+## [1.2.6] - 2026-07-06
+
+### Fixed
+
+- Excessive mobile padding: `#content` and `.project-card` kept their desktop
+  padding (32px) on mobile instead of using the existing `--mobile-padding`
+  token, adding ~128px of horizontal padding on a 375px phone. Also fixed the
+  same never-revisited-on-mobile pattern in `.content-two-column` (About/
+  Utilities pages), `.contact-group.large .contact-card`, and `.page-content`
+  list indentation.
+
 ## [1.2.5] - 2026-07-02
 
 ### Changed
