@@ -336,4 +336,13 @@ nav h2.foldout-header.open .foldout-arrow {
     color: var(--text-secondary);
     opacity: var(--opacity-70);
     user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Set while the version marker's tap-to-open-admin sequence is counting
+   down. No hover or cursor hint exists — the marker only reacts once the
+   taps are already deliberate. */
+.version-marker.is-counting {
+    color: var(--color-primary);
+    opacity: var(--opacity-100);
 }

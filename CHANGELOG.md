@@ -7,6 +7,19 @@ and the project adheres to [Semantic Versioning](https://semver.org/).
 The top entry below must always match the `version` constant in
 `js/core/config.js`, which is rendered at the bottom of the sidebar.
 
+## [1.3.1] - 2026-08-12
+
+### Added
+
+- A way into the admin panel from a phone without typing the URL: tapping the
+  sidebar's version marker five times quickly opens it. The marker keeps its
+  plain-text styling and cursor, so nothing advertises it to visitors; it
+  stays silent through the first two taps (an accidental double tap looks
+  like nothing happened) and then counts down the remaining taps in the
+  accent colour so the sequence is followable on a touch screen. Pausing for
+  1.5s resets it. The panel is still password-locked — this is convenience,
+  not access.
+
 ## [1.3.0] - 2026-08-12
 
 ### Added
