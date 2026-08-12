@@ -52,31 +52,28 @@ be mixed freely.
 
 ### How the login works
 
-The site is static, so there is no server to authenticate against and no way
-to make a password check on its own meaningful — anything the browser can
-verify, a visitor can read. So the password does real work instead of
-pretending: **setup** (once per device) takes a GitHub token and a password,
-derives a key from the password with PBKDF2-SHA256, and stores the token
-encrypted with AES-GCM in `localStorage`. **Login** re-derives that key and
-decrypts. A wrong password fails AES-GCM's integrity check, so there is no
-stored answer to compare against or bypass.
+The site is static, so there is no server to authenticate against — the
+GitHub token *is* the credential, and a password on top of it would only be
+guarding the same thing twice. So the login is one field: paste the token.
 
-What this means in practice:
+The token is kept in `localStorage`, so returning to the panel goes straight
+to the editor rather than asking again, and logging out removes it. The
+owner, repository and branch aren't asked for either — a project page is
+served from `<owner>.github.io/<repo>/`, which is all the panel needs, so it
+reads them off its own URL (falling back to `danielnoam/portfolio` on
+`main` during local development).
 
-- The panel is publicly reachable, and useless without both the password and
-  a browser that has been set up. Without them there is no token to steal.
-- The password is never stored or transmitted, so there is no reset — losing
-  it means setting up again with a fresh token.
-- The token is decrypted into memory only, and dropped on logout, on tab
-  close, and after 30 minutes idle.
-- Setup is per-device. A second device needs the token pasted again.
+The tradeoff is that the token is stored as-is, so anything with access to
+the browser can read it. What keeps that bounded:
 
-Use a **fine-grained personal access token** scoped to this repository alone,
-with **Contents: Read and write** and an expiry date. That is the blast
-radius if it ever leaks: this repo's contents, until the token expires.
-
-Editing from a device you don't control is not a good idea, since the vault
-stays in that browser until you use "start over with a new token" to clear it.
+- Use a **fine-grained personal access token** scoped to this repository
+  alone, with **Contents: Read and write**. That is the blast radius if it
+  leaks: this repo's contents, nothing else.
+- **Give it an expiry date.** It is the one thing that limits the damage
+  from a token you forget you left somewhere.
+- Log out when using a device that isn't yours, which deletes the stored
+  token. A token that has since expired or been revoked is discarded
+  automatically on the next load rather than failing every time.
 
 ## Local development
 

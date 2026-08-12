@@ -12,6 +12,31 @@
 const API_ROOT = 'https://api.github.com';
 const FILE_MODE = '100644';
 
+// Used when the location can't say which repo this is — i.e. local development.
+const FALLBACK_REPO = { owner: 'danielnoam', repo: 'portfolio', branch: 'main' };
+
+/**
+ * Work out which repository the panel is editing from where it is being
+ * served: a project page lives at `<owner>.github.io/<repo>/`, which is
+ * everything needed. Deriving it means there is nothing to fill in by hand
+ * and nothing to keep in sync if the repo is ever renamed.
+ */
+export function detectRepository() {
+    const userSite = window.location.hostname.match(/^([^.]+)\.github\.io$/);
+    const owner = userSite ? userSite[1] : FALLBACK_REPO.owner;
+
+    // The first path segment is the repo on a project page. A segment with a
+    // dot in it is a file (admin.html), which means this is a user site.
+    const [, firstSegment] = window.location.pathname.split('/');
+    const isRepoSegment = firstSegment && !firstSegment.includes('.');
+
+    const repo = isRepoSegment
+        ? firstSegment
+        : (userSite ? `${owner}.github.io` : FALLBACK_REPO.repo);
+
+    return { owner, repo, branch: FALLBACK_REPO.branch };
+}
+
 const encoder = new TextEncoder();
 const decoder = new TextDecoder();
 

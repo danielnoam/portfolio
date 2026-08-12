@@ -83,6 +83,11 @@ a { color: var(--color-primary-light); }
     color: var(--color-dark-text-secondary);
 }
 
+/* Empty before a config is loaded — an empty bordered pill reads as a bug. */
+.version-badge:empty {
+    display: none;
+}
+
 .version-badge {
     padding: var(--space-1) var(--space-2);
     border: 1px solid rgba(255, 255, 255, var(--opacity-20));
@@ -221,56 +226,91 @@ button:disabled {
             AUTH SCREEN
 ================================================*/
 
-.auth-screen {
-    max-width: 520px;
-    margin: var(--space-8) auto 0;
+/* An author `display` beats the [hidden] attribute's UA rule, so restore it
+   explicitly — the screen starts hidden until the stored token is checked. */
+.auth-screen[hidden] {
+    display: none;
 }
 
-.panel {
-    padding: var(--space-6);
+/* Centred in whatever height is left under the header, so the card sits at
+   the optical centre on a phone as well as a desktop. */
+.auth-screen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 12rem);
+    padding: var(--space-5) 0;
+}
+
+.login-card {
+    width: min(380px, 100%);
+    padding: var(--space-7) var(--space-6);
+    text-align: center;
     background-color: var(--color-dark-card);
     border: 1px solid rgba(255, 255, 255, var(--opacity-10));
     border-radius: var(--card-radius);
+    box-shadow: var(--shadow-lg);
 }
 
-.auth-panel h2 {
+.login-mark {
+    font-size: var(--text-2xl);
+    line-height: 1;
+    margin-bottom: var(--space-4);
+    opacity: var(--opacity-60);
+}
+
+.login-card h2 {
     margin-bottom: var(--space-2);
 }
 
-.auth-panel form {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-1);
-    margin-top: var(--space-5);
+#login-form {
+    margin-top: var(--space-6);
 }
 
-.auth-panel form > label:not(:first-child) {
-    margin-top: var(--space-4);
+/* The reveal toggle sits inside the field rather than beside it, so the row
+   stays a single control at narrow widths. */
+.token-field {
+    position: relative;
 }
 
-.auth-panel .primary-btn {
-    margin-top: var(--space-5);
+.token-field input {
+    padding-right: 3.75rem;
+    text-align: center;
 }
 
-.auth-panel .muted.small {
+#toggle-token {
+    position: absolute;
+    top: 50%;
+    right: var(--space-3);
+    transform: translateY(-50%);
+    font-size: var(--text-xs);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-wide);
+}
+
+.login-submit {
+    width: 100%;
     margin-top: var(--space-3);
-}
-
-.field-row {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-3);
-    margin-top: var(--space-4);
-}
-
-.field-row label {
-    margin-top: 0;
+    padding: var(--space-3) var(--space-5);
 }
 
 #auth-status,
 #auth-error {
-    margin-top: var(--space-4);
-    text-align: center;
+    margin-top: var(--space-3);
+}
+
+/* #auth-error keeps its reserved line so an error doesn't shift the card,
+   but the status line should take no room until it has something to say. */
+#auth-status:empty {
+    display: none;
+}
+
+.login-help {
+    margin-top: var(--space-6);
+    padding-top: var(--space-4);
+    border-top: 1px solid rgba(255, 255, 255, var(--opacity-10));
+    line-height: var(--leading-relaxed);
 }
 
 /*==============================================
@@ -543,17 +583,6 @@ input.page-folder {
 .toast.is-ok { border-color: var(--color-success); }
 .toast.is-warn { border-color: var(--color-firefly); }
 .toast.is-error { border-color: var(--color-error); }
-
-.fatal {
-    max-width: 32rem;
-    margin: var(--space-12) auto;
-    padding: var(--space-6);
-    text-align: center;
-}
-
-.fatal h1 {
-    margin-bottom: var(--space-3);
-}
 
 /*==============================================
             RESPONSIVE

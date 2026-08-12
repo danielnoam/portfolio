@@ -7,6 +7,29 @@ and the project adheres to [Semantic Versioning](https://semver.org/).
 The top entry below must always match the `version` constant in
 `js/core/config.js`, which is rendered at the bottom of the sidebar.
 
+## [1.4.0] - 2026-08-12
+
+### Changed
+
+- The admin panel now logs in with the GitHub token alone. The password step
+  is gone, along with the owner/repository/branch fields — the repository is
+  derived from where the panel is served (`<owner>.github.io/<repo>/`), so
+  there is nothing to fill in and nothing to keep in sync if the repo is
+  renamed. The login screen is a single field with a show/hide toggle.
+- The token is kept in `localStorage` and reused, so returning to the panel
+  goes straight to the editor instead of asking again; logging out removes
+  it. A stored token that has expired or been revoked is discarded on the
+  spot rather than failing on every load.
+- Because the token is now stored as-is rather than encrypted, anything with
+  access to the browser can read it. Use a fine-grained token limited to this
+  repository with Contents: Read and write, and give it an expiry date.
+
+### Removed
+
+- `js/admin/adminAuth.js` and the password vault it implemented (PBKDF2 →
+  AES-GCM), the 30-minute idle lock, and the secure-context requirement the
+  browser crypto imposed.
+
 ## [1.3.1] - 2026-08-12
 
 ### Added

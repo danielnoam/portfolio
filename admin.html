@@ -25,70 +25,32 @@
 
 <main class="admin-main">
 
-    <!-- ============ LOGIN / FIRST-RUN SETUP ============ -->
-    <section id="auth-screen" class="auth-screen">
+    <!-- ============ LOGIN ============ -->
+    <section id="auth-screen" class="auth-screen" hidden>
+        <div class="login-card">
+            <div class="login-mark" aria-hidden="true">⚙</div>
+            <h2>Admin login</h2>
+            <p class="muted small">Paste your GitHub token to manage pages and sections.</p>
 
-        <div id="login-panel" class="panel auth-panel" hidden>
-            <h2>Log in</h2>
-            <p class="muted">Enter your admin password to unlock this browser's saved GitHub access.</p>
             <form id="login-form">
-                <label for="login-password">Password</label>
-                <input id="login-password" type="password" autocomplete="current-password" required>
-                <button type="submit" class="primary-btn">Log in</button>
-            </form>
-            <p class="muted small">
-                Forgot it? There is no reset — the password is never stored, only used to decrypt.
-                <button id="forget-device" type="button" class="link-btn">Start over with a new token</button>
-            </p>
-        </div>
-
-        <div id="setup-panel" class="panel auth-panel" hidden>
-            <h2>Set up admin access</h2>
-            <p class="muted">
-                This site is static — there is no server to log in to. Instead, this browser stores a
-                GitHub token encrypted with a password you choose. You do this once per device;
-                after that it is just the password.
-            </p>
-
-            <form id="setup-form">
-                <label for="setup-token">GitHub token</label>
-                <input id="setup-token" type="password" autocomplete="off" spellcheck="false"
-                       placeholder="github_pat_…" required>
-                <p class="muted small">
-                    Create a <strong>fine-grained personal access token</strong> at
-                    <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">
-                        github.com/settings/personal-access-tokens</a>,
-                    limited to this one repository, with <strong>Contents: Read and write</strong>.
-                    Give it an expiry date — you can always set it up again.
-                </p>
-
-                <div class="field-row">
-                    <div>
-                        <label for="setup-owner">Owner</label>
-                        <input id="setup-owner" type="text" autocomplete="off" spellcheck="false">
-                    </div>
-                    <div>
-                        <label for="setup-repo">Repository</label>
-                        <input id="setup-repo" type="text" autocomplete="off" spellcheck="false">
-                    </div>
-                    <div>
-                        <label for="setup-branch">Deploy branch</label>
-                        <input id="setup-branch" type="text" autocomplete="off" spellcheck="false">
-                    </div>
+                <div class="token-field">
+                    <input id="token" type="password" autocomplete="off" spellcheck="false"
+                           placeholder="github_pat_…" aria-label="GitHub token" required>
+                    <button id="toggle-token" type="button" class="link-btn">Show</button>
                 </div>
-
-                <label for="setup-password">Choose a password</label>
-                <input id="setup-password" type="password" autocomplete="new-password" required>
-
-                <label for="setup-password-confirm">Confirm password</label>
-                <input id="setup-password-confirm" type="password" autocomplete="new-password" required>
-
-                <button type="submit" class="primary-btn">Save and log in</button>
+                <button type="submit" class="primary-btn login-submit">Log in</button>
             </form>
-        </div>
 
-        <p id="auth-status" class="muted small" aria-live="polite"></p>
-        <p id="auth-error" class="error-text" role="alert"></p>
+            <p id="auth-status" class="muted small" aria-live="polite"></p>
+            <p id="auth-error" class="error-text" role="alert"></p>
+
+            <p class="login-help muted small">
+                Need one? Create a
+                <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">fine-grained token</a>
+                for this repository with <strong>Contents: Read and write</strong>, and give it an
+                expiry date. It is stored on this device until you log out.
+            </p>
+        </div>
     </section>
 
     <!-- ============ EDITOR ============ -->

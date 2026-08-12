@@ -11,8 +11,8 @@
     new pages, adds their content.md).
 ================================================*/
 
-import { AdminAuth } from './adminAuth.js';
-import { GitHubClient } from './githubClient.js';
+import { tokenStore } from './tokenStore.js';
+import { GitHubClient, detectRepository } from './githubClient.js';
 import * as changeSet from './changeSet.js';
 import {
     paths,
@@ -29,9 +29,6 @@ import {
     suggestFolder
 } from './configFile.js';
 
-const DEFAULT_OWNER = 'danielnoam';
-const DEFAULT_REPO = 'portfolio';
-const DEFAULT_BRANCH = 'main';
 const DEFAULT_COMMIT_MESSAGE = 'Update site pages from the admin panel';
 
 /** Page slugs the router already answers to, so a new page can't shadow them. */
@@ -61,7 +58,6 @@ function $(selector) {
 
 export class AdminApp {
     constructor() {
-        this.auth = new AdminAuth();
         this.client = null;
 
         this.configSource = '';
@@ -75,34 +71,39 @@ export class AdminApp {
     ================================================*/
 
     init() {
-        if (!AdminAuth.isSupported()) {
-            this._showFatal(
-                'This panel needs a secure context (https, or localhost) for the ' +
-                'browser crypto it uses to protect your token. Open it over https.'
-            );
-            return;
-        }
-
         this._bindAuthScreen();
         this._bindEditorScreen();
 
-        this.auth.onLock = () => {
-            this._showAuthScreen();
-            this._toast('Locked after 30 minutes of inactivity. Log back in to continue.', 'warn');
-        };
-
-        ['pointerdown', 'keydown'].forEach(event => {
-            document.addEventListener(event, () => this.auth.touch(), { passive: true });
-        });
-
         window.addEventListener('beforeunload', event => {
-            if (this.auth.isUnlocked && this._changes().length) {
+            if (this.client && this._changes().length) {
                 event.preventDefault();
                 event.returnValue = '';
             }
         });
 
-        this._showAuthScreen();
+        this._start();
+    }
+
+    /** A stored token goes straight to the editor; otherwise, ask for one. */
+    async _start() {
+        const token = tokenStore.get();
+        if (!token) {
+            this._showAuthScreen();
+            return;
+        }
+
+        this._setAuthBusy(true);
+        try {
+            await this._openEditor(token);
+        } catch (error) {
+            // A stored token that no longer works is worse than none at all,
+            // since it would fail again on every load.
+            tokenStore.clear();
+            this._showAuthScreen();
+            this._authError(error.message);
+        } finally {
+            this._setAuthBusy(false);
+        }
     }
 
     /*==============================================
@@ -115,87 +116,43 @@ export class AdminApp {
             this._handleLogin();
         });
 
-        $('#setup-form').addEventListener('submit', event => {
-            event.preventDefault();
-            this._handleSetup();
-        });
-
-        $('#forget-device').addEventListener('click', () => {
-            if (!confirm('Remove the saved token from this browser? You will need the token again to set the panel back up.')) return;
-            this.auth.forget();
-            this._showAuthScreen();
-            this._toast('This browser has forgotten the token.', 'ok');
+        $('#toggle-token').addEventListener('click', () => {
+            const field = $('#token');
+            const revealed = field.type === 'text';
+            field.type = revealed ? 'password' : 'text';
+            $('#toggle-token').textContent = revealed ? 'Show' : 'Hide';
         });
 
         $('#lock-btn').addEventListener('click', () => {
             if (this._changes().length && !confirm('You have unpublished changes. Log out and discard them?')) return;
-            this.auth.lock();
-            this._showAuthScreen();
+            this._logout();
         });
     }
 
-    _showAuthScreen() {
-        const returning = this.auth.hasVault();
+    _logout() {
+        tokenStore.clear();
+        this.client = null;
+        this._showAuthScreen();
+        this._toast('Logged out. The token has been removed from this browser.', 'ok');
+    }
 
+    _showAuthScreen() {
         $('#editor-screen').hidden = true;
         $('#auth-screen').hidden = false;
         $('#lock-btn').hidden = true;
         $('#repo-label').textContent = '';
+        $('#config-version').textContent = '';
 
-        $('#login-panel').hidden = !returning;
-        $('#setup-panel').hidden = returning;
+        $('#token').value = '';
         $('#auth-error').textContent = '';
 
-        document.querySelectorAll('#auth-screen input[type="password"]').forEach(input => {
-            input.value = '';
-        });
-
-        const focusTarget = returning ? $('#login-password') : $('#setup-token');
-        requestAnimationFrame(() => focusTarget.focus());
-
-        if (!returning) {
-            $('#setup-owner').value = $('#setup-owner').value || DEFAULT_OWNER;
-            $('#setup-repo').value = $('#setup-repo').value || DEFAULT_REPO;
-            $('#setup-branch').value = $('#setup-branch').value || DEFAULT_BRANCH;
-        }
+        requestAnimationFrame(() => $('#token').focus());
     }
 
     async _handleLogin() {
-        const password = $('#login-password').value;
-        this._setAuthBusy(true);
+        const token = $('#token').value.trim();
 
-        try {
-            const credentials = await this.auth.unlock(password);
-            await this._openEditor(credentials);
-        } catch (error) {
-            this.auth.lock();
-            this._authError(error.message);
-        } finally {
-            this._setAuthBusy(false);
-        }
-    }
-
-    async _handleSetup() {
-        const password = $('#setup-password').value;
-        const confirmPassword = $('#setup-password-confirm').value;
-
-        if (password !== confirmPassword) {
-            this._authError('The two passwords do not match.');
-            return;
-        }
-        if (password.length < AdminAuth.minPasswordLength) {
-            this._authError(`Password must be at least ${AdminAuth.minPasswordLength} characters.`);
-            return;
-        }
-
-        const credentials = {
-            token: $('#setup-token').value.trim(),
-            owner: $('#setup-owner').value.trim() || DEFAULT_OWNER,
-            repo: $('#setup-repo').value.trim() || DEFAULT_REPO,
-            branch: $('#setup-branch').value.trim() || DEFAULT_BRANCH
-        };
-
-        if (!credentials.token) {
+        if (!token) {
             this._authError('Paste a GitHub token to continue.');
             return;
         }
@@ -203,12 +160,9 @@ export class AdminApp {
         this._setAuthBusy(true);
 
         try {
-            // Prove the token works before committing it to storage, so a typo
-            // fails here rather than after the vault is written.
-            await new GitHubClient(credentials).verifyAccess();
-            await this.auth.createVault(password, credentials);
-            await this._openEditor(credentials);
-            this._toast('Admin access set up. From now on this browser only asks for your password.', 'ok');
+            await this._openEditor(token);
+            // Only remember a token that has proven it works.
+            tokenStore.save(token);
         } catch (error) {
             this._authError(error.message);
         } finally {
@@ -223,21 +177,27 @@ export class AdminApp {
     _setAuthBusy(busy) {
         document.querySelectorAll('#auth-screen button, #auth-screen input')
             .forEach(node => { node.disabled = busy; });
-        $('#auth-status').textContent = busy ? 'Working…' : '';
+        $('#auth-status').textContent = busy ? 'Checking the token…' : '';
     }
 
     /*==============================================
                 LOADING THE CONFIG
     ================================================*/
 
-    async _openEditor(credentials) {
-        this.client = new GitHubClient(credentials);
+    async _openEditor(token) {
+        const repository = detectRepository();
+        const client = new GitHubClient({ token, ...repository });
+
+        // Check access before swapping screens, so a bad token surfaces on the
+        // login form rather than behind a half-loaded editor.
+        await client.verifyAccess();
+        this.client = client;
         await this._loadConfig();
 
         $('#auth-screen').hidden = true;
         $('#editor-screen').hidden = false;
         $('#lock-btn').hidden = false;
-        $('#repo-label').textContent = `${credentials.owner}/${credentials.repo} · ${credentials.branch}`;
+        $('#repo-label').textContent = `${repository.owner}/${repository.repo} · ${repository.branch}`;
 
         this.render();
     }
@@ -805,14 +765,5 @@ export class AdminApp {
 
         clearTimeout(this._toastTimer);
         this._toastTimer = setTimeout(() => toast.classList.remove('is-visible'), 6000);
-    }
-
-    _showFatal(message) {
-        document.body.replaceChildren(
-            el('div', { class: 'fatal' }, [
-                el('h1', { textContent: 'Admin panel unavailable' }),
-                el('p', { textContent: message })
-            ])
-        );
     }
 }
