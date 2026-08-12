@@ -7,6 +7,32 @@ and the project adheres to [Semantic Versioning](https://semver.org/).
 The top entry below must always match the `version` constant in
 `js/core/config.js`, which is rendered at the bottom of the sidebar.
 
+## [1.5.0] - 2026-08-12
+
+### Added
+
+- The admin token is encrypted at rest again, without going back to typing a
+  password. Setup takes the token and a PIN; unlocking afterwards is Face ID
+  / a fingerprint, or the PIN. Both are offered on the login screen, and the
+  PIN is what carries browsers that lack biometrics.
+- Biometric unlock uses WebAuthn's PRF extension, which returns a secret held
+  by the device's authenticator and released only after user verification —
+  so that key never touches disk. The PIN path derives its key with
+  PBKDF2-SHA256 at 600k iterations, chosen high because a PIN has little
+  entropy and each offline guess should be expensive.
+- The token is encrypted separately under each unlock method, so either one
+  opens it and neither can derive the other. An **Add Face ID** button in the
+  editor header covers devices where biometrics were skipped or unavailable
+  at setup.
+
+### Fixed
+
+- Setup showed the editor before the vault had finished being written. The
+  token is now verified, then stored, then the editor opens, so a storage
+  failure can't hide behind a working editor.
+- Focus rings on the panel's buttons used the browser default instead of the
+  site's accent colour.
+
 ## [1.4.0] - 2026-08-12
 
 ### Changed

@@ -222,6 +222,16 @@ button:disabled {
     text-decoration: underline;
 }
 
+/* The UA's default focus ring clashes with the palette — keyboard focus
+   should still be obvious, just in the site's own colour. */
+.primary-btn:focus-visible,
+.text-btn:focus-visible,
+.icon-btn:focus-visible,
+.link-btn:focus-visible {
+    outline: 2px solid var(--color-primary-light);
+    outline-offset: 2px;
+}
+
 /*==============================================
             AUTH SCREEN
 ================================================*/
@@ -263,7 +273,43 @@ button:disabled {
     margin-bottom: var(--space-2);
 }
 
-#login-form {
+#setup-form,
+#pin-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    margin-top: var(--space-6);
+}
+
+#pin,
+#new-pin {
+    text-align: center;
+    letter-spacing: var(--tracking-widest);
+}
+
+.biometric-opt {
+    justify-content: center;
+    white-space: normal;
+    margin-top: var(--space-1);
+}
+
+/* "or" with a rule through it, separating the two unlock routes. */
+.divider {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    margin: var(--space-4) 0;
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background-color: rgba(255, 255, 255, var(--opacity-10));
+}
+
+#passkey-btn {
     margin-top: var(--space-6);
 }
 
@@ -291,7 +337,6 @@ button:disabled {
 
 .login-submit {
     width: 100%;
-    margin-top: var(--space-3);
     padding: var(--space-3) var(--space-5);
 }
 

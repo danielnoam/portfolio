@@ -18,6 +18,7 @@
     </div>
     <div class="admin-header-actions">
         <span id="config-version" class="version-badge"></span>
+        <button id="add-passkey" type="button" class="text-btn" hidden>Add Face ID</button>
         <a class="text-btn" href="./" target="_blank" rel="noopener">View site</a>
         <button id="lock-btn" type="button" class="text-btn" hidden>Log out</button>
     </div>
@@ -25,31 +26,68 @@
 
 <main class="admin-main">
 
-    <!-- ============ LOGIN ============ -->
+    <!-- ============ LOGIN / FIRST-RUN SETUP ============ -->
     <section id="auth-screen" class="auth-screen" hidden>
         <div class="login-card">
             <div class="login-mark" aria-hidden="true">⚙</div>
-            <h2>Admin login</h2>
-            <p class="muted small">Paste your GitHub token to manage pages and sections.</p>
 
-            <form id="login-form">
-                <div class="token-field">
-                    <input id="token" type="password" autocomplete="off" spellcheck="false"
-                           placeholder="github_pat_…" aria-label="GitHub token" required>
-                    <button id="toggle-token" type="button" class="link-btn">Show</button>
-                </div>
-                <button type="submit" class="primary-btn login-submit">Log in</button>
-            </form>
+            <!-- Returning: unlock the encrypted token -->
+            <div id="login-panel" hidden>
+                <h2>Admin login</h2>
+                <p class="muted small">Unlock the token stored on this device.</p>
+
+                <button id="passkey-btn" type="button" class="primary-btn login-submit" hidden>
+                    Unlock with Face ID / fingerprint
+                </button>
+
+                <p id="unlock-divider" class="divider muted small" hidden><span>or</span></p>
+
+                <form id="pin-form">
+                    <input id="pin" type="password" inputmode="numeric" pattern="[0-9]*"
+                           autocomplete="off" placeholder="PIN" aria-label="PIN" required>
+                    <button type="submit" class="primary-btn login-submit">Unlock</button>
+                </form>
+
+                <p class="login-help muted small">
+                    <button id="reset-vault" type="button" class="link-btn">Start over with a new token</button>
+                </p>
+            </div>
+
+            <!-- First run on this device -->
+            <div id="setup-panel" hidden>
+                <h2>Admin setup</h2>
+                <p class="muted small">
+                    Your token is encrypted on this device with a PIN you choose.
+                </p>
+
+                <form id="setup-form">
+                    <div class="token-field">
+                        <input id="token" type="password" autocomplete="off" spellcheck="false"
+                               placeholder="github_pat_…" aria-label="GitHub token" required>
+                        <button id="toggle-token" type="button" class="link-btn">Show</button>
+                    </div>
+
+                    <input id="new-pin" type="password" inputmode="numeric" pattern="[0-9]*"
+                           autocomplete="off" placeholder="Choose a PIN" aria-label="Choose a PIN" required>
+
+                    <label id="biometric-opt" class="checkbox biometric-opt" hidden>
+                        <input id="enable-passkey" type="checkbox" checked>
+                        Also unlock with Face ID / fingerprint
+                    </label>
+
+                    <button type="submit" class="primary-btn login-submit">Continue</button>
+                </form>
+
+                <p class="login-help muted small">
+                    Need a token? Create a
+                    <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">fine-grained token</a>
+                    for this repository with <strong>Contents: Read and write</strong>, and give it an
+                    expiry date.
+                </p>
+            </div>
 
             <p id="auth-status" class="muted small" aria-live="polite"></p>
             <p id="auth-error" class="error-text" role="alert"></p>
-
-            <p class="login-help muted small">
-                Need one? Create a
-                <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">fine-grained token</a>
-                for this repository with <strong>Contents: Read and write</strong>, and give it an
-                expiry date. It is stored on this device until you log out.
-            </p>
         </div>
     </section>
 

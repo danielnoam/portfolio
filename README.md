@@ -53,27 +53,48 @@ be mixed freely.
 ### How the login works
 
 The site is static, so there is no server to authenticate against — the
-GitHub token *is* the credential, and a password on top of it would only be
-guarding the same thing twice. So the login is one field: paste the token.
+GitHub token *is* the credential. **Setup** (once per device) takes the
+token and a PIN, and stores the token encrypted in `localStorage`.
+**Unlocking** afterwards is Face ID / a fingerprint, or the PIN.
 
-The token is kept in `localStorage`, so returning to the panel goes straight
-to the editor rather than asking again, and logging out removes it. The
-owner, repository and branch aren't asked for either — a project page is
+The owner, repository and branch are never asked for: a project page is
 served from `<owner>.github.io/<repo>/`, which is all the panel needs, so it
-reads them off its own URL (falling back to `danielnoam/portfolio` on
-`main` during local development).
+reads them off its own URL (falling back to `danielnoam/portfolio` on `main`
+during local development).
 
-The tradeoff is that the token is stored as-is, so anything with access to
-the browser can read it. What keeps that bounded:
+#### Where the key comes from
 
-- Use a **fine-grained personal access token** scoped to this repository
-  alone, with **Contents: Read and write**. That is the blast radius if it
-  leaks: this repo's contents, nothing else.
-- **Give it an expiry date.** It is the one thing that limits the damage
-  from a token you forget you left somewhere.
-- Log out when using a device that isn't yours, which deletes the stored
-  token. A token that has since expired or been revoked is discarded
-  automatically on the next load rather than failing every time.
+Encryption is only worth anything if the key isn't sitting next to the
+ciphertext, so no key is ever stored. It is rebuilt at unlock time from
+something you supply:
+
+- **PIN** — PBKDF2-SHA256 (600k iterations) stretches the digits into an
+  AES-GCM key. The high iteration count is deliberate: a PIN has little
+  entropy, so each guess needs to be expensive for anyone brute-forcing a
+  copied vault offline. A longer PIN is meaningfully better than a 4-digit
+  one.
+- **Passkey** — WebAuthn's PRF extension returns a secret held by the
+  device's authenticator and released only after Face ID / a fingerprint. It
+  never touches disk at all.
+
+The token is encrypted separately under each, so either unlocks it and
+neither can derive the other. A wrong PIN fails AES-GCM's integrity check —
+there is no stored answer to compare against or skip past.
+
+Biometric unlock needs both a platform authenticator and PRF support; where
+either is missing the panel says so and the PIN carries on working. If you
+skip it at setup, an **Add Face ID** button appears in the header while
+you're logged in.
+
+#### Still worth doing
+
+Use a **fine-grained personal access token** scoped to this repository alone,
+with **Contents: Read and write**, and **give it an expiry date**. Encryption
+protects the token at rest on your device; the scope and expiry are what
+bound the damage if it ever escapes some other way.
+
+"Start over with a new token" on the login screen erases the vault — use it
+on any device that isn't yours.
 
 ## Local development
 

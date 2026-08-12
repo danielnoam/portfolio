@@ -11,7 +11,7 @@
     new pages, adds their content.md).
 ================================================*/
 
-import { tokenStore } from './tokenStore.js';
+import { vault } from './vault.js';
 import { GitHubClient, detectRepository } from './githubClient.js';
 import * as changeSet from './changeSet.js';
 import {
@@ -59,6 +59,8 @@ function $(selector) {
 export class AdminApp {
     constructor() {
         this.client = null;
+        this.token = null;
+        this.passkeySupported = false;
 
         this.configSource = '';
         this.original = [];
@@ -84,26 +86,9 @@ export class AdminApp {
         this._start();
     }
 
-    /** A stored token goes straight to the editor; otherwise, ask for one. */
     async _start() {
-        const token = tokenStore.get();
-        if (!token) {
-            this._showAuthScreen();
-            return;
-        }
-
-        this._setAuthBusy(true);
-        try {
-            await this._openEditor(token);
-        } catch (error) {
-            // A stored token that no longer works is worse than none at all,
-            // since it would fail again on every load.
-            tokenStore.clear();
-            this._showAuthScreen();
-            this._authError(error.message);
-        } finally {
-            this._setAuthBusy(false);
-        }
+        this.passkeySupported = await vault.isPasskeySupported();
+        this._showAuthScreen();
     }
 
     /*==============================================
@@ -111,9 +96,18 @@ export class AdminApp {
     ================================================*/
 
     _bindAuthScreen() {
-        $('#login-form').addEventListener('submit', event => {
+        $('#setup-form').addEventListener('submit', event => {
             event.preventDefault();
-            this._handleLogin();
+            this._handleSetup();
+        });
+
+        $('#pin-form').addEventListener('submit', event => {
+            event.preventDefault();
+            this._handleUnlock(() => vault.unlockWithPin($('#pin').value), 'Unlocking…');
+        });
+
+        $('#passkey-btn').addEventListener('click', () => {
+            this._handleUnlock(() => vault.unlockWithPasskey(), 'Waiting for Face ID…');
         });
 
         $('#toggle-token').addEventListener('click', () => {
@@ -123,6 +117,14 @@ export class AdminApp {
             $('#toggle-token').textContent = revealed ? 'Show' : 'Hide';
         });
 
+        $('#reset-vault').addEventListener('click', () => {
+            if (!confirm('Forget the token stored on this device and start over?')) return;
+            vault.clear();
+            this._showAuthScreen();
+        });
+
+        $('#add-passkey').addEventListener('click', () => this._addPasskey());
+
         $('#lock-btn').addEventListener('click', () => {
             if (this._changes().length && !confirm('You have unpublished changes. Log out and discard them?')) return;
             this._logout();
@@ -130,39 +132,93 @@ export class AdminApp {
     }
 
     _logout() {
-        tokenStore.clear();
         this.client = null;
+        this.token = null;
         this._showAuthScreen();
-        this._toast('Logged out. The token has been removed from this browser.', 'ok');
+        this._toast('Logged out. The token stays encrypted on this device.', 'ok');
     }
 
     _showAuthScreen() {
+        const returning = vault.exists();
+
         $('#editor-screen').hidden = true;
         $('#auth-screen').hidden = false;
         $('#lock-btn').hidden = true;
+        $('#add-passkey').hidden = true;
         $('#repo-label').textContent = '';
         $('#config-version').textContent = '';
 
-        $('#token').value = '';
-        $('#auth-error').textContent = '';
+        $('#login-panel').hidden = !returning;
+        $('#setup-panel').hidden = returning;
 
-        requestAnimationFrame(() => $('#token').focus());
+        // Biometric unlock only appears once it has actually been set up here.
+        const passkeyReady = returning && vault.hasPasskey();
+        $('#passkey-btn').hidden = !passkeyReady;
+        $('#unlock-divider').hidden = !passkeyReady;
+        $('#biometric-opt').hidden = returning || !this.passkeySupported;
+
+        ['#token', '#new-pin', '#pin'].forEach(selector => { $(selector).value = ''; });
+        $('#auth-error').textContent = '';
+        $('#auth-status').textContent = '';
+
+        const focusTarget = returning ? (passkeyReady ? '#passkey-btn' : '#pin') : '#token';
+        requestAnimationFrame(() => $(focusTarget).focus());
     }
 
-    async _handleLogin() {
+    async _handleSetup() {
         const token = $('#token').value.trim();
+        const pin = $('#new-pin').value.trim();
+        const wantsPasskey = this.passkeySupported && $('#enable-passkey').checked;
 
         if (!token) {
             this._authError('Paste a GitHub token to continue.');
             return;
         }
+        if (pin.length < vault.minPinLength) {
+            this._authError(`The PIN needs at least ${vault.minPinLength} digits.`);
+            return;
+        }
 
-        this._setAuthBusy(true);
+        this._setAuthBusy(true, 'Checking the token…');
+        let connection;
 
         try {
-            await this._openEditor(token);
-            // Only remember a token that has proven it works.
-            tokenStore.save(token);
+            // Prove the token works before storing anything, so a typo fails
+            // here rather than after the vault is written.
+            connection = await this._connect(token);
+
+            this._setAuthBusy(true, 'Encrypting…');
+            await vault.create(token, pin);
+        } catch (error) {
+            this._authError(error.message);
+            this._setAuthBusy(false);
+            return;
+        }
+
+        if (wantsPasskey) {
+            // Not fatal — the PIN vault already exists, so the panel stays
+            // usable and biometrics can be added from the editor later.
+            this._setAuthBusy(true, 'Waiting for Face ID…');
+            try {
+                await vault.enablePasskey(token);
+            } catch (error) {
+                this._toast(`Set up without biometric unlock: ${error.message}`, 'warn');
+            }
+        }
+
+        this._setAuthBusy(false);
+        await this._enterEditor(connection, token);
+        this._syncPasskeyButton();
+    }
+
+    async _handleUnlock(unlock, busyMessage) {
+        this._setAuthBusy(true, busyMessage);
+
+        try {
+            const token = await unlock();
+            this._setAuthBusy(true, 'Loading…');
+            await this._enterEditor(await this._connect(token), token);
+            this._syncPasskeyButton();
         } catch (error) {
             this._authError(error.message);
         } finally {
@@ -170,28 +226,55 @@ export class AdminApp {
         }
     }
 
+    /** Offer to add biometrics later if the device could do it but hasn't. */
+    _syncPasskeyButton() {
+        $('#add-passkey').hidden = !this.passkeySupported || vault.hasPasskey();
+    }
+
+    async _addPasskey() {
+        $('#add-passkey').disabled = true;
+
+        try {
+            await vault.enablePasskey(this.token);
+            this._syncPasskeyButton();
+            this._toast('Biometric unlock added on this device.', 'ok');
+        } catch (error) {
+            this._toast(error.message, 'error');
+        } finally {
+            $('#add-passkey').disabled = false;
+        }
+    }
+
     _authError(message) {
         $('#auth-error').textContent = message;
     }
 
-    _setAuthBusy(busy) {
+    _setAuthBusy(busy, message = '') {
         document.querySelectorAll('#auth-screen button, #auth-screen input')
             .forEach(node => { node.disabled = busy; });
-        $('#auth-status').textContent = busy ? 'Checking the token…' : '';
+        $('#auth-status').textContent = busy ? message : '';
     }
 
     /*==============================================
                 LOADING THE CONFIG
     ================================================*/
 
-    async _openEditor(token) {
+    /**
+     * Check the token can reach the repo. Kept separate from opening the
+     * editor so setup can verify, then store, then show — a vault that failed
+     * to write should never be hidden behind a working editor.
+     */
+    async _connect(token) {
         const repository = detectRepository();
         const client = new GitHubClient({ token, ...repository });
-
-        // Check access before swapping screens, so a bad token surfaces on the
-        // login form rather than behind a half-loaded editor.
         await client.verifyAccess();
+        return { client, repository };
+    }
+
+    async _enterEditor({ client, repository }, token) {
         this.client = client;
+        // Kept in memory so biometrics can be added later without re-entry.
+        this.token = token;
         await this._loadConfig();
 
         $('#auth-screen').hidden = true;
