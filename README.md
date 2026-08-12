@@ -11,13 +11,16 @@ exactly as committed.
 
 ```
 index.html            Entry point (loads config.js, then js/main.js as a module)
+admin.html            Admin panel for editing pages/sections (see below)
 404.html              SPA deep-link redirect (derives the base path at runtime)
 css/main.css          Imports every stylesheet in css/{core,layout,components,effects}
+css/admin.css         Standalone styles for admin.html
 js/
   core/config.js      Single source of truth: version, baseUrl, navigation, page structure
   core/router.js      Client-side routing (History API + the 404 redirect trick)
   main.js             App bootstrap — wires up the manager modules
   ui/ effects/ content/  Feature modules (navigation, lightbox, backgrounds, markdown, …)
+  admin/              Admin panel modules (auth, GitHub client, config rewriting, UI)
 content/              Page content as Markdown (content/<section>/<page>/content.md)
 assets/               Images, resume PDF, favicons
 ```
@@ -32,6 +35,48 @@ assets/               Images, resume PDF, favicons
   here and nowhere else.
 - `navigation` / `structure` — the sidebar links and the Games/Unity/GameJams
   page groups. Each page points at a `content/.../content.md` folder.
+
+## Admin panel
+
+[`/admin`](https://danielnoam.github.io/portfolio/admin) edits the `structure`
+block above from a browser instead of by hand. It can add, remove, rename,
+reorder and hide pages, move them between sections, and add or remove
+sections. Publishing rewrites `js/core/config.js` and pushes it to the deploy
+branch as one commit — which is the deploy — optionally bumping the version
+and adding the matching `CHANGELOG.md` entry at the same time. New pages get
+a starter `content.md`; their body is still written by hand.
+
+Everything outside the `structure` block (comments, `uiSettings`,
+`navigation`) is left byte-for-byte alone, so the panel and hand-editing can
+be mixed freely.
+
+### How the login works
+
+The site is static, so there is no server to authenticate against and no way
+to make a password check on its own meaningful — anything the browser can
+verify, a visitor can read. So the password does real work instead of
+pretending: **setup** (once per device) takes a GitHub token and a password,
+derives a key from the password with PBKDF2-SHA256, and stores the token
+encrypted with AES-GCM in `localStorage`. **Login** re-derives that key and
+decrypts. A wrong password fails AES-GCM's integrity check, so there is no
+stored answer to compare against or bypass.
+
+What this means in practice:
+
+- The panel is publicly reachable, and useless without both the password and
+  a browser that has been set up. Without them there is no token to steal.
+- The password is never stored or transmitted, so there is no reset — losing
+  it means setting up again with a fresh token.
+- The token is decrypted into memory only, and dropped on logout, on tab
+  close, and after 30 minutes idle.
+- Setup is per-device. A second device needs the token pasted again.
+
+Use a **fine-grained personal access token** scoped to this repository alone,
+with **Contents: Read and write** and an expiry date. That is the blast
+radius if it ever leaks: this repo's contents, until the token expires.
+
+Editing from a device you don't control is not a good idea, since the vault
+stays in that browser until you use "start over with a new token" to clear it.
 
 ## Local development
 
@@ -57,3 +102,7 @@ On every change (even small ones):
 3. Verify locally at desktop and mobile widths.
 4. Push to `main`, then load the live URL and confirm the sidebar version
    marker shows the new number.
+
+Publishing from the admin panel does steps 1, 2 and 4 for you (the patch bump
+and changelog entry are a checkbox on the publish dialog), and its commit is
+the push.

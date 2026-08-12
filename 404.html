@@ -9,11 +9,17 @@
         // name is the first path segment), so this file isn't coupled to it.
         var base = '/' + (window.location.pathname.split('/')[1] || '');
 
-        // Store the requested path so the main page's router can restore it.
-        localStorage.setItem('redirectPath', window.location.pathname);
+        // The admin panel is a real page rather than an SPA route, so send
+        // /admin straight to it instead of through the router.
+        if (/\/admin\/?$/.test(window.location.pathname)) {
+            window.location.replace(base + '/admin.html');
+        } else {
+            // Store the requested path so the main page's router can restore it.
+            localStorage.setItem('redirectPath', window.location.pathname);
 
-        // Redirect to the app root.
-        window.location.replace(base + '/');
+            // Redirect to the app root.
+            window.location.replace(base + '/');
+        }
     </script>
 </head>
 <body>

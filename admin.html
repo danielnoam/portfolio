@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Portfolio Admin</title>
+    <link rel="icon" type="image/x-icon" href="assets/school-these-shits/favicon.ico">
+    <link rel="stylesheet" href="css/admin.css">
+    <script type="module" src="js/admin/main.js"></script>
+</head>
+<body class="admin">
+
+<header class="admin-header">
+    <div class="admin-header-titles">
+        <h1>Portfolio Admin</h1>
+        <span id="repo-label" class="repo-label"></span>
+    </div>
+    <div class="admin-header-actions">
+        <span id="config-version" class="version-badge"></span>
+        <a class="text-btn" href="./" target="_blank" rel="noopener">View site</a>
+        <button id="lock-btn" type="button" class="text-btn" hidden>Log out</button>
+    </div>
+</header>
+
+<main class="admin-main">
+
+    <!-- ============ LOGIN / FIRST-RUN SETUP ============ -->
+    <section id="auth-screen" class="auth-screen">
+
+        <div id="login-panel" class="panel auth-panel" hidden>
+            <h2>Log in</h2>
+            <p class="muted">Enter your admin password to unlock this browser's saved GitHub access.</p>
+            <form id="login-form">
+                <label for="login-password">Password</label>
+                <input id="login-password" type="password" autocomplete="current-password" required>
+                <button type="submit" class="primary-btn">Log in</button>
+            </form>
+            <p class="muted small">
+                Forgot it? There is no reset — the password is never stored, only used to decrypt.
+                <button id="forget-device" type="button" class="link-btn">Start over with a new token</button>
+            </p>
+        </div>
+
+        <div id="setup-panel" class="panel auth-panel" hidden>
+            <h2>Set up admin access</h2>
+            <p class="muted">
+                This site is static — there is no server to log in to. Instead, this browser stores a
+                GitHub token encrypted with a password you choose. You do this once per device;
+                after that it is just the password.
+            </p>
+
+            <form id="setup-form">
+                <label for="setup-token">GitHub token</label>
+                <input id="setup-token" type="password" autocomplete="off" spellcheck="false"
+                       placeholder="github_pat_…" required>
+                <p class="muted small">
+                    Create a <strong>fine-grained personal access token</strong> at
+                    <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">
+                        github.com/settings/personal-access-tokens</a>,
+                    limited to this one repository, with <strong>Contents: Read and write</strong>.
+                    Give it an expiry date — you can always set it up again.
+                </p>
+
+                <div class="field-row">
+                    <div>
+                        <label for="setup-owner">Owner</label>
+                        <input id="setup-owner" type="text" autocomplete="off" spellcheck="false">
+                    </div>
+                    <div>
+                        <label for="setup-repo">Repository</label>
+                        <input id="setup-repo" type="text" autocomplete="off" spellcheck="false">
+                    </div>
+                    <div>
+                        <label for="setup-branch">Deploy branch</label>
+                        <input id="setup-branch" type="text" autocomplete="off" spellcheck="false">
+                    </div>
+                </div>
+
+                <label for="setup-password">Choose a password</label>
+                <input id="setup-password" type="password" autocomplete="new-password" required>
+
+                <label for="setup-password-confirm">Confirm password</label>
+                <input id="setup-password-confirm" type="password" autocomplete="new-password" required>
+
+                <button type="submit" class="primary-btn">Save and log in</button>
+            </form>
+        </div>
+
+        <p id="auth-status" class="muted small" aria-live="polite"></p>
+        <p id="auth-error" class="error-text" role="alert"></p>
+    </section>
+
+    <!-- ============ EDITOR ============ -->
+    <section id="editor-screen" hidden>
+
+        <div id="result-banner" class="banner" hidden></div>
+
+        <div class="editor-toolbar">
+            <div>
+                <h2>Pages &amp; sections</h2>
+                <p class="muted small">
+                    These are the sidebar groups and the pages inside them. Changes stay local
+                    until you publish.
+                </p>
+            </div>
+            <div class="toolbar-actions">
+                <button id="reload-config" type="button" class="text-btn">Reload from GitHub</button>
+                <button id="add-section" type="button" class="text-btn">+ Add section</button>
+            </div>
+        </div>
+
+        <div id="sections" class="sections"></div>
+
+        <div id="save-bar" class="save-bar">
+            <ul id="problems" class="problems" hidden></ul>
+            <div class="save-bar-row">
+                <span id="change-count" class="change-count">No changes yet</span>
+                <div class="save-bar-actions">
+                    <button id="discard-changes" type="button" class="text-btn" disabled>Discard</button>
+                    <button id="review-changes" type="button" class="primary-btn" disabled>Review &amp; publish</button>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- ============ PUBLISH CONFIRMATION ============ -->
+<dialog id="publish-dialog" class="publish-dialog">
+    <form id="publish-form" method="dialog">
+        <h2>Review &amp; publish</h2>
+        <p class="muted small">
+            This writes one commit to the deploy branch, which is what triggers the GitHub Pages build.
+        </p>
+
+        <h3>What will change</h3>
+        <ul id="publish-list" class="publish-list"></ul>
+
+        <div id="publish-new-files-wrap" hidden>
+            <h3>Files that will be created</h3>
+            <ul id="publish-new-files" class="publish-list"></ul>
+        </div>
+
+        <label for="commit-message">Commit message</label>
+        <input id="commit-message" type="text" required>
+
+        <label class="checkbox">
+            <input id="bump-version" type="checkbox" checked>
+            Bump the patch version and add a CHANGELOG entry
+        </label>
+
+        <div id="delete-content-wrap" class="checkbox-block" hidden>
+            <label class="checkbox">
+                <input id="delete-content" type="checkbox">
+                <span id="delete-content-label"></span>
+            </label>
+        </div>
+
+        <p id="publish-error" class="error-text" role="alert"></p>
+
+        <div class="dialog-actions">
+            <button id="publish-cancel" type="button" class="text-btn">Cancel</button>
+            <button id="publish-submit" type="submit" class="primary-btn">Publish</button>
+        </div>
+    </form>
+</dialog>
+
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+</body>
+</html>

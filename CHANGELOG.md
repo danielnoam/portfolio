@@ -7,6 +7,32 @@ and the project adheres to [Semantic Versioning](https://semver.org/).
 The top entry below must always match the `version` constant in
 `js/core/config.js`, which is rendered at the bottom of the sidebar.
 
+## [1.3.0] - 2026-08-12
+
+### Added
+
+- Admin panel at `/admin` (`admin.html`) for editing the sidebar without
+  hand-editing `js/core/config.js`. It adds, removes, renames, reorders and
+  hides pages, moves them between sections, and adds or removes sections —
+  then writes `config.js` back to the deploy branch as a single commit, which
+  is what triggers the Pages build. New pages get a starter `content.md`.
+- Password login for that panel. The site is static and has no server to
+  authenticate against, so setup stores a GitHub token encrypted with a
+  password (PBKDF2-SHA256 → AES-GCM, via WebCrypto) in `localStorage`; after
+  that, logging in is password-only. The password is never stored, the token
+  is only ever decrypted into memory, and the session locks after 30 minutes
+  idle.
+- Publishing validates before it commits: duplicate or reserved page
+  addresses are rejected, since the router resolves `/<slug>` from the last
+  segment of a page's folder and a collision would make a page unreachable.
+  Every change is listed in plain language for review first, and the version
+  bump plus this changelog entry can be written as part of the same commit.
+
+### Changed
+
+- `404.html` now sends `/admin` straight to `admin.html` instead of handing
+  it to the SPA router, which has no route for it.
+
 ## [1.2.7] - 2026-07-06
 
 ### Changed

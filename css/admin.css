@@ -1,0 +1,592 @@
+/*==============================================
+            ADMIN PANEL STYLES
+
+    admin.html is a standalone tool, not part of the
+    SPA, so it borrows the site's design tokens but
+    not its layout (css/main.css puts the body into
+    a sidebar flex row, which this page doesn't want).
+================================================*/
+
+@import url('core/variables.css');
+
+/*==============================================
+            BASE
+================================================*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body.admin {
+    min-height: 100vh;
+    font-family: var(--font-family, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif);
+    font-size: var(--text-md);
+    line-height: var(--leading-normal);
+    background-color: var(--color-dark-bg);
+    color: var(--color-dark-text);
+}
+
+h1, h2, h3 {
+    color: var(--heading-color);
+    line-height: var(--leading-tight);
+}
+
+h1 { font-size: var(--text-lg); }
+h2 { font-size: var(--text-lg); }
+h3 {
+    font-size: var(--text-base);
+    color: var(--color-dark-text);
+    margin-bottom: var(--space-2);
+}
+
+a { color: var(--color-primary-light); }
+
+.muted {
+    color: var(--text-secondary, var(--color-dark-text-secondary));
+}
+
+.small { font-size: var(--text-sm); }
+
+.error-text {
+    color: var(--color-error);
+    font-size: var(--text-sm);
+    min-height: 1.2em;
+}
+
+/*==============================================
+            HEADER
+================================================*/
+
+.admin-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-4);
+    flex-wrap: wrap;
+    padding: var(--space-4) var(--space-6);
+    background-color: rgba(0, 0, 0, 0.35);
+    border-bottom: 1px solid rgba(255, 255, 255, var(--opacity-10));
+}
+
+.admin-header-titles {
+    display: flex;
+    align-items: baseline;
+    gap: var(--space-3);
+    flex-wrap: wrap;
+}
+
+.repo-label,
+.version-badge {
+    font-size: var(--text-sm);
+    color: var(--color-dark-text-secondary);
+}
+
+.version-badge {
+    padding: var(--space-1) var(--space-2);
+    border: 1px solid rgba(255, 255, 255, var(--opacity-20));
+    border-radius: var(--radius-full);
+}
+
+.admin-header-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+}
+
+.admin-main {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: var(--space-6) var(--space-5) var(--space-12);
+}
+
+/*==============================================
+            CONTROLS
+================================================*/
+
+label {
+    display: block;
+    margin-bottom: var(--space-1);
+    font-size: var(--text-sm);
+    color: var(--color-dark-text-secondary);
+}
+
+input[type="text"],
+input[type="password"],
+select {
+    width: 100%;
+    padding: var(--space-2) var(--space-3);
+    font-family: inherit;
+    font-size: var(--text-base);
+    color: var(--color-dark-text);
+    background-color: rgba(0, 0, 0, var(--opacity-30));
+    border: 1px solid rgba(255, 255, 255, var(--opacity-20));
+    border-radius: var(--radius-sm);
+    transition: border-color var(--transition-fast);
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+select:focus {
+    outline: none;
+    border-color: var(--color-primary);
+}
+
+input:disabled,
+select:disabled,
+button:disabled {
+    opacity: var(--opacity-40);
+    cursor: not-allowed;
+}
+
+.checkbox {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    margin: 0;
+    font-size: var(--text-sm);
+    color: var(--color-dark-text);
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.checkbox input {
+    width: auto;
+    accent-color: var(--color-primary);
+    cursor: pointer;
+}
+
+.primary-btn,
+.text-btn,
+.icon-btn,
+.link-btn {
+    font-family: inherit;
+    font-size: var(--text-sm);
+    color: var(--color-dark-text);
+    background: none;
+    border: 1px solid transparent;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: background-color var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast);
+}
+
+.primary-btn {
+    padding: var(--space-2) var(--space-5);
+    font-weight: var(--weight-semibold);
+    color: #fff;
+    background-color: var(--color-primary-dark);
+    border-radius: var(--button-radius);
+}
+
+.primary-btn:hover:not(:disabled) {
+    background-color: var(--color-primary);
+}
+
+.text-btn {
+    padding: var(--space-2) var(--space-3);
+    text-decoration: none;
+    border-color: rgba(255, 255, 255, var(--opacity-20));
+}
+
+.text-btn:hover:not(:disabled) {
+    border-color: var(--color-primary);
+    color: var(--color-primary-light);
+}
+
+.text-btn.danger:hover:not(:disabled) {
+    border-color: var(--color-error);
+    color: var(--color-error);
+}
+
+.icon-btn {
+    width: 2rem;
+    height: 2rem;
+    line-height: 1;
+    border-color: rgba(255, 255, 255, var(--opacity-20));
+}
+
+.icon-btn:hover:not(:disabled) {
+    border-color: var(--color-primary);
+    color: var(--color-primary-light);
+}
+
+.link-btn {
+    padding: 0;
+    color: var(--color-primary-light);
+    text-decoration: underline;
+}
+
+/*==============================================
+            AUTH SCREEN
+================================================*/
+
+.auth-screen {
+    max-width: 520px;
+    margin: var(--space-8) auto 0;
+}
+
+.panel {
+    padding: var(--space-6);
+    background-color: var(--color-dark-card);
+    border: 1px solid rgba(255, 255, 255, var(--opacity-10));
+    border-radius: var(--card-radius);
+}
+
+.auth-panel h2 {
+    margin-bottom: var(--space-2);
+}
+
+.auth-panel form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+    margin-top: var(--space-5);
+}
+
+.auth-panel form > label:not(:first-child) {
+    margin-top: var(--space-4);
+}
+
+.auth-panel .primary-btn {
+    margin-top: var(--space-5);
+}
+
+.auth-panel .muted.small {
+    margin-top: var(--space-3);
+}
+
+.field-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-3);
+    margin-top: var(--space-4);
+}
+
+.field-row label {
+    margin-top: 0;
+}
+
+#auth-status,
+#auth-error {
+    margin-top: var(--space-4);
+    text-align: center;
+}
+
+/*==============================================
+            EDITOR
+================================================*/
+
+.editor-toolbar {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: var(--space-4);
+    flex-wrap: wrap;
+    margin-bottom: var(--space-5);
+}
+
+.toolbar-actions {
+    display: flex;
+    gap: var(--space-2);
+}
+
+.sections {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+
+.section-card {
+    background-color: var(--color-dark-card);
+    border: 1px solid rgba(255, 255, 255, var(--opacity-10));
+    border-radius: var(--card-radius);
+    overflow: hidden;
+}
+
+.section-head {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    flex-wrap: wrap;
+    padding: var(--space-3) var(--space-4);
+    background-color: rgba(0, 0, 0, var(--opacity-20));
+    border-bottom: 1px solid rgba(255, 255, 255, var(--opacity-10));
+}
+
+input.section-name {
+    flex: 1 1 12rem;
+    font-size: var(--text-lg);
+    font-weight: var(--weight-semibold);
+    color: var(--heading-color);
+}
+
+.row-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    margin-left: auto;
+}
+
+.page-list {
+    list-style: none;
+}
+
+.page-row {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    flex-wrap: wrap;
+    padding: var(--space-3) var(--space-4);
+    border-bottom: 1px solid rgba(255, 255, 255, var(--opacity-10));
+    transition: opacity var(--transition-fast);
+}
+
+.page-row:last-child {
+    border-bottom: none;
+}
+
+/* Pages with visible:false still exist, they just don't show in the sidebar. */
+.page-row.is-hidden .page-fields {
+    opacity: var(--opacity-50);
+}
+
+.page-fields {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    flex: 1 1 18rem;
+    min-width: 0;
+}
+
+input.page-folder {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: var(--text-sm);
+    color: var(--color-dark-text-secondary);
+}
+
+.page-controls {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    flex-wrap: wrap;
+}
+
+.page-section {
+    width: auto;
+    max-width: 10rem;
+}
+
+.section-foot {
+    padding: var(--space-3) var(--space-4);
+}
+
+.empty-note {
+    padding: var(--space-4);
+    font-size: var(--text-sm);
+    color: var(--color-dark-text-secondary);
+    font-style: italic;
+}
+
+/*==============================================
+            SAVE BAR
+================================================*/
+
+.save-bar {
+    position: sticky;
+    bottom: 0;
+    margin-top: var(--space-5);
+    padding: var(--space-3) var(--space-4);
+    background-color: rgba(20, 22, 26, 0.96);
+    border: 1px solid rgba(255, 255, 255, var(--opacity-10));
+    border-radius: var(--card-radius);
+    backdrop-filter: blur(6px);
+    box-shadow: var(--shadow-lg);
+}
+
+.save-bar.is-dirty {
+    border-color: var(--color-primary-dark);
+}
+
+.save-bar-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-4);
+    flex-wrap: wrap;
+}
+
+.change-count {
+    font-size: var(--text-sm);
+    color: var(--color-dark-text-secondary);
+}
+
+.save-bar.is-dirty .change-count {
+    color: var(--color-primary-light);
+}
+
+.save-bar-actions {
+    display: flex;
+    gap: var(--space-2);
+    margin-left: auto;
+}
+
+.problems {
+    margin: 0 0 var(--space-3);
+    padding-left: var(--space-5);
+    font-size: var(--text-sm);
+    color: var(--color-error);
+}
+
+/*==============================================
+            PUBLISH DIALOG
+================================================*/
+
+.publish-dialog {
+    /* The `* { margin: 0 }` reset above kills the auto margins a modal
+       <dialog> relies on to centre itself, so put them back. */
+    margin: auto;
+    width: min(560px, calc(100vw - 2rem));
+    max-height: calc(100vh - 2rem);
+    padding: var(--space-6);
+    color: var(--color-dark-text);
+    background-color: #1f2329;
+    border: 1px solid rgba(255, 255, 255, var(--opacity-20));
+    border-radius: var(--card-radius);
+}
+
+.publish-dialog::backdrop {
+    background-color: rgba(0, 0, 0, var(--opacity-70));
+}
+
+.publish-dialog h3 {
+    margin-top: var(--space-5);
+}
+
+.publish-dialog label[for] {
+    margin-top: var(--space-5);
+}
+
+.publish-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+    font-size: var(--text-sm);
+    max-height: 14rem;
+    overflow-y: auto;
+}
+
+.publish-list li {
+    padding: var(--space-1) var(--space-3);
+    border-left: 3px solid rgba(255, 255, 255, var(--opacity-20));
+    background-color: rgba(0, 0, 0, var(--opacity-20));
+}
+
+.publish-list li.add { border-left-color: var(--color-success); }
+.publish-list li.remove { border-left-color: var(--color-error); }
+.publish-list li.rename,
+.publish-list li.move,
+.publish-list li.edit,
+.publish-list li.order { border-left-color: var(--color-primary); }
+
+.checkbox-block,
+.publish-dialog .checkbox {
+    margin-top: var(--space-3);
+}
+
+.publish-dialog .checkbox {
+    align-items: flex-start;
+    white-space: normal;
+}
+
+.dialog-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: var(--space-2);
+    margin-top: var(--space-5);
+}
+
+/*==============================================
+            FEEDBACK
+================================================*/
+
+.banner {
+    padding: var(--space-3) var(--space-4);
+    margin-bottom: var(--space-5);
+    font-size: var(--text-sm);
+    background-color: rgba(76, 175, 80, var(--opacity-20));
+    border: 1px solid var(--color-success);
+    border-radius: var(--radius-md);
+}
+
+.toast {
+    position: fixed;
+    left: 50%;
+    bottom: var(--space-5);
+    transform: translate(-50%, 200%);
+    max-width: min(30rem, calc(100vw - 2rem));
+    padding: var(--space-3) var(--space-5);
+    font-size: var(--text-sm);
+    background-color: #23272e;
+    border: 1px solid rgba(255, 255, 255, var(--opacity-20));
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-lg);
+    transition: transform var(--transition-normal);
+    z-index: var(--z-tooltip);
+}
+
+.toast.is-visible {
+    transform: translate(-50%, 0);
+}
+
+.toast.is-ok { border-color: var(--color-success); }
+.toast.is-warn { border-color: var(--color-firefly); }
+.toast.is-error { border-color: var(--color-error); }
+
+.fatal {
+    max-width: 32rem;
+    margin: var(--space-12) auto;
+    padding: var(--space-6);
+    text-align: center;
+}
+
+.fatal h1 {
+    margin-bottom: var(--space-3);
+}
+
+/*==============================================
+            RESPONSIVE
+================================================*/
+
+@media (max-width: 768px) {
+    .admin-header {
+        padding: var(--space-3) var(--mobile-padding);
+    }
+
+    .admin-main {
+        padding: var(--space-5) var(--mobile-padding) var(--space-10);
+    }
+
+    .field-row {
+        grid-template-columns: 1fr;
+    }
+
+    .page-controls {
+        width: 100%;
+    }
+
+    .page-section {
+        max-width: none;
+        flex: 1 1 8rem;
+    }
+
+    .row-actions {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .row-actions .text-btn {
+        margin-left: auto;
+    }
+}
