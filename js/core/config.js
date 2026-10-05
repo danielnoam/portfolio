@@ -19,7 +19,7 @@ const CONFIG = {
     defaultPath: `${BASE_URL}/content/about/content.md`,
 
     // Site title
-    siteTitle: 'Daniel Noam - Portfolio',
+    siteTitle: 'Daniel Noam - Unity Developer',
 
     // UI default settings
     uiSettings: {
