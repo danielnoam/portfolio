@@ -7,6 +7,18 @@ and the project adheres to [Semantic Versioning](https://semver.org/).
 The top entry below must always match the `version` constant in
 `js/core/config.js`, which is rendered at the bottom of the sidebar.
 
+## [1.7.2] - 2026-10-05
+
+### Fixed
+
+- Hovering Email, Phone, LinkedIn or Résumé on the About page shows the
+  address again, in a small tooltip above the card. It was hidden in 1.6.0
+  because the cards became too narrow to fit it inside.
+- Zoomed in (or on a narrow laptop window), the About page no longer
+  crushes the right column into a thin strip. Both columns now shrink
+  together, the page stacks into one column below 1200px instead of 1100px,
+  and the contact buttons go two per row when their column gets narrow.
+
 ## [1.7.1] - 2026-10-05
 
 ### Changed

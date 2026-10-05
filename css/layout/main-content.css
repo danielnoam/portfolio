@@ -77,7 +77,9 @@ main {
 /* Two-column layout for content */
 .content-two-column {
     display: grid;
-    grid-template-columns: minmax(300px, 500px) 1fr; /* Change this line */
+    /* Proportional, so a narrow content area (zoomed in, small laptop) shrinks both
+       columns instead of crushing the right one */
+    grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
     gap: var(--space-8);
     align-items: flex-start;
     margin: var(--space-6) auto;
@@ -87,6 +89,7 @@ main {
 }
 
 .content-two-column .content-left {
+    container-type: inline-size;
     position: sticky;
     top: var(--space-6);
 }
@@ -120,8 +123,8 @@ main {
 }
 
 
-/* Responsive: stack on smaller screens */
-@media (max-width: 1100px) {
+/* Responsive: stack once the area beside the sidebar is too narrow for two columns */
+@media (max-width: 1199px) {
     .content-two-column {
         grid-template-columns: 2fr;
     }
