@@ -52,11 +52,7 @@
     line-height: var(--leading-normal);
 }
 
-.featured-body .tags-group {
-    margin: var(--space-4) 0;
-}
-
 .featured-body .button-group {
     justify-content: flex-start;
-    margin: 0;
+    margin: var(--space-4) 0 0;
 }
