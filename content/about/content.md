@@ -14,9 +14,9 @@
 </div>
 
 
-<h2 class="text-left-heading">ABOUT</h2>
-I'm Daniel Noam, a Game Developer who began my journey in game development during high school.
-My experience spans from modding existing games to creating original adventures using various game engines.
+<h2 class="text-left-heading">About</h2>
+<p>I'm Daniel Noam, a Game Developer who began my journey in game development during high school.
+My experience spans from modding existing games to creating original adventures using various game engines.</p>
 
 <div class="tags-group">
     <span class="tag">C#</span>
