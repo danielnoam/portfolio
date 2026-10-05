@@ -263,3 +263,33 @@
     color: black;
     text-shadow: none;
 }
+
+.page-content .image-gallery.captions-visible video {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+/* Editor screenshots: show the whole capture instead of cropping it */
+.page-content .image-gallery.fit-contain img,
+.page-content .image-gallery.fit-contain video {
+    object-fit: contain;
+    background-color: var(--color-dark-bg);
+}
+
+.image-gallery.fit-contain {
+    grid-template-columns: repeat(var(--gallery-columns), minmax(0, 1fr));
+}
+
+.image-gallery.fit-contain figure {
+    width: 100%;
+}
+
+.image-gallery.fit-contain a,
+.page-content .image-gallery.fit-contain img,
+.page-content .image-gallery.fit-contain video {
+    width: 100%;
+    height: auto;
+    max-height: none;
+    aspect-ratio: 16 / 9;
+}
