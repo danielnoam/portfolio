@@ -32,28 +32,28 @@ My experience spans from modding existing games to creating original adventures 
 
 <div class="contact-group horizontal small">
     <a href="mailto:danielnoam1999@gmail.com" class="contact-card">
-        <span class="contact-icon">📧</span>
+        <span class="contact-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10"/><path d="M3 7l9 6l9 -6"/></svg></span>
         <div class="contact-content">
             <span class="contact-label">Email</span>
             <span class="contact-info">danielnoam1999@gmail.com</span>
         </div>
     </a>
     <a href="tel:+972528984779" class="contact-card">
-        <span class="contact-icon">📱</span>
+        <span class="contact-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"/></svg></span>
         <div class="contact-content">
             <span class="contact-label">Phone</span>
             <span class="contact-info">+972 52-898-4779</span>
         </div>
     </a>
     <a href="https://linkedin.com/in/daniel-noam" target="_blank" class="contact-card">
-        <span class="contact-icon">💼</span>
+        <span class="contact-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 11v5"/><path d="M8 8v.01"/><path d="M12 16v-5"/><path d="M16 16v-3a2 2 0 1 0 -4 0"/><path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4l0 -10"/></svg></span>
         <div class="contact-content">
             <span class="contact-label">LinkedIn</span>
             <span class="contact-info">daniel-noam</span>
         </div>
     </a>
     <a href="https://danielnoam.github.io/portfolio/assets/Resume-UnityDev.pdf" target="_blank" class="contact-card">
-        <span class="contact-icon">📄</span>
+        <span class="contact-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3v4a1 1 0 0 0 1 1h4"/><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2"/><path d="M9 9l1 0"/><path d="M9 13l6 0"/><path d="M9 17l6 0"/></svg></span>
         <div class="contact-content">
             <span class="contact-label">Résumé</span>
             <span class="contact-info">PDF</span>

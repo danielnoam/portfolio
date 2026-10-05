@@ -32,6 +32,9 @@ The top entry below must always match the `version` constant in
 ### Removed
 
 - The pulsing gradient background on the School These Shits page.
+- Emoji icons on the contact cards and the phone menu button, replaced by
+  Tabler line icons (MIT) drawn inline, so they look the same on every
+  device and take the site's text color.
 
 ## [1.6.0] - 2026-10-05
 
