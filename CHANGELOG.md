@@ -7,6 +7,20 @@ and the project adheres to [Semantic Versioning](https://semver.org/).
 The top entry below must always match the `version` constant in
 `js/core/config.js`, which is rendered at the bottom of the sidebar.
 
+## [1.8.0] - 2026-10-05
+
+### Changed
+
+- The DNExtensions page is about a third of its old length: a two-line
+  overview, then short clips with one-line captions under Editor, Inspector
+  and Runtime, and a "How it's built" section with two code highlights.
+  The full feature list now lives in the GitHub README.
+- The two code highlights (SerializableSelector and ObjectPooler) load
+  straight from the DNExtensions repo on GitHub, so they never go out of
+  date. The old copies under assets/dnextensions are removed.
+- Project section cards always take the full content width, so a section
+  of loading videos no longer renders narrower than the others.
+
 ## [1.7.2] - 2026-10-05
 
 ### Fixed
