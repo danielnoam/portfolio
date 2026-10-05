@@ -19,6 +19,10 @@ The top entry below must always match the `version` constant in
   times instead of only on hover, so they are labeled on phones too, and
   share one 16:9 shape so their rows line up.
 - The headline under the name reads "Unity developer".
+- Each project tile on the About page has a line under its title with the
+  role, team and tools (e.g. "Solo · Unity C# · PC").
+- A Résumé button sits with Email, Phone and LinkedIn on the About page;
+  the four are equal width, in one row on desktop and two on phones.
 - Two-column pages keep both columns down to 1100px wide instead of 1400px,
   so common laptop screens (1280, 1366) no longer get the stacked phone
   layout.
