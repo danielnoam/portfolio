@@ -117,7 +117,8 @@
     max-height: 50px;
 }
 
-/* About page: four equal buttons in a row; the hover address reveal is dropped */
+/* About page: four equal buttons in a row; the address shows in a tooltip above
+   the card, since the cards are too narrow to fit it inside */
 .home-layout .contact-group {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -128,7 +129,28 @@
 }
 
 .home-layout .contact-info {
-    display: none;
+    position: absolute;
+    bottom: calc(100% + var(--space-2));
+    left: 50%;
+    transform: translate(-50%, var(--space-1));
+    max-height: none;
+    padding: var(--space-1) var(--space-3);
+    background-color: var(--bg-color);
+    border: 1px solid var(--text-secondary);
+    border-radius: var(--radius-sm);
+    color: var(--text-color);
+    font-size: var(--text-sm);
+    white-space: nowrap;
+    pointer-events: none;
+    z-index: 1;
+    transition: opacity var(--transition-base), transform var(--transition-base);
+}
+
+.home-layout .contact-card:hover .contact-info,
+.home-layout .contact-card:focus-visible .contact-info {
+    opacity: var(--opacity-100);
+    max-height: none;
+    transform: translate(-50%, 0);
 }
 
 /* Mobile adjustments */

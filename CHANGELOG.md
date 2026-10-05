@@ -7,6 +7,14 @@ and the project adheres to [Semantic Versioning](https://semver.org/).
 The top entry below must always match the `version` constant in
 `js/core/config.js`, which is rendered at the bottom of the sidebar.
 
+## [1.7.2] - 2026-10-05
+
+### Fixed
+
+- Hovering Email, Phone, LinkedIn or Résumé on the About page shows the
+  address again, in a small tooltip above the card. It was hidden in 1.6.0
+  because the cards became too narrow to fit it inside.
+
 ## [1.7.1] - 2026-10-05
 
 ### Changed
