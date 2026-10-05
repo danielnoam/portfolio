@@ -1,6 +1,6 @@
 <div class="page-content">
 
-<div class="content-two-column">
+<div class="content-two-column home-layout">
 
 <div class="content-left">
 
@@ -8,7 +8,7 @@
 <div class="page-header">
     <h1 class="page-name">Daniel Noam</h1>
     <p class="page-title">
-        <span class="default-text">game developer</span>
+        <span class="default-text">Unity developer</span>
         <span class="hover-text">game programmer</span>
     </p>
 </div>
@@ -52,6 +52,13 @@ My experience spans from modding existing games to creating original adventures 
             <span class="contact-info">daniel-noam</span>
         </div>
     </a>
+    <a href="https://danielnoam.github.io/portfolio/assets/Resume-UnityDev.pdf" target="_blank" class="contact-card">
+        <span class="contact-icon">📄</span>
+        <div class="contact-content">
+            <span class="contact-label">Résumé</span>
+            <span class="contact-info">PDF</span>
+        </div>
+    </a>
 </div>
 
 
@@ -59,47 +66,47 @@ My experience spans from modding existing games to creating original adventures 
 
 <div class="content-right">
 
-<div class="showcase" data-layout="grid" data-columns="2">
-    <figure>
-        <a href="#" data-navigate="/content/games/electro-grid/content.md"
-           data-background-video="https://danielnoam.github.io/portfolio/assets/electro-grid/GameplaySquareStar.mp4">
-            <img src="https://danielnoam.github.io/portfolio/assets/electro-grid/main.gif" alt="Electro Grid">
-            <figcaption>Electro Grid</figcaption>
-        </a>
-    </figure>
+<div class="featured-project">
+    <a href="#" class="featured-media" data-navigate="/content/games/electro-grid/content.md"
+       data-background-video="https://danielnoam.github.io/portfolio/assets/electro-grid/GameplaySquareStar.mp4">
+        <img src="https://danielnoam.github.io/portfolio/assets/electro-grid/main.gif" alt="Electro Grid">
+    </a>
+    <div class="featured-body">
+        <p class="featured-pitch">A match-3 puzzle game with objectives on non-standard grid layouts. Built solo in one month and polished for mobile.</p>
+        <div class="button-group horizontal">
+            <a href="#" class="button" data-navigate="/content/games/electro-grid/content.md">Read more</a>
+            <a href="https://danielnoam.itch.io/electro-grid" target="_blank" class="button">Play on Itch.io</a>
+        </div>
+    </div>
+</div>
+
+<div class="showcase captions-visible" data-layout="grid" data-columns="2">
     <figure>
         <a href="#" data-navigate="/content/games/chicken-invaders-remake/content.md"
            data-background-video="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/Gameplay2.mp4">
             <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/Cover.png" alt="Chicken Invaders Remake">
-            <figcaption>Chicken Invaders Remake</figcaption>
+            <figcaption><span class="tile-meta">Programmer · team of 5</span></figcaption>
         </a>
     </figure>
     <figure>
         <a href="#" data-navigate="/content/games/project-umn/content.md"
            data-background-image="https://danielnoam.github.io/portfolio/assets/project-umn/robot1.gif">
             <img src="https://danielnoam.github.io/portfolio/assets/project-umn/main.gif" alt="Project UMN">
-            <figcaption>Project UMN</figcaption>
-        </a>
-    </figure>
-    <figure>
-        <a href="#" data-navigate="/content/games/2dplatformer/content.md"
-           data-background-image="https://danielnoam.github.io/portfolio/assets/2dplatformer/wallslide.gif">
-            <img src="https://danielnoam.github.io/portfolio/assets/2dplatformer/main.gif" alt="2DPlatformer">
-            <figcaption>2DPlatformer</figcaption>
+            <figcaption><span class="tile-meta">Solo · Unity C# · PC</span></figcaption>
         </a>
     </figure>
     <figure>
         <a href="#" data-navigate="/content/other/utilities/content.md"
            data-background-video="https://danielnoam.github.io/portfolio/assets/dnextensions/Button.mp4">
             <img src="https://danielnoam.github.io/portfolio/assets/dnextensions/unitylogo.jpg" alt="DNExtensions">
-            <figcaption>DNExtensions</figcaption>
+            <figcaption><span class="tile-meta">Solo · Unity editor tools</span></figcaption>
         </a>
     </figure>
     <figure>
         <a href="#" data-navigate="/content/other/shaders/content.md"
            data-background-video="https://danielnoam.github.io/portfolio/assets/shaders/Dither.mp4">
             <img src="https://danielnoam.github.io/portfolio/assets/shaders/shaderlogo.jpg" alt="Shaders">
-            <figcaption>Shaders</figcaption>
+            <figcaption><span class="tile-meta">Solo · Shader Graph</span></figcaption>
         </a>
     </figure>
 </div>

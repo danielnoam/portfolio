@@ -7,6 +7,41 @@ and the project adheres to [Semantic Versioning](https://semver.org/).
 The top entry below must always match the `version` constant in
 `js/core/config.js`, which is rendered at the bottom of the sidebar.
 
+## [1.6.0] - 2026-10-05
+
+### Changed
+
+- The About page leads with Electro Grid as a featured card: just the game's
+  image, with a one-line pitch and Read more / Play on Itch.io buttons that
+  fade in on hover (always shown on touch screens). Chicken Invaders, Project
+  UMN, DNExtensions and Shaders sit below it, two per row.
+- Project tiles on the About page share one 16:9 shape so their rows line
+  up, and drop the hover title (the images carry the names).
+- The headline under the name reads "Unity developer".
+- Each project tile on the About page has a line under it with the role,
+  team and tools (e.g. "Solo · Unity C# · PC").
+- A Résumé button sits with Email, Phone and LinkedIn on the About page;
+  the four are equal width, in one row on desktop and two on phones.
+- Tighter About page on phones: less space under the headline, smaller
+  section headings, and the featured card's buttons side by side.
+- Two-column pages keep both columns down to 1100px wide instead of 1400px,
+  so common laptop screens (1280, 1366) no longer get the stacked phone
+  layout.
+
+## [1.5.1] - 2026-10-05
+
+### Changed
+
+- The site is always dark for now. It no longer switches to light mode when
+  the visitor's system prefers light, or when a light choice was saved
+  earlier. `uiSettings.allowLightMode` in `js/core/config.js` turns it back on.
+
+### Fixed
+
+- Light mode text was too faint to read. Headings, subheadings, sidebar
+  labels, nav links and button text now pass WCAG AA contrast against the
+  light background (headings went from 2.0:1 to 6.0:1).
+
 ## [1.5.0] - 2026-08-12
 
 ### Added

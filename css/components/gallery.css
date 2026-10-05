@@ -185,6 +185,47 @@
     transform: scale(1.05);
 }
 
+/* Variant: titles always shown under each tile, for touch screens */
+.image-gallery.captions-visible {
+    align-items: start;
+}
+
+.image-gallery.captions-visible figure {
+    justify-content: flex-start;
+    min-height: 0;
+}
+
+.image-gallery.captions-visible a {
+    flex-direction: column;
+}
+
+.page-content .image-gallery.captions-visible img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+.image-gallery.captions-visible figcaption,
+.image-gallery.captions-visible figure:hover figcaption {
+    position: static;
+    opacity: var(--opacity-100);
+    transform: none;
+    margin-top: var(--space-2);
+    padding: 0;
+    background: none;
+    border: none;
+    backdrop-filter: none;
+    font-size: var(--text-base);
+    font-weight: var(--weight-semibold);
+}
+
+.image-gallery.captions-visible .tile-meta {
+    display: block;
+    font-size: var(--text-sm);
+    font-weight: var(--weight-normal);
+    color: var(--text-secondary);
+}
+
 /* Video indicator for gallery images */
 .video-indicator {
     position: absolute;

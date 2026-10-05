@@ -117,6 +117,20 @@
     max-height: 50px;
 }
 
+/* About page: four equal buttons in a row; the hover address reveal is dropped */
+.home-layout .contact-group {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.home-layout .contact-card {
+    justify-content: center;
+}
+
+.home-layout .contact-info {
+    display: none;
+}
+
 /* Mobile adjustments */
 @media (max-width: 768px) {
     .contact-group {
@@ -125,5 +139,11 @@
 
     .contact-card {
         width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .home-layout .contact-group {
+        grid-template-columns: repeat(2, 1fr);
     }
 }

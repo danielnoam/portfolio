@@ -121,7 +121,9 @@
     /* Neutral Colors - Light Theme */
     --color-light-bg: rgba(196, 214, 232, 0.8);
     --color-light-text: rgba(26, 29, 33, 1);
-    --color-light-text-secondary: rgba(102, 102, 102, 1);
+    --color-light-text-secondary: rgba(74, 79, 87, 1);
+    --color-light-heading: #1d4f8f;
+    --color-light-subheading: #245a9e;
     --color-light-sidebar: rgba(161, 178, 212, 0.5);
     --color-light-card: rgba(0, 0, 0, 0.05);
     --color-light-gallery-text: rgba(196, 214, 232, 0.5);
@@ -194,4 +196,6 @@
     --link-color: var(--color-light-text-secondary);
     --link-hover-color: var(--color-light-text);
     --gallery-image-text-bg: var(--color-light-gallery-text);
+    --heading-color: var(--color-light-heading);
+    --subheading-color: var(--color-light-subheading);
 }
