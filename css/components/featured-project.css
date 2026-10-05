@@ -1,0 +1,62 @@
+/*==============================================
+            FEATURED PROJECT
+================================================*/
+
+.featured-project {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--card-bg);
+    border-radius: var(--card-radius);
+    overflow: hidden;
+    max-width: 760px;
+    margin: 0 auto var(--space-6);
+    box-shadow: var(--shadow-lg);
+}
+
+.featured-media {
+    display: block;
+    line-height: 0;
+}
+
+.page-content .featured-media img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.featured-body {
+    padding: var(--space-5);
+}
+
+.featured-label {
+    font-size: var(--text-xs);
+    font-weight: var(--weight-semibold);
+    letter-spacing: var(--tracking-widest);
+    text-transform: uppercase;
+    color: var(--text-secondary);
+}
+
+.page-content .featured-title {
+    margin: var(--space-1) 0 var(--space-2);
+    font-size: var(--text-xl);
+    color: var(--heading-color);
+}
+
+.page-content .featured-pitch {
+    margin: 0;
+    line-height: var(--leading-normal);
+}
+
+.featured-body .tags-group {
+    margin: var(--space-4) 0;
+}
+
+.featured-body .button-group {
+    justify-content: flex-start;
+    margin: 0;
+}

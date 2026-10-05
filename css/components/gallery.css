@@ -185,6 +185,29 @@
     transform: scale(1.05);
 }
 
+/* Variant: titles always shown under each tile, for touch screens */
+.image-gallery.captions-visible {
+    align-items: start;
+}
+
+.image-gallery.captions-visible a {
+    flex-direction: column;
+}
+
+.image-gallery.captions-visible figcaption,
+.image-gallery.captions-visible figure:hover figcaption {
+    position: static;
+    opacity: var(--opacity-100);
+    transform: none;
+    margin-top: var(--space-2);
+    padding: 0;
+    background: none;
+    border: none;
+    backdrop-filter: none;
+    font-size: var(--text-base);
+    font-weight: var(--weight-semibold);
+}
+
 /* Video indicator for gallery images */
 .video-indicator {
     position: absolute;

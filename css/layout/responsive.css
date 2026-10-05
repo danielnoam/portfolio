@@ -121,7 +121,8 @@
         grid-column: span 2;
     }
 
-    .image-gallery figure.is-portrait {
+    .image-gallery figure.is-portrait,
+    .image-gallery.captions-visible figure {
         grid-column: span 1;
     }
 

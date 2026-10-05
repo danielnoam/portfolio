@@ -8,7 +8,7 @@
 <div class="page-header">
     <h1 class="page-name">Daniel Noam</h1>
     <p class="page-title">
-        <span class="default-text">game developer</span>
+        <span class="default-text">Unity developer</span>
         <span class="hover-text">game programmer</span>
     </p>
 </div>
@@ -59,14 +59,30 @@ My experience spans from modding existing games to creating original adventures 
 
 <div class="content-right">
 
-<div class="showcase" data-layout="grid" data-columns="2">
-    <figure>
-        <a href="#" data-navigate="/content/games/electro-grid/content.md"
-           data-background-video="https://danielnoam.github.io/portfolio/assets/electro-grid/GameplaySquareStar.mp4">
-            <img src="https://danielnoam.github.io/portfolio/assets/electro-grid/main.gif" alt="Electro Grid">
-            <figcaption>Electro Grid</figcaption>
-        </a>
-    </figure>
+<div class="featured-project">
+    <a href="#" class="featured-media" data-navigate="/content/games/electro-grid/content.md"
+       data-background-video="https://danielnoam.github.io/portfolio/assets/electro-grid/GameplaySquareStar.mp4">
+        <img src="https://danielnoam.github.io/portfolio/assets/electro-grid/main.gif" alt="Electro Grid">
+    </a>
+    <div class="featured-body">
+        <span class="featured-label">Featured project</span>
+        <h3 class="featured-title">Electro Grid</h3>
+        <p class="featured-pitch">A match-3 puzzle game with objectives on non-standard grid layouts. Built solo in one month and polished for mobile.</p>
+        <div class="tags-group">
+            <span class="tag">Mobile</span>
+            <span class="tag">WebGL</span>
+            <span class="tag">Firebase</span>
+            <span class="tag">Solo</span>
+            <span class="tag">1 month</span>
+        </div>
+        <div class="button-group horizontal">
+            <a href="#" class="button" data-navigate="/content/games/electro-grid/content.md">Read more</a>
+            <a href="https://danielnoam.itch.io/electro-grid" target="_blank" class="button">Play on Itch.io</a>
+        </div>
+    </div>
+</div>
+
+<div class="showcase captions-visible" data-layout="grid" data-columns="2">
     <figure>
         <a href="#" data-navigate="/content/games/chicken-invaders-remake/content.md"
            data-background-video="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/Gameplay2.mp4">

@@ -7,6 +7,17 @@ and the project adheres to [Semantic Versioning](https://semver.org/).
 The top entry below must always match the `version` constant in
 `js/core/config.js`, which is rendered at the bottom of the sidebar.
 
+## [1.6.0] - 2026-10-05
+
+### Changed
+
+- The About page leads with Electro Grid as a featured project: a wide card
+  with a one-line pitch, its key facts, and Read more / Play on Itch.io
+  buttons. The other projects sit below it, two per row.
+- Project tiles on the About page show their titles under the image at all
+  times instead of only on hover, so they are labeled on phones too.
+- The headline under the name reads "Unity developer".
+
 ## [1.5.1] - 2026-10-05
 
 ### Changed
