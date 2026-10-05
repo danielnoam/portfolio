@@ -168,7 +168,7 @@
 }
 
 
-/* About page on phones: tighter spacing, side-by-side featured buttons */
+/* About page on phones: tighter spacing */
 @media (max-width: 768px) {
     .home-layout .page-header {
         margin-bottom: 0;
@@ -179,17 +179,8 @@
         margin: var(--space-5) 0 var(--space-3);
     }
 
-    .home-layout .featured-body .button-group {
-        flex-direction: row;
-    }
-
-    .home-layout .featured-body .button {
-        flex: 1;
-        width: auto;
-        padding: var(--space-3);
-    }
-
-    .home-layout .image-gallery.captions-visible .tile-meta {
+    .home-layout .image-gallery.captions-visible .tile-meta,
+    .home-layout .featured-caption {
         font-size: var(--text-xs);
     }
 }
