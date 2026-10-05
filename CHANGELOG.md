@@ -7,6 +7,20 @@ and the project adheres to [Semantic Versioning](https://semver.org/).
 The top entry below must always match the `version` constant in
 `js/core/config.js`, which is rendered at the bottom of the sidebar.
 
+## [1.5.1] - 2026-10-05
+
+### Changed
+
+- The site is always dark for now. It no longer switches to light mode when
+  the visitor's system prefers light, or when a light choice was saved
+  earlier. `uiSettings.allowLightMode` in `js/core/config.js` turns it back on.
+
+### Fixed
+
+- Light mode text was too faint to read. Headings, subheadings, sidebar
+  labels, nav links and button text now pass WCAG AA contrast against the
+  light background (headings went from 2.0:1 to 6.0:1).
+
 ## [1.5.0] - 2026-08-12
 
 ### Added

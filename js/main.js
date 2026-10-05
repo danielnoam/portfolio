@@ -30,7 +30,7 @@ class PortfolioApp {
         this.modules.content = new ContentManager(this.config);
         await this.modules.content.loadProjects();
         this.modules.navigation = new NavigationManager(this.config);
-        this.modules.theme = new ThemeManager();
+        this.modules.theme = new ThemeManager(this.config);
         this.modules.ui = new UIManager(this.config);
         this.modules.animation = new AnimationManager();
         this.modules.lightbox = new LightboxManager();

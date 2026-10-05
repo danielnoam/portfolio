@@ -3,7 +3,8 @@
 ================================================*/
 
 export class ThemeManager {
-    constructor() {
+    constructor(config) {
+        this.config = config;
         this.toggles = [];
     }
 
@@ -11,6 +12,12 @@ export class ThemeManager {
         const sidebarToggle = document.getElementById('theme-toggle');
         const mobileToggle = document.querySelector('.mobile-theme-toggle');
         this.toggles = [sidebarToggle, mobileToggle].filter(t => t);
+
+        if (!this.config.uiSettings.allowLightMode) {
+            document.documentElement.classList.remove('light-mode');
+            this.updateToggles(false);
+            return;
+        }
 
         const savedTheme = localStorage.getItem('theme');
         const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;

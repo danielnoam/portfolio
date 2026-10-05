@@ -10,7 +10,7 @@ const CONFIG = {
     // Single source of truth for the site version. Bump on every deploy
     // (semver) and keep CHANGELOG.md's top entry in sync. Rendered at the
     // bottom of the sidebar as the visible "did my deploy land?" marker.
-    version: '1.5.0',
+    version: '1.5.1',
 
     // Base URL for the site
     baseUrl: BASE_URL,
@@ -26,6 +26,8 @@ const CONFIG = {
         showUrls: true,
         showTopBar: true,
         showThemeToggle: false,
+        // When false the site is always dark, whatever the OS or a saved choice says
+        allowLightMode: false,
     },
 
     navigation: {
