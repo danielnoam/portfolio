@@ -65,8 +65,6 @@ My experience spans from modding existing games to creating original adventures 
         <img src="https://danielnoam.github.io/portfolio/assets/electro-grid/main.gif" alt="Electro Grid">
     </a>
     <div class="featured-body">
-        <span class="featured-label">Featured project</span>
-        <h3 class="featured-title">Electro Grid</h3>
         <p class="featured-pitch">A match-3 puzzle game with objectives on non-standard grid layouts. Built solo in one month and polished for mobile.</p>
         <div class="button-group horizontal">
             <a href="#" class="button" data-navigate="/content/games/electro-grid/content.md">Read more</a>
@@ -88,13 +86,6 @@ My experience spans from modding existing games to creating original adventures 
            data-background-image="https://danielnoam.github.io/portfolio/assets/project-umn/robot1.gif">
             <img src="https://danielnoam.github.io/portfolio/assets/project-umn/main.gif" alt="Project UMN">
             <figcaption>Project UMN</figcaption>
-        </a>
-    </figure>
-    <figure>
-        <a href="#" data-navigate="/content/games/2dplatformer/content.md"
-           data-background-image="https://danielnoam.github.io/portfolio/assets/2dplatformer/wallslide.gif">
-            <img src="https://danielnoam.github.io/portfolio/assets/2dplatformer/main.gif" alt="2DPlatformer">
-            <figcaption>2DPlatformer</figcaption>
         </a>
     </figure>
     <figure>

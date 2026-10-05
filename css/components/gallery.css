@@ -190,8 +190,19 @@
     align-items: start;
 }
 
+.image-gallery.captions-visible figure {
+    justify-content: flex-start;
+    min-height: 0;
+}
+
 .image-gallery.captions-visible a {
     flex-direction: column;
+}
+
+.page-content .image-gallery.captions-visible img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
 }
 
 .image-gallery.captions-visible figcaption,

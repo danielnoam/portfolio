@@ -11,10 +11,13 @@ The top entry below must always match the `version` constant in
 
 ### Changed
 
-- The About page leads with Electro Grid as a featured project: a wide card
-  with a one-line pitch and Read more / Play on Itch.io buttons. The other projects sit below it, two per row.
+- The About page leads with Electro Grid as a featured card: just the game's
+  image, with a one-line pitch and Read more / Play on Itch.io buttons that
+  fade in on hover (always shown on touch screens). Chicken Invaders, Project
+  UMN, DNExtensions and Shaders sit below it, two per row.
 - Project tiles on the About page show their titles under the image at all
-  times instead of only on hover, so they are labeled on phones too.
+  times instead of only on hover, so they are labeled on phones too, and
+  share one 16:9 shape so their rows line up.
 - The headline under the name reads "Unity developer".
 - Two-column pages keep both columns down to 1100px wide instead of 1400px,
   so common laptop screens (1280, 1366) no longer get the stacked phone
