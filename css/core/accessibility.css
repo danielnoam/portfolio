@@ -2,6 +2,12 @@
             ACCESSIBILITY
 ================================================*/
 
+/* No browser tap box on phones; each control draws its own pressed state */
+html {
+    -webkit-tap-highlight-color: transparent;
+    --press-scale: 0.96;
+}
+
 /* Keyboard focus: visible ring only for keyboard navigation, not mouse clicks */
 :focus-visible {
     outline: 2px solid var(--color-primary-light);
@@ -30,5 +36,9 @@
 
     .page-background {
         display: none;
+    }
+
+    html {
+        --press-scale: 1;
     }
 }

@@ -39,6 +39,11 @@
     transform: scale(1.05);
 }
 
+.code-block-header:active {
+    opacity: var(--opacity-80);
+    transform: scale(var(--press-scale));
+}
+
 .code-block-header.active {
     background-color: var(--heading-color);
     border-color: var(--heading-color);

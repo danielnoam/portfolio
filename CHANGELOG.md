@@ -7,6 +7,16 @@ and the project adheres to [Semantic Versioning](https://semver.org/).
 The top entry below must always match the `version` constant in
 `js/core/config.js`, which is rendered at the bottom of the sidebar.
 
+## [1.7.3] - 2026-10-05
+
+### Fixed
+
+- Tapping on a phone no longer flashes the browser's blue-grey box. Every
+  tappable thing shows its own pressed state instead: nav links, the menu
+  and theme buttons, contact cards, the Electro Grid video, text links,
+  code tabs, back-to-top, and the lightbox and carousel controls dim or
+  press in slightly. With reduced motion on, they only dim.
+
 ## [1.7.2] - 2026-10-05
 
 ### Fixed

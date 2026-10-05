@@ -38,6 +38,11 @@
     transform: translateY(-3px) scale(1.05);
 }
 
+#back-to-top.show:active {
+    transform: scale(calc(var(--press-scale) - 0.04));
+    opacity: var(--opacity-80);
+}
+
 @keyframes buttonAppear {
     0% {
         opacity: var(--opacity-0);

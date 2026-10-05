@@ -80,7 +80,8 @@
 }
 
 .contact-card:active {
-    transform: translateY(0);
+    transform: scale(var(--press-scale));
+    box-shadow: none;
 }
 
 .contact-icon {

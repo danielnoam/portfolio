@@ -111,6 +111,12 @@ nav a:hover {
     transform: translateX(6px) scale(1.03);
 }
 
+nav a:active,
+.bottom-nav a:active {
+    opacity: var(--opacity-60);
+    transform: translateX(6px) scale(var(--press-scale));
+}
+
 nav a:not([target="_blank"]).active {
     color: var(--text-color);
     position: relative;
@@ -214,6 +220,10 @@ nav h2.foldout-header:hover {
     color: var(--text-color);
 }
 
+nav h2.foldout-header:active {
+    opacity: var(--opacity-60);
+}
+
 /* Arrow icon */
 .foldout-arrow {
     display: inline-block;
@@ -304,6 +314,11 @@ nav h2.foldout-header.open .foldout-arrow {
 .theme-toggle:hover {
     background-color: var(--card-bg);
     border-color: var(--text-color);
+}
+
+.theme-toggle:active {
+    opacity: var(--opacity-60);
+    transform: scale(var(--press-scale));
 }
 
 .mobile-top-bar .theme-toggle {

@@ -144,6 +144,15 @@
     transform: scale(1.2);
 }
 
+.carousel-dot:active {
+    opacity: 1;
+    transform: scale(0.9);
+}
+
+.carousel figure:not(.active):active {
+    opacity: var(--opacity-60);
+}
+
 .carousel-dot.active {
     background: var(--heading-color);
     transform: scale(1.3);
