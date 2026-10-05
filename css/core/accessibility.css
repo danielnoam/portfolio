@@ -2,6 +2,21 @@
             ACCESSIBILITY
 ================================================*/
 
+/* Keyboard focus: visible ring only for keyboard navigation, not mouse clicks */
+:focus-visible {
+    outline: 2px solid var(--color-primary-light);
+    outline-offset: 3px;
+    border-radius: var(--radius-sm);
+}
+
+/* Media and cards keep their own rounded corners under the ring */
+.image-gallery a:focus-visible,
+.featured-media:focus-visible,
+.contact-card:focus-visible,
+.button:focus-visible {
+    border-radius: var(--radius-md);
+}
+
 /* Visitors who asked their OS for less motion get a still page */
 @media (prefers-reduced-motion: reduce) {
     *,
