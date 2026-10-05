@@ -2,6 +2,7 @@
 @import url('core/variables.css');
 @import url('core/reset.css');
 @import url('core/utilities.css');
+@import url('core/accessibility.css');
 
 /* Layout */
 @import url('layout/sidebar.css');
