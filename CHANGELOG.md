@@ -7,6 +7,14 @@ and the project adheres to [Semantic Versioning](https://semver.org/).
 The top entry below must always match the `version` constant in
 `js/core/config.js`, which is rendered at the bottom of the sidebar.
 
+## [1.7.1] - 2026-10-05
+
+### Changed
+
+- Electro Grid on the About page matches the project tiles: the image, with
+  "Solo · Unity C# · Mobile · Play on Itch.io" under it. The hover overlay
+  with the pitch and buttons is gone.
+
 ## [1.7.0] - 2026-10-05
 
 ### Added

@@ -71,13 +71,7 @@ My experience spans from modding existing games to creating original adventures 
        data-background-video="https://danielnoam.github.io/portfolio/assets/electro-grid/GameplaySquareStar.mp4">
         <img src="https://danielnoam.github.io/portfolio/assets/electro-grid/main.gif" alt="Electro Grid">
     </a>
-    <div class="featured-body">
-        <p class="featured-pitch">A match-3 puzzle game with objectives on non-standard grid layouts. Built solo in one month and polished for mobile.</p>
-        <div class="button-group horizontal">
-            <a href="#" class="button" data-navigate="/content/games/electro-grid/content.md">Read more</a>
-            <a href="https://danielnoam.itch.io/electro-grid" target="_blank" class="button">Play on Itch.io</a>
-        </div>
-    </div>
+    <p class="featured-caption">Solo · Unity C# · Mobile · <a href="https://danielnoam.itch.io/electro-grid" target="_blank">Play on Itch.io</a></p>
 </div>
 
 <div class="showcase captions-visible" data-layout="grid" data-columns="2">
