@@ -26,6 +26,12 @@ The top entry below must always match the `version` constant in
 - Section headings on project pages sit on the left with a quiet divider
   instead of centered with a bright blue underline; "ABOUT" reads "About"
   to match "Contact".
+- Page backgrounds stay out of the sidebar on desktop, so the sidebar
+  reads clean instead of showing lines and shapes through it.
+
+### Removed
+
+- The pulsing gradient background on the School These Shits page.
 
 ## [1.6.0] - 2026-10-05
 

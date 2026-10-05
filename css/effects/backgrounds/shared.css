@@ -25,6 +25,14 @@
     opacity: 1;
 }
 
+/* Desktop: keep effects out from behind the see-through sidebar */
+@media (min-width: 769px) {
+    .page-background {
+        left: var(--sidebar-width);
+        width: calc(100% - var(--sidebar-width));
+    }
+}
+
 /* Static image background */
 .image-background {
     position: absolute;

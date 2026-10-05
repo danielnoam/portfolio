@@ -38,11 +38,6 @@ export class BackgroundManager {
                     {type: 'shapes', shape: 'square', count: 25,},
                 ]
             },
-            'school-these-shits': {
-                effects: [
-                    {type: 'waves', count: 1,},
-                ]
-            },
             'pixel-knight': {
                 effects: [
                     {type: 'rain', count: 15, speed: 0.5,},
