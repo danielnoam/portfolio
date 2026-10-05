@@ -82,6 +82,11 @@
     transform: scale(1.2);
 }
 
+.lightbox-close:active {
+    opacity: var(--opacity-60);
+    transform: scale(var(--press-scale));
+}
+
 /* Image container for consistent sizing */
 .lightbox-image-container {
     width: 80vw;
@@ -138,6 +143,11 @@
 .lightbox-nav:hover {
     background: rgba(255, 255, 255, 0.2);
     transform: scale(1.1);
+}
+
+.lightbox-nav:not(.disabled):active {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(var(--press-scale));
 }
 
 .lightbox-nav.disabled {

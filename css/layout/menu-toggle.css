@@ -11,4 +11,10 @@
     font-size: var(--text-xl);
     cursor: pointer;
     padding: var(--space-2);
+    transition: transform var(--transition-fast), opacity var(--transition-fast);
+}
+
+.menu-toggle:active {
+    opacity: var(--opacity-60);
+    transform: scale(var(--press-scale));
 }
