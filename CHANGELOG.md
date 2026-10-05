@@ -15,14 +15,15 @@ The top entry below must always match the `version` constant in
   image, with a one-line pitch and Read more / Play on Itch.io buttons that
   fade in on hover (always shown on touch screens). Chicken Invaders, Project
   UMN, DNExtensions and Shaders sit below it, two per row.
-- Project tiles on the About page show their titles under the image at all
-  times instead of only on hover, so they are labeled on phones too, and
-  share one 16:9 shape so their rows line up.
+- Project tiles on the About page share one 16:9 shape so their rows line
+  up, and drop the hover title (the images carry the names).
 - The headline under the name reads "Unity developer".
-- Each project tile on the About page has a line under its title with the
-  role, team and tools (e.g. "Solo · Unity C# · PC").
+- Each project tile on the About page has a line under it with the role,
+  team and tools (e.g. "Solo · Unity C# · PC").
 - A Résumé button sits with Email, Phone and LinkedIn on the About page;
   the four are equal width, in one row on desktop and two on phones.
+- Tighter About page on phones: less space under the headline, smaller
+  section headings, and the featured card's buttons side by side.
 - Two-column pages keep both columns down to 1100px wide instead of 1400px,
   so common laptop screens (1280, 1366) no longer get the stacked phone
   layout.

@@ -85,28 +85,28 @@ My experience spans from modding existing games to creating original adventures 
         <a href="#" data-navigate="/content/games/chicken-invaders-remake/content.md"
            data-background-video="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/Gameplay2.mp4">
             <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/Cover.png" alt="Chicken Invaders Remake">
-            <figcaption>Chicken Invaders Remake<span class="tile-meta">Programmer · team of 5</span></figcaption>
+            <figcaption><span class="tile-meta">Programmer · team of 5</span></figcaption>
         </a>
     </figure>
     <figure>
         <a href="#" data-navigate="/content/games/project-umn/content.md"
            data-background-image="https://danielnoam.github.io/portfolio/assets/project-umn/robot1.gif">
             <img src="https://danielnoam.github.io/portfolio/assets/project-umn/main.gif" alt="Project UMN">
-            <figcaption>Project UMN<span class="tile-meta">Solo · Unity C# · PC</span></figcaption>
+            <figcaption><span class="tile-meta">Solo · Unity C# · PC</span></figcaption>
         </a>
     </figure>
     <figure>
         <a href="#" data-navigate="/content/other/utilities/content.md"
            data-background-video="https://danielnoam.github.io/portfolio/assets/dnextensions/Button.mp4">
             <img src="https://danielnoam.github.io/portfolio/assets/dnextensions/unitylogo.jpg" alt="DNExtensions">
-            <figcaption>DNExtensions<span class="tile-meta">Solo · Unity editor tools</span></figcaption>
+            <figcaption><span class="tile-meta">Solo · Unity editor tools</span></figcaption>
         </a>
     </figure>
     <figure>
         <a href="#" data-navigate="/content/other/shaders/content.md"
            data-background-video="https://danielnoam.github.io/portfolio/assets/shaders/Dither.mp4">
             <img src="https://danielnoam.github.io/portfolio/assets/shaders/shaderlogo.jpg" alt="Shaders">
-            <figcaption>Shaders<span class="tile-meta">Solo · Shader Graph</span></figcaption>
+            <figcaption><span class="tile-meta">Solo · Shader Graph</span></figcaption>
         </a>
     </figure>
 </div>
