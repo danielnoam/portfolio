@@ -164,7 +164,14 @@
     }
 }
 
+/* Two per row when the column is too narrow for four (phones, zoomed-in laptops) */
 @media (max-width: 768px) {
+    .home-layout .contact-group {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@container (max-width: 440px) {
     .home-layout .contact-group {
         grid-template-columns: repeat(2, 1fr);
     }
