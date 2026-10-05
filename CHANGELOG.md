@@ -17,6 +17,9 @@ The top entry below must always match the `version` constant in
 - Project tiles on the About page show their titles under the image at all
   times instead of only on hover, so they are labeled on phones too.
 - The headline under the name reads "Unity developer".
+- Two-column pages keep both columns down to 1100px wide instead of 1400px,
+  so common laptop screens (1280, 1366) no longer get the stacked phone
+  layout.
 
 ## [1.5.1] - 2026-10-05
 
