@@ -14,6 +14,10 @@ The top entry below must always match the `version` constant in
 - Electro Grid on the About page matches the project tiles: the image, with
   "Solo · Unity C# · Mobile · Play on Itch.io" under it. The hover overlay
   with the pitch and buttons is gone.
+- The sidebar title reads "Daniel Noam" instead of "DANIEL NOAM'S
+  PORTFOLIO".
+- New "DN" favicon in the site's blue, replacing the one borrowed from School
+  These Shits, with a home-screen icon for phones.
 
 ## [1.7.0] - 2026-10-05
 
