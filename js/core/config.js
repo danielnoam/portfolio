@@ -49,7 +49,7 @@ const CONFIG = {
             {
                 title: "Resume",
                 type: "external",
-                url: "assets/Resume-UnityDev.pdf",
+                url: "assets/Resume-TechArt.pdf",
                 target: "_blank"
             },
             {
