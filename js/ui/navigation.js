@@ -121,8 +121,7 @@ export class NavigationManager {
                         const link = document.createElement('a');
                         link.textContent = page.title;
                         const fullPath = `${this.config.baseUrl}/${page.folder}/content.md`;
-                        link.dataset.contentPath = fullPath;
-                        link.onclick = () => onClickHandler(fullPath, link);
+                        this._setupContentLink(link, fullPath, onClickHandler);
                         container.appendChild(link);
                     });
 
@@ -136,8 +135,7 @@ export class NavigationManager {
                         const link = document.createElement('a');
                         link.textContent = page.title;
                         const fullPath = `${this.config.baseUrl}/${page.folder}/content.md`;
-                        link.dataset.contentPath = fullPath;
-                        link.onclick = () => onClickHandler(fullPath, link);
+                        this._setupContentLink(link, fullPath, onClickHandler);
                         nav.appendChild(link);
                     });
                 }
@@ -152,12 +150,21 @@ export class NavigationManager {
 
         if (linkConfig.type === 'content') {
             const fullPath = `${this.config.baseUrl}/${linkConfig.path}`;
-            link.dataset.contentPath = fullPath;
-            link.onclick = () => onClickHandler(fullPath, link);
+            this._setupContentLink(link, fullPath, onClickHandler);
         } else if (linkConfig.type === 'external') {
             this._setupExternalLink(link, linkConfig);
         }
         return link;
+    }
+
+    // A real href makes the link reachable with Tab and Enter; the click still routes in-page
+    _setupContentLink(link, fullPath, onClickHandler) {
+        link.dataset.contentPath = fullPath;
+        link.href = pageRouteUrl(this.config.baseUrl, fullPath);
+        link.onclick = (e) => {
+            e.preventDefault();
+            onClickHandler(fullPath, link);
+        };
     }
 
     buildBottomNavigation(onClickHandler) {

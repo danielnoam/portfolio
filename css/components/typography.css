@@ -62,6 +62,13 @@
     opacity: 1;
 }
 
+.page-content h1,
+.page-content h2,
+.page-content h3 {
+    line-height: var(--leading-tight);
+    text-wrap: balance;
+}
+
 .page-content h2 {
     font-size: var(--text-2xl);
     margin: var(--space-6) 0 var(--space-4) 0;
@@ -70,7 +77,8 @@
 }
 
 .page-content p {
-    line-height: var(--leading-loose);
+    line-height: var(--leading-relaxed);
+    text-wrap: pretty;
     margin-bottom: var(--space-5);
     text-align: left;
     font-size: var(--text-lg);

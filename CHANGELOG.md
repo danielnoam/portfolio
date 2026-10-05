@@ -7,6 +7,35 @@ and the project adheres to [Semantic Versioning](https://semver.org/).
 The top entry below must always match the `version` constant in
 `js/core/config.js`, which is rendered at the bottom of the sidebar.
 
+## [1.7.0] - 2026-10-05
+
+### Added
+
+- Link previews: sharing the site on LinkedIn, WhatsApp or Slack shows a
+  card with the name, "Unity developer" and project screenshots, instead of
+  a blank box. The browser tab reads "Daniel Noam - Unity Developer".
+- Keyboard focus is visible: a blue ring around whatever Tab lands on, and
+  the sidebar page links can now be reached with Tab and opened with Enter.
+- Visitors whose system asks for reduced motion get a still page: no
+  animated background, no fades, and back-to-top jumps instead of scrolling.
+
+### Changed
+
+- Body text on project pages is less spaced out (line height 1.625 instead
+  of 2), and the About text uses the same paragraph style.
+- Section headings on project pages sit on the left with a quiet divider
+  instead of centered with a bright blue underline; "ABOUT" reads "About"
+  to match "Contact".
+- Page backgrounds stay out of the sidebar on desktop, so the sidebar
+  reads clean instead of showing lines and shapes through it.
+
+### Removed
+
+- The pulsing gradient background on the School These Shits page.
+- Emoji icons on the contact cards and the phone menu button, replaced by
+  Tabler line icons (MIT) drawn inline, so they look the same on every
+  device and take the site's text color.
+
 ## [1.6.0] - 2026-10-05
 
 ### Changed
