@@ -13,8 +13,8 @@ The top entry below must always match the `version` constant in
 
 - The Chicken Invaders Remake page is a third of its old length. It opens
   with a role line (Programmer, team of 5) and one paragraph on what Daniel
-  built, then four sections that each explain one decision: weapons as
-  data, levels as scriptable events, the moving HUD, and spatial rumble.
+  built, then four short sections: data-driven weapons, stage events, the
+  reactive HUD, and spatial controller rumble.
   Everything else became one line each under "Also". Ten code showcases
   instead of 17, 16 clips instead of 29; no assets were added or removed.
 

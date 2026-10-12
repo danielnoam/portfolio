@@ -22,15 +22,15 @@ tags: [games, unity, pc, "2025", team, featured]
 
 ## Overview
 
-A remake of Chicken Invaders as a third-person rail shooter, built in a fourth-semester team of five: two programmers, two 3D modelers and one technical artist. I was one of the two programmers. I built the player, weapons, levels, UI, shop, save system, audio, controller support and the editor tools the team used to configure all of it.
+A third-person rail shooter remake of Chicken Invaders, made in a fourth-semester team of five. I was one of two programmers and built the player, weapons, levels, UI, shop, save system, audio, controller support and the team's editor tools.
 
 </div>
 
 <div class="project-card">
 
-## Weapons built from data
+## Data-driven weapons
 
-Every weapon is a ScriptableObject holding a list of behaviors: how the projectile moves, what it does on hit, how it targets. The player script runs whichever behaviors the asset lists, so a new weapon is a new asset and no new code. The reticle reads the same data to show heat, spread and lock state, and aim assist snaps to the nearest enemy inside a configurable cone.
+Each weapon is a ScriptableObject listing its behaviors: how the projectile moves, what it does on hit, how it targets. A new weapon is a new asset, not new code.
 
 <div class="code-showcase">
   <div class="code-block"
@@ -78,9 +78,9 @@ Every weapon is a ScriptableObject holding a list of behaviors: how the projecti
 
 <div class="project-card">
 
-## Levels the designers could script
+## Stage events
 
-A level is a list of stage events: spawn a wave, drop resources, play a radio message, wait. Each event is a ScriptableObject with one job, and the level manager runs them in order. A bridge component turns any stage event into a UnityEvent, so the rest of the team hooked up animations and UI to level progress in the inspector without touching code. Obstacles, stage objectives and the warning system all sit on the same event stream.
+A level is a list of stage events: spawn a wave, drop resources, play a radio message, wait. A bridge component exposes any event as a UnityEvent, so the team wired animations and UI to level progress in the inspector.
 
 <div class="code-showcase">
   <div class="code-block"
@@ -134,9 +134,9 @@ A level is a list of stage events: spawn a wave, drop resources, play a radio me
 
 <div class="project-card">
 
-## A HUD that moves with the player
+## Reactive HUD
 
-The HUD tilts and offsets with player input, shakes on hits and changes color by damage type, so the screen reads as part of the cockpit instead of an overlay. The stage progression bar lays out any number of stages to fit its width and animates between them. The main menu is diegetic, placed in the game world.
+The HUD tilts with input, shakes on hits and changes color by damage type, so it reads as part of the cockpit. The progression bar fits any number of stages and animates between them.
 
 <div class="code-showcase">
   <div class="code-block"
@@ -184,9 +184,9 @@ The HUD tilts and offsets with player input, shakes on hits and changes color by
 
 <div class="project-card">
 
-## Rumble with a position
+## Spatial controller rumble
 
-Controller vibration is spatial: each source, an explosion or a shot, has a position and a falloff, and a listener on the player mixes every active source into one motor output. Device switching is seamless and button prompts update to the active device.
+Each vibration source has a position and a falloff, and a listener on the player mixes all active sources into one motor output. Button prompts follow whichever device is active.
 
 <div class="code-showcase">
   <div class="code-block"
