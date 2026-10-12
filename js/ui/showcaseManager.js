@@ -97,7 +97,7 @@ export class ShowcaseManager {
         <figure>
             <a href="#" data-navigate="/${project.folder}/content.md">
                 <img src="${project.thumbnail}" alt="${project.title}">
-                <figcaption>${project.title}${project.role ? `<span class="tile-meta">${project.role}</span>` : ''}</figcaption>
+                <figcaption>${project.role ? `<span class="tile-meta">${project.role}</span>` : project.title}</figcaption>
             </a>
         </figure>`;
     }
