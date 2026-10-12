@@ -198,6 +198,21 @@
     transform: scale(1.05);
 }
 
+/* A grid of portrait clips (authored with class="showcase portrait-grid",
+   or tagged by LightboxManager once every clip has loaded) runs four across
+   on desktop and two on phones, each tile a 9:16 box. */
+.image-gallery.portrait-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.page-content .image-gallery.portrait-grid img,
+.page-content .image-gallery.portrait-grid video {
+    width: 100%;
+    aspect-ratio: 9 / 16;
+    max-height: none;
+    object-fit: cover;
+}
+
 /* Variant: titles always shown under each tile, for touch screens */
 .image-gallery.captions-visible {
     align-items: start;

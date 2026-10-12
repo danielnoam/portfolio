@@ -116,12 +116,6 @@ Chambers build themselves in animated sequences, prompts and hints live in the e
             <figcaption>Main menu</figcaption>
         </a>
     </figure>
-    <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/project-umn/intro2.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/intro2.gif" alt="Intro">
-            <figcaption>Intro</figcaption>
-        </a>
-    </figure>
 </div>
 
 </div>
@@ -141,6 +135,12 @@ Chambers build themselves in animated sequences, prompts and hints live in the e
 ## Gallery
 
 <div class="showcase" data-layout="grid">
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/project-umn/intro2.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/intro2.gif" alt="Intro">
+            <figcaption>Intro</figcaption>
+        </a>
+    </figure>
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/project-umn/player2.gif" target="_blank">
             <img src="https://danielnoam.github.io/portfolio/assets/project-umn/player2.gif" alt="Player">

@@ -120,4 +120,67 @@ Coyote time, jump buffering and variable jump height make the controls forgiving
 
 </div>
 
+<div class="project-card">
+
+## Gallery
+
+<div class="showcase" data-layout="grid">
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/2dplatformer/softPlatform.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/2dplatformer/softPlatform.gif" alt="Soft platforms">
+            <figcaption>Soft platforms</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/2dplatformer/crumblingobject.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/2dplatformer/crumblingobject.gif" alt="Crumbling platforms">
+            <figcaption>Crumbling platforms</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/2dplatformer/movingplatform.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/2dplatformer/movingplatform.gif" alt="Moving platforms">
+            <figcaption>Moving platforms</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/2dplatformer/lava.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/2dplatformer/lava.gif" alt="Lava">
+            <figcaption>Lava</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/2dplatformer/spikes.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/2dplatformer/spikes.gif" alt="Spikes">
+            <figcaption>Spikes</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/2dplatformer/hazard4.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/2dplatformer/hazard4.gif" alt="Hazards">
+            <figcaption>Hazards</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/2dplatformer/hiddenarea.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/2dplatformer/hiddenarea.gif" alt="Hidden area">
+            <figcaption>Hidden area</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/2dplatformer/doublejump.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/2dplatformer/doublejump.gif" alt="Double jump">
+            <figcaption>Double jump</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/2dplatformer/wallslide.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/2dplatformer/wallslide.gif" alt="Wall slide">
+            <figcaption>Wall slide</figcaption>
+        </a>
+    </figure>
+</div>
+
+</div>
+
 </div>

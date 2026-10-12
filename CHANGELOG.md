@@ -17,6 +17,13 @@ The top entry below must always match the `version` constant in
   screenshots, the Chicken Invaders intro and boundary shader clips) or
   padded to it where cropping would cut content (HUD strips, the reticle,
   the rumble settings, the Project UMN animator clip).
+- Phones show two tiles per row instead of one, so galleries take half the
+  scrolling. Grids of portrait clips (Electro Grid, Shaders) run four across
+  on desktop.
+- Every project card is the same width; text-only cards no longer shrink
+  to their content.
+- Project UMN: the intro clip moved to the Gallery. 2DPlatformer: new
+  Gallery with the platform, hazard, secret and ability clips.
 
 ## [1.8.2] - 2026-10-12
 

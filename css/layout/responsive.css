@@ -111,19 +111,10 @@
         right: var(--space-4);
     }
 
-    .image-gallery {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    /* Default to a full-width row; portrait media (tagged by LightboxManager
-       once its real dimensions are known) pairs up two-per-row instead. */
-    .image-gallery figure {
-        grid-column: span 2;
-    }
-
-    .image-gallery figure.is-portrait,
-    .image-gallery.captions-visible figure {
-        grid-column: span 1;
+    /* Two tiles per row on phones, landscape and portrait alike */
+    .image-gallery,
+    .image-gallery.portrait-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     #back-to-top {
