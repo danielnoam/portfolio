@@ -7,7 +7,7 @@ and the project adheres to [Semantic Versioning](https://semver.org/).
 The top entry below must always match the `version` constant in
 `js/core/config.js`, which is rendered at the bottom of the sidebar.
 
-## [1.7.4] - 2026-10-12
+## [1.8.0] - 2026-10-12
 
 ### Changed
 
