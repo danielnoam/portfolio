@@ -7,6 +7,14 @@ and the project adheres to [Semantic Versioning](https://semver.org/).
 The top entry below must always match the `version` constant in
 `js/core/config.js`, which is rendered at the bottom of the sidebar.
 
+## [1.8.2] - 2026-10-12
+
+### Changed
+
+- Project UMN: "The chambers" is now "Look and feel" and holds the stairs,
+  bridge, loading, menu and intro clips. The Gallery keeps the player,
+  robot and easter egg clips.
+
 ## [1.8.1] - 2026-10-12
 
 ### Changed
