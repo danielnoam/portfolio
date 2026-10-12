@@ -1,6 +1,7 @@
 ---
 thumbnail: /portfolio/assets/midnight-masquerade/logo.jpg
 shortDescription: Short game made for GGJ 2026.
+role: Programmer · team of 4 · Unity C#
 tags: [games, unity, pc, "2026", team, game-jam, archived]
 ---
 <div class="page-content">

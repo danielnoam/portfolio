@@ -1,6 +1,7 @@
 ---
 thumbnail: /portfolio/assets/power-factory/main.png
 shortDescription: A first-person mathematical puzzle game developed for Kenny Jam 2025.
+role: Solo · Unity C# · 48-hour jam
 tags: [games, unity, pc, "2025", solo, game-jam, archived]
 ---
 <div class="page-content">
