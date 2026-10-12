@@ -1,6 +1,7 @@
 ---
 thumbnail: /portfolio/assets/school-these-shits/main.png
 shortDescription: A fast-paced "shooter" where players take on the role of an unconventional teacher.
+role: Solo · Unity C# · first semester
 tags: [games, unity, pc, "2024", solo, archived]
 ---
 <div class="page-content">

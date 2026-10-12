@@ -60,7 +60,7 @@ The robot hovers on physics, holding its height over terrain while following the
 
 ## The player
 
-A state-machine controller with tuned acceleration, IK head tracking that follows the camera in play and the cursor in menus, and blend trees between walking, running and interacting. The camera switches between a free orbit and an over-the-shoulder view for precise interaction.
+A state-machine controller with tuned acceleration, IK head tracking that follows the camera in play and the cursor in menus, and blend trees between walking, running and interacting.
 
 <div class="showcase" data-layout="grid">
     <figure>
@@ -93,15 +93,40 @@ Chambers build themselves in animated sequences, prompts and hints live in the e
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/project-umn/world2.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/world2.gif" alt="Dynamic bridge">
-            <figcaption>Dynamic bridge</figcaption>
+        <a href="https://danielnoam.github.io/portfolio/assets/project-umn/menu.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/menu.gif" alt="In-world menu">
+            <figcaption>In-world menu</figcaption>
+        </a>
+    </figure>
+</div>
+
+</div>
+
+<div class="project-card">
+
+## Also
+
+- Camera that switches between a free orbit and an over-the-shoulder view for precise interaction
+- Minimalist sci-fi look that keeps the important elements readable
+- Full GDD, linked above
+
+</div>
+
+<div class="project-card">
+
+## Gallery
+
+<div class="showcase" data-layout="grid">
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/project-umn/intro2.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/intro2.gif" alt="Intro">
+            <figcaption>Intro</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/project-umn/world4.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/world4.gif" alt="?">
-            <figcaption>?</figcaption>
+        <a href="https://danielnoam.github.io/portfolio/assets/project-umn/world2.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/world2.gif" alt="Dynamic bridge">
+            <figcaption>Dynamic bridge</figcaption>
         </a>
     </figure>
     <figure>
@@ -111,15 +136,21 @@ Chambers build themselves in animated sequences, prompts and hints live in the e
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/project-umn/menu.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/menu.gif" alt="In-world menu">
-            <figcaption>In-world menu</figcaption>
-        </a>
-    </figure>
-    <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/project-umn/mainmenu.gif" target="_blank">
             <img src="https://danielnoam.github.io/portfolio/assets/project-umn/mainmenu.gif" alt="Main menu">
             <figcaption>Main menu</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/project-umn/robot2.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/robot2.gif" alt="Robot">
+            <figcaption>Robot</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/project-umn/world4.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/world4.gif" alt="Easter egg">
+            <figcaption>Easter egg</figcaption>
         </a>
     </figure>
 </div>

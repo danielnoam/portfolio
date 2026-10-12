@@ -64,6 +64,7 @@ export class ContentManager {
                     folder: pathData.folder,
                     thumbnail: metadata.thumbnail || '',
                     shortDescription: metadata.shortDescription || '',
+                    role: metadata.role || '',
                     tags: metadata.tags || []
                 };
             } catch (error) {
