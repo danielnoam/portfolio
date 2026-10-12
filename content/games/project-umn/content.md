@@ -7,9 +7,9 @@ tags: [games, unity, pc, "2025", solo, featured]
 
 # Project UMN
 
+<img src="https://danielnoam.github.io/portfolio/assets/project-umn/main.gif" alt="Project UMN" class="page-logo">
 
-<img src="https://danielnoam.github.io/portfolio/assets/project-umn/main.gif" alt="Intro" class="page-logo">
-
+<p class="featured-caption">Solo · Unity C# · PC</p>
 
 <div class="button-group horizontal">
     <a href="https://danielnoam.itch.io/project-umd" target="_blank" class="button">Itch.io</a>
@@ -17,115 +17,108 @@ tags: [games, unity, pc, "2025", solo, featured]
     <a href="https://docs.google.com/document/d/1cU73PA5Ix3AxZ0AB7ok3quzK6Il2FuIT4DuwFEk2508/edit?usp=sharing" target="_blank" class="button">GDD</a>
 </div>
 
-
 <div class="project-card">
 
 ## Overview
 
-"Project UMN" is a third-person puzzle game developed as my third-semester school project. 
-Players control an entity alongside a companion through a series of minimalist simulation tests, each featuring unique mechanics.
+A third-person puzzle game made solo as my third-semester project. You and a hovering robot companion work through a series of minimalist test chambers, each with its own mechanic.
+
+
 
 </div>
 
 <div class="project-card">
 
-## Core Design Elements
+## The robot
 
-### The Player
-
-- A state machine controller with fine-tuned movement parameters for smooth acceleration, precise control, and responsive movement.
-- Head tracking through IK that follows the camera during gameplay and tracks the mouse cursor in menus for more natural character animation.
-- Fluid animation transitions using blend trees that create seamless movement between walking, running, and interacting with objects.
-- Versatile camera system that switches between exploration mode with a free-orbiting view and a focused over-the-shoulder perspective for precise interactions.
-
-
-<div class="showcase" data-layout="grid">
-    <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/project-umn/player.mp4" target="_blank">
-            <video src="https://danielnoam.github.io/portfolio/assets/project-umn/player.mp4" autoplay loop muted playsinline></video>
-            <figcaption>Player Animation Tree</figcaption>
-        </a>
-    </figure>
-    <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/project-umn/player3.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/player3.gif" alt="Player Interaction">
-            <figcaption>Player interaction</figcaption>
-        </a>
-    </figure>
-</div>
-
-
-### The Robot
-
-- A physics-based hover movement that dynamically adjusts to terrain, maintaining optimal height while following the player or reaching designated positions.
-- Reactive ear animations that respond to movement and rotation, creating visual feedback as the robot changes direction or speed.
-- Dynamic lighting and emission that adapts to environmental conditions, with special aiming mode enhancements when the player needs precision.
-- Environmental reveal mechanics that allow the robot to uncover hidden pathways.
-
+The robot hovers on physics, holding its height over terrain while following the player or flying to a commanded spot. Its ears react to movement, its light changes with the environment and sharpens when you aim it, and it can reveal hidden paths.
 
 <div class="showcase" data-layout="grid">
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/project-umn/robot1.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/robot1.gif" alt="Robot Movement">
+            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/robot1.gif" alt="Robot movement">
             <figcaption>Robot movement</figcaption>
         </a>
     </figure>
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/project-umn/world3.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/world3.gif" alt="Robot Light">
-            <figcaption>The robot follows the player's aim</figcaption>
+            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/world3.gif" alt="The robot follows your aim">
+            <figcaption>The robot follows your aim</figcaption>
         </a>
     </figure>
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/project-umn/robot3.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/robot3.gif" alt="Robot command">
+            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/robot3.gif" alt="Commanding the robot">
             <figcaption>Commanding the robot</figcaption>
         </a>
     </figure>
 </div>
 
-### The Simulation
+</div>
 
-- A clean, minimalist look that highlights important elements while maintaining a distinctive sci-fi aesthetic.
-- Button prompts and hints that appear as part of the environment instead of UI elements, showing up only when needed.
-- Game menus are built as part of the world itself with smooth animations and controls that match the game's overall feel.
-- Test chambers that build themselves through animated sequences, creating dramatic scene changes and reinforcing the artificial testing environment.
+<div class="project-card">
 
+## The player
+
+A state-machine controller with tuned acceleration, IK head tracking that follows the camera in play and the cursor in menus, and blend trees between walking, running and interacting. The camera switches between a free orbit and an over-the-shoulder view for precise interaction.
+
+<div class="showcase" data-layout="grid">
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/project-umn/player.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/project-umn/player.mp4" autoplay loop muted playsinline></video>
+            <figcaption>Animation tree</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/project-umn/player3.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/player3.gif" alt="Interaction">
+            <figcaption>Interaction</figcaption>
+        </a>
+    </figure>
+</div>
+
+</div>
+
+<div class="project-card">
+
+## The chambers
+
+Chambers build themselves in animated sequences, prompts and hints live in the environment instead of a HUD, and the menus are objects in the world.
 
 <div class="showcase" data-layout="grid">
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/project-umn/world1.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/world1.gif" alt="Dynamic Stairs">
+            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/world1.gif" alt="Dynamic stairs">
             <figcaption>Dynamic stairs</figcaption>
         </a>
     </figure>
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/project-umn/world2.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/world2.gif" alt="Dynamic Bridge">
+            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/world2.gif" alt="Dynamic bridge">
             <figcaption>Dynamic bridge</figcaption>
         </a>
     </figure>
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/project-umn/world4.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/world4.gif" alt="Easter egg">
+            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/world4.gif" alt="?">
             <figcaption>?</figcaption>
         </a>
     </figure>
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/project-umn/loadanimation.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/loadanimation.gif" alt="Loading Animation">
-            <figcaption>Test loading animation</figcaption>
+            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/loadanimation.gif" alt="Test loading">
+            <figcaption>Test loading</figcaption>
         </a>
     </figure>
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/project-umn/menu.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/menu.gif" alt="Menu">
-            <figcaption>In world menu</figcaption>
+            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/menu.gif" alt="In-world menu">
+            <figcaption>In-world menu</figcaption>
         </a>
     </figure>
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/project-umn/mainmenu.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/mainmenu.gif" alt="Main Menu">
+            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/mainmenu.gif" alt="Main menu">
             <figcaption>Main menu</figcaption>
         </a>
     </figure>
@@ -134,4 +127,3 @@ Players control an entity alongside a companion through a series of minimalist s
 </div>
 
 </div>
-

@@ -11,12 +11,15 @@ The top entry below must always match the `version` constant in
 
 ### Changed
 
-- The Chicken Invaders Remake page is a third of its old length. It opens
-  with a role line (Programmer, team of 5) and one paragraph on what Daniel
-  built, then four short sections: data-driven weapons, stage events, the
-  reactive HUD, and spatial controller rumble.
-  Everything else became one line each under "Also". Ten code showcases
-  instead of 17, 16 clips instead of 29; no assets were added or removed.
+- The four project pages are rewritten to the same shape: a role line
+  under the hero (solo or team, engine, platform), a two-sentence
+  overview of what Daniel built, then a few short sections that each
+  explain one decision in prose, with the existing clips and code under
+  each. Chicken Invaders Remake goes from 15 subsections to 4 plus an
+  "Also" list; Electro Grid leads with the grid editor; Project UMN leads
+  with the robot; 2DPlatformer leads with its editor tools. Word count
+  roughly halved on every page, 2DPlatformer by two thirds. No assets
+  were added or removed.
 
 ## [1.7.3] - 2026-10-05
 
