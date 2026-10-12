@@ -18,8 +18,13 @@ The top entry below must always match the `version` constant in
   each. Chicken Invaders Remake goes from 15 subsections to 4 plus an
   "Also" list; Electro Grid leads with the grid editor; Project UMN leads
   with the robot; 2DPlatformer leads with its editor tools. Word count
-  roughly halved on every page, 2DPlatformer by two thirds. No assets
-  were added or removed.
+  roughly halved on every page, 2DPlatformer by two thirds.
+- The five Archive pages get the same role line and a one-paragraph
+  overview instead of bullet lists. Midnight Masquerade shows its two
+  screenshots, which were in assets but not on the page.
+- The Archived page shows each project's title under its tile and crops
+  the tiles to the same 16:9 shape, like the About grid. Before, they were
+  five unlabeled thumbnails of different heights.
 
 ## [1.7.3] - 2026-10-05
 

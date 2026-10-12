@@ -3,12 +3,13 @@ thumbnail: /portfolio/assets/midnight-masquerade/logo.jpg
 shortDescription: Short game made for GGJ 2026.
 tags: [games, unity, pc, "2026", team, game-jam, archived]
 ---
-
 <div class="page-content">
 
 # Midnight Masquerade
 
-<img src="https://danielnoam.github.io/portfolio/assets/midnight-masquerade/logo.jpg" alt="Midnight Masquerade Gameplay" class="page-logo">
+<img src="https://danielnoam.github.io/portfolio/assets/midnight-masquerade/logo.jpg" alt="Midnight Masquerade" class="page-logo">
+
+<p class="featured-caption">Programmer · team of 4 · Unity C# · Global Game Jam 2026</p>
 
 <div class="button-group horizontal">
     <a href="https://danielnoam.itch.io/midnight-masquerade" target="_blank" class="button">Itch.io</a>
@@ -19,17 +20,23 @@ tags: [games, unity, pc, "2026", team, game-jam, archived]
 
 ## Overview
 
-"Midnight Masquerade" was developed for Global Game Jam 2026.
-I worked as a programmer in a team of four, alongside another programmer, an artist, and a musician.
+A 48-hour jam game. You race to find and remove the ritual objects a cult needs before the sacrifice completes, and the soundtrack loses a layer with each object you take, so the music tracks your progress. I was one of two programmers alongside an artist and a musician.
 
-The game is a frantic race against time when the player must disrupt a cultist ritual. The goal is to identify and remove specific ceremonial objects the cult intends to use for a sacrifice before the ritual completes.
-
-### Key Features
-
-- Players rush to find and dispose of ritualistic weapons scattered across the map to prevent the sacrifice.
-- The soundtrack evolves as the player removes dangerous items, the music layers update to reflect the changing tension and progress.
-
+<div class="showcase" data-layout="grid">
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/midnight-masquerade/player1.png" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/midnight-masquerade/player1.png" alt="In the cult camp">
+            <figcaption>In the cult camp</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/midnight-masquerade/player2.png" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/midnight-masquerade/player2.png" alt="Searching for ritual objects">
+            <figcaption>Searching for ritual objects</figcaption>
+        </a>
+    </figure>
 </div>
 
+</div>
 
 </div>
