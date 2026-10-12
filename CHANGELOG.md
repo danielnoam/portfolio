@@ -7,6 +7,13 @@ and the project adheres to [Semantic Versioning](https://semver.org/).
 The top entry below must always match the `version` constant in
 `js/core/config.js`, which is rendered at the bottom of the sidebar.
 
+## [1.8.4] - 2026-10-12
+
+### Changed
+
+- Project UMN: the player movement clip moved from the Gallery up under
+  The player, which now has three clips.
+
 ## [1.8.3] - 2026-10-12
 
 ### Changed
