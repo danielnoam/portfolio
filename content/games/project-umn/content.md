@@ -75,6 +75,12 @@ A state-machine controller with tuned acceleration, IK head tracking that follow
             <figcaption>Interaction</figcaption>
         </a>
     </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/project-umn/player2.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/player2.gif" alt="Movement">
+            <figcaption>Movement</figcaption>
+        </a>
+    </figure>
 </div>
 
 </div>
@@ -139,12 +145,6 @@ Chambers build themselves in animated sequences, prompts and hints live in the e
         <a href="https://danielnoam.github.io/portfolio/assets/project-umn/intro2.gif" target="_blank">
             <img src="https://danielnoam.github.io/portfolio/assets/project-umn/intro2.gif" alt="Intro">
             <figcaption>Intro</figcaption>
-        </a>
-    </figure>
-    <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/project-umn/player2.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/player2.gif" alt="Player">
-            <figcaption>Player</figcaption>
         </a>
     </figure>
     <figure>
