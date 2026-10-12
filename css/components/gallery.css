@@ -5,7 +5,7 @@
 /* Image Gallery */
 .image-gallery {
     display: grid;
-    grid-template-columns: repeat(var(--gallery-columns), auto);
+    grid-template-columns: repeat(var(--gallery-columns), minmax(0, 1fr));
     row-gap: var(--gallery-rows-gap);
     column-gap: var(--gallery-columns-gap);
     margin: var(--space-4) auto;
@@ -25,20 +25,21 @@
 }
 
 .image-gallery.gallery-2-columns {
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .image-gallery.gallery-3-columns {
-    grid-template-columns: repeat(3, auto);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .image-gallery.gallery-4-columns {
-    grid-template-columns: repeat(4, auto);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 
 .image-gallery a {
     display: flex;
+    width: 100%;
     align-items: center;
     justify-content: center;
     text-decoration: none;
@@ -47,14 +48,17 @@
 
 .page-content .image-gallery img,
 .page-content .image-gallery video {
-    width: auto;
+    /* Landscape media fills a uniform 16:9 tile so a grid lines up whatever
+       the clips' native sizes; portrait media (tagged by LightboxManager)
+       keeps its own shape so screenshots stay readable. */
+    width: 100%;
     height: auto;
-    max-height: var(--gallery-image-max-height);
+    aspect-ratio: 16 / 9;
     max-width: 100%;
     margin: 0;
     box-shadow: none;
-    display: inline-block;
-    object-fit: contain;
+    display: block;
+    object-fit: cover;
     border-radius: var(--radius-md);
     transition: transform var(--transition-normal), box-shadow var(--transition-normal);
     background-color: var(--card-bg);
@@ -85,6 +89,15 @@
     min-width: 0px;
     min-height: 150px;
     max-width: 100%;
+    width: 100%;
+}
+
+.page-content .image-gallery figure.is-portrait img,
+.page-content .image-gallery figure.is-portrait video {
+    width: auto;
+    aspect-ratio: auto;
+    max-height: var(--gallery-image-max-height);
+    object-fit: contain;
 }
 
 .image-gallery figure:hover .video-indicator {
@@ -197,12 +210,6 @@
 
 .image-gallery.captions-visible a {
     flex-direction: column;
-}
-
-.page-content .image-gallery.captions-visible img {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
 }
 
 .image-gallery.captions-visible figcaption,

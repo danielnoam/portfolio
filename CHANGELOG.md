@@ -7,6 +7,17 @@ and the project adheres to [Semantic Versioning](https://semver.org/).
 The top entry below must always match the `version` constant in
 `js/core/config.js`, which is rendered at the bottom of the sidebar.
 
+## [1.8.3] - 2026-10-12
+
+### Changed
+
+- Grid tiles are a uniform 16:9 everywhere: equal columns, landscape
+  media fills the tile, portrait media keeps its own shape.
+- The off-ratio assets were cropped to 16:9 (archive thumbnails and
+  screenshots, the Chicken Invaders intro and boundary shader clips) or
+  padded to it where cropping would cut content (HUD strips, the reticle,
+  the rumble settings, the Project UMN animator clip).
+
 ## [1.8.2] - 2026-10-12
 
 ### Changed
