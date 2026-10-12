@@ -4,45 +4,46 @@ shortDescription: A fast-paced "shooter" where players take on the role of an un
 tags: [games, unity, pc, "2024", solo, archived]
 ---
 <div class="page-content">
-    
+
 # School These Sh*ts
 
+<img src="https://danielnoam.github.io/portfolio/assets/school-these-shits/main.png" alt="School These Sh*ts" class="page-logo">
 
-<img src="https://danielnoam.github.io/portfolio/assets/school-these-shits/main.png" alt="Game Screenshot" class="page-logo">
-
+<p class="featured-caption">Solo · Unity C# · first semester</p>
 
 <div class="project-card">
-    
+
 ## Overview
-"School These Sh*ts" is a fast-paced "shooter" developed as my first-semester school project where players take on the role of an unconventional teacher.
-Armed with textbooks as projectiles and momentum-based movement, the player must race against time to help students overcome various obstacles and ensure at least 70% of the student body succeeds before the bell rings.
+
+My first-semester project: a time-attack "shooter" where you play a teacher throwing textbooks to get students through their problems before the bell. Momentum-based movement, trick-shot throws, a school full of shortcuts and notes to find, and difficulty levels that tighten the clock.
+
+
+
 </div>
 
 <div class="project-card">
-    
-## Core Design Elements
-### Gameplay Mechanics
-- Momentum-based movement system rewarding skillful navigation and mastery.
-- Precision-focused book throwing mechanic requiring careful aim and timing.
-- Various student obstacles requiring creative problem-solving, from retrieving lost items to freeing students from lockers.
+
+## Gameplay
+
+
 
 <div class="showcase" data-layout="grid">
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/school-these-shits/gameplay2.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/school-these-shits/gameplay2.gif" alt="Various shortcuts">
-            <figcaption>Various shortcuts</figcaption>
+            <img src="https://danielnoam.github.io/portfolio/assets/school-these-shits/gameplay2.gif" alt="Shortcuts">
+            <figcaption>Shortcuts</figcaption>
         </a>
     </figure>
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/school-these-shits/gameplay3.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/school-these-shits/gameplay3.gif" alt="Some objects can break">
-            <figcaption>Some objects can break</figcaption>
+            <img src="https://danielnoam.github.io/portfolio/assets/school-these-shits/gameplay3.gif" alt="Breakable objects">
+            <figcaption>Breakable objects</figcaption>
         </a>
     </figure>
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/school-these-shits/trickshot.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/school-these-shits/trickshot.gif" alt="Trickshots!">
-            <figcaption>Trick shots!</figcaption>
+            <img src="https://danielnoam.github.io/portfolio/assets/school-these-shits/trickshot.gif" alt="Trick shots">
+            <figcaption>Trick shots</figcaption>
         </a>
     </figure>
     <figure>
@@ -57,11 +58,27 @@ Armed with textbooks as projectiles and momentum-based movement, the player must
             <figcaption>A student's mission</figcaption>
         </a>
     </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/school-these-shits/gameplay1.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/school-these-shits/gameplay1.gif" alt="Difficulty levels">
+            <figcaption>Difficulty levels</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://danielnoam.github.io/portfolio/assets/school-these-shits/gameplay4.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/school-these-shits/gameplay4.gif" alt="The bell rings">
+            <figcaption>The bell rings</figcaption>
+        </a>
+    </figure>
 </div>
 
-### Environment Design
-- Diverse school environment featuring classrooms, offices, a playground, and unique areas to explore.
-- Environmental storytelling through scattered notes, bulletin boards, and student items that expand on the game.
+</div>
+
+<div class="project-card">
+
+## The school
+
+
 
 <div class="showcase" data-layout="grid">
     <figure>
@@ -96,24 +113,6 @@ Armed with textbooks as projectiles and momentum-based movement, the player must
     </figure>
 </div>
 
-### Difficulty and Time Management
-- Time-pressured gameplay encouraging mastery of movement, accuracy, and route optimization.
-- Multiple difficulty levels allowing players to learn mechanics while providing increased challenge.
-
-<div class="showcase" data-layout="grid">
-    <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/school-these-shits/gameplay1.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/school-these-shits/gameplay1.gif" alt="Difficulty levels">
-            <figcaption>Difficulty levels</figcaption>
-        </a>
-    </figure>
-    <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/school-these-shits/gameplay4.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/school-these-shits/gameplay4.gif" alt="School bells rings">
-            <figcaption>School bell rings</figcaption>
-        </a>
-    </figure>
-</div>
 </div>
 
 </div>

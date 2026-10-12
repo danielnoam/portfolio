@@ -4,6 +4,6 @@
 
 <p>Older and retired projects, kept around for posterity.</p>
 
-<div class="showcase" data-layout="grid" data-columns="3" data-tags="archived"></div>
+<div class="showcase captions-visible" data-layout="grid" data-columns="3" data-tags="archived"></div>
 
 </div>

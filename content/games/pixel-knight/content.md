@@ -7,31 +7,27 @@ tags: [games, gamemaker, "2016", pc, solo, archived]
 
 # Pixel Knight
 
-<img src="https://danielnoam.github.io/portfolio/assets/pixel-knight/main.gif" alt="Game Screenshot" class="page-logo">
+<img src="https://danielnoam.github.io/portfolio/assets/pixel-knight/main.gif" alt="Pixel Knight" class="page-logo">
+
+<p class="featured-caption">Solo · GameMaker · 2016, high school</p>
 
 <div class="project-card">
 
 ## Overview
 
-"Pixel Knight" is a short Action-RPG developed during my high school years while learning Game Maker.
+A short action RPG made in high school while learning GameMaker: melee, dash and area attacks, a fireball, monsters with status effects, bosses, and health, stamina and mana to balance with potions and campfires.
 
 
-### Game Mechanics
-
-- Melee attacks, special abilities (dashing, AOE attack), and a ranged fireball spell create a varied combat experience.
-- A diverse monster roster with unique abilities, such as inflicting status effects (poison, fire damage), creates varied challenges.
-- Boss battles featuring distinct combat patterns test players' skills and adaptability.
-- The health, stamina, and mana resources challenges players to balance their play effectively.
-- Healing options, such as potions and campfires, provide players with strategic choices during combat.
 
 </div>
-
 
 <div class="project-card">
 
 ## Gallery
 
-<div class="showcase" data-layout="grid" data-columns="2">
+
+
+<div class="showcase" data-layout="grid">
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/pixel-knight/gameplay1.png" target="_blank">
             <img src="https://danielnoam.github.io/portfolio/assets/pixel-knight/gameplay1.png" alt="Campfire">
