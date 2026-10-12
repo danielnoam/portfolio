@@ -97,7 +97,7 @@ Objectives are small classes on one event-driven base, so a level can ask for a 
   </div>
 </div>
 
-<div class="showcase" data-layout="grid">
+<div class="showcase portrait-grid" data-layout="grid">
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/electro-grid/GameplayMatching.mp4" target="_blank">
             <video src="https://danielnoam.github.io/portfolio/assets/electro-grid/GameplayMatching.mp4" autoplay loop muted playsinline></video>
@@ -147,7 +147,7 @@ One screen-shake system, a VFX system that sequences particles and post-processi
   </div>
 </div>
 
-<div class="showcase" data-layout="grid">
+<div class="showcase portrait-grid" data-layout="grid">
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/electro-grid/FeelStartingLevel.mp4" target="_blank">
             <video src="https://danielnoam.github.io/portfolio/assets/electro-grid/FeelStartingLevel.mp4" autoplay loop muted playsinline></video>

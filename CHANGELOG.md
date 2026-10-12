@@ -7,6 +7,24 @@ and the project adheres to [Semantic Versioning](https://semver.org/).
 The top entry below must always match the `version` constant in
 `js/core/config.js`, which is rendered at the bottom of the sidebar.
 
+## [1.8.3] - 2026-10-12
+
+### Changed
+
+- Grid tiles are a uniform 16:9 everywhere: equal columns, landscape
+  media fills the tile, portrait media keeps its own shape.
+- The off-ratio assets were cropped to 16:9 (archive thumbnails and
+  screenshots, the Chicken Invaders intro and boundary shader clips) or
+  padded to it where cropping would cut content (HUD strips, the reticle,
+  the rumble settings, the Project UMN animator clip).
+- Phones show two tiles per row instead of one, so galleries take half the
+  scrolling. Grids of portrait clips (Electro Grid, Shaders) run four across
+  on desktop.
+- Every project card is the same width; text-only cards no longer shrink
+  to their content.
+- Project UMN: the intro clip moved to the Gallery. 2DPlatformer: new
+  Gallery with the platform, hazard, secret and ability clips.
+
 ## [1.8.2] - 2026-10-12
 
 ### Changed

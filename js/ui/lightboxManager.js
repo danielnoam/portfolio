@@ -124,6 +124,19 @@ export class LightboxManager {
         const height = media.tagName === 'IMG' ? media.naturalHeight : media.videoHeight;
         if (width > 0 && height > 0) {
             figure.classList.toggle('is-portrait', height > width);
+            this.markPortraitGrid(figure.parentElement);
+        }
+    }
+
+    // A grid whose loaded media is all portrait gets `portrait-grid`
+    // (css/components/gallery.css): four across on desktop, 9:16 tiles.
+    markPortraitGrid(gallery) {
+        if (!gallery) return;
+        const figures = Array.from(gallery.querySelectorAll(':scope > figure'));
+        const loaded = figures.filter(figure => figure.classList.contains('loaded'));
+        if (loaded.length !== figures.length) return;
+        if (figures.every(figure => figure.classList.contains('is-portrait'))) {
+            gallery.classList.add('portrait-grid');
         }
     }
 

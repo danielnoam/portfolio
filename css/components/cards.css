@@ -12,6 +12,7 @@
     transition: transform var(--transition-base),
     box-shadow var(--transition-base),
     background-color var(--transition-normal);
+    width: 100%;
     max-width: 900px;
     margin-left: auto;
     margin-right: auto;
