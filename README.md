@@ -111,7 +111,8 @@ top bar on mobile).
 Hosted via **Settings → Pages → Deploy from a branch** (`main`, `/root`), so
 **a push to `main` is the deploy** — Pages rebuilds within a minute or two.
 
-On every change (even small ones):
+On every change that visitors see (CLAUDE.md has the full flow, including
+the notes files and the PR):
 
 1. Bump `version` in `js/core/config.js` (semver: feature → minor,
    fix/tweak → patch).
