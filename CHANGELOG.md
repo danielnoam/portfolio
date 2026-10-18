@@ -7,6 +7,17 @@ and the project adheres to [Semantic Versioning](https://semver.org/).
 The top entry below must always match the `version` constant in
 `js/core/config.js`, which is rendered at the bottom of the sidebar.
 
+## [1.8.7] - 2026-10-18
+
+### Changed
+
+- The Markdown library that turns every page into HTML (marked) is now a
+  copy kept in the site itself, fixed at v15.0.12, instead of "whatever is
+  newest" fetched from jsDelivr on every visit. Nothing looks different.
+  The site no longer breaks if jsDelivr stops serving that file, can't
+  pick up a bad upstream release, and loads one less thing from an
+  outside server.
+
 ## [1.8.6] - 2026-10-18
 
 ### Changed

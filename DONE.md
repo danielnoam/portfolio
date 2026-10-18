@@ -78,3 +78,4 @@ in. Details are in CHANGELOG.md.
 - Visible version marker in the sidebar and this changelog (1.0.0)
 - Shared DOM helpers and CSS de-duplication (1.0.1)
 - GA4 analytics (before 1.0.0)
+- marked v15.0.12 kept in `js/vendors/` instead of loaded unpinned from jsDelivr (1.8.7)
