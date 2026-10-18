@@ -21,7 +21,8 @@
     transform: scale(calc(var(--press-scale) + 0.02));
 }
 
-.page-content .featured-media img {
+.page-content .featured-media img,
+.page-content .featured-media video {
     display: block;
     width: 100%;
     height: auto;

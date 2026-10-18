@@ -31,3 +31,5 @@ the idea can come back.
 - **First About text draft** (2026-10-05): Unity developer, Electro Grid,
   Disney Solitaire, DNExtensions, looking for a junior role. Rejected;
   the reason wasn't recorded, so ask before redrafting.
+- **Changing the About skill tags** (2026-10-18). Daniel said keep them
+  as they are.

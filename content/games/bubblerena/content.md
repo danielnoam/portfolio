@@ -1,5 +1,5 @@
 ---
-thumbnail: /portfolio/assets/bubblerena/main.gif
+thumbnail: /portfolio/assets/bubblerena/main.mp4
 shortDescription: A first-person arena shooter combined with match-3 mechanics where the player needs to match different colored bubbles to pop them.
 role: Solo · Unity C# · 48-hour jam
 tags: [games, unity, pc, solo, "2025", game-jam, archived]
@@ -8,7 +8,8 @@ tags: [games, unity, pc, solo, "2025", game-jam, archived]
 
 # Bubblerena
 
-<img src="https://danielnoam.github.io/portfolio/assets/bubblerena/main.gif" alt="Bubblerena" class="page-logo">
+<video src="https://danielnoam.github.io/portfolio/assets/bubblerena/main.mp4" class="page-logo" autoplay loop muted playsinline aria-label="Bubblerena">
+</video>
 
 <p class="featured-caption">Solo · Unity C# · Global Game Jam 2025</p>
 
@@ -35,32 +36,32 @@ A first-person arena shooter crossed with match-3, made solo in 48 hours for the
 
 <div class="showcase" data-layout="grid">
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/bubblerena/dash.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/bubblerena/dash.gif" alt="Dashing">
+        <a href="https://danielnoam.github.io/portfolio/assets/bubblerena/dash.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/bubblerena/dash.mp4" autoplay loop muted playsinline aria-label="Dashing"></video>
             <figcaption>Dashing</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/bubblerena/jumppad.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/bubblerena/jumppad.gif" alt="Jump pad">
+        <a href="https://danielnoam.github.io/portfolio/assets/bubblerena/jumppad.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/bubblerena/jumppad.mp4" autoplay loop muted playsinline aria-label="Jump pad"></video>
             <figcaption>Jump pad</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/bubblerena/poppingbubbles.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/bubblerena/poppingbubbles.gif" alt="Popping bubbles">
+        <a href="https://danielnoam.github.io/portfolio/assets/bubblerena/poppingbubbles.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/bubblerena/poppingbubbles.mp4" autoplay loop muted playsinline aria-label="Popping bubbles"></video>
             <figcaption>Popping bubbles</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/bubblerena/poppingbubbles2.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/bubblerena/poppingbubbles2.gif" alt="Popping bubbles">
+        <a href="https://danielnoam.github.io/portfolio/assets/bubblerena/poppingbubbles2.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/bubblerena/poppingbubbles2.mp4" autoplay loop muted playsinline aria-label="Popping bubbles"></video>
             <figcaption>Popping bubbles</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/bubblerena/poppingbubbles3.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/bubblerena/poppingbubbles3.gif" alt="Popping bubbles">
+        <a href="https://danielnoam.github.io/portfolio/assets/bubblerena/poppingbubbles3.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/bubblerena/poppingbubbles3.mp4" autoplay loop muted playsinline aria-label="Popping bubbles"></video>
             <figcaption>Popping bubbles</figcaption>
         </a>
     </figure>

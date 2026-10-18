@@ -81,12 +81,19 @@ export class ShowcaseManager {
         return tagString.split(',').map(tag => tag.trim()).filter(tag => tag.length > 0);
     }
 
+    // Thumbnails can be a still or a looping video clip.
+    thumbnailMedia(project) {
+        return /\.(mp4|webm)$/i.test(project.thumbnail)
+            ? `<video src="${project.thumbnail}" autoplay loop muted playsinline aria-label="${project.title}"></video>`
+            : `<img src="${project.thumbnail}" alt="${project.title}">`;
+    }
+
     // A project item. Grid -> a navigable thumbnail; carousel -> a rich card.
     projectFigure(project, layout) {
         if (layout === 'carousel') {
             return `
             <figure data-project="${project.id}" data-folder="${project.folder}">
-                <img src="${project.thumbnail}" alt="${project.title}">
+                ${this.thumbnailMedia(project)}
                 <figcaption>
                     <h3>${project.title}</h3>
                     <p>${project.shortDescription}</p>
@@ -96,7 +103,7 @@ export class ShowcaseManager {
         return `
         <figure>
             <a href="#" data-navigate="/${project.folder}/content.md">
-                <img src="${project.thumbnail}" alt="${project.title}">
+                ${this.thumbnailMedia(project)}
                 <figcaption>${project.role ? `<span class="tile-meta">${project.role}</span>` : project.title}</figcaption>
             </a>
         </figure>`;
@@ -309,7 +316,7 @@ class Carousel {
             });
 
             // Clicking the active item acts on its type.
-            const target = item.querySelector('a') || item.querySelector('img');
+            const target = item.querySelector('a') || item.querySelector('img, video');
             if (target) {
                 target.addEventListener('click', (e) => {
                     if (!item.classList.contains('active')) return;

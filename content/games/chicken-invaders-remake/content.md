@@ -55,14 +55,14 @@ Each weapon is a ScriptableObject listing its behaviors: how the projectile move
 
 <div class="showcase" data-layout="grid">
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/WeaponsGif.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/WeaponsGif.gif" alt="Weapons">
+        <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/WeaponsGif.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/WeaponsGif.mp4" autoplay loop muted playsinline aria-label="Weapons"></video>
             <figcaption>Different weapon behaviors</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/reticle.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/reticle.gif" alt="Reticle">
+        <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/reticle.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/reticle.mp4" autoplay loop muted playsinline aria-label="Reticle"></video>
             <figcaption>Reticle size, spread and heat</figcaption>
         </a>
     </figure>
@@ -123,8 +123,8 @@ A level is a list of stage events: spawn a wave, drop resources, play a radio me
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/ObstaclesStageGif.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/ObstaclesStageGif.gif" alt="Obstacles stage">
+        <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/ObstaclesStageGif.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/ObstaclesStageGif.mp4" autoplay loop muted playsinline aria-label="Obstacles stage"></video>
             <figcaption>Obstacles the player has to dodge</figcaption>
         </a>
     </figure>
@@ -155,20 +155,20 @@ The HUD tilts with input, shakes on hits and changes color by damage type, so it
 
 <div class="showcase" data-layout="grid">
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/statusbar.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/statusbar.gif" alt="Status bar">
+        <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/statusbar.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/statusbar.mp4" autoplay loop muted playsinline aria-label="Status bar"></video>
             <figcaption>Status bar reacts to movement and hits</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/weaponsbar.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/weaponsbar.gif" alt="Weapons bar">
+        <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/weaponsbar.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/weaponsbar.mp4" autoplay loop muted playsinline aria-label="Weapons bar"></video>
             <figcaption>Weapon and dodge bar</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/levelProgressionBar.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/levelProgressionBar.gif" alt="Level progression bar">
+        <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/levelProgressionBar.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/levelProgressionBar.mp4" autoplay loop muted playsinline aria-label="Level progression bar"></video>
             <figcaption>Stage progression bar and objectives</figcaption>
         </a>
     </figure>
@@ -211,8 +211,8 @@ Each vibration source has a position and a falloff, and a listener on the player
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/controllerUI.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/controllerUI.gif" alt="Button prompts">
+        <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/controllerUI.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/controllerUI.mp4" autoplay loop muted playsinline aria-label="Button prompts"></video>
             <figcaption>Button prompts follow the active device</figcaption>
         </a>
     </figure>
@@ -263,14 +263,14 @@ Each vibration source has a position and a falloff, and a listener on the player
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/StoreGif.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/StoreGif.gif" alt="Upgrade store">
+        <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/StoreGif.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/StoreGif.mp4" autoplay loop muted playsinline aria-label="Upgrade store"></video>
             <figcaption>Upgrade store</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/boundaryshader.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/boundaryshader.gif" alt="Boundary shader">
+        <a href="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/boundaryshader.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/chicken-invaders-remake/boundaryshader.mp4" autoplay loop muted playsinline aria-label="Boundary shader"></video>
             <figcaption>Boundary dither shader</figcaption>
         </a>
     </figure>

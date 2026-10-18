@@ -1,5 +1,5 @@
 ---
-thumbnail: /portfolio/assets/pixel-knight/main.gif
+thumbnail: /portfolio/assets/pixel-knight/main.mp4
 shortDescription: A short action-rpg developed while i was in high school and learning gamemaker.
 role: Solo · GameMaker · 2016
 tags: [games, gamemaker, "2016", pc, solo, archived]
@@ -8,7 +8,8 @@ tags: [games, gamemaker, "2016", pc, solo, archived]
 
 # Pixel Knight
 
-<img src="https://danielnoam.github.io/portfolio/assets/pixel-knight/main.gif" alt="Pixel Knight" class="page-logo">
+<video src="https://danielnoam.github.io/portfolio/assets/pixel-knight/main.mp4" class="page-logo" autoplay loop muted playsinline aria-label="Pixel Knight">
+</video>
 
 <p class="featured-caption">Solo · GameMaker · 2016, high school</p>
 
@@ -42,14 +43,14 @@ A short action RPG made in high school while learning GameMaker: melee, dash and
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/pixel-knight/gameplay5.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/pixel-knight/gameplay5.gif" alt="Boss battle">
+        <a href="https://danielnoam.github.io/portfolio/assets/pixel-knight/gameplay5.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/pixel-knight/gameplay5.mp4" autoplay loop muted playsinline aria-label="Boss battle"></video>
             <figcaption>Boss battle</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/pixel-knight/gameplay6.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/pixel-knight/gameplay6.gif" alt="Combat">
+        <a href="https://danielnoam.github.io/portfolio/assets/pixel-knight/gameplay6.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/pixel-knight/gameplay6.mp4" autoplay loop muted playsinline aria-label="Combat"></video>
             <figcaption>Combat</figcaption>
         </a>
     </figure>

@@ -1,5 +1,5 @@
 ---
-thumbnail: /portfolio/assets/project-umn/main.gif
+thumbnail: /portfolio/assets/project-umn/main.mp4
 shortDescription: A third-person puzzle game where you solve different puzzles with your robot companion.
 tags: [games, unity, pc, "2025", solo, featured]
 ---
@@ -7,7 +7,8 @@ tags: [games, unity, pc, "2025", solo, featured]
 
 # Project UMN
 
-<img src="https://danielnoam.github.io/portfolio/assets/project-umn/main.gif" alt="Project UMN" class="page-logo">
+<video src="https://danielnoam.github.io/portfolio/assets/project-umn/main.mp4" class="page-logo" autoplay loop muted playsinline aria-label="Project UMN">
+</video>
 
 <p class="featured-caption">Solo · Unity C# · PC</p>
 
@@ -35,20 +36,20 @@ The robot hovers on physics, holding its height over terrain while following the
 
 <div class="showcase" data-layout="grid">
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/project-umn/robot1.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/robot1.gif" alt="Robot movement">
+        <a href="https://danielnoam.github.io/portfolio/assets/project-umn/robot1.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/project-umn/robot1.mp4" autoplay loop muted playsinline aria-label="Robot movement"></video>
             <figcaption>Robot movement</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/project-umn/world3.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/world3.gif" alt="The robot follows your aim">
+        <a href="https://danielnoam.github.io/portfolio/assets/project-umn/world3.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/project-umn/world3.mp4" autoplay loop muted playsinline aria-label="The robot follows your aim"></video>
             <figcaption>The robot follows your aim</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/project-umn/robot3.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/robot3.gif" alt="Commanding the robot">
+        <a href="https://danielnoam.github.io/portfolio/assets/project-umn/robot3.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/project-umn/robot3.mp4" autoplay loop muted playsinline aria-label="Commanding the robot"></video>
             <figcaption>Commanding the robot</figcaption>
         </a>
     </figure>
@@ -70,14 +71,14 @@ A state-machine controller with tuned acceleration, IK head tracking that follow
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/project-umn/player3.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/player3.gif" alt="Interaction">
+        <a href="https://danielnoam.github.io/portfolio/assets/project-umn/player3.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/project-umn/player3.mp4" autoplay loop muted playsinline aria-label="Interaction"></video>
             <figcaption>Interaction</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/project-umn/player2.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/player2.gif" alt="Movement">
+        <a href="https://danielnoam.github.io/portfolio/assets/project-umn/player2.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/project-umn/player2.mp4" autoplay loop muted playsinline aria-label="Movement"></video>
             <figcaption>Movement</figcaption>
         </a>
     </figure>
@@ -93,32 +94,32 @@ Chambers build themselves in animated sequences, prompts and hints live in the e
 
 <div class="showcase" data-layout="grid">
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/project-umn/world1.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/world1.gif" alt="Dynamic stairs">
+        <a href="https://danielnoam.github.io/portfolio/assets/project-umn/world1.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/project-umn/world1.mp4" autoplay loop muted playsinline aria-label="Dynamic stairs"></video>
             <figcaption>Dynamic stairs</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/project-umn/world2.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/world2.gif" alt="Dynamic bridge">
+        <a href="https://danielnoam.github.io/portfolio/assets/project-umn/world2.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/project-umn/world2.mp4" autoplay loop muted playsinline aria-label="Dynamic bridge"></video>
             <figcaption>Dynamic bridge</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/project-umn/loadanimation.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/loadanimation.gif" alt="Test loading">
+        <a href="https://danielnoam.github.io/portfolio/assets/project-umn/loadanimation.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/project-umn/loadanimation.mp4" autoplay loop muted playsinline aria-label="Test loading"></video>
             <figcaption>Test loading</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/project-umn/menu.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/menu.gif" alt="In-world menu">
+        <a href="https://danielnoam.github.io/portfolio/assets/project-umn/menu.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/project-umn/menu.mp4" autoplay loop muted playsinline aria-label="In-world menu"></video>
             <figcaption>In-world menu</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/project-umn/mainmenu.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/mainmenu.gif" alt="Main menu">
+        <a href="https://danielnoam.github.io/portfolio/assets/project-umn/mainmenu.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/project-umn/mainmenu.mp4" autoplay loop muted playsinline aria-label="Main menu"></video>
             <figcaption>Main menu</figcaption>
         </a>
     </figure>
@@ -142,20 +143,20 @@ Chambers build themselves in animated sequences, prompts and hints live in the e
 
 <div class="showcase" data-layout="grid">
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/project-umn/intro2.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/intro2.gif" alt="Intro">
+        <a href="https://danielnoam.github.io/portfolio/assets/project-umn/intro2.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/project-umn/intro2.mp4" autoplay loop muted playsinline aria-label="Intro"></video>
             <figcaption>Intro</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/project-umn/robot2.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/robot2.gif" alt="Robot">
+        <a href="https://danielnoam.github.io/portfolio/assets/project-umn/robot2.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/project-umn/robot2.mp4" autoplay loop muted playsinline aria-label="Robot"></video>
             <figcaption>Robot</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/project-umn/world4.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/world4.gif" alt="Easter egg">
+        <a href="https://danielnoam.github.io/portfolio/assets/project-umn/world4.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/project-umn/world4.mp4" autoplay loop muted playsinline aria-label="Easter egg"></video>
             <figcaption>Easter egg</figcaption>
         </a>
     </figure>

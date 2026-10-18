@@ -17,13 +17,18 @@ export class LogoManager {
 
         if (!pageLogo || !pageTitle) return;
 
+        const isVideo = pageLogo.tagName === 'VIDEO';
+        const isLoaded = isVideo
+            ? pageLogo.readyState >= HTMLMediaElement.HAVE_CURRENT_DATA
+            : pageLogo.complete && pageLogo.naturalWidth > 0;
+
         // If logo is already loaded
-        if (pageLogo.complete && pageLogo.naturalWidth > 0) {
+        if (isLoaded) {
             pageLogo.classList.add('loaded');
             pageTitle.classList.add('logo-loaded');
         } else {
             // Wait for logo to load
-            pageLogo.addEventListener('load', () => {
+            pageLogo.addEventListener(isVideo ? 'loadeddata' : 'load', () => {
                 pageLogo.classList.add('loaded');
                 pageTitle.classList.add('logo-loaded');
             });

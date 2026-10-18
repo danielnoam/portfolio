@@ -1,34 +1,32 @@
 # TODO
 
 Only what's left. Shipped work moves to DONE.md, turned-down work to
-DROPPED.md. Live version: 1.8.4.
+DROPPED.md. Live version: 1.8.5.
 
 ## Next
 
 ### 1. Positioning and About (release 1.9.0)
-Decided 2026-10-18: "Unity developer" leads, for now. The bio is still
-about high school, and the draft text and tags below wait on his OK.
-- **About text.** The 2026-10-05 draft was rejected; ask what was wrong
-  with it (tone, facts, salesy) before writing another. Three sentences for
-  the chosen role, in `content/about/content.md`.
+Decided 2026-10-18: "Unity developer" leads, for now.
+- **About opening.** Add only a line about working at Superplay as a
+  Technical Artist (2026-10-18); the rest of the bio stays. Wording
+  shown in the thread, waiting on his OK.
 - **Remove the header hover swap** ("Unity developer" to "game
   programmer"). Proposed 2026-10-07, never answered. Delete the
   `hover-text` span in `content/about/content.md` and its CSS. Ship with
   the About text, or drop it if he says no.
-- **Skill tags.** "AI Workflows", "Unreal", "Photoshop" are listed;
-  Shader Graph, VFX Graph and URP are not. Proposed set: C#, Unity, Shader
-  Graph, VFX Graph, URP, Editor tooling, Git, Blender. Same release.
 
-### 2. Speed and security pass (release 1.8.5)
-Found while applying the new rules (2026-10-17). Measure page weight and
-load time at 390px before and after.
-- **Heavy GIFs.** Several are 30 to 40 MB (`project-umn/menu.gif` 39 MB,
-  `bubblerena/poppingbubbles3.gif` 36 MB, `project-umn/robot1.gif` 30 MB).
-  Convert GIFs over ~5 MB to muted looping MP4 (H.264, plays on iPhone
-  Safari) and swap the tags; keep a poster frame.
-- **Pin marked.** `index.html` loads `marked` from jsDelivr with no version
-  or integrity hash, so any new upstream release runs on the site. Pin an
-  exact version with an SRI hash, or vendor the file into `js/vendor/`.
+### 2. Pin the Markdown library (release 1.8.6)
+`index.html` loads `marked` from jsDelivr with no version. jsDelivr
+currently serves v15.0.12 (checked 2026-10-18) because newer versions
+dropped the `marked.min.js` file, so the site works by accident. Pin
+`marked@15.0.12` with an SRI hash, or vendor the file into `js/vendor/`.
+
+### 3. Re-encode the large MP4s
+Measure first. The existing videos were never compressed for the web:
+`chicken-invaders-remake/Gameplay1.mp4` is 40 MB, `Gameplay2.mp4` 30 MB
+(also the About hover background), and Electro Grid and Shaders pages
+carry 66 MB each. Re-encode at H.264 CRF 23 with faststart, same as the
+GIF conversion, and compare side by side before swapping.
 
 ## Waiting on Daniel's media or details
 

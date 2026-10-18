@@ -1,5 +1,5 @@
 ---
-thumbnail: /portfolio/assets/electro-grid/main.gif
+thumbnail: /portfolio/assets/electro-grid/main.mp4
 shortDescription: Match-3 mobile puzzle game with power-ups and various objectives.
 tags: [games, unity, mobile, web-gl, "2025", pc, solo, featured]
 ---
@@ -7,7 +7,8 @@ tags: [games, unity, mobile, web-gl, "2025", pc, solo, featured]
 
 # Electro Grid
 
-<img src="https://danielnoam.github.io/portfolio/assets/electro-grid/main.gif" alt="Electro Grid" class="page-logo">
+<video src="https://danielnoam.github.io/portfolio/assets/electro-grid/main.mp4" class="page-logo" autoplay loop muted playsinline aria-label="Electro Grid">
+</video>
 
 <p class="featured-caption">Solo · Unity C# · Android, PC, WebGL · one month</p>
 
