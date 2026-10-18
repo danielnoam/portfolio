@@ -6,10 +6,8 @@ DROPPED.md. Live version: 1.8.4.
 ## Next
 
 ### 1. Positioning and About (release 1.9.0)
-Blocked on Daniel: which role leads the site (tech art, Unity generalist,
-or both with one leading). He has been a Technical Artist at Superplay
-since May 2026 and the site still reads "Unity developer" with a
-high-school bio.
+Decided 2026-10-18: "Unity developer" leads, for now. The bio is still
+about high school, and the draft text and tags below wait on his OK.
 - **About text.** The 2026-10-05 draft was rejected; ask what was wrong
   with it (tone, facts, salesy) before writing another. Three sentences for
   the chosen role, in `content/about/content.md`.
@@ -18,8 +16,8 @@ high-school bio.
   `hover-text` span in `content/about/content.md` and its CSS. Ship with
   the About text, or drop it if he says no.
 - **Skill tags.** "AI Workflows", "Unreal", "Photoshop" are listed;
-  Shader Graph, HLSL, VFX Graph, URP and Timeline are not. Reorder to match
-  the chosen role, same release.
+  Shader Graph, VFX Graph and URP are not. Proposed set: C#, Unity, Shader
+  Graph, VFX Graph, URP, Editor tooling, Git, Blender. Same release.
 
 ### 2. Speed and security pass (release 1.8.5)
 Found while applying the new rules (2026-10-17). Measure page weight and

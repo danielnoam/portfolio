@@ -3,6 +3,10 @@
 Why things are the way they are, newest first. Each entry starts with a
 bold title and its date or version so a search finds it.
 
+**"Unity developer" leads the site (2026-10-18).** Daniel picked it over
+tech art or a split, "for now". The Superplay tech-art job still belongs
+in the About text and on its own page; it just isn't the headline.
+
 **Project rules and notes files (2026-10-17).** Daniel's working rules
 live in CLAUDE.md under "Working with Daniel", with TODO, DONE, DROPPED,
 NOTES and CHANGELOG beside it. His new rule to merge without asking once
