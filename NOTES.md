@@ -32,7 +32,7 @@ browsers for this site.
 **Video encoding settings (1.8.8).** All site video is H.264 (yuv420p,
 CRF 23, preset slow, faststart), longest side capped at 1920, AAC 128k
 only where the track has real sound (silent tracks, max volume under
--60 dB, are dropped). 39 of the original 44 clips were HEVC straight from
+-60 dB, are dropped). 35 of the original 44 clips were HEVC straight from
 the recorder, which Firefox and some PCs can't play. A file is replaced
 only if it gets at least 30% smaller or was HEVC; `project-umn/player.mp4`
 stayed as it was. Use the same settings for new clips.

@@ -16,7 +16,7 @@ The top entry below must always match the `version` constant in
   wide), same length, and clips with real sound keep it. The Shaders page
   goes from about 68 MB of video to 20 MB, Electro Grid from 66 MB to
   38 MB, DNExtensions from 39 MB to 13 MB.
-- Every video is now H.264. 39 of them were HEVC, which not every browser
+- Every video is now H.264. 35 of them were HEVC, which not every browser
   plays.
 
 ## [1.8.7] - 2026-10-18
