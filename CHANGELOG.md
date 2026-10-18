@@ -7,6 +7,14 @@ and the project adheres to [Semantic Versioning](https://semver.org/).
 The top entry below must always match the `version` constant in
 `js/core/config.js`, which is rendered at the bottom of the sidebar.
 
+## [1.8.9] - 2026-10-18
+
+### Fixed
+
+- Four Chicken Invaders clips (status bar, weapons bar, button prompts,
+  reticle) showed white bars around them. The bars are now the same grey
+  as the tile behind them, as they were before the clips became video.
+
 ## [1.8.8] - 2026-10-18
 
 ### Changed

@@ -3,6 +3,14 @@
 Why things are the way they are, newest first. Each entry starts with a
 bold title and its date or version so a search finds it.
 
+**Padded clips are filled with the tile grey (1.8.9).** The four
+Chicken Invaders HUD and reticle GIFs were padded to 16:9 with
+transparency in 1.8.3, which showed the tile behind them. H.264 has no
+transparency, so the 1.8.5 conversion filled the padding with white. They
+are now flattened onto `#313131`, the tile colour as it renders
+(`--card-bg` over the page). Pad any new off-ratio clip with that colour,
+not transparency.
+
 **GIFs became MP4 (1.8.5).** 78 GIFs weighed 505 MB; as H.264 MP4
 (CRF 23, faststart, no audio) they are 27 MB with the same look and
 length. H.264 rather than WebM because iPhone Safari plays it everywhere.
