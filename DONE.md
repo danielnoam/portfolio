@@ -22,6 +22,7 @@ in. Details are in CHANGELOG.md.
 - Project UMN "Look and feel" section with the environment clips (1.8.2)
 - 2DPlatformer Gallery with nine clips (1.8.3)
 - Project UMN player movement clip under The player (1.8.4)
+- Project page headers and project thumbnails can be a looping video (1.8.5)
 - Code buttons per section that open the real script (before 1.0.0)
 - DNExtensions page merges Object Pooling, Controller Rumble and VFX & Transitions into one page (1.2.5)
 
@@ -32,6 +33,7 @@ in. Details are in CHANGELOG.md.
 - Grid tiles are a uniform 16:9; off-ratio assets cropped or padded to match (1.8.3)
 - Two tiles per row on phones; portrait grids four across on desktop (1.8.3)
 - Text-only project cards full width (1.8.3)
+- All animated clips are looping MP4 videos instead of GIFs (1.8.5)
 
 ## Archive
 

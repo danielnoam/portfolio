@@ -1,5 +1,5 @@
 ---
-thumbnail: /portfolio/assets/2dplatformer/main.gif
+thumbnail: /portfolio/assets/2dplatformer/main.mp4
 shortDescription: Platformer featuring various player and world mechanics.
 tags: [games, unity, pc, solo, "2024", web-gl, featured]
 ---
@@ -7,7 +7,8 @@ tags: [games, unity, pc, solo, "2024", web-gl, featured]
 
 # 2DPlatformer
 
-<img src="https://danielnoam.github.io/portfolio/assets/2dplatformer/main.gif" alt="2DPlatformer" class="page-logo">
+<video src="https://danielnoam.github.io/portfolio/assets/2dplatformer/main.mp4" class="page-logo" autoplay loop muted playsinline aria-label="2DPlatformer">
+</video>
 
 <p class="featured-caption">Solo · Unity C# · PC, WebGL · second semester</p>
 
@@ -34,32 +35,32 @@ Player stats and abilities are tunable assets. A jump measurement tool shows rea
 
 <div class="showcase" data-layout="grid">
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/2dplatformer/PlayerStats.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/2dplatformer/PlayerStats.gif" alt="Player stats">
+        <a href="https://danielnoam.github.io/portfolio/assets/2dplatformer/PlayerStats.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/2dplatformer/PlayerStats.mp4" autoplay loop muted playsinline aria-label="Player stats"></video>
             <figcaption>Player stats</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/2dplatformer/PlayerAbilitys.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/2dplatformer/PlayerAbilitys.gif" alt="Ability toggles">
+        <a href="https://danielnoam.github.io/portfolio/assets/2dplatformer/PlayerAbilitys.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/2dplatformer/PlayerAbilitys.mp4" autoplay loop muted playsinline aria-label="Ability toggles"></video>
             <figcaption>Ability toggles</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/2dplatformer/Length.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/2dplatformer/Length.gif" alt="Jump measurement tool">
+        <a href="https://danielnoam.github.io/portfolio/assets/2dplatformer/Length.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/2dplatformer/Length.mp4" autoplay loop muted playsinline aria-label="Jump measurement tool"></video>
             <figcaption>Jump measurement tool</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/2dplatformer/CameraTrigger.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/2dplatformer/CameraTrigger.gif" alt="Camera trigger editor">
+        <a href="https://danielnoam.github.io/portfolio/assets/2dplatformer/CameraTrigger.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/2dplatformer/CameraTrigger.mp4" autoplay loop muted playsinline aria-label="Camera trigger editor"></video>
             <figcaption>Camera trigger editor</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/2dplatformer/PlatformMovement.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/2dplatformer/PlatformMovement.gif" alt="Platform path visualizer">
+        <a href="https://danielnoam.github.io/portfolio/assets/2dplatformer/PlatformMovement.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/2dplatformer/PlatformMovement.mp4" autoplay loop muted playsinline aria-label="Platform path visualizer"></video>
             <figcaption>Platform path visualizer</figcaption>
         </a>
     </figure>
@@ -75,32 +76,32 @@ Coyote time, jump buffering and variable jump height make the controls forgiving
 
 <div class="showcase" data-layout="grid">
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/2dplatformer/player1.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/2dplatformer/player1.gif" alt="Coyote jump">
+        <a href="https://danielnoam.github.io/portfolio/assets/2dplatformer/player1.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/2dplatformer/player1.mp4" autoplay loop muted playsinline aria-label="Coyote jump"></video>
             <figcaption>Coyote jump</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/2dplatformer/variableJump.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/2dplatformer/variableJump.gif" alt="Variable jump height">
+        <a href="https://danielnoam.github.io/portfolio/assets/2dplatformer/variableJump.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/2dplatformer/variableJump.mp4" autoplay loop muted playsinline aria-label="Variable jump height"></video>
             <figcaption>Variable jump height</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/2dplatformer/walljump.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/2dplatformer/walljump.gif" alt="Wall jump">
+        <a href="https://danielnoam.github.io/portfolio/assets/2dplatformer/walljump.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/2dplatformer/walljump.mp4" autoplay loop muted playsinline aria-label="Wall jump"></video>
             <figcaption>Wall jump</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/2dplatformer/Physics1.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/2dplatformer/Physics1.gif" alt="Predictable movement">
+        <a href="https://danielnoam.github.io/portfolio/assets/2dplatformer/Physics1.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/2dplatformer/Physics1.mp4" autoplay loop muted playsinline aria-label="Predictable movement"></video>
             <figcaption>Predictable movement</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/2dplatformer/Physics2.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/2dplatformer/Physics2.gif" alt="Acceleration">
+        <a href="https://danielnoam.github.io/portfolio/assets/2dplatformer/Physics2.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/2dplatformer/Physics2.mp4" autoplay loop muted playsinline aria-label="Acceleration"></video>
             <figcaption>Acceleration</figcaption>
         </a>
     </figure>
@@ -126,56 +127,56 @@ Coyote time, jump buffering and variable jump height make the controls forgiving
 
 <div class="showcase" data-layout="grid">
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/2dplatformer/softPlatform.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/2dplatformer/softPlatform.gif" alt="Soft platforms">
+        <a href="https://danielnoam.github.io/portfolio/assets/2dplatformer/softPlatform.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/2dplatformer/softPlatform.mp4" autoplay loop muted playsinline aria-label="Soft platforms"></video>
             <figcaption>Soft platforms</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/2dplatformer/crumblingobject.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/2dplatformer/crumblingobject.gif" alt="Crumbling platforms">
+        <a href="https://danielnoam.github.io/portfolio/assets/2dplatformer/crumblingobject.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/2dplatformer/crumblingobject.mp4" autoplay loop muted playsinline aria-label="Crumbling platforms"></video>
             <figcaption>Crumbling platforms</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/2dplatformer/movingplatform.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/2dplatformer/movingplatform.gif" alt="Moving platforms">
+        <a href="https://danielnoam.github.io/portfolio/assets/2dplatformer/movingplatform.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/2dplatformer/movingplatform.mp4" autoplay loop muted playsinline aria-label="Moving platforms"></video>
             <figcaption>Moving platforms</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/2dplatformer/lava.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/2dplatformer/lava.gif" alt="Lava">
+        <a href="https://danielnoam.github.io/portfolio/assets/2dplatformer/lava.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/2dplatformer/lava.mp4" autoplay loop muted playsinline aria-label="Lava"></video>
             <figcaption>Lava</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/2dplatformer/spikes.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/2dplatformer/spikes.gif" alt="Spikes">
+        <a href="https://danielnoam.github.io/portfolio/assets/2dplatformer/spikes.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/2dplatformer/spikes.mp4" autoplay loop muted playsinline aria-label="Spikes"></video>
             <figcaption>Spikes</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/2dplatformer/hazard4.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/2dplatformer/hazard4.gif" alt="Hazards">
+        <a href="https://danielnoam.github.io/portfolio/assets/2dplatformer/hazard4.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/2dplatformer/hazard4.mp4" autoplay loop muted playsinline aria-label="Hazards"></video>
             <figcaption>Hazards</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/2dplatformer/hiddenarea.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/2dplatformer/hiddenarea.gif" alt="Hidden area">
+        <a href="https://danielnoam.github.io/portfolio/assets/2dplatformer/hiddenarea.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/2dplatformer/hiddenarea.mp4" autoplay loop muted playsinline aria-label="Hidden area"></video>
             <figcaption>Hidden area</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/2dplatformer/doublejump.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/2dplatformer/doublejump.gif" alt="Double jump">
+        <a href="https://danielnoam.github.io/portfolio/assets/2dplatformer/doublejump.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/2dplatformer/doublejump.mp4" autoplay loop muted playsinline aria-label="Double jump"></video>
             <figcaption>Double jump</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/2dplatformer/wallslide.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/2dplatformer/wallslide.gif" alt="Wall slide">
+        <a href="https://danielnoam.github.io/portfolio/assets/2dplatformer/wallslide.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/2dplatformer/wallslide.mp4" autoplay loop muted playsinline aria-label="Wall slide"></video>
             <figcaption>Wall slide</figcaption>
         </a>
     </figure>

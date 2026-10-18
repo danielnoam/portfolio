@@ -30,44 +30,44 @@ My first-semester project: a time-attack "shooter" where you play a teacher thro
 
 <div class="showcase" data-layout="grid">
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/school-these-shits/gameplay2.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/school-these-shits/gameplay2.gif" alt="Shortcuts">
+        <a href="https://danielnoam.github.io/portfolio/assets/school-these-shits/gameplay2.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/school-these-shits/gameplay2.mp4" autoplay loop muted playsinline aria-label="Shortcuts"></video>
             <figcaption>Shortcuts</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/school-these-shits/gameplay3.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/school-these-shits/gameplay3.gif" alt="Breakable objects">
+        <a href="https://danielnoam.github.io/portfolio/assets/school-these-shits/gameplay3.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/school-these-shits/gameplay3.mp4" autoplay loop muted playsinline aria-label="Breakable objects"></video>
             <figcaption>Breakable objects</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/school-these-shits/trickshot.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/school-these-shits/trickshot.gif" alt="Trick shots">
+        <a href="https://danielnoam.github.io/portfolio/assets/school-these-shits/trickshot.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/school-these-shits/trickshot.mp4" autoplay loop muted playsinline aria-label="Trick shots"></video>
             <figcaption>Trick shots</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/school-these-shits/mission1.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/school-these-shits/mission1.gif" alt="A student's mission">
+        <a href="https://danielnoam.github.io/portfolio/assets/school-these-shits/mission1.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/school-these-shits/mission1.mp4" autoplay loop muted playsinline aria-label="A student's mission"></video>
             <figcaption>A student's mission</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/school-these-shits/mission2.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/school-these-shits/mission2.gif" alt="A student's mission">
+        <a href="https://danielnoam.github.io/portfolio/assets/school-these-shits/mission2.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/school-these-shits/mission2.mp4" autoplay loop muted playsinline aria-label="A student's mission"></video>
             <figcaption>A student's mission</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/school-these-shits/gameplay1.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/school-these-shits/gameplay1.gif" alt="Difficulty levels">
+        <a href="https://danielnoam.github.io/portfolio/assets/school-these-shits/gameplay1.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/school-these-shits/gameplay1.mp4" autoplay loop muted playsinline aria-label="Difficulty levels"></video>
             <figcaption>Difficulty levels</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/school-these-shits/gameplay4.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/school-these-shits/gameplay4.gif" alt="The bell rings">
+        <a href="https://danielnoam.github.io/portfolio/assets/school-these-shits/gameplay4.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/school-these-shits/gameplay4.mp4" autoplay loop muted playsinline aria-label="The bell rings"></video>
             <figcaption>The bell rings</figcaption>
         </a>
     </figure>

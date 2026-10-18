@@ -40,7 +40,8 @@
     transform: scale(1);
 }
 
-.carousel figure.active img {
+.carousel figure.active img,
+.carousel figure.active video {
     cursor: pointer; /* Only image gets pointer cursor */
 }
 

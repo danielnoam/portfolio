@@ -3,6 +3,21 @@
 Why things are the way they are, newest first. Each entry starts with a
 bold title and its date or version so a search finds it.
 
+**GIFs became MP4 (1.8.5).** 78 GIFs weighed 505 MB; as H.264 MP4
+(CRF 23, faststart, no audio) they are 27 MB with the same look and
+length. H.264 rather than WebM because iPhone Safari plays it everywhere.
+Every clip is `autoplay loop muted playsinline`, which is what lets phones
+autoplay it. Two gotchas: marked wraps a one-line `<video ...></video>`
+in a `<p>`, so a page header video keeps `</video>` on its own line; and
+the logo manager waits for `loadeddata` on a video instead of `load`.
+Thumbnails ending in `.mp4` render as video in the showcase grids and
+carousel. The original GIFs were deleted from the repo; old direct links
+to them now 404.
+
+**"Unity developer" leads the site (2026-10-18).** Daniel picked it over
+tech art or a split, "for now". The Superplay tech-art job still belongs
+in the About text and on its own page; it just isn't the headline.
+
 **Project rules and notes files (2026-10-17).** Daniel's working rules
 live in CLAUDE.md under "Working with Daniel", with TODO, DONE, DROPPED,
 NOTES and CHANGELOG beside it. His new rule to merge without asking once

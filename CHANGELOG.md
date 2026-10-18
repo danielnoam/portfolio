@@ -7,6 +7,17 @@ and the project adheres to [Semantic Versioning](https://semver.org/).
 The top entry below must always match the `version` constant in
 `js/core/config.js`, which is rendered at the bottom of the sidebar.
 
+## [1.8.5] - 2026-10-18
+
+### Changed
+
+- Every animated clip is now a short looping video instead of a GIF: the
+  galleries, the project page headers, the Project UMN tile on the About
+  page and the project thumbnails. They look the same but are about a
+  twentieth of the size (505 MB of GIFs became 27 MB of video), so pages
+  load faster and use far less phone data. Project UMN goes from about
+  207 MB of media to 22 MB, Bubblerena from 104 MB to 3 MB.
+
 ## [1.8.4] - 2026-10-12
 
 ### Changed

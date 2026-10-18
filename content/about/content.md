@@ -69,7 +69,7 @@ My experience spans from modding existing games to creating original adventures 
 <div class="featured-project">
     <a href="#" class="featured-media" data-navigate="/content/games/electro-grid/content.md"
        data-background-video="https://danielnoam.github.io/portfolio/assets/electro-grid/GameplaySquareStar.mp4">
-        <img src="https://danielnoam.github.io/portfolio/assets/electro-grid/main.gif" alt="Electro Grid">
+        <video src="https://danielnoam.github.io/portfolio/assets/electro-grid/main.mp4" autoplay loop muted playsinline aria-label="Electro Grid"></video>
     </a>
     <p class="featured-caption">Solo · Unity C# · Mobile · <a href="https://danielnoam.itch.io/electro-grid" target="_blank">Play on Itch.io</a></p>
 </div>
@@ -84,8 +84,8 @@ My experience spans from modding existing games to creating original adventures 
     </figure>
     <figure>
         <a href="#" data-navigate="/content/games/project-umn/content.md"
-           data-background-image="https://danielnoam.github.io/portfolio/assets/project-umn/robot1.gif">
-            <img src="https://danielnoam.github.io/portfolio/assets/project-umn/main.gif" alt="Project UMN">
+           data-background-video="https://danielnoam.github.io/portfolio/assets/project-umn/robot1.mp4">
+            <video src="https://danielnoam.github.io/portfolio/assets/project-umn/main.mp4" autoplay loop muted playsinline aria-label="Project UMN"></video>
             <figcaption><span class="tile-meta">Solo · Unity C# · PC</span></figcaption>
         </a>
     </figure>

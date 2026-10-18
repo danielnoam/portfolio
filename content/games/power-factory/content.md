@@ -36,26 +36,26 @@ A first-person puzzle game made solo in under 48 hours using only Kenney and Kay
 
 <div class="showcase" data-layout="grid">
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/power-factory/recyclemachine.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/power-factory/recyclemachine.gif" alt="Recycle machine">
+        <a href="https://danielnoam.github.io/portfolio/assets/power-factory/recyclemachine.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/power-factory/recyclemachine.mp4" autoplay loop muted playsinline aria-label="Recycle machine"></video>
             <figcaption>Recycle machine</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/power-factory/ordercomplete.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/power-factory/ordercomplete.gif" alt="Completing an order">
+        <a href="https://danielnoam.github.io/portfolio/assets/power-factory/ordercomplete.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/power-factory/ordercomplete.mp4" autoplay loop muted playsinline aria-label="Completing an order"></video>
             <figcaption>Completing an order</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/power-factory/packagespawner.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/power-factory/packagespawner.gif" alt="Packages spawning">
+        <a href="https://danielnoam.github.io/portfolio/assets/power-factory/packagespawner.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/power-factory/packagespawner.mp4" autoplay loop muted playsinline aria-label="Packages spawning"></video>
             <figcaption>Packages spawning</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/power-factory/upgrade.gif" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/power-factory/upgrade.gif" alt="Machine upgrade">
+        <a href="https://danielnoam.github.io/portfolio/assets/power-factory/upgrade.mp4" target="_blank">
+            <video src="https://danielnoam.github.io/portfolio/assets/power-factory/upgrade.mp4" autoplay loop muted playsinline aria-label="Machine upgrade"></video>
             <figcaption>Machine upgrade</figcaption>
         </a>
     </figure>
