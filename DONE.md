@@ -6,7 +6,8 @@ in. Details are in CHANGELOG.md.
 ## About page
 
 - Electro Grid as the featured card, other projects two per row below (1.6.0)
-- Headline "Unity developer" (1.6.0)
+- Headline "Unity developer" (1.6.0), with no hover swap (1.8.6)
+- About text opens with the Technical Artist job at Superplay (1.8.6)
 - Grey role line under every project tile: role, team, engine, platform (1.6.0)
 - Résumé button with Email, Phone and LinkedIn, equal width, one row on desktop and two on phones (1.6.0)
 - Project tiles share one 16:9 shape (1.6.0)

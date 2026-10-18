@@ -33,3 +33,5 @@ the idea can come back.
   the reason wasn't recorded, so ask before redrafting.
 - **Changing the About skill tags** (2026-10-18). Daniel said keep them
   as they are.
+- **Header hover swap to "game programmer"** (removed 1.8.6). Touch users
+  never saw it, and the site leads with one role.

@@ -7,6 +7,15 @@ and the project adheres to [Semantic Versioning](https://semver.org/).
 The top entry below must always match the `version` constant in
 `js/core/config.js`, which is rendered at the bottom of the sidebar.
 
+## [1.8.6] - 2026-10-18
+
+### Changed
+
+- The About text opens with the current job: "a Unity developer currently
+  working as a Technical Artist at Superplay". The rest of the bio stays.
+- The headline under the name always reads "Unity developer". Hovering it
+  no longer swaps to "game programmer", which touch screens never showed.
+
 ## [1.8.5] - 2026-10-18
 
 ### Changed
