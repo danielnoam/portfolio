@@ -1,17 +1,11 @@
 # TODO
 
 Only what's left. Shipped work moves to DONE.md, turned-down work to
-DROPPED.md. Live version: 1.8.6.
+DROPPED.md. Live version: 1.8.7.
 
 ## Next
 
-### 1. Pin the Markdown library (release 1.8.7)
-`index.html` loads `marked` from jsDelivr with no version. jsDelivr
-currently serves v15.0.12 (checked 2026-10-18) because newer versions
-dropped the `marked.min.js` file, so the site works by accident. Pin
-`marked@15.0.12` with an SRI hash, or vendor the file into `js/vendor/`.
-
-### 2. Re-encode the large MP4s
+### 1. Re-encode the large MP4s
 Measure first. The existing videos were never compressed for the web:
 `chicken-invaders-remake/Gameplay1.mp4` is 40 MB, `Gameplay2.mp4` 30 MB
 (also the About hover background), and Electro Grid and Shaders pages

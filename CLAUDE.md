@@ -49,7 +49,7 @@ the admin panel and the deploy steps.
 - Secure and private as far as it can go: least access (the admin panel's
   token is fine-grained, this repo only, Contents read/write, with an
   expiry), nothing leaves the visitor's device that isn't already a stated
-  choice (today: GA4 and the jsDelivr copy of marked), untrusted content
+  choice (today: only GA4), untrusted content
   stays sandboxed. Say any trade-off plainly and write it in NOTES.md.
 - Works on phones and on a computer. For this site that means phone
   browsers (Android Chrome, iPhone Safari) and desktop browsers. If

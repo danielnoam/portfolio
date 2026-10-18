@@ -29,11 +29,19 @@ PR merges cleanly. Notes-only changes don't bump the version: visitors see
 nothing different. The Android/iOS rule reads as phone and desktop
 browsers for this site.
 
-**Privacy trade-offs on the site (2026-10-17).** Two things send visitor
-data off the device: GA4 (Google sees page views) and the `marked`
-library loaded from jsDelivr (jsDelivr sees the request). Daniel chose GA4
-over heavier analytics tools. `marked` is unpinned, which is
-a supply-chain risk as well; pinning it is in TODO.md.
+**marked is vendored (1.8.7).** `index.html` used to load
+`cdn.jsdelivr.net/npm/marked/marked.min.js` with no version. marked 16+
+ships no `marked.min.js`, so jsDelivr was falling back to 15.0.12 and the
+site worked by luck; any change there would blank every page, and an
+unpinned URL runs whatever is published. A local copy in `js/vendors/`
+(next to prism.js) fixes the version, needs no integrity hash and drops a
+third-party request. Upgrading means replacing the file by hand: newer
+marked only ships `lib/marked.umd.js`, which also sets the `marked` global.
+
+**Privacy trade-offs on the site (2026-10-17).** GA4 is the one thing that
+sends visitor data off the device (Google sees page views). Daniel chose
+GA4 over heavier analytics tools. marked used to be the second (jsDelivr
+saw each visit) until 1.8.7.
 
 **Profiling and atlasing go on Disney Solitaire (2026-10-12).** They came
 up as job requirements. His real optimization work is on that game, and a
