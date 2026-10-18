@@ -17,6 +17,8 @@ to them now 404.
 **"Unity developer" leads the site (2026-10-18).** Daniel picked it over
 tech art or a split, "for now". The Superplay tech-art job still belongs
 in the About text and on its own page; it just isn't the headline.
+The About opening names it (1.8.6) and the hover swap is gone, so one
+role shows everywhere.
 
 **Project rules and notes files (2026-10-17).** Daniel's working rules
 live in CLAUDE.md under "Working with Daniel", with TODO, DONE, DROPPED,

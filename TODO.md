@@ -1,27 +1,17 @@
 # TODO
 
 Only what's left. Shipped work moves to DONE.md, turned-down work to
-DROPPED.md. Live version: 1.8.5.
+DROPPED.md. Live version: 1.8.6.
 
 ## Next
 
-### 1. Positioning and About (release 1.9.0)
-Decided 2026-10-18: "Unity developer" leads, for now.
-- **About opening.** Add only a line about working at Superplay as a
-  Technical Artist (2026-10-18); the rest of the bio stays. Wording
-  shown in the thread, waiting on his OK.
-- **Remove the header hover swap** ("Unity developer" to "game
-  programmer"). Proposed 2026-10-07, never answered. Delete the
-  `hover-text` span in `content/about/content.md` and its CSS. Ship with
-  the About text, or drop it if he says no.
-
-### 2. Pin the Markdown library (release 1.8.6)
+### 1. Pin the Markdown library (release 1.8.7)
 `index.html` loads `marked` from jsDelivr with no version. jsDelivr
 currently serves v15.0.12 (checked 2026-10-18) because newer versions
 dropped the `marked.min.js` file, so the site works by accident. Pin
 `marked@15.0.12` with an SRI hash, or vendor the file into `js/vendor/`.
 
-### 3. Re-encode the large MP4s
+### 2. Re-encode the large MP4s
 Measure first. The existing videos were never compressed for the web:
 `chicken-invaders-remake/Gameplay1.mp4` is 40 MB, `Gameplay2.mp4` 30 MB
 (also the About hover background), and Electro Grid and Shaders pages

@@ -8,15 +8,14 @@
 <div class="page-header">
     <h1 class="page-name">Daniel Noam</h1>
     <p class="page-title">
-        <span class="default-text">Unity developer</span>
-        <span class="hover-text">game programmer</span>
+        <span>Unity developer</span>
     </p>
 </div>
 
 
 <h2 class="text-left-heading">About</h2>
-<p>I'm Daniel Noam, a Game Developer who began my journey in game development during high school.
-My experience spans from modding existing games to creating original adventures using various game engines.</p>
+<p>I'm Daniel Noam, a Unity developer currently working as a Technical Artist at Superplay.
+I began my journey in game development during high school, and my experience spans from modding existing games to creating original adventures using various game engines.</p>
 
 <div class="tags-group">
     <span class="tag">C#</span>

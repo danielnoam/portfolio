@@ -148,26 +148,6 @@
 }
 
 
-.page-title .default-text,
-.page-title .hover-text {
-    transition: opacity var(--transition-base);
-}
-
-.page-title .hover-text {
-    position: absolute;
-    left: 0;
-    top: 0;
-    opacity: 0;
-}
-
-.page-title:hover .default-text {
-    opacity: 0;
-}
-
-.page-title:hover .hover-text {
-    opacity: 1;
-}
-
 .page-title span::after {
     content: '_';
     display: inline-block;
