@@ -1,7 +1,7 @@
 # TODO
 
 Only what's left. Shipped work moves to DONE.md, turned-down work to
-DROPPED.md. Live version: 1.8.8.
+DROPPED.md. Live version: 1.8.9.
 
 ## Next
 
