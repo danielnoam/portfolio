@@ -35,6 +35,7 @@ in. Details are in CHANGELOG.md.
 - Two tiles per row on phones; portrait grids four across on desktop (1.8.3)
 - Text-only project cards full width (1.8.3)
 - All animated clips are looping MP4 videos instead of GIFs (1.8.5)
+- Every video is web-compressed H.264 with faststart; silent audio tracks removed (1.8.8)
 
 ## Archive
 
