@@ -1,16 +1,11 @@
 # TODO
 
 Only what's left. Shipped work moves to DONE.md, turned-down work to
-DROPPED.md. Live version: 1.8.7.
+DROPPED.md. Live version: 1.8.8.
 
 ## Next
 
-### 1. Re-encode the large MP4s
-Measure first. The existing videos were never compressed for the web:
-`chicken-invaders-remake/Gameplay1.mp4` is 40 MB, `Gameplay2.mp4` 30 MB
-(also the About hover background), and Electro Grid and Shaders pages
-carry 66 MB each. Re-encode at H.264 CRF 23 with faststart, same as the
-GIF conversion, and compare side by side before swapping.
+Nothing ready to build. Everything left waits on Daniel.
 
 ## Waiting on Daniel's media or details
 

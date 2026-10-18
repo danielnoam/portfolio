@@ -29,6 +29,14 @@ PR merges cleanly. Notes-only changes don't bump the version: visitors see
 nothing different. The Android/iOS rule reads as phone and desktop
 browsers for this site.
 
+**Video encoding settings (1.8.8).** All site video is H.264 (yuv420p,
+CRF 23, preset slow, faststart), longest side capped at 1920, AAC 128k
+only where the track has real sound (silent tracks, max volume under
+-60 dB, are dropped). 35 of the original 44 clips were HEVC straight from
+the recorder, which Firefox and some PCs can't play. A file is replaced
+only if it gets at least 30% smaller or was HEVC; `project-umn/player.mp4`
+stayed as it was. Use the same settings for new clips.
+
 **marked is vendored (1.8.7).** `index.html` used to load
 `cdn.jsdelivr.net/npm/marked/marked.min.js` with no version. marked 16+
 ships no `marked.min.js`, so jsDelivr was falling back to 15.0.12 and the
